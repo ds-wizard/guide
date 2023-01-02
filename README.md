@@ -14,7 +14,7 @@ pip install -r docs/requirements.txt
 Extra requirements only for development:
 
 ```
-pip install sphinx-autobuild
+pip install -r docs/requirements.dev.txt
 ```
 
 ### Generate Guide
@@ -31,6 +31,19 @@ make html
 make watch
 ```
 
+Use [Python Developer’s Guide](https://devguide.python.org/documentation/markup/) as a reference for writing RST, specific rules are listed in the [CONTRIBUTING](CONTRIBUTING.md) file.
+
+### Refresh Dependencies
+
+```
+rm -r env
+python -m venv env
+source env/bin/activate
+
+pip install -r docs/requirements.direct.txt
+pip freeze > docs/requirements.txt
+```
+
 ## References
 
 * [Sphinx Documentation](https://www.sphinx-doc.org/en/master/)
@@ -41,5 +54,5 @@ make watch
 
 ## License
 
-This project is licensed under the  Creative Commons Attribution-ShareAlike (CC BY.SA) - see the
+This project is licensed under the  Creative Commons Attribution-ShareAlike (CC BY-SA) - see the
 [LICENSE](LICENSE) file for more details.

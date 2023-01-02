@@ -22,7 +22,7 @@ Create a Chapter
 Once you have created a new KM, it’s time to fill it with Chapters (i.e. sections; think of them as headers of your model).
 
 1. Press **+ Add chapter**
-2. Write a Title (e.g. ``Introduction``) and Text (e.g. ``Background information``) for the chapter. Note: The Text field is where you add a description of what the chapter will contain questions about. There are two tabs, **Editor** and **Preview**, since you can use :doc:`../../../miscellaneous/markdown` to format the text and check the result in **Preview**.
+2. Write a Title (e.g. ``Introduction``) and Text (e.g. ``Background information``) for the chapter. Note: The Text field is where you add a description of what the chapter will contain questions about. There are two tabs, **Editor** and **Preview**, since you can use :doc:`../../../miscellaneous/markdown-cheatsheet` to format the text and check the result in **Preview**.
 3. Press **+ Add question** in order to create a Question
 
 Notice another Sidebar that gives an overview of your KM. Use this to navigate between the different parts. Whenever you want to see the result of an addition, click on another part in the KM overview (at this stage this would be the *parent* we named `My test KM`.
@@ -90,7 +90,11 @@ Let's create a question of each type to demonstrate:
 1. Click on **Introduction** in the overview area of the editor
 2. Press *+Add question* in order to create a new question
 3. Select *Integration* as **Question Type**
-4.
+
+.. TODO::
+
+    Finish this
+
 
 **Multi-Choice**
 

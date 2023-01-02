@@ -19,4 +19,18 @@ Table of Contents
     self-hosted-dsw/index
     development/index
     miscellaneous/index
-    
+
+
+Old Stuff
+=========
+
+
+.. toctree::
+    :maxdepth: 2
+
+    general/about-dsw
+    general/terminology
+    general/user-account
+    for-users/for-researchers/index
+    for-users/for-data-stewards/index
+    for-users/for-administrators/index

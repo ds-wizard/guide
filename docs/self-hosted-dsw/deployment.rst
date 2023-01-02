@@ -17,6 +17,9 @@ Own DSW Instance
 
     The following instructions are intended **only for local deployment** and trying it out. It does not include any safety measures that are required for production deployment and are handled differently based on specific requirements and deployment site (e.g. using HTTPS, enabled websockets, backups, and many others).
 
+
+.. _installation-docker:
+
 Deployment with Docker
 ----------------------
 

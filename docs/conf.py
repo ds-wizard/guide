@@ -22,7 +22,7 @@ copyright = '2022, DSW Team'
 author = 'DSW Team'
 
 # The full version, including alpha/beta/rc tags
-release = 'latest'
+version = release = 'latest'
 
 rst_prolog = f"""
 
@@ -38,6 +38,8 @@ rst_prolog = f"""
 extensions = [
     'sphinx_substitution_extensions',
     'sphinxcontrib.youtube',
+    'sphinx.ext.todo',
+    'sphinx_toolbox.confval',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -62,8 +64,6 @@ html_static_path = ['_static']
 
 html_favicon = '_static/favicon.ico'
 html_theme_options = {
-    'display_version': True,
-    'logo_only': True,
     'light_logo': 'logo/logo-light-mode.svg',
     'dark_logo': 'logo/logo-dark-mode.svg',
     'light_css_variables': {
@@ -84,33 +84,7 @@ html_theme_options = {
 def setup(app):
     app.add_css_file('style.css')
 
-    make_confval(app)
-
-
-def make_confval(app):
-    # Copy-pasted from https://github.com/rtfd/sphinx_rtd_theme
-    from sphinx.locale import _
-    from sphinx.domains.python import PyField
-    from sphinx.util.docfields import Field
-
-    app.add_object_type(
-        'confval',
-        'confval',
-        objname='configuration value',
-        indextemplate='pair: %s; configuration value',
-        doc_field_types=[
-            PyField(
-                'type',
-                label=_('Type'),
-                has_arg=False,
-                names=('type',),
-                bodyrolename='class'
-            ),
-            Field(
-                'default',
-                label=_('Default'),
-                has_arg=False,
-                names=('default',),
-            ),
-        ]
-    )
+suppress_warnings = [
+    # Suppress "WARNING: unknown mimetype (issue with .ico)
+    'epub.unknown_project_files',
+]

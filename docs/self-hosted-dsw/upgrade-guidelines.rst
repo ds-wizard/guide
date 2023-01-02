@@ -233,13 +233,13 @@ Usually, nothing special is required for upgrade. Internal structure changes are
 2.0.X to 2.1.X
 --------------
 
-- There is a significant change related to new *Document Worker* that handles generation of documents from templates and filled questionnaires. You need to run RabbitMQ and document-worker with correct configuration according to server, see :ref:`installation-docker` and :ref:`configuration` for details.
+- There is a significant change related to new *Document Worker* that handles generation of documents from templates and filled questionnaires. You need to run RabbitMQ and document-worker with correct configuration according to server, see :ref:`installation-docker` and :doc:`configuration` for details.
 
 1.10.X to 2.0.X
 ---------------
 
 - Changing the major version actually does not mean any problem in migration, it has been made due to significant internal changes (restructuring, new repositories, etc.)
-- If you are using Docker for running DSW, you need to change it according to new documentation of :ref:`installation-docker` and :ref:`configuration`.
+- If you are using Docker for running DSW, you need to change it according to new documentation of :ref:`installation-docker` and :doc:`configuration`.
 - Crontab image is no longer needed.
 - A DMP template configuration file must contain list of ``allowedKMs`` (see the default *root* template).
 

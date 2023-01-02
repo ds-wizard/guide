@@ -2,6 +2,9 @@
 Configuration
 *************
 
+
+.. _config-settings:
+
 Settings
 ========
 
@@ -11,6 +14,9 @@ Configuration Files
 ===================
 
 Configuration files are used for setting the server-side configuration. Since 3.0 release, the configuration for server and document worker components overlap. Therefore, you can have a single configuration file for both.
+
+
+.. _config-server:
 
 Server Configuration
 --------------------
@@ -57,7 +63,7 @@ Database
 
 Information for connection to PostgreSQL database.
 
-.. confval:: connectionString
+.. confval:: database.connectionString
 
    :type: String
 
@@ -68,25 +74,26 @@ S3
 
 Information for connection to S3 storage (used for document and template asset files).
 
-.. confval:: url
+.. confval:: s3.url
 
    :type: URI
 
     Endpoint of S3 storage, e.g., ``http://minio:9000``
 
-.. confval:: username
-
-   :type: String
+.. confval:: s3.username
+    
+    :noindex:
+    :type: String
 
     Username (or ``Access Key ID``) for authentication
 
-.. confval:: password
+.. confval:: s3.password
 
    :type: String
 
     Password (or ``Secret Access Key``) for authentication
 
-.. confval:: bucket
+.. confval:: s3.bucket
 
    :type: String
    :default: ``engine-wizard``
@@ -99,56 +106,56 @@ Mail
 This configuration section is used only by **Server**. It must be filled with SMTP connection information to allow sending emails (registration verification, password recovery, project invitation, etc.).
 
 
-.. confval:: enabled
+.. confval:: mail.enabled
 
    :type: String
 
     It should be set to ``true`` unless used for local testing only.
 
-.. confval:: name
+.. confval:: mail.name
 
    :type: String
 
     Name of the DS Wizard instance that will be used as “senders name” in email headers.
 
-.. confval:: email
+.. confval:: mail.email
 
    :type: String
 
     Email address from which the emails will be sent.
 
-.. confval:: host
+.. confval:: mail.host
 
    :type: String
 
     Hostname or IP address of SMTP server.
 
-.. confval:: port
+.. confval:: mail.port
 
    :type: Int
 
     Port that is used for SMTP on the server (usually ``25`` for plain or ``465`` for SSL).
 
-.. confval:: ssl
+.. confval:: mail.ssl
 
    :type: Boolean
    :default: ``false``
 
     If SMTP connection is encrypted via SSL (we highly recommend this).
 
-.. confval:: authEnabled
+.. confval:: mail.authEnabled
 
    :type: Boolean
 
     If authentication using username and password should be used for SMTP.
 
-.. confval:: username
+.. confval:: mail.username
 
    :type: String
 
     Username for the SMTP connection.
 
-.. confval:: password
+.. confval:: mail.password
 
    :type: String
 
@@ -200,7 +207,7 @@ Client Configuration
 
 If you are running the client app using “With Docker”, the all you need is to specify ``API_URL`` environment variable inside ``docker-compose.yml``. In case you want to run the client locally, you need to create a ``config.js`` file in the project root:
 
-.. CODE-BLOCK:: js
+.. CODE-BLOCK:: javascript
 
     window.dsw = {
         apiUrl: 'http://localhost:3000'
@@ -208,7 +215,7 @@ If you are running the client app using “With Docker”, the all you need is t
 
 Client also provides wide variety of style customizations using SASS variables or message localization. Then you can mount it as volumes in case Docker as well:
 
-.. CODE-BLOCK::
+.. CODE-BLOCK:: yaml
 
     volumes:
         # mount SCSS file
@@ -242,7 +249,7 @@ Email Templates
 Similarly to document templates, you can customize templates for emails sent by the Wizard located in ``templates/mail`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__. And you can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Related>`__ equal to the filename).
 
 Templates Structure
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 The structure is following:
 
@@ -256,7 +263,7 @@ The structure is following:
 All attachments are loaded from the template-specific and common folders and included to email with detected `MIME type <https://en.wikipedia.org/wiki/Media_type>`__. It similarly works for inline images but those are not displayed as attachments just as `related part <https://en.wikipedia.org/wiki/MIME#Related>`__ to HTML part (if present). We highly recommend to use ASCII-only names without whitespaces and with standard extensions. Also, sending minimum amount of data via email is suggested.
 
 Templates variables
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 All templates are provided also with variables:
 
@@ -270,7 +277,7 @@ All templates are provided also with variables:
 * ``user`` = user (subject of an email), structure with attributes accessible via . (dot, e.g. ``user.name``)
 
 Email types
-^^^^^^^^^^^
+-----------
 
 Currently, there are following types of mail:
 
@@ -283,11 +290,11 @@ Currently, there are following types of mail:
 * ``resetPassword`` = email sent to user when requests resetting a password, contains ``resetLink`` variable
 
 Docker deployment
-^^^^^^^^^^^^^^^^^
+-----------------
 
 Including own email templates while using dockerized Wizard is practically the same as for DMP templates. You can also bind whole ``templates/mail`` folder (or even ``templates`` if want to change both):
 
-.. CODE-BLOCK::
+.. CODE-BLOCK:: yaml
 
     mailer:
         image: datastewardshipwizard/mailer

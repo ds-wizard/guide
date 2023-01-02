@@ -30,4 +30,4 @@ Now the Project can be used as a Project Template by other users.
 
 .. NOTE::
 
-If you decide not to share the Project Template any more, you can disable the function anytime.
+    If you decide not to share the Project Template any more, you can disable the function anytime.

@@ -142,6 +142,9 @@ Those are local-only metadata used for development of the template. You can use 
 * ``readmeFile``: files used to get content for ``readme`` of the template, usually ``README.md``
 * ``files``: list of patterns to specify files that are part of the document template (it uses Git’s wildcard-match patterns, so you can also exclude files or directories)
 
+
+.. _schema-doc-context:
+
 Document Context
 ================
 
@@ -242,13 +245,14 @@ Graphics and Scripts
 
 If you want to include some graphics or JavaScript, we recommend you to put it directly into the HTML template file. In case of graphics, use ``base64`` encoded content (suitable for smaller images like icons and logos):
 
-.. code-block::
+.. code-block:: xml
 
     <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
 
+
 Alternatively, you can of course reference picture that is accessible online. For JavaScript, again you can put there directly some script or reference it, for example, from some CDN:
 
-.. code-block:: js
+.. code-block:: xml
 
     <style type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></style>
     <style type="text/javascript">
@@ -257,15 +261,17 @@ Alternatively, you can of course reference picture that is accessible online. Fo
         });
     </style>
 
+
 You can split your template code into multiple files and the use include directive that opens the file and inserts its content where the directive is placed - like we do for including CSS style in HTML template (only one complex HTML file is generated in the end):
 
-.. code-block:: html
+.. code-block:: jinja
 
     <head>
         <title>Data Management Plan</title>
         <meta charset="utf-8">
         <style>{% include "root.css" %}</style>
     </head>
+
 
 Template Development Procedure
 ==============================
@@ -319,7 +325,7 @@ Version 4 (since 3.2.0)
 * Metrics are now also identified by UUID and part of the KM.
 
 Version 3 (since 2.12.0)
------------------------
+------------------------
 
 * Additional metadata about each replies has been added and structure of reply is changed (extra ``.value`` needed). In case you are using filters such as ``reply_str_value`` no changes are needed.
 * For integration reply, the type values are renamed ``IntegrationValue`` -> ``IntegrationType`` and ``PlainValue`` -> ``PlainType`` for consistency.

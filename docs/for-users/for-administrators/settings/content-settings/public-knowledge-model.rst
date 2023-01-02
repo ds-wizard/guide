@@ -1,6 +1,6 @@
-***************
+**********************
 Public Knowledge Model
-***************
+**********************
 
 Not sure how to allow public view of your KM so even unlogged-in users can see them?
 

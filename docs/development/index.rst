@@ -16,7 +16,6 @@ This section covers various information related to the DSW development.
     :maxdepth: 1
 
     vulnerabilities
-    template-development
     metamodel-schemas
     contributing
     roadmap

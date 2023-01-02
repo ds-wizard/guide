@@ -21,5 +21,5 @@ Knowledge Model Editor
     deep-links
     publish-knowledge-model
     update-knowledge-model
-    delete-knowledge-mode
+    delete-knowledge-model-in-knowledge-model-editor
     knowledge-model-editor-tutorial

@@ -10,5 +10,5 @@ This section is dedicated for researchers who want to start creating data manage
 
 **What help is listed in this section?**
 
-* :doc:`./projects`
+* :doc:`projects/index`
 * :doc:`knowledge-models`

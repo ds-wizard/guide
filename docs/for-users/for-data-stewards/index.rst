@@ -9,4 +9,3 @@ For Data Stewards
     knowledge-model-editor/index
     knowledge-models/index
     projects/index
-    templates/index
