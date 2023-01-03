@@ -1,11 +1,6 @@
 Document Template Development
 *****************************
 
-
-.. TODO::
-
-    There are links to archived DSW repositories
-
 .. NOTE::
 
     **Requirements for Template Development**
@@ -13,7 +8,7 @@ Document Template Development
     * Your favorite text editor or IDE
     * DSW Template Development Kit (see below)
     * DSW instance (recommended to have local one) with your admin account
-    * Python 3.6+ (with pip) or Docker
+    * Python 3.7+ (with pip) or Docker
 
 
 DSW Template Development Kit
@@ -88,10 +83,6 @@ Template Metadata
 
 Each document template in DSW has metadata stored in ``template.json`` file:
 
-.. TODO::
-
-    Add links to Package Filter, Format and TDK Config
-
 * ``id`` = composed full ID of the template (``organizationId:templateId:version``)
 * ``organizationId`` = identifier of organization developing the template (lowercase, numerics, dot)
 * ``templateId`` = identifier of template (lowercase, numerics, dash)
@@ -102,11 +93,14 @@ Each document template in DSW has metadata stored in ``template.json`` file:
 * ``readme`` = longer description usually containing changelog
 * ``metamodelVersion`` = supported version of template metamodel, it affects with which DSW version is can be used
 * ``recommendedPackageId`` = identifier of recommended package (if any, null otherwise)
-* ``allowedPackages`` = list of package filters (see below Package Filter) to specify supported packages
-* ``formats`` = list of available formats (see below Format) with specified steps for generation
-* ``_tdk`` = TDK configuration for local development (not stored in DSW, see below TDK Config)
+* ``allowedPackages`` = list of package filters (see :ref:`document-template-package-filter`) to specify supported packages
+* ``formats`` = list of available formats (see below :ref:`document-template-format`) with specified steps for generation
+* ``_tdk`` = TDK configuration for local development (not stored in DSW, see :ref:`tdk-config`)
 
 DSW TDK handles ``id`` and ``readme`` for you, so you can skip then and naturally use ``README.md`` file separately.
+
+
+.. _document-template-package-filter:
 
 Package Filter
 --------------
@@ -118,20 +112,22 @@ For filtering, the ``null`` value serves as wildcard, i.e., filter with all ``nu
 * ``minVersion``: minimal package version (in format X.Y.Z, inclusive)
 * ``maxVersion``: maximal package version (in format X.Y.Z, inclusive)
 
+
+.. _document-template-format:
+
 Format
 ------
 
 A template can describe how to produce several formats, each with these metadata:
 
-.. TODO::
-
-    Add link to Steps
-
 * ``uuid``: UUID of the format (within template)
 * ``name``: display name of the format
 * ``shortName``: short name (ideally extension) for the format, it can be used for example to be displayed in icons
 * ``icon``: icon style (CSS classes), preferably `Font Awesome <https://fontawesome.com/icons?d=gallery>`__, e.g. ``fas fa-file-word``
-* ``steps``: list of steps for document worker to produce the document with this format, each step has ``name`` and ``options`` (see below Steps)
+* ``steps``: list of steps for document worker to produce the document with this format, each step has ``name`` and ``options`` (see :ref:`document-worker-steps`)
+
+
+.. _tdk-config:
 
 TDK Config
 ----------
@@ -150,7 +146,7 @@ Document Context
 
 .. NOTE::
 
-    To work efficiently with the Document Context, you want to use object instead of the JSON-like one. Please read through `DocumentContext.md <https://github.com/ds-wizard/document-worker/blob/develop/support/DocumentContext.md>`__ directly (select different version if needed).
+    To work efficiently with the Document Context, you want to use object instead of the JSON-like one. Please read through `DocumentContext.md <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/DocumentContext.md>`__ directly (select different version if needed).
 
 Document context is an object that carries all information related to a DSW questionnaire in order to produce a document. To investigate it, it is the best to use *Questionnaire Report* template with ``JSON`` format. The core fields are:
 
@@ -179,11 +175,10 @@ Document context is an object that carries all information related to a DSW ques
 Document Worker
 ===============
 
-.. TODO::
+`Document Worker <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker>`__ component is used for document generation by supplying context to a specific template based on users demands. It retrieves a job to generate document, based on desired template and format it processed the input. This processing may be composed of several steps, usually some generation using Jinja2 and then optionally transformations. For processing Jinja2, we add several custom filters to those builtin directly in Jinja2.
 
-    Check where to link Jinja2 filters, the original link does not work
 
-`Document Worker <https://github.com/ds-wizard/document-worker>`__ component is used for document generation by supplying context to a specific template based on users demands. It retrieves a job to generate document, based on desired template and format it processed the input. This processing may be composed of several steps, usually some generation using Jinja2 and then optionally transformations. For processing Jinja2, we add several custom filters to those builtin directly in Jinja2.
+.. _document-worker-steps:
 
 Steps
 -----
@@ -213,7 +208,7 @@ Jinja2 filters
 
 .. NOTE::
 
-    All filters are described in `JinjaFilters.md <https://github.com/ds-wizard/document-worker/blob/develop/support/JinjaFilters.md>`__ (select different version if needed).
+    All filters are described in `JinjaFilters.md <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/JinjaFilters.md>`__ (select different version if needed).
 
 To make template development easier, the document worker provides several additional filters:
 
@@ -236,7 +231,7 @@ Jinja2 tests
 
 .. NOTE::
 
-    All tests are described in `JinjaTests.md <https://github.com/ds-wizard/document-worker/blob/develop/support/JinjaTests.md>`__ (select different version if needed).
+    All tests are described in `JinjaTests.md <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/JinjaTests.md>`__ (select different version if needed).
 
 Tests can be used to make if conditions more readable using the ``is`` keyword. Just as in Python.
 
