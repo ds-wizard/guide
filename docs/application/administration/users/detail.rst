@@ -3,12 +3,18 @@
 User Detail
 ***********
 
-As administrators, we can edit existing users manually on the detail (selected user from  the :ref:`users list<users-list>`). It is possible to change all properties of the user, including possibility to change whether the user account is active or inactive. The password can be also changed (after selecting :guilabel:`Password` from the left navigation of user settings).
+As administrators, we can edit existing users manually on the detail (selected user from  the :ref:`users list<users-list>`). It is possible to change all properties of the user, including possibility to change whether the user account is active or inactive. 
 
-.. TODO::
+.. figure:: detail/profile.png
+    
+    Detail of a user profile.
 
-    Add screenshot of user edit form (with User Settings navigation on the left)
 
+The password can be also changed (after selecting :guilabel:`Password` from the left navigation of user settings).
+
+.. figure:: detail/password.png
+    
+    Form for changing password of a user.
 
 .. _user-roles:
 

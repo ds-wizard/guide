@@ -3,9 +3,11 @@
 Settings
 ********
 
-This section covers different settings available to admin users.
+This section covers different settings available to admin users. The settings are categorized as listed below.
 
-// note that the need to save settings
+.. NOTE::
+    
+    Do not forget press :guilabel:`Save` button to save the changes.
 
 ----
 

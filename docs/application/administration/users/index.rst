@@ -7,9 +7,9 @@ Users list allows administrators to see and manage all users in a DSW instance. 
 
 A :ref:`user detail<user-detail>` can be opened by clicking the name of a user or by selecting :guilabel:`Edit` in the right dropdown menu for the desired row. There, a user can be also deleted via the :guilabel:`Delete` action. Finally, administrator can :ref:`create a new user<user-create>` by clicking :guilabel:`Create`.
 
-.. TODO::
-
-    Add screenshot of users list (with expanded right dropdown and Create button visible)
+.. figure:: index/list.png
+    
+    List of users.
 
 ----
 

@@ -1,31 +1,89 @@
-*******
 Roadmap
 *******
 
-Need to know some info about the latest released version?
+Need to know some info about the latest released version or what is planned?
 
 ----
 
 .. NOTE::
 
-     The backlog is being highly affected by provided feedback, community needs, and discussion with our key users. You can visit our `Ideas <https://ideas.ds-wizard.org/>`__ or `JIRA <https://ds-wizard.atlassian.net/jira/software/c/projects/DSW/issues/?filter=allopenissues>`__ or check out `DSW Advisory Board <https://ds-wizard.org/about.html>`__.
+     The backlog is being highly affected by provided feedback, community needs, and discussion with our key users. You can visit our `Ideas <https://ideas.ds-wizard.org/>`__ and `Jira <https://ds-wizard.atlassian.net/jira/software/c/projects/DSW/issues/?filter=allopenissues>`__ or check out `DSW Advisory Board <https://ds-wizard.org/about.html>`__.
 
-Planned versions
+.. WARNING::
+
+    You should always strive to use the latest version of DSW for both security and user experience reasons. Also, if you are having a self-hosted DSW, please check :doc:`../self-hosted-dsw/upgrade-guidelines` prior to actual upgrade.
+
+
+Planned Versions
 ================
+
+3.21
+----
+
+* Release (expected): 7 March 2023
+* `Jira issues 3.21.0 <https://ds-wizard.atlassian.net/browse/DSW-1682?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.21.0%20ORDER%20BY%20priority%20DESC>`__
+* Key changes:
+    * Two-factor authentication (2FA)
+    * i18n support in document templates
+    * RO-Crate import/export
+    * Warnings on imports
+    * Various optimizations and UI fixes
+
+
+Released Versions
+=================
+
+3.20
+----
+
+* Release: 7 February 2023
+* `Jira issues 3.20.0 <https://ds-wizard.atlassian.net/browse/DSW-1658?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.20.0%20ORDER%20BY%20priority%20DESC>`__
+* Key changes:
+    * Document template editor (`idea <https://ideas.ds-wizard.org/posts/10/document-template-editor>`__)
+    * Mark document template as legacy
+    * Various UI improvements and fixes
+* Hotfixes:
+    * 3.20.1 (frontend), 8 February 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1690?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.20.1-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.20.1 (tools), 9 February 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1706?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.20.1-tools%20ORDER%20BY%20priority%20DESC>`__
+    * 3.20.2 (frontend), 10 February 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1714?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.20.2-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.20.2 (tools), 10 February 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1711?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.20.2-tools%20ORDER%20BY%20priority%20DESC>`__
+
+
+3.19
+----
+
+* Release: 3 January 2023
+* `Jira issues 3.19.0 <https://ds-wizard.atlassian.net/browse/DSW-1580?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.0%20ORDER%20BY%20priority%20DESC>`__
+* Key changes:
+    * Indications computation
+    * Minor UI improvements and fixes
+* Hotfixes:
+    * 3.19.1 (backend), 3 January 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1632?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.19.1 (frontend), 6 January 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1642?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.1-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.19.2 (backend), 12 January 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1645?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.2-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.19.1 (tools), 15 January 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1655?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.1-tools%20ORDER%20BY%20priority%20DESC>`__
+    * 3.19.2 (tools), 17 January 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1660?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.2-tools%20ORDER%20BY%20priority%20DESC>`__
+    * 3.19.3 (backend), 17 January 2023, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1664?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.19.3-backend%20ORDER%20BY%20priority%20DESC>`__
+
 
 3.18
 ----
 
-* Release (expected): 29 November 2022
+* Release: 29 November 2022
 * `Jira issues 3.18.0 <https://ds-wizard.atlassian.net/browse/DSW-1560?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.0%20ORDER%20BY%20priority%20DESC>`__
 * Key changes:
-    * Add book references to KM
+    * Localizations (`idea <https://ideas.ds-wizard.org/posts/23/translate-into-other-languages>`__)
     * Filter file extensions when importing KM or template
-    * Compute indications for newly created project
-    * Add optional importer window size to importer metadata
+    * Logout user when 401 received from API on dashboard
+* Hotfixes:
+    * 3.18.1 (frontend), 1 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1585?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.1-fronted%20ORDER%20BY%20priority%20DESC>`__
+    * 3.18.1 (backend), 1 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1587?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.18.2 (frontend), 1 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1591?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.2-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.18.2 (backend), 1 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1591?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.2-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.18.3 (backend), 2 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1606?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.3-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.18.3 (frontend), 15 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1597?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.3-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.18.4 (backend), 16 December 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1608?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.18.4-backend%20ORDER%20BY%20priority%20DESC>`__
 
-Released versions
-=================
 
 3.17
 ----
@@ -38,6 +96,9 @@ Released versions
     * Support for ZIP/TAR archives and Excel exports
     * Use of gettext for client localizations
     * Support for OpenID logout functionality
+* Hotfixes:
+    * 3.17.1 (frontend), 14 November 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1573?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.17.1-frontend%20ORDER%20BY%20priority%20DESC>`__
+
 
 3.16
 ----
@@ -45,14 +106,14 @@ Released versions
 * Release: 4 October 2022
 * `Jira issues 3.16.0 <https://ds-wizard.atlassian.net/browse/DSW-1434?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.0%20ORDER%20BY%20priority%20DESC>`__
 * Key changes:
-    * Import for replies from other questionnaires
+    * Import for replies from other questionnaires (`idea <https://ideas.ds-wizard.org/posts/5/import-answers-to-questionnaires>`__)
     * Collapsible and movable items in list questions
     * Main menu grouping
     * Speed optimizations and refactoring
 * Hotfixes:
-    * 3.16.1 (fix deleting user, fix synchronizing feedback issue)
-    * 3.16.2 (remove unnecessary caching to reduce RAM usage)
-    * 3.16.3 (fix wrong date deserialization from the database)
+    * 3.16.1 (backend), 27 October 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1522?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.16.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.16.2 (backend), 12 October 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1530?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.16.2-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.16.3 (backend), 6 October 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1548?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.16.3-backend%20ORDER%20BY%20priority%20DESC>`__
 
 3.15
 ----
@@ -64,8 +125,13 @@ Released versions
     * Python components refactoring
     * Several other fixes and refactoring
 * Hotfixes:
-    * 3.15.2 (document-worker, mailer), 7 September 2022
-    * 3.15.1 (wizard-client), 7 September 2022
+    * 3.15.1 (tools), 7 September 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1479?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.1-tools%20ORDER%20BY%20priority%20DESC>`__
+    * 3.15.1 (frontend), 7 September 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1481?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.1-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.15.2 (tools), 7 September 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1484?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.2-tools%20ORDER%20BY%20priority%20DESC>`__
+    * 3.15.2 (frontend), 14 September 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1495?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.2-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.15.1 (backend), 14 September 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1495?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.15.3 (tools), 17 September 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1499?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.15.3-tools%20ORDER%20BY%20priority%20DESC>`__
+
 
 3.14
 ----
@@ -77,8 +143,9 @@ Released versions
     * Improve authentication for downloads
     * Python components refactoring
 * Hotfixes:
-    * 3.14.1 (wizard-server), 4 August 2022
-    * 3.14.1 (document-worker), 4 August 2022
+    * 3.14.1 (backend), 4 August 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1442?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.14.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.14.1 (tools), 4 August 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1442?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.14.1-backend%20ORDER%20BY%20priority%20DESC>`__
+
 
 3.13
 ----
@@ -88,6 +155,7 @@ Released versions
 * Key changes:
     * Prevent user leave unsaved changes
     * Improved exceptions monitoring
+
 
 3.12
 ----
@@ -99,8 +167,9 @@ Released versions
     * KM events optimizations
     * Several bugfixes and UI/UX improvements
 * Hotfixes:
-    * 3.12.1 (wizard-server), 5 June 2022
-    * 3.12.1 (document-worker), 13 June 2022
+    * 3.12.1 (backend), 5 June 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1391?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.12.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.12.1 (document-worker), 13 June 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1393?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.12.1-docworker%20ORDER%20BY%20priority%20DESC>`__
+
 
 3.11
 ----
@@ -124,9 +193,9 @@ Released versions
     * Opening Markdown links in new tab/window
     * Several bugfixes and UI improvements
 * Hotfixes:
-    * 3.10.1 (wizard-client), 6 April 2022
-    * 3.10.2 (wizard-client), 17 April 2022
-    * 3.10.1 (wizard-server), 17 April 2022
+    * 3.10.1 (frontend), 6 April 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1340?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.10.1-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.10.2 (frontend), 17 April 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1354?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.10.2-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.10.1 (backend), 17 April 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1354?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.10.1-backend%20ORDER%20BY%20priority%20DESC>`__
 
 3.9
 ---
@@ -140,7 +209,7 @@ Released versions
     * Usage statistics for administrators
     * Several bugfixes and UI improvements
 * Hotfixes:
-    * 3.9.1 (wizard-server), 8 March 2022, `Jira issues 3.9.1 <https://ds-wizard.atlassian.net/browse/DSW-1327?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.9.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.9.1 (wizard-server), 8 March 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1327?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.9.1-backend%20ORDER%20BY%20priority%20DESC>`__
 
 3.8
 ---
@@ -150,9 +219,9 @@ Released versions
 * Key changes:
     * Online collaboration in KM Editor
 * Hotfixes:
-    * 3.8.1 (wizard-client), 1 February 2022, `Jira issues 3.8.1 <https://ds-wizard.atlassian.net/browse/DSW-1290?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.8.1-frontend%20ORDER%20BY%20priority%20DESC>`__
-    * 3.8.1 (registry-server), 2 February 2022, `Jira issues 3.8.1 <https://ds-wizard.atlassian.net/browse/DSW-1308?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.8.1-backend%20ORDER%20BY%20priority%20DESC>`__
-    * 3.8.2 (wizard-server), 14 February 2022, `Jira issues 3.8.2 <https://ds-wizard.atlassian.net/browse/DSW-1276?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.8.2-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.8.1 (wizard-client), 1 February 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1290?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.8.1-frontend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.8.1 (registry-server), 2 February 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1308?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.8.1-backend%20ORDER%20BY%20priority%20DESC>`__
+    * 3.8.2 (wizard-server), 14 February 2022, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1276?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.8.2-backend%20ORDER%20BY%20priority%20DESC>`__
 
 3.7
 ---
@@ -170,7 +239,7 @@ Released versions
 * Key changes:
     * Enhancing integration question options (item template)
 * Hotfixes:
-    * 3.6.1 (document-worker), 9 December 2021, `Jira issues 3.6.1 <https://ds-wizard.atlassian.net/browse/DSW-1247?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.6.1%20ORDER%20BY%20priority%20DESC>`__
+    * 3.6.1 (document-worker), 9 December 2021, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1247?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.6.1%20ORDER%20BY%20priority%20DESC>`__
 
 3.5
 ---
@@ -212,8 +281,8 @@ Released versions
     * Custom phases (in KM)
     * Several optimizations
 * Hotfixes:
-    * 3.2.1 (registry-server), 6 August 2021, `Jira issues 3.2.1 <https://ds-wizard.atlassian.net/browse/DSW-1151?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.2.1%20ORDER%20BY%20priority%20DESC>`__
-    * 3.2.2 (wizard-server), 20 August 2021, `Jira issues 3.2.2 <https://ds-wizard.atlassian.net/browse/DSW-1164?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.2.2%20ORDER%20BY%20priority%20DESC>`__
+    * 3.2.1 (registry-server), 6 August 2021, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1151?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.2.1%20ORDER%20BY%20priority%20DESC>`__
+    * 3.2.2 (wizard-server), 20 August 2021, `Jira <https://ds-wizard.atlassian.net/browse/DSW-1164?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.2.2%20ORDER%20BY%20priority%20DESC>`__
 
 3.1
 ---
@@ -488,3 +557,18 @@ Released versions
 
 * End of development: 24 October 2018
 * Release: 30 October 2018
+
+
+Release Management
+==================
+
+Currently, we release in a montly cycle (first Tuesday in month). We strictly use `semantic versioning <https://semver.org/>`__. In case of urgent bug reported or vulnerability identified, we release a hotfix (patch) for the latest major and minor version. The major and minor version must be matching for compatibility reasons; however, patch version might differ.
+
+We release multiple components from the same repositories:
+
+* `frontend <https://github.com/ds-wizard/engine-frontend>`__ = ``wizard-client``, ``registry-client``, ``wizard-style-builder``
+* `backend <https://github.com/ds-wizard/engine-backend>`__ = ``wizard-server``, ``registry-server``
+* `tools <https://github.com/ds-wizard/engine-tools>`__ = ``mailer``, ``document-worker``, ``tdk``, ``data-seeder`` (and other Python libraries)
+
+When a hotfix is released, it is always for all the components in the affected repository.
+

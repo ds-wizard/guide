@@ -12,11 +12,14 @@ The **Default Role** settings option allows us to define which role is assigned 
 Internal
 ========
 
-For internal authentication, we can only set whether the registrations are enabled or not. If registrations are enabled, any user who can visit the DSW instance may sign up (and obtain the default role).
+For internal authentication, we can set whether the **Registration** is enabled or not. If enabled, any user who can visit the DSW instance may sign up (and obtain the default role).
 
 .. NOTE::
 
     In case we are using OpenID or creating user accounts manually, registrations should be disabled.
+
+
+Another option is whether the **Two-Factor Authentication** (2FA) is enabled. If enabled, once users try to log in using credentials, they receive an email message with one-time code to confirm the login. Moreover, we can configure **Code Length** (how many character the code has) and **Expiration** period in seconds.
 
 
 .. _auth-services:
@@ -37,3 +40,8 @@ Back in the DSW settings, we can fill **Client ID**, **Client Secret**, and **UR
 .. NOTE::
 
     After setting a new OpenID service, we should directly test it and verify that the configuration works well. For that, we can simply open our DSW instance in a new anonymous window of the web browser.
+
+
+.. figure:: authentication/openid.png
+    
+    Example configuration of OpenID service.
