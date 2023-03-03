@@ -1,7 +1,7 @@
 Document Template List
 **********************
 
-As **data stewards** and **admins**, we can check and manage all document templates from the list accessible from the main menu via :menuselection:`Documents > Templates`. The list can be filtered and sorted by name.
+As **data stewards** and **admins**, we can check and manage all document templates from the list accessible from the main menu via :guilabel:`Document Templates`. The list can be filtered and sorted by name.
 
 For each document template, we can see the latest version present; however, we can see all the versions by accessing the :doc:`./detail` by clicking the name of the template or via :guilabel:`View detail` from the right dropdown item menu. The dropdown menu also offers :guilabel:`Export` of the latest document template or :guilabel:`Delete` of entire template (all its versions).
 

@@ -7,4 +7,4 @@ The main part of the detail is the README of the template that should contain ba
 
 In the top bar, we can :guilabel:`Export` the template as a ZIP package or :guilabel:`Delete` this version of the template (only if it is not already used for some documents).
 
-If we are not seeing the latest version of the template, a warning message is shown in the top. Similarly, we will see a notification that upgrade is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org>`__ (if configured).
+If we are not seeing the latest version of the template, a warning message is shown in the top. Similarly, we will see a notification that update is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org>`__ (if configured).
