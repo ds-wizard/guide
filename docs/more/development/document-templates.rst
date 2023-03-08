@@ -3,9 +3,12 @@
 Document Template Development
 *****************************
 
+Document Templates allows to specify how to export a questionnaire in form of a textual file. It is a highly flexible element of the tool; however, the development requires basic programming skills with Jinja2 templating language. We can develop the document templates either on our local computer (traditional development with text editor or IDE) or directly in DSW using :doc:`../../application/document-templates/editors/index`. 
+
+
 .. NOTE::
 
-    **Requirements for Template Development**
+    **Requirements for Local Template Development**
 
     * Your favorite text editor or IDE
     * DSW Template Development Kit (see below)
@@ -94,7 +97,6 @@ Each document template in DSW has metadata stored in ``template.json`` file:
 * ``license`` = name of the used license
 * ``readme`` = longer description usually containing changelog
 * ``metamodelVersion`` = supported version of template metamodel, it affects with which DSW version is can be used
-* ``recommendedPackageId`` = identifier of recommended package (if any, null otherwise)
 * ``allowedPackages`` = list of package filters (see :ref:`document-template-package-filter`) to specify supported packages
 * ``formats`` = list of available formats (see below :ref:`document-template-format`) with specified steps for generation
 * ``_tdk`` = TDK configuration for local development (not stored in DSW, see :ref:`tdk-config`)
@@ -124,8 +126,7 @@ A template can describe how to produce several formats, each with these metadata
 
 * ``uuid``: UUID of the format (within template)
 * ``name``: display name of the format
-* ``shortName``: short name (ideally extension) for the format, it can be used for example to be displayed in icons
-* ``icon``: icon style (CSS classes), preferably `Font Awesome <https://fontawesome.com/icons?d=gallery>`__, e.g. ``fas fa-file-word``
+* ``icon``: icon style (CSS classes), preferably `Font Awesome <https://fontawesome.com/v5/search>`__, e.g. ``fas fa-file-word``
 * ``steps``: list of steps for document worker to produce the document with this format, each step has ``name`` and ``options`` (see :ref:`document-worker-steps`)
 
 
@@ -205,6 +206,11 @@ Each step of template produces output based on its (optional) input and options.
         * ``from`` = source format (one of: ``rdf`` (XML), ``n3``, ``nt``, ``ttl``, ``trig``, ``jsonld``)
         * ``to`` = target format (as above)
 
+.. NOTE::
+
+    The steps including experimental are described in detail in `steps directory <https://github.com/ds-wizard/engine-tools/tree/develop/packages/dsw-document-worker/support/steps>`__ (select different version if needed).
+
+
 Jinja2 filters
 --------------
 
@@ -270,8 +276,8 @@ You can split your template code into multiple files and the use include directi
     </head>
 
 
-Template Development Procedure
-==============================
+Local Template Development Procedure
+====================================
 
 * Prepare template project locally and run ``dsw-tdk put -fw`` with ``.env`` file prepared for your dev instance.
 * Open a project in the DSW dev instance and set default template and format to the one you are going to edit.
@@ -283,6 +289,11 @@ It is recommended to save and check atomic changes in the templates as it makes 
 
 Template Metamodels
 ===================
+
+Version 11 (since 3.20.0)
+-------------------------
+
+* Removed ``recommendedPackageId`` from template metadata and ``shortName`` together with ``color`` from steps.
 
 Version 10 (since 3.12.0)
 -------------------------
@@ -345,3 +356,4 @@ More Info
 * Examples
     * `ds-wizard/questionnaire-report-template <https://github.com/ds-wizard/questionnaire-report-template>`__
     * `ds-wizard/madmp-template <https://github.com/ds-wizard/madmp-template>`__
+    * `ds-wizard/horizon-europe-dmp-template <https://github.com/ds-wizard/horizon-europe-dmp-template>`__

@@ -20,3 +20,7 @@ In the top pane, we can see the options based on our role:
 
 If we are not seeing the latest version of the KM, a warning message is shown in the top. Similarly, we will see a notification that update is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org>`__ (if configured).
 
+
+.. figure:: detail/detail.png
+    
+    Detail of a knowledge model.

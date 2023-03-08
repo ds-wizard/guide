@@ -13,6 +13,9 @@ Each item may be marked with *unsupported metamodel* if the document template is
 
 Finally, we can use :guilabel:`Import` new document templates by clicking the top right button (see :doc:`./import` for details).
 
+.. figure:: index/list.png
+    
+    List of all document templates with actions.
 
 .. raw:: html
     

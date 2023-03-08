@@ -30,8 +30,6 @@ From file
 
 We can import a locale as a ZIP package. Such a package can be created as an export from DSW.
 
-
-
 .. figure:: import/file.png
     :width: 500
     

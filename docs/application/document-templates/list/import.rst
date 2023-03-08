@@ -17,7 +17,19 @@ If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizar
     In case of document templates present in the `DSW Registry <https://registry.ds-wizard.org>`__, we will be notified about the available upgrades.
 
 
+.. figure:: import/registry.png
+    :width: 500
+    
+    Input for importing a document template from DSW Registry.
+
+
 From file
 =========
 
 We can import a document template as a ZIP package. Such a package can be created as an export from DSW or using the Template Development Kit (see :ref:`document-template-development`).
+
+
+.. figure:: import/file.png
+    :width: 500
+    
+    Input for importing a document template using a ZIP package.

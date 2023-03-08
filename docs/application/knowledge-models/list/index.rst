@@ -19,6 +19,10 @@ For **data stewards** and **admins**, *update available* may appear if there is 
 
 Finally, there is an option to :doc:`./import` by click the :guilabel:`Import` button in the top right part of the screen.
 
+.. figure:: index/list.png
+    
+    List of all knowledge models with actions.
+
 .. raw:: html
     
     <h2>Table of Contents</h2>

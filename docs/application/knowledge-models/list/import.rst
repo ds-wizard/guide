@@ -18,7 +18,19 @@ If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizar
     In case of knowledge model present in the `DSW Registry <https://registry.ds-wizard.org>`__, we will be notified about the available upgrades.
 
 
+.. figure:: import/registry.png
+    :width: 500
+    
+    Input for importing a knowledge model from DSW Registry.
+
+
 From file
 =========
 
 We can import a knowledge model as a KM file. Such a file can be created as an export from DSW (from :doc:`./index` or :doc:`./detail`).
+
+
+.. figure:: import/file.png
+    :width: 500
+    
+    Input for importing a knowledge model using a KM package.

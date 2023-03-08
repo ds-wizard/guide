@@ -12,7 +12,6 @@ In the top bar, we can :guilabel:`Export` the locale as a ZIP package, set or un
     The default locale must be always enabled as it serves for users that did not have any preference or do not request matching locale directly using the browser configuration.
 
 
-
 .. figure:: detail/detail.png
     
     Detail of a locale.
