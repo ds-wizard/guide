@@ -20,6 +20,7 @@ Knowledge model editor is where we build knowledge models. In this section, we w
     :maxdepth: 2
 
     knowledge-model
+    phases
     question-tags
     preview
     settings
