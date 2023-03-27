@@ -15,4 +15,4 @@ In the **Danger Zone** we can delete the knowledge model. Once it is deleted it 
 .. figure:: settings/settings-form.png
     :width: 548
     
-    Knowledge model settings.
+    Knowledge Model settings.

@@ -1,11 +1,12 @@
-.. _knowledge-model-publishing:
+.. _knowledge-model-publish:
 
-Publishing
-**********
+Publish
+*******
 
 Before the knowledge model can be used by researchers in their projects, we need to publish it. We can get to the publish form by clicking the :guilabel:`Publish` button in the top right corner of the knowledge model editor.
 
-.. figure:: publishing/publish-form.png
+.. figure:: publish/publish-modal.png
+    :width: 528
     
     Publish form where we fill additional details for the knowledge model.
 

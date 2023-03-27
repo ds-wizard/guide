@@ -3,7 +3,7 @@
 Knowledge Model Migration
 *************************
 
-Knowledge model can be created either from scratch or based on existing one and further modified. If that happened, we can call the original **Parent KM** and the modification **Child KM**. We can create the Child KM any :ref:`published version <knowledge-model-publishing>` of the Parent KM, make some modification and publish a version of the Child KM. However, the Parent KM can evolve, and at some point we might want to have those changes in our Child KM, too.
+Knowledge model can be created either from scratch or based on existing one and further modified. If that happened, we can call the original **Parent KM** and the modification **Child KM**. We can create the Child KM any :ref:`published version <knowledge-model-publish>` of the Parent KM, make some modification and publish a version of the Child KM. However, the Parent KM can evolve, and at some point we might want to have those changes in our Child KM, too.
 
 That is what the knowledge model migration is for. Once a new version of the Parent KM is published, we can start the KM migration where we go through these changes. We can choose whether we want to apply or reject these modification to our Child KM during migration. At the end, we publish a new version of the Child KM with all the selected changes.
 
@@ -53,4 +53,4 @@ We can cancell the knowledge model migration at any point before we publish the 
 Finishing a Knowledge Model Migration
 =====================================
 
-After we resolve all the changes, we are ready to publish the new version of the Child KM. The publishing process is the same as when :ref:`publishing from the KM editor<knowledge-model-publishing>`.
+After we resolve all the changes, we are ready to publish the new version of the Child KM. The publishing process is the same as when :ref:`publishing from the KM editor<knowledge-model-publish>`.
