@@ -15,7 +15,13 @@ If the :ref:`knowledge model<knowledge-model>` we use for the :ref:`project<proj
     
     Phase selection widget.
 
-By selecting the phase you are currently in, we can see the desirable questions that are not yet answered in red. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
+By selecting the phase you are currently in, we can see the desirability of questions. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
+
+There are three desirability states the question can be in:
+
+- **red, with a pen icon** - this question must be answered in the current phase
+- **light grey, with an hourglass icon** - this question will have to be answered in some later phase
+- **green, with a checkmark icon** - this question has already been answered
 
 .. NOTE::
 
@@ -40,7 +46,9 @@ Questionnaire Area
 
 The questionnaire area fills the most space in the questionnaire screen. It displays the questions and answers from the opened chapter.
 
-Each question has an identifier which indicates the order and nesting of the question, for example **1.a.5**, and the actual question. There can be optionally some additional information:
+Each question has an identifier which indicates the chapter it belongs to, as well as its order and nesting within the chapter. For example, **I.1.a.5**, where the Roman numeral represents the number of the chapter, and the remaining numbers indicate the order and nesting of the question. Then there is also the question name.
+
+Some additional information can also be part of the question:
 
 - **Question tags** - can indicate some additional groupping of questions, for example what DMP templates is this question used for
 - **Description** - additional information explaining the question
@@ -132,6 +140,8 @@ In the questionnaire tab, there is a menu bar with various options. The first on
 - :guilabel:`Answered by` - show/hide who and when answered questions
 - :guilabel:`Phases` - show/hide what phase the questions are desirable in
 - :guilabel:`Question tags` - show/hide the question tags
+- :guilabel:`Non-desirable questions` - show/hide questions that are not desired to be filled in current phase
+- :guilabel:`Metric values` - show/hide value of metrics for accessibility purpose
 
 .. figure:: questionnaire/view-options.png
     :width: 170
