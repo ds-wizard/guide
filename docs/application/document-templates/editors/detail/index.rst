@@ -18,7 +18,7 @@ There is also option to :doc:`./publish` the document template via :guilabel:`Pu
 .. toctree::
     :maxdepth: 2
 
-    Template<template>
     Files<files>
     Preview<preview>
+    Settings<settings>
     Publish<publish>

@@ -1,7 +1,7 @@
-Template
+Settings
 ********
 
-The :guilabel:`Template` tab of :doc:`./index` allows us to adjust the configuration and metadata of the document template. It is split to the following three parts:
+The :guilabel:`Settings` tab of :doc:`./index` allows us to adjust the configuration and metadata of the document template. It is split to the following three parts:
 
 General
 =======
