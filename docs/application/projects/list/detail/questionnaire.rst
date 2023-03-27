@@ -15,7 +15,7 @@ If the :ref:`knowledge model<knowledge-model>` we use for the :ref:`project<proj
     
     Phase selection widget.
 
-By selecting the phase you are currently in, we can see the desirability of questions. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
+By selecting the phase we are currently in, we can see the desirability of questions. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
 
 There are three desirability states the question can be in:
 
