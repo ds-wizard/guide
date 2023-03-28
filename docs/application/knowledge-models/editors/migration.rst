@@ -53,4 +53,17 @@ We can cancell the knowledge model migration at any point before we publish the 
 Finishing a Knowledge Model Migration
 =====================================
 
-After we resolve all the changes, we are ready to publish the new version of the Child KM. The publishing process is the same as when :ref:`publishing from the KM editor<knowledge-model-publish>`.
+After we resolve all the changes, we are ready to publish the new version of the Child KM. To do that, we need to click on the :guilabel:`Publish →` button. This will open the Publish new version screen where we need to provide additional information for the new version of the Knowledge Model.
+
+The publish screen shows us some information about the knowledge model, such as it's **Knowledge Model Name** and **Knowledge Model ID**. We need to choose the new **version number**.
+
+.. NOTE::
+
+    We recommended using similar approach as in `semantic versioning <https://semver.org>`_. So when we have a version ``<major>.<minor>.<patch>``, change in the major version number indicates some breaking changes (deleting questions, significant changes in the questionnaire structure, etc.), change in minor version number indicates some new changes that are backwards compatible (i.e., adding a new question), and change in the patch version number indicate some fixes (such as fixing some typos).
+
+
+Then we need to add some additional metadata (these fields are pre-filled if there was a previous version published):
+
+- **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX Licens List <https://spdx.org/licenses/>`_.
+- **Description** - this should be really short and descriptive. It is used, for example, in select boxes when creating a new project to help researchers choose the best knowledge model for their use case.
+- **Readme** - this is where we can describe everything we need about the knowledge model. We can, for example, include a changelog of what changed in what version, etc. We can use :ref:`Markdown<markdown>` in this field to provide some nice formatting.

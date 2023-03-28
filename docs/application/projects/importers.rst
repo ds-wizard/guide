@@ -8,7 +8,7 @@ Project Importers
     Project importers are an experimental feature.
 
 
-We can use project importers to import data from different DSW instances or even different applications to DSW. Each has a set of supported knolwedge models defined. This is because each knowledge model has a different structure and the importer needs to understand it so it can import the answers to the correct questions.
+We can use project importers to import data from different DSW instances or even different applications to DSW. Each has a set of supported knowledge models defined. This is because each knowledge model has a different structure and the importer needs to understand it so it can import the answers to the correct questions.
 
 .. NOTE::
 

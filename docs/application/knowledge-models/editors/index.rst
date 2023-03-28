@@ -19,7 +19,7 @@ By clicking the triple dots on each of the item in the list we can access some a
 - **Open Editor** - simply open the :ref:`editor detail<knowledge-model-editor>`
 - **Upgrade** - if there is a newer version of parent knowledge model, we can use upgrade action to start a :ref:`knowledge model migration<knowledge-model-migration>`, otherwise the action is not visible
 - **Publish** - to :ref:`publish<knowledge-model-publish>` a new version of the knowledge model
-- **Delete** - to delete the knolwedge model editor (cannot be undone)
+- **Delete** - to delete the knowledge model editor (cannot be undone)
 
 If there is an ongoing :ref:`knowledge model migration<knowledge-model-migration>`, there are different actions:
 

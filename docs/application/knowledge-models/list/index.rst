@@ -1,3 +1,5 @@
+.. _knowledge-model-list:
+
 Knowledge Model List
 ********************
 

@@ -188,7 +188,7 @@ Question Tag
 
 We can define question tags on the knowledge model and then assign them to different :ref:`questions<question>`. This can be used to group together questions on the same topic or for the same purpose.
 
-When researchers create a new project from the knowledge model, they can only choose the question groups they are interested in for their research. So we can use this to create a very rich knolwedge model but researchers will be able to use only the parts relevant to them.
+When researchers create a new project from the knowledge model, they can only choose the question groups they are interested in for their research. So we can use this to create a very rich knowledge model but researchers will be able to use only the parts relevant to them.
 
 
 .. _integration:

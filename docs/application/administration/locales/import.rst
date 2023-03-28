@@ -3,7 +3,7 @@
 Import Locale
 *************
 
-We can import an existing locale by navigating to :doc:`./index` (:menuselection:`Settings > Locales`) in the main menu and then clicking on :guilabel:`Import` button on the list of locales.
+We can import an existing locale by navigating to :menuselection:`Settings → Locales` in the main menu and then clicking on :guilabel:`Import` button on the list of locales.
 
 
 .. _locale-import-from-registry:

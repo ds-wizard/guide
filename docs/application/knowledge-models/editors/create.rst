@@ -3,7 +3,7 @@
 Create Knowledge Model Editor
 *****************************
 
-We can create a new knowledge model editor by navigating to :guilabel:`Knowledge Models → Editors` in the main menu and then clicking the :guilabel:`Create` button.
+We can create a new knowledge model editor by navigating to :menuselection:`Knowledge Models → Editors` in the main menu and then clicking the :guilabel:`Create` button.
 
 .. figure:: create/create-km.png
     :width: 528
@@ -11,7 +11,7 @@ We can create a new knowledge model editor by navigating to :guilabel:`Knowledge
     Form for creating a new knowledge model.
 
 
-Every knowledge model needs to have a **name** and  a **knowledge model ID**. The name should be something descriptive to help users understand what the knowledge model is about. The knowledge model ID is used for the identification together with the :ref:`organization ID<organization-settings>` and knowledge model version after it is published. So the identifier of the knolwedge model is: 
+Every knowledge model needs to have a **name**, a **knowledge model ID** and **version**. The name should be something descriptive to help users understand what the knowledge model is about. The knowledge model ID is used for the identification together with the :ref:`organization ID<organization-settings>` and knowledge model version after it is published. So the identifier of the knowledge model is: 
 
 .. code::
 
