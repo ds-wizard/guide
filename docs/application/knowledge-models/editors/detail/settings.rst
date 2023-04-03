@@ -28,6 +28,5 @@ If the knowledge model was based on another knowledge model, we can also see the
 In the **Danger Zone** we can delete the knowledge model. Once it is deleted it can **no longer be recovered**.
 
 .. figure:: settings/settings-form.png
-    :width: 548
     
     Knowledge Model settings.

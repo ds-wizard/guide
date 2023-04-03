@@ -3,7 +3,7 @@
 Publish
 *******
 
-Before the knowledge model can be used by researchers in their projects, we need to publish it. We can to that by clicking the :guilabel:`Publish` button in the top right corner of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
+Before the knowledge model can be used by researchers in their projects, we need to publish it. We can do that by clicking the :guilabel:`Publish` button in the top right corner of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
 
 If we click the button, we are prompted whether we are sure to publish it. We cannot change the version here, so if we want to change it, we have to press Cancel and edit the version number first on the :guilabel:`Settings` tab of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
 
