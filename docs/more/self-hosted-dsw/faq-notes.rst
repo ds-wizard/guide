@@ -37,6 +37,10 @@ I upgraded DSW and now it does not work properly, what should I do?
 
 You should always check :doc:`upgrade-guidelines` before upgrading, be sure that you followed all steps. In case you forgot and it is not possible to fix it now, you will have to rollback from you backup and do it again by following the guidelines this time. In case you encounter an issue even though you followed the guidelines, that might a bug and please `report it <https://github.com/ds-wizard/ds-wizard/issues>`_.
 
+Document templates show "Unsupported Metamodel", what should I do?
+------------------------------------------------------------------
+
+You need to update your document templates so those are compatible with your DSW version, e.g. from DSW Registry. If those are your own document templates, you need to update them according to :doc:`upgrade-guidelines`.
 
 Deployment Notes
 ================

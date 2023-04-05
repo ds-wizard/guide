@@ -38,6 +38,11 @@ Upgrade process
 
 Usually, nothing special is required for the upgrade. Internal structure changes are migrated automatically using DB migrations and Metamodel migrations *(since 1.8.0)*. See below the changes that need to be done by us *(since 1.10.0)*:
 
+3.21.X to 3.22.X
+----------------
+
+*(nothing)*
+
 3.20.X to 3.21.X
 ----------------
 
@@ -284,6 +289,10 @@ The following table shows the compatibility of the DS Wizard with the metamodel 
 +------------------+--------------+-----------------------------+----------------------------+-----------+
 | DS Wizard        | KM Metamodel | Document Template Metamodel | Project Importer Metamodel | Registry  |
 +==================+==============+=============================+============================+===========+
+| 3.22.0           |           13 |                          11 |                          1 |    3.22.0 |
++------------------+--------------+-----------------------------+----------------------------+-----------+
+| 3.21.0           |           13 |                          11 |                          1 |    3.21.0 |
++------------------+--------------+-----------------------------+----------------------------+-----------+
 | 3.20.0           |           13 |                          11 |                          1 |    3.20.0 |
 +------------------+--------------+-----------------------------+----------------------------+-----------+
 | 3.19.0           |           13 |                          10 |                          1 |    3.19.0 |

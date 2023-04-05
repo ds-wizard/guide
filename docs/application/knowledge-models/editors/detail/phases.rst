@@ -1,3 +1,5 @@
+.. _km-editor-phases:
+
 Phases
 ******
 

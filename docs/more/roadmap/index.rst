@@ -17,24 +17,63 @@ Need to know some info about the latest released version or what is planned?
 Planned Versions
 ================
 
-3.22
+3.23
 ----
 
-* Release (expected): 4 April 2023
-* `Jira issues 3.22.0 <https://ds-wizard.atlassian.net/browse/DSW-1730?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.22.0%20ORDER%20BY%20priority%20DESC>`__
-* Key changes:
-    * Information about versions of all components
-    * Possibility to forbid use of a specific KM
-    * Support DKIM signing for emails
-    * Phase table in KM Editor
-    * Improve default English locale metadata
-    * Several UI/UX improvements and bugfixes
+* Release (expected): 2 May 2023
+* `Jira issues 3.23.0 <https://ds-wizard.atlassian.net/browse/DSW-1865?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.23.0%20ORDER%20BY%20priority%20DESC>`__
 
 
 .. _released-versions:
 
 Released Versions
 =================
+
+
+.. _v3.22:
+
+3.22
+----
+
+* Release: 4 April 2023
+* `Jira issues 3.22.0 <https://ds-wizard.atlassian.net/browse/DSW-1730?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.22.0%20ORDER%20BY%20priority%20DESC>`__
+
+
+* **Features:**
+
+  * Added the possibility to set a knowledge model as deprecated so researchers cannot use it to create new projects.
+  * Added :ref:`phase editor<km-editor-phases>` to KM Editor (similar to Tag editor).
+  * Renamed :guilabel:`Template` tab to :guilabel:`Settings` in the document template editor to make it consistent with KM Editor or Project.
+  * Added link to selected project in document template editor preview.
+  * Position in the questionnaire is now remembered when switching tabs in the project (such as going to preview and back to the questionnaire).
+  * Warnings tab in the project is now automatically closed when the last one is resolved.
+  * Projects are no longer filtered by current user if the user is admin.
+  * Improved accessibility of unanswered question indications and metrics (as well as adding an option to hide non-desirable questions).
+  * Added information about a version of all components in the About modal.
+  * Improved add button labels in various forms to make it easier to understand what they add.
+  * Added support for DKIM signing for emails.
+  * Added experimental `weasyprint step <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/steps/weasyprint.md>`__ in document templates for better PDF documents generation. 
+  * User details are now updated in the menu after editing your own profile.
+  * Added link to the DSW Registry from locale detail.
+
+* **Bugfixes:**
+
+  * Fixed visible first chapter in KM Editor preview when deleted.
+  * Fixed inconsistent update label for badge and action for KM migration.
+  * Fixed failing to publish knowledge models due to wrong event squashing in some cases.
+  * Fixed redirect to login when opening the project after the session has expired.
+  * Fixed a visual bug in the project selection dropdown in the document template editor preview.
+  * Fixed text overflow for long questions/answers in the project import view.
+  * Fixed image previews in the document template editor.
+  * Fixed downloading document template with DSW TDK.
+  * Fixed dropdown menu separators in list views.
+
+* **Misc:**
+
+  * Added support for RO-Crates (`RO-Crate Importer <https://github.com/ds-wizard/dsw-ro-crate-importer>`__ and `RO-Crate Template <https://github.com/ds-wizard/ro-crate-template>`__)
+  * Improved default English locale metadata.
+  * Added support for arm64 builds for most of the Docker images.
+
 
 3.21
 ----
