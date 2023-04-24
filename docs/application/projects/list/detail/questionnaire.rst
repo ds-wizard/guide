@@ -62,9 +62,11 @@ Based on our role in the project and specific instance settings there are some a
 - :ref:`Add comment<add-comment>`
 - Provide feedback for the question
 
+We can get more information on how various collaboration tools work and can be used in :ref:`Sharing<sharing>`.
+
 The most important part is, however, answering the question. The way of how to answer the question differs based on the question type.
 
-The following video tutorial explain questions and different question types in more detail.
+The following video tutorial explains questions and different question types in more detail.
 
 .. youtube:: buG5BjWPs70
     :width: 100%
