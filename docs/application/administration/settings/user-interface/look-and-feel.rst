@@ -28,10 +28,4 @@ We can easily add custom links to the main (left) menu by clicking :guilabel:`Ad
 .. figure:: look-and-feel/custom-links.png
     
     Example configuration of a custom menu link.
-
-
-
-Login Info
-==========
-
-It is possible to write a message (Markdown-enabled) that users will see before logging in the DSW instance. We can use it to explain users in what cases they can/should use our DSW instance, or how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured).
+    
