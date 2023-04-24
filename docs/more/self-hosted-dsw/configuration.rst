@@ -204,7 +204,7 @@ Integrations in the DS Wizard use external APIs. Sometimes, we might need some c
         apiUrl: https://api.dbase.example:10666
         someConfig: someValue4Integration
 
-There can be multiple integrations configured in a single file. These can be used then when setting up the integration in the Editor as ``${apiKey}``, ``${apiUrl}``, etc. More about integrations can be found in separate :ref:`integrations documentation<integrations>`.
+There can be multiple integrations configured in a single file. These can be used then when setting up the integration in the Editor as ``${apiKey}``, ``${apiUrl}``, etc. More about integrations can be found in separate :ref:`integration questions documentation<integration_questions>`.
 
 .. NOTE::
 

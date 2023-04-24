@@ -196,7 +196,7 @@ When researchers create a new project from the knowledge model, they can only ch
 Integration
 -----------
 
-Integrations define a connection to an external service or resource where we can get the answers from. They are used with :ref:`integration questions<integration-question>`. For each integration we configure some basic information, such as **ID**, **Name**, or **Logo URL**. Other configuration varies based on the integration type. More information about how to configure integration is available under the :ref:`integration development<integrations>`.
+Integrations define a connection to an external service or resource where we can get the answers from. They are used with :ref:`integration questions<integration-question>`. For each integration we configure some basic information, such as **ID**, **Name**, or **Logo URL**. Other configuration varies based on the integration type. More information about how to configure integration is available under the :ref:`integration questions documentation<integration_questions>`.
 
 API Integration
 ^^^^^^^^^^^^^^^

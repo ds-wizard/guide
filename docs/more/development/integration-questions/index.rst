@@ -1,7 +1,7 @@
-.. _integrations:
+.. _integration_questions:
 
-Integrations
-************
+Integration Questions
+*********************
 
 DSW can be integrated with other services using so called :ref:`integration question<integration-question>`. The answer to that type of question does not contain only the answer itself but also a link to that external resource (which can be done, for example, using a persistent identifier). Therefore, these answers help clearly understand what the researchers use and promotes interoperability.
 

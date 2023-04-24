@@ -60,7 +60,7 @@ Here are some recommended sections where to start based on the role:
       - :ref:`document-template-development`
       - :ref:`submission-service`
     * - 
-      - :ref:`integrations`
+      - :ref:`integration_questions`
       - 
     * - 
       - :ref:`project-importers`
