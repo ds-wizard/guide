@@ -20,7 +20,7 @@ Planned Versions
 3.24
 ----
 
-* Release (expected): 2 May 2023
+* Release (expected): 30 May 2023
 
 
 .. _released-versions:
