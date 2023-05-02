@@ -13,5 +13,5 @@ User Interface (UI) settings allow us to manage how the DSW instance looks like:
 .. toctree::
     :maxdepth: 2
 
-    Dashboard<dashboard>
+    Dashboard & Login Screen<dashboard-and-login-screen>
     Look & Feel<look-and-feel>

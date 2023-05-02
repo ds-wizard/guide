@@ -106,7 +106,7 @@ An answer is used with :ref:`options questions<options-question>`. It contains a
 
 Answers can have **follow-up questions** that are only visible if the answer is selected. We can use this to ask only relevant questions based on the previous answers.
 
-If tere are some :ref:`metrics<metric>` created in the knowledge model, we can configure how each answer affects them. The result for each metric is eventually calculated as a weighted average of all answers affecting that metric. Therefore, we need to configure:
+If there are some :ref:`metrics<metric>` created in the knowledge model, we can configure how each answer affects them. The result for each metric is eventually calculated as a weighted average of all answers affecting that metric. Therefore, we need to configure:
 
 - **weight** [0..1] - how important the answer is (0 = not important at all, 1 = very important)
 - **measure** [0..1] - how it affects the metric (0 = bad, 1 = good)
@@ -196,7 +196,7 @@ When researchers create a new project from the knowledge model, they can only ch
 Integration
 -----------
 
-Integrations define a connection to an external service or resource where we can get the answers from. They are used with :ref:`integration questions<integration-question>`. For each integration we configure some basic information, such as **ID**, **Name**, or **Logo URL**. Other configuration varies based on the integration type. More information about how to configure integration is available under the :ref:`integration development<integrations>`.
+Integrations define a connection to an external service or resource where we can get the answers from. They are used with :ref:`integration questions<integration-question>`. For each integration we configure some basic information, such as **ID**, **Name**, or **Logo URL**. Other configuration varies based on the integration type. More information about how to configure integration is available under the :ref:`integration questions documentation<integration_questions>`.
 
 API Integration
 ^^^^^^^^^^^^^^^

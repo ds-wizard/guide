@@ -1,5 +1,5 @@
-Dashboard Settings
-******************
+Dashboard & Login Screen Settings
+*********************************
 
 The dashboard settings allows us to adjust what users will see after they log in, i.e. on the application initial page called the dashboard. 
 
@@ -37,7 +37,30 @@ We can select the **Dashboard Style** whether the user should see a standard **w
   * **Add OpenID Widget** quickly navigates to :doc:`../system/authentication` to configure the identity provider services (if not yet been done).
 
 
-Welcome Info and Warning
-========================
+.. _login-info:
 
-Another option to adjust the dashboard is to add **Welcome Info** or **Welcome Warning** which is then visible above the main dashboard content (both **welcome** and **role-based**). The different between info and warning is just in the style; in both cases, we can use Markdown syntax. We should use **Welcome Info** for some generic information for users, e.g. some custom welcome message and links. On the other hand **Welcome Warning** is suitable for important notification, for example, that there is some work in progress being done or outage is planned.
+Login Info
+==========
+
+It is possible to write a message that users will see before logging in the DSW instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our DSW instance, how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured), or if there is any news regarding our DSW instance.
+
+.. _sidebar-login-info:
+
+Sidebar Login Info
+==================
+
+It is also possible to write another message that users will see on the login screen. The Sidebar Login info is placed underneath the login form. We can also use HTML or Markdown as in the Login Info.
+
+
+.. _announcements:
+
+Announcements
+=============
+
+Another option to adjust the dashboard and/or the login screen is to add Announcements. Announcements are displayed above the main content in the login screen. In dashboard, they are also displayed above the main content for both **welcome** and **role-based** dashboard style. There are three levels of Announcements:
+
+* **Info** - light blue color for sending informations to the users.
+* **Warning** - yellow to warn the users about something.
+* **Critical** - red to signalize the Announcement is critical and it needs attention.
+
+The content of the Announcement can be edited using Markdown. There are also two additional switches which determine, where the Announcement is displayed. The Announcement can be set up to be displayed either on the dashboard after users log in or on the login screen before the users log in. It is also possible to display the same Announcement in both places. Number of Announcements is not limited.

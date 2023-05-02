@@ -122,6 +122,13 @@ There are different roles how we can share the project that can access different
     Some of the following options might be globally disabled in the application settings for the whole DSW instance, therefore not visible on the project level.
 
 
+The following video tutorial explains and showcases sharing options and tools that can be used while collaborating with others. Some features mentioned in the video are also explained in the :ref:`project questionnaire<project-questionnaire>`.
+
+.. youtube:: ZN0VTbpLrHk
+    :width: 100%
+    :align: center
+
+
 Users
 =====
 
