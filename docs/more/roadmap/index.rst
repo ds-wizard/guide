@@ -17,7 +17,7 @@ Need to know some info about the latest released version or what is planned?
 Planned Versions
 ================
 
-3.23
+3.24
 ----
 
 * Release (expected): 2 May 2023
@@ -51,6 +51,46 @@ Released Versions
 * **More:**
 
   * `Jira issues 3.22.1-tools <https://ds-wizard.atlassian.net/browse/DSW-1900?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.22.1-tools%20ORDER%20BY%20priority%20DESC>`__
+
+
+
+.. _v3.23:
+
+3.23
+----
+
+* *Release (expected): 2 May 2023*
+
+* **Features:**
+  
+  * Added possibility to generate API tokens to access the API instead of using username and password. The API tokens also work when 2FA is enabled.
+  * Added an overview of all active sessions.
+  * It is now possible to use HTML for login info.
+  * Added possibility for additional login info under the login box.
+  * Welcome warning and info have been reworked to announcements -- it is now possible to have unlimited list of announcements of different levels and choose if they are visible on dashboard and/or login screen.
+  * Added sort by created to document template list.
+  * Improved progress bar in project migration.
+  * Warnings tab in the knowledge model editor is now automatically closed when the last one is resolved.
+  * Fixed knowledge model export from the knowledge model list.
+  * Improved form actions to make them more visible when forms change.
+  
+* **Bugfixes:**
+
+  * Fixed project indication calculation after import or project migration.
+  * Fixed double error message when deleting failed in list views.
+  * Fixed buttons in email templates in Outlook.
+  * Fixed phase in questionnaire after project migration if the phase no longer exists.
+  * Fixed dropdown menus in the sidebar when page was scrolled.
+
+* **Misc:**
+
+  * Sped up processing and generating of documents.
+  * Changed path of configuration files.
+
+* **More:**
+  
+  * `Jira issues 3.23.0 <https://ds-wizard.atlassian.net/browse/DSW-1865?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.23.0%20ORDER%20BY%20priority%20DESC>`__
+  * `API Changelog 3.22.0 ➔ 3.23.0 <https://api-docs.ds-wizard.org/changelogs/3.22.0-3.23.0.html>`__ 
 
 
 .. _v3.22.3-backend:
