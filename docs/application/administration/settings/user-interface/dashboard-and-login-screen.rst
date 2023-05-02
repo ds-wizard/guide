@@ -37,15 +37,22 @@ We can select the **Dashboard Style** whether the user should see a standard **w
   * **Add OpenID Widget** quickly navigates to :doc:`../system/authentication` to configure the identity provider services (if not yet been done).
 
 
+.. _login-info:
+
 Login Info
 ==========
 
 It is possible to write a message that users will see before logging in the DSW instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our DSW instance, how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured), or if there is any news regarding our DSW instance.
 
+.. _sidebar-login-info:
+
 Sidebar Login Info
 ==================
 
 It is also possible to write another message that users will see on the login screen. The Sidebar Login info is placed underneath the login form. We can also use HTML or Markdown as in the Login Info.
+
+
+.. _announcements:
 
 Announcements
 =============

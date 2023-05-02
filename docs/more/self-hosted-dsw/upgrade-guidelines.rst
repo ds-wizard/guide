@@ -38,6 +38,8 @@ Upgrade process
 
 Usually, nothing special is required for the upgrade. Internal structure changes are migrated automatically using DB migrations and Metamodel migrations *(since 1.8.0)*. See below the changes that need to be done by us *(since 1.10.0)*:
 
+.. _upgrade-3-22-x-3-23-x:
+
 3.22.X to 3.23.X
 ----------------
 

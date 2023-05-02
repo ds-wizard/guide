@@ -1,3 +1,5 @@
+.. _active-sessions:
+
 Active Sessions
 ***************
 

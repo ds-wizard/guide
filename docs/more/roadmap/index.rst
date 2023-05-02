@@ -17,11 +17,10 @@ Need to know some info about the latest released version or what is planned?
 Planned Versions
 ================
 
-3.23
+3.24
 ----
 
 * Release (expected): 2 May 2023
-* `Jira issues 3.23.0 <https://ds-wizard.atlassian.net/browse/DSW-1865?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.23.0%20ORDER%20BY%20priority%20DESC>`__
 
 
 .. _released-versions:
@@ -51,6 +50,45 @@ Released Versions
 * **More:**
 
   * `Jira issues 3.22.1-tools <https://ds-wizard.atlassian.net/browse/DSW-1900?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.22.1-tools%20ORDER%20BY%20priority%20DESC>`__
+
+
+
+.. _v3.23:
+
+3.23
+----
+
+* *Release (expected): 2 May 2023*
+
+* **Features:**
+  
+  * Added the possibility to generate :ref:`API keys<api-keys>` to access the API instead of using username and password. The API keys also work when 2FA is enabled.
+  * Added an overview of all :ref:`active sessions<active-sessions>`.
+  * It is now possible to use HTML for :ref:`login info<login-info>`.
+  * Added possibility for :ref:`sidebar login info<sidebar-login-info>` under the login box.
+  * Welcome warning and info have been reworked to :ref:`announcements<announcements>` -- it is now possible to have an unlimited list of announcements of different levels and choose if they are visible on the dashboard and/or login screen.
+  * Added sort by created to document template list.
+  * Improved progress bar in project migration.
+  * The warnings tab in the knowledge model editor is now automatically closed when the last one is resolved.
+  * Improved form actions to make them more visible when forms change.
+  
+* **Bugfixes:**
+
+  * Fixed project indication calculation after import or project migration.
+  * Fixed double error message when deleting failed in list views.
+  * Fixed buttons in email templates in Outlook.
+  * Fixed phase in a questionnaire after project migration if the phase no longer exists.
+  * Fixed dropdown menus in the sidebar when the page was scrolled.
+  * Fixed knowledge model export from the knowledge model list.
+
+* **Misc:**
+
+  * Changed the path of configuration files (:ref:`see upgrade guidelines<upgrade-3-22-x-3-23-x>`).
+  * Sped up processing and generating of documents.
+
+* **More:**
+  
+  * `API Changelog 3.22.0 ➔ 3.23.0 <https://api-docs.ds-wizard.org/changelogs/3.22.0-3.23.0.html>`__ 
 
 
 .. _v3.22.3-backend:
