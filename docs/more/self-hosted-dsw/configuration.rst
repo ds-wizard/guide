@@ -44,11 +44,18 @@ This configuration section is used only by **Server** and covers basic configura
 
    :type: String
 
-    Secret string of 32 characters for encrypting configuration in the database and JWT tokens.
+    Secret string of 32 characters for encrypting configuration in the database.
+
+.. confval:: rsaPrivateKey
+
+    :type: String
+
+    RSA private key for signing JWT tokens according to RS256 algorithm in PEM format (e.g. use ``ssh-keygen -t rsa -b 4096 -m PEM -f jwtRS256.key`` without passphrase and paste the contents to this configuration item).
+
 
 .. WARNING::
 
-    We should keep our ``secret`` secured! Changing ``secret`` will require re-configuration of secrets stored in the database, e.g., token for Registry.
+    We should keep our ``secret`` and ``rsaPrivateKey`` secured! Changing ``secret`` will require re-configuration of secrets stored in the database, e.g., token for Registry.
 
 If we need to change our ``secret``, we need also replace all values encrypted by the secret that is stored in the database as follows:
 

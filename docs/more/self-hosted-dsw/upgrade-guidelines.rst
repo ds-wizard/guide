@@ -38,6 +38,13 @@ Upgrade process
 
 Usually, nothing special is required for the upgrade. Internal structure changes are migrated automatically using DB migrations and Metamodel migrations *(since 1.8.0)*. See below the changes that need to be done by us *(since 1.10.0)*:
 
+3.22.X to 3.23.X
+----------------
+
+- **(breaking)** The JWT signing has been changed to RS256 and you need to add ``rsaPrivateKey`` in configuration file (see :ref:`config-server`).
+- **(breaking)** The location of configuration files has been changed and unified across components, check the deployment example for details. The main configuration file is located in ``/app/config/application.yml`` path which can be adjusted  ``APPLICATION_CONFIG_PATH``.
+
+
 3.21.X to 3.22.X
 ----------------
 
