@@ -37,6 +37,23 @@ Released Versions
 .. _tools:
 
 
+.. _v3.23.1-backend:
+
+3.23.1 (backend)
+----------------
+
+* *Release: 4 May 2023*
+
+* **Bugfixes:**
+
+  * Fixed loading RSA private key if set only in the ENV variable.
+
+* **More:**
+
+  * `API Changelog 3.23.0 ➔ 3.23.1 <https://api-docs.ds-wizard.org/changelogs/3.23.0-3.23.1.html>`__ 
+
+
+
 .. _v3.23:
 
 3.23
