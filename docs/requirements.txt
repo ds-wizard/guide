@@ -28,7 +28,7 @@ ruamel.yaml==0.17.22
 six==1.16.0
 snowballstemmer==2.2.0
 soupsieve==2.4.1
-Sphinx==6.2.1
+Sphinx==7.0.1
 sphinx-autodoc-typehints==1.23.0
 sphinx-basic-ng==1.0.0b1
 sphinx-jinja2-compat==0.2.0
