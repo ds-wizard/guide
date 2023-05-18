@@ -42,6 +42,20 @@ Document templates show "Unsupported Metamodel", what should I do?
 
 You need to update your document templates so those are compatible with your DSW version, e.g. from DSW Registry. If those are your own document templates, you need to update them according to :doc:`upgrade-guidelines`.
 
+You can follow this guide:
+
+1. Go to Settings -> Content Settings -> DSW Registry
+2. Click on Enabled
+3. Click on Sign Up
+4. Fill out your email
+5. With a token you will get to login to https://registry.ds-wizard.org
+6. Open Questionnaire Report
+7. Copy the Template ID
+8. Go back to Wizard -> Document Templates -> List
+9. Click on Import
+10. Paste the Template ID
+11. Click on Import
+
 Deployment Notes
 ================
 
