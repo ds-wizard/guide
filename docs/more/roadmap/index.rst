@@ -66,6 +66,21 @@ Released Versions
 
   - * `API Changelog 3.23.0 ➔ 3.24.0 <https://api-docs.ds-wizard.org/changelogs/3.23.0-3.24.0.html>`__
 
+.. _v3.23.2-backend:
+
+3.23.2 (backend)
+----------------
+
+* *Release: 25 May 2023*
+
+* **Bugfixes:**
+
+  * Fixed API key expiration to use the value set when creating it.
+
+* **More:**
+
+  * `API Changelog 3.23.1 ➔ 3.23.2 <https://api-docs.ds-wizard.org/changelogs/3.23.1-3.23.2.html>`__ 
+
 
 
 .. _v3.23.1-backend:
