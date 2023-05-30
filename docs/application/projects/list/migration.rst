@@ -5,6 +5,13 @@ Project Migration
 
 Every project is based on a specific :ref:`knowledge model<knowledge-model>`, its version, and selected tags. Sometimes, we might want to change the knowledge model to a different version (for example, when a new version is released), change the knowledge model (for example, when a new customization is created), or just change the tag selection. Project migration is a process where we can do this.
 
+The following video explains all aspects of Project Migration.
+
+.. youtube:: E5bXIWvhNKw
+    :width: 100%
+    :align: center
+
+
 Creating a Project Migration
 ============================
 

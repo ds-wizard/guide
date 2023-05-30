@@ -17,10 +17,10 @@ Need to know some info about the latest released version or what is planned?
 Planned Versions
 ================
 
-3.24
+3.25
 ----
 
-* Release (expected): 30 May 2023
+* Release (expected): 4 July 2023
 
 
 .. _released-versions:
@@ -35,6 +35,52 @@ Released Versions
 .. _frontend-backend:
 .. _backend:
 .. _tools:
+
+
+
+.. _v3.24:
+
+3.24
+----
+
+- *Release: 30 May 2023*
+
+- **Features:**
+
+  - List views (such as project list or knowledge model list) have been reworked so that only the results are reloaded instead of the whole page. Therefore, the search field should not loose focus when typing slowly.
+  - Added warning before the user session expires.
+  - Improved information on detail pages (such as knowledge model or document template).
+
+- **Bugfixes:**
+  
+  - Fixed document generation when there were inconsistent replies after questionnaire migration.
+  - Fixed icon alignment in questionnaire import.
+  - Fixed color transition for menu icons.
+
+- **Misc:**
+
+  - All document templates from DSW Registry now use WeasyPrint instead of wkhtmltopdf for PDF formats.
+  - It is recommended to migrate your existing PDF template to `WeasyPrint <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/steps/weasyprint.md>`__ as wkhtmltopdf will be removed in the future.
+
+- **More:**
+
+  - * `API Changelog 3.23.0 ➔ 3.24.0 <https://api-docs.ds-wizard.org/changelogs/3.23.0-3.24.0.html>`__
+
+.. _v3.23.2-backend:
+
+3.23.2 (backend)
+----------------
+
+* *Release: 25 May 2023*
+
+* **Bugfixes:**
+
+  * Fixed API key expiration to use the value set when creating it.
+
+* **More:**
+
+  * `API Changelog 3.23.1 ➔ 3.23.2 <https://api-docs.ds-wizard.org/changelogs/3.23.1-3.23.2.html>`__ 
+
 
 
 .. _v3.23.1-backend:
@@ -92,6 +138,7 @@ Released Versions
   * `API Changelog 3.22.0 ➔ 3.23.0 <https://api-docs.ds-wizard.org/changelogs/3.22.0-3.23.0.html>`__ 
 
 
+
 .. _v3.22.1-tools:
 
 3.22.1 (tools)
@@ -106,6 +153,8 @@ Released Versions
 * **More:**
 
   * `Jira issues 3.22.1-tools <https://ds-wizard.atlassian.net/browse/DSW-1900?jql=project%20%3D%20DSW%20AND%20fixVersion%20%3D%203.22.1-tools%20ORDER%20BY%20priority%20DESC>`__
+
+
 
 .. _v3.22.3-backend:
 
