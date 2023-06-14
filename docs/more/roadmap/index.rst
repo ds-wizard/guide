@@ -81,6 +81,23 @@ Released Versions
 
   * `API Changelog 3.23.0 ➔ 3.24.0 <https://api-docs.ds-wizard.org/changelogs/3.23.0-3.24.0.html>`__
 
+
+.. _v3.23.3-backend:
+
+3.23.3 (backend)
+----------------
+
+* *Release: 14 June 2023*
+
+* **Bugfixes**
+  
+  * Fixed generating documents that contain more than one whitespace in the filename.
+
+* **More:**
+
+  * `API Changelog 3.23.2 ➔ 3.23.3 <https://api-docs.ds-wizard.org/changelogs/3.23.2-3.23.3.html>`__ 
+
+
 .. _v3.23.2-backend:
 
 3.23.2 (backend)
