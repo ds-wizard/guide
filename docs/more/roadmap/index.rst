@@ -37,34 +37,49 @@ Released Versions
 .. _tools:
 
 
+.. _v3.24.1-backend:
+
+3.24.1 (backend)
+----------------
+
+* *Release: 14 June 2023*
+
+* **Bugfixes**
+  
+  * Fixed generating documents that contain more than one whitespace in the filename.
+
+* **More:**
+
+  * `API Changelog 3.24.0 ➔ 3.24.1 <https://api-docs.ds-wizard.org/changelogs/3.24.0-3.24.1.html>`__ 
+
 
 .. _v3.24:
 
 3.24
 ----
 
-- *Release: 30 May 2023*
+* *Release: 30 May 2023*
 
-- **Features:**
+* **Features:**
 
-  - List views (such as project list or knowledge model list) have been reworked so that only the results are reloaded instead of the whole page. Therefore, the search field should not loose focus when typing slowly.
-  - Added warning before the user session expires.
-  - Improved information on detail pages (such as knowledge model or document template).
+  * List views (such as project list or knowledge model list) have been reworked so that only the results are reloaded instead of the whole page. Therefore, the search field should not loose focus when typing slowly.
+  * Added warning before the user session expires.
+  * Improved information on detail pages (such as knowledge model or document template).
 
-- **Bugfixes:**
+* **Bugfixes:**
   
-  - Fixed document generation when there were inconsistent replies after questionnaire migration.
-  - Fixed icon alignment in questionnaire import.
-  - Fixed color transition for menu icons.
+  * Fixed document generation when there were inconsistent replies after questionnaire migration.
+  * Fixed icon alignment in questionnaire import.
+  * Fixed color transition for menu icons.
 
-- **Misc:**
+* **Misc:**
 
-  - All document templates from DSW Registry now use WeasyPrint instead of wkhtmltopdf for PDF formats.
-  - It is recommended to migrate your existing PDF template to `WeasyPrint <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/steps/weasyprint.md>`__ as wkhtmltopdf will be removed in the future.
+  * All document templates from DSW Registry now use WeasyPrint instead of wkhtmltopdf for PDF formats.
+  * It is recommended to migrate your existing PDF template to `WeasyPrint <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/steps/weasyprint.md>`__ as wkhtmltopdf will be removed in the future.
 
-- **More:**
+* **More:**
 
-  - * `API Changelog 3.23.0 ➔ 3.24.0 <https://api-docs.ds-wizard.org/changelogs/3.23.0-3.24.0.html>`__
+  * `API Changelog 3.23.0 ➔ 3.24.0 <https://api-docs.ds-wizard.org/changelogs/3.23.0-3.24.0.html>`__
 
 .. _v3.23.2-backend:
 
