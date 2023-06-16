@@ -27,6 +27,10 @@ jobs:
           cache: pip
           cache-dependency-path: |
             **/requirements*.txt
+            
+      - name: Install fonts
+        run: |
+          sudo apt-get install ghostscript fonts-freefont-otf
 
       - name: Install dependencies
         run: |

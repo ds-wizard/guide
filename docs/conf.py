@@ -45,7 +45,8 @@ extensions = [
     'sphinxcontrib.youtube',
     'sphinx.ext.todo',
     'sphinx_toolbox.confval',
-    'sphinxext.rediraffe'
+    'sphinxext.rediraffe',
+    'sphinx.ext.imgconverter',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

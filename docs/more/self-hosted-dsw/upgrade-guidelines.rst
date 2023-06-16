@@ -189,7 +189,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 2.11.X to 2.12.X
 ----------------
 
-- The metamodel for templates has been upgraded, and accessing the reply values is changed due to additional metadata about each reply, see :ref:`schema-doc-context`. But if we are using filters such as ``reply_str_value``, it gets the reply object with value correctly. Moreover, for working with integration reply, the type values are renamed ``IntegrationValue`` -> ``IntegrationType`` and ``PlainValue`` -> ``PlainType`` for consistency.
+- The metamodel for templates has been upgraded, and accessing the reply values is changed due to additional metadata about each reply, see :ref:`document-context`. But if we are using filters such as ``reply_str_value``, it gets the reply object with value correctly. Moreover, for working with integration reply, the type values are renamed ``IntegrationValue`` -> ``IntegrationType`` and ``PlainValue`` -> ``PlainType`` for consistency.
 
 2.10.X to 2.11.X
 ----------------
