@@ -24,7 +24,7 @@ packaging==23.1
 platformdirs==3.5.0
 Pygments==2.15.1
 requests==2.29.0
-ruamel.yaml==0.17.22
+ruamel.yaml==0.17.32
 six==1.16.0
 snowballstemmer==2.2.0
 soupsieve==2.4.1
