@@ -302,8 +302,12 @@ The |project_name| is compatible with all recent versions of web browsers Chrome
 The following table shows the compatibility of the |project_name| with the metamodel versions of Knowledge models, Document Templates, Project Importers, and the Registry.
 
 +------------------+--------------+-----------------------------+----------------------------+-----------+
-| DS Wizard        | KM Metamodel | Document Template Metamodel | Project Importer Metamodel | Registry  |
+| Wizard           | KM Metamodel | Document Template Metamodel | Project Importer Metamodel | Registry  |
 +==================+==============+=============================+============================+===========+
+| 3.24.0           |           13 |                          11 |                          1 |    3.24.0 |
++------------------+--------------+-----------------------------+----------------------------+-----------+
+| 3.23.0           |           13 |                          11 |                          1 |    3.23.0 |
++------------------+--------------+-----------------------------+----------------------------+-----------+
 | 3.22.0           |           13 |                          11 |                          1 |    3.22.0 |
 +------------------+--------------+-----------------------------+----------------------------+-----------+
 | 3.21.0           |           13 |                          11 |                          1 |    3.21.0 |
