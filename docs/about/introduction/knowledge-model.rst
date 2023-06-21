@@ -201,7 +201,7 @@ Integrations define a connection to an external service or resource where we can
 API Integration
 ^^^^^^^^^^^^^^^
 
-API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so DSW can use the API.
+API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so |project_name| can use the API.
 
 
 Widget Integration

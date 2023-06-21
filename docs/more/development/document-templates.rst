@@ -3,7 +3,7 @@
 Document Template Development
 *****************************
 
-Document Templates allows to specify how to export a questionnaire in form of a textual file. It is a highly flexible element of the tool; however, the development requires basic programming skills with Jinja2 templating language. We can develop the document templates either on our local computer (traditional development with text editor or IDE) or directly in DSW using :doc:`../../application/document-templates/editors/index`. 
+Document Templates allows to specify how to export a questionnaire in form of a textual file. It is a highly flexible element of the tool; however, the development requires basic programming skills with Jinja2 templating language. We can develop the document templates either on our local computer (traditional development with text editor or IDE) or directly in |project_name| using :doc:`../../application/document-templates/editors/index`. 
 
 
 .. NOTE::
@@ -12,7 +12,7 @@ Document Templates allows to specify how to export a questionnaire in form of a 
 
     * Your favorite text editor or IDE
     * DSW Template Development Kit (see below)
-    * DSW instance (recommended to have local one) with your admin account
+    * |project_name| instance (recommended to have local one) with your admin account
     * Python 3.7+ (with pip) or Docker
 
 
@@ -56,11 +56,11 @@ Commands
 There are these basic commands:
 
 * ``new`` = create a new template project, it launches a simple interactive wizard for template metadata
-* ``list`` = list all templates (latest versions) from configured DSW
-* ``get`` = download a template project with specified template ID from DSW
-* ``put`` = upload the local template project to DSW (once or continually on-change when ``--watch`` flag is used)
+* ``list`` = list all templates (latest versions) from configured |project_name|
+* ``get`` = download a template project with specified template ID from |project_name|
+* ``put`` = upload the local template project to |project_name| (once or continually on-change when ``--watch`` flag is used)
 * ``verify`` = check the metadata of the local template project
-* ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to DSW via its web interface)
+* ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to |project_name| via its web interface)
 
 Default template directory is current one for ``put``, ``verify``, and ``package``. But ``new`` and ``get`` will create a new folder according to the template ID if not explicitly set in other way.
 
@@ -76,7 +76,7 @@ Environment variables and .env file
 To avoid entering API URL and credentials every time, you can use environment variables:
 
 * ``DSW_API`` = URL of DSW API with which you want to communicate. Hover mouse over your profile name to find the About section where URL is specified.
-* ``DSW_USERNAME`` = your login (email address) to that DSW instance, must be administrator account
+* ``DSW_USERNAME`` = your login (email address) to that |project_name| instance, must be administrator account
 * ``DSW_PASSWORD`` = corresponding password
 
 To make this even easier, you can store those in ``.env`` file in the project root and it will be loaded automatically. Or you can specify the path to a ``.env`` file:
@@ -88,7 +88,7 @@ To make this even easier, you can store those in ``.env`` file in the project ro
 Template Metadata
 =================
 
-Each document template in DSW has metadata stored in ``template.json`` file:
+Each document template in |project_name| has metadata stored in ``template.json`` file:
 
 * ``id`` = composed full ID of the template (``organizationId:templateId:version``)
 * ``organizationId`` = identifier of organization developing the template (lowercase, numerics, dot)
@@ -98,10 +98,10 @@ Each document template in DSW has metadata stored in ``template.json`` file:
 * ``description`` = short description of the template
 * ``license`` = name of the used license
 * ``readme`` = longer description usually containing changelog
-* ``metamodelVersion`` = supported version of template metamodel, it affects with which DSW version is can be used
+* ``metamodelVersion`` = supported version of template metamodel, it affects with which |project_name| version is can be used
 * ``allowedPackages`` = list of package filters (see :ref:`document-template-package-filter`) to specify supported packages
 * ``formats`` = list of available formats (see below :ref:`document-template-format`) with specified steps for generation
-* ``_tdk`` = TDK configuration for local development (not stored in DSW, see :ref:`tdk-config`)
+* ``_tdk`` = TDK configuration for local development (not stored in |project_name|, see :ref:`tdk-config`)
 
 DSW TDK handles ``id`` and ``readme`` for you, so you can skip then and naturally use ``README.md`` file separately.
 
@@ -137,7 +137,7 @@ A template can describe how to produce several formats, each with these metadata
 TDK Config
 ----------
 
-Those are local-only metadata used for development of the template. You can use them in versioned ``template.json`` but those are never stored directly in DSW.
+Those are local-only metadata used for development of the template. You can use them in versioned ``template.json`` but those are never stored directly in |project_name|.
 
 * ``version``: metadata version for needs of migrations
 * ``readmeFile``: files used to get content for ``readme`` of the template, usually ``README.md``
@@ -153,9 +153,9 @@ Document Context
 
     To work efficiently with the Document Context, you want to use object instead of the JSON-like one. Please read through `DocumentContext.md <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/DocumentContext.md>`__ directly (select different version if needed).
 
-Document context is an object that carries all information related to a DSW questionnaire in order to produce a document. To investigate it, it is the best to use *Questionnaire Report* template with ``JSON`` format. The core fields are:
+Document context is an object that carries all information related to a |project_name| questionnaire in order to produce a document. To investigate it, it is the best to use *Questionnaire Report* template with ``JSON`` format. The core fields are:
 
-* ``config`` = object with DSW configuration related to documents, e.g., ``clientUrl`` for referring to the DSW instance
+* ``config`` = object with |project_name| configuration related to documents, e.g., ``clientUrl`` for referring to the |project_name| instance
 * ``createdAt`` = timestamp when the document was created
 * ``createdBy`` = object describing author of the document
 * ``knowledgeModel`` = object describing used KM for the questionnaire
@@ -168,7 +168,7 @@ Document context is an object that carries all information related to a DSW ques
 * ``level`` = current desirability level selected for the questionnaire
 * ``levels`` = list of desirability levels possible
 * ``metrics`` = list of available metrics
-* ``organization`` = object describing organization that runs the DSW instance
+* ``organization`` = object describing organization that runs the |project_name| instance
 * ``package`` = object with metadata about the KM package such as ``version``, ``name``, or ``description``
 * ``questionnaireName`` = name of the questionnaire
 * ``questionnaireReplies`` = map of replies with path-reply pairs, each reply has ``type`` and ``value``
@@ -282,7 +282,7 @@ Local Template Development Procedure
 ====================================
 
 * Prepare template project locally and run ``dsw-tdk put -fw`` with ``.env`` file prepared for your dev instance.
-* Open a project in the DSW dev instance and set default template and format to the one you are going to edit.
+* Open a project in the |project_name| dev instance and set default template and format to the one you are going to edit.
 * Edit the template as you need and save the changed files (TDK will update the template in dev instance).
 * Switch to browser, click "Preview" tab for refresh.
 * You will either compiled document or information about error that will help you to fix it.
@@ -349,7 +349,7 @@ Version 2 (since 2.6.0)
 Version 1 (since 2.5.0)
 -----------------------
 
-* Initial version of metamodel, introduced in DSW 2.5.0 as start of versioning.
+* Initial version of metamodel, introduced in |project_name| 2.5.0 as start of versioning.
 
 
 More Info

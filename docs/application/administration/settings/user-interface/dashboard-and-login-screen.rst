@@ -30,7 +30,7 @@ We can select the **Dashboard Style** whether the user should see a standard **w
 
   * **Configure Organization Widget** quickly navigates to :doc:`../system/organization` if it is not yet done.
 
-  * **Configure Look and Feel Widget** quickly navigates to :doc:`../user-interface/look-and-feel` to adjust style of the DSW instance.
+  * **Configure Look and Feel Widget** quickly navigates to :doc:`../user-interface/look-and-feel` to adjust style of the |project_name| instance.
 
   * **Connect DSW Registry Widget** quickly navigates to :doc:`../content/dsw-registry` to configure the connection (if not yet been done).
 
@@ -42,7 +42,7 @@ We can select the **Dashboard Style** whether the user should see a standard **w
 Login Info
 ==========
 
-It is possible to write a message that users will see before logging in the DSW instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our DSW instance, how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured), or if there is any news regarding our DSW instance.
+It is possible to write a message that users will see before logging in the |project_name| instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our |project_name| instance, how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured), or if there is any news regarding our |project_name| instance.
 
 .. _sidebar-login-info:
 

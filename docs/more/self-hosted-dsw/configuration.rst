@@ -60,7 +60,7 @@ This configuration section is used only by **Server** and covers basic configura
 If we need to change our ``secret``, we need also replace all values encrypted by the secret that is stored in the database as follows:
 
 1. Note somewhere values from Settings: Client ID and Client Secret of OpenID configurations, Registry token, and GitHub token for Feedback functionality, etc. Adjust the settings that the values are not there (recommended; e.g., remove OpenID configuration), and save it.
-2. Change the ``secret`` in the configuration file and restart the DSW server (re-create the container if using Docker).
+2. Change the ``secret`` in the configuration file and restart the |project_name| server (re-create the container if using Docker).
 3. Adjust the settings back to our previous values.
 4. If we also use some “user properties” (for the Document Submission feature), let our users know to change the values in their profiles.
 
@@ -104,7 +104,7 @@ Information for connection to S3 storage (used for document and document templat
    :type: String
    :default: ``engine-wizard``
 
-    Bucket name used by DSW
+    Bucket name used by |project_name|
 
 
 .. WARNING::
@@ -128,7 +128,7 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 
    :type: String
 
-    Name of the DS Wizard instance that will be used as “senders name” in email headers.
+    Name of the |project_name| instance that will be used as “senders name” in email headers.
 
 .. confval:: mail.email
 
@@ -202,7 +202,7 @@ This configuration section is used only by **Document Worker**. We can affect st
 Integrations Configuration
 --------------------------
 
-Integrations in the DS Wizard use external APIs. Sometimes, we might need some configured variables, such as API keys or endpoints. For example, integration with ID ``dbase`` might use the following configuration.
+Integrations in the |project_name| use external APIs. Sometimes, we might need some configured variables, such as API keys or endpoints. For example, integration with ID ``dbase`` might use the following configuration.
 
 .. CODE-BLOCK:: yaml
 

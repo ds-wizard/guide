@@ -31,7 +31,7 @@ We can click on :guilabel:`New document` when we want to create a new document. 
 Document Submission
 ===================
 
-:ref:`Submission services<submission-service>` can be used to quickly submit the document directly from DSW to some external service.
+:ref:`Submission services<submission-service>` can be used to quickly submit the document directly from |project_name| to some external service.
 
 .. figure:: documents/submission.png
     :width: 540
@@ -39,6 +39,6 @@ Document Submission
     Submission service selection for a document.
 
 
-If there are any document submission services configured for our DSW instance, we should be able to see :guilabel:`Submit` option when we open document menu in the document list by clicking on the triple dots. Then we choose the desired from the list and click on :guilabel:`Submit`.
+If there are any document submission services configured for our |project_name| instance, we should be able to see :guilabel:`Submit` option when we open document menu in the document list by clicking on the triple dots. Then we choose the desired from the list and click on :guilabel:`Submit`.
 
 We can see all the submissions for each document in the document list as well.

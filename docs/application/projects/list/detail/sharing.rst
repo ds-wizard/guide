@@ -3,7 +3,7 @@
 Sharing
 *******
 
-We can share project with other DSW users or even external collaborators. We can access all the sharing option by clicking the :guilabel:`Share` button in the top right.
+We can share project with other |project_name| users or even external collaborators. We can access all the sharing option by clicking the :guilabel:`Share` button in the top right.
 
 .. figure:: sharing/share-modal.png
     :width: 540
@@ -119,7 +119,7 @@ There are different roles how we can share the project that can access different
 
 .. NOTE::
 
-    Some of the following options might be globally disabled in the application settings for the whole DSW instance, therefore not visible on the project level.
+    Some of the following options might be globally disabled in the application settings for the whole |project_name| instance, therefore not visible on the project level.
 
 
 The following video tutorial explains and showcases sharing options and tools that can be used while collaborating with others. Some features mentioned in the video are also explained in the :ref:`project questionnaire<project-questionnaire>`.
@@ -132,7 +132,7 @@ The following video tutorial explains and showcases sharing options and tools th
 Users
 =====
 
-We can choose specific users from the DSW instance and their role on the project to grant them access to project features based on the table above. This is a good way to add other collaborators that work together with us on the project. Also, this is the only way to add other project owners.
+We can choose specific users from the |project_name| instance and their role on the project to grant them access to project features based on the table above. This is a good way to add other collaborators that work together with us on the project. Also, this is the only way to add other project owners.
 
 
 Visible by all other logged-in users
@@ -147,4 +147,4 @@ This can be useful, when we want to have an example project accessible by everyb
 Public link
 ===========
 
-We can enable the :guilabel:`Public link` toggle to grant access to the project to anyone who has the link. We can again choose what they can do -- **view**, **comment**, or **edit** the project. Also, the public link is visible there, so we can simply copy it and send to whoever we want to collaborate with. Then, they don't need a DSW account and still be able to access our project.
+We can enable the :guilabel:`Public link` toggle to grant access to the project to anyone who has the link. We can again choose what they can do -- **view**, **comment**, or **edit** the project. Also, the public link is visible there, so we can simply copy it and send to whoever we want to collaborate with. Then, they don't need a |project_name| account and still be able to access our project.

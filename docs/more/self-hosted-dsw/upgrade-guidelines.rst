@@ -1,8 +1,8 @@
 Upgrade Guidelines
 ******************
 
-Upgrading DSW
-=============
+Upgrading |project_name|
+========================
 
 .. Warning::
 
@@ -249,8 +249,8 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 2.4.X to 2.5.X
 --------------
 
-- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD `` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
-- Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as DSW schedules synchronization internally.
+- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via |project_name| API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD `` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
+- Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as |project_name| schedules synchronization internally.
 
 2.3.X to 2.4.X
 --------------
@@ -266,7 +266,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 2.1.X to 2.2.X
 --------------
 
-- Configuration of client and several features is now moved from ``application.yml`` file to in-app :ref:`config-settings`; therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start DSW, migrate options from ``application.yml`` to :ref:`config-settings` and then optionally clean up ``application.yml`` file.
+- Configuration of client and several features is now moved from ``application.yml`` file to in-app :ref:`config-settings`; therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start |project_name|, migrate options from ``application.yml`` to :ref:`config-settings` and then optionally clean up ``application.yml`` file.
 - User fiels ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
 - Recommended version of MongoDB is updated to 4.2.3.
 
@@ -279,7 +279,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 ---------------
 
 - Changing the major version actually does not mean any problem in migration, it has been made due to significant internal changes (restructuring, new repositories, etc.)
-- If we are using Docker for running DSW, we need to change it according to new documentation of :ref:`installation-docker` and :doc:`configuration`.
+- If we are using Docker for running |project_name|, we need to change it according to new documentation of :ref:`installation-docker` and :doc:`configuration`.
 - Crontab image is no longer needed.
 - A DMP template configuration file must contain list of ``allowedKMs`` (see the default *root* template).
 
@@ -294,12 +294,12 @@ Compatibility
 
 .. Important::
 
-   DS Wizard components (server, client, document worker, mailer, registry) should always use the matching version (compatibility is assured)!
+   |project_name| components (server, client, document worker, mailer, registry) should always use the matching version (compatibility is assured)!
 
 
-The DS Wizard is compatible with all recent versions of web browsers Chrome, Opera, Firefox, and Edge. We do not recommend the use of Internet Explorer. 
+The |project_name| is compatible with all recent versions of web browsers Chrome, Opera, Firefox, and Edge. We do not recommend the use of Internet Explorer. 
 
-The following table shows the compatibility of the DS Wizard with the metamodel versions of Knowledge models, Document Templates, Project Importers, and the Registry.
+The following table shows the compatibility of the |project_name| with the metamodel versions of Knowledge models, Document Templates, Project Importers, and the Registry.
 
 +------------------+--------------+-----------------------------+----------------------------+-----------+
 | DS Wizard        | KM Metamodel | Document Template Metamodel | Project Importer Metamodel | Registry  |

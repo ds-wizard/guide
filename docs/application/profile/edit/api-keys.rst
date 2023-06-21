@@ -3,7 +3,7 @@
 API Keys
 ********
 
-When we want to access the DSW through DSW API we have to set up an API Key. The API Key has an :guilabel:`API Key Name` so we can remember for what purpose this Key is used and :guilabel:`Expiration` which is a date from when the API Key will no longer be valid.
+When we want to access the |project_name| through |project_name| API we have to set up an API Key. The API Key has an :guilabel:`API Key Name` so we can remember for what purpose this Key is used and :guilabel:`Expiration` which is a date from when the API Key will no longer be valid.
 
 .. figure:: api-keys/form.png
     :width: 800

@@ -4,7 +4,7 @@ Projects Settings
 Project Visibility
 ==================
 
-If we want to let users select visibility of their projects within the DSW instance, we can enable **Project Visibility** feature. If it is disabled, the new projects will have the **Default Project Visibility** which is used when creating a new project:
+If we want to let users select visibility of their projects within the |project_name| instance, we can enable **Project Visibility** feature. If it is disabled, the new projects will have the **Default Project Visibility** which is used when creating a new project:
 
 *  **Private** = the project is visible only to the users with explicit access to the project.
 * **Visible - View** = the project is visible in view-only mode to all logged-in users, i.e. all users will be able to see the project in their :ref:`projects list<project-list>` and access it (but not edit or comment anything unless they are invited with different permissions).
@@ -15,7 +15,7 @@ If we want to let users select visibility of their projects within the DSW insta
 Project Sharing
 ===============
 
-If we want to let users select sharing option of their projects within the DSW instance, we can enable **Project Sharing** feature. If it is disabled, the new projects will have the **Default Project Sharing** which is used when creating a new project:
+If we want to let users select sharing option of their projects within the |project_name| instance, we can enable **Project Sharing** feature. If it is disabled, the new projects will have the **Default Project Sharing** which is used when creating a new project:
 
 *  **Restricted** = only logged-in users can access the project depending on the project visibility (no public access for anonymous users).
 * **View with the link** = anyone with the link to the project may open it in view mode and browse it.

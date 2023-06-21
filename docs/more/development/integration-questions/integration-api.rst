@@ -1,7 +1,7 @@
 Integration Question - API
 **************************
 
-:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the DSW questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
+:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the |project_name| questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
 
 
 
@@ -13,7 +13,7 @@ Integration Question - API
 External Service Requirements
 =============================
 
-If we want to connect an external service using the API there are certain requirements for it to make the connection to DSW possible.
+If we want to connect an external service using the API there are certain requirements for it to make the connection to |project_name| possible.
 
 - **Allows search using free text**
   
@@ -21,7 +21,7 @@ If we want to connect an external service using the API there are certain requir
 
 - **Returns a JSON response with a list of results**
 
-  - The response must be JSON so DSW can parse it
+  - The response must be JSON so |project_name| can parse it
   - There needs to be a JSON list where all the items matching the search query are
   
 - **It is possible to construct a link to the selected item**

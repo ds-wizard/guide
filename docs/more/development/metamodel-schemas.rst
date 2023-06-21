@@ -9,7 +9,7 @@ As Data Stewardship Wizard evolves, the internal structures may change during th
 KM Package (.km file)
 =====================
 
-File for import and export of Knowledge Models is a JSON file that contains all KM packages (lists of change events with additional metadata). The structure of events is versioned using the KM metamodel version number and migrations in DSW automatically update the KMs when needed. As said, files according to this schema can be exported from :doc:`../../application/knowledge-models/list/index` or :doc:`../../application/knowledge-models/list/detail` and then used for :doc:`../../application/knowledge-models/list/import`.
+File for import and export of Knowledge Models is a JSON file that contains all KM packages (lists of change events with additional metadata). The structure of events is versioned using the KM metamodel version number and migrations in |project_name| automatically update the KMs when needed. As said, files according to this schema can be exported from :doc:`../../application/knowledge-models/list/index` or :doc:`../../application/knowledge-models/list/detail` and then used for :doc:`../../application/knowledge-models/list/import`.
 
 +-------------------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                   | Changes (brief)                         | Since DSW |
@@ -44,7 +44,7 @@ File for import and export of Knowledge Models is a JSON file that contains all 
 Document Context
 ================
 
-Document Context is provided to the document templates by document worker. It contains all relevant data about project/questionnaire with replies, related knowledge model, author, and more. As KM evolves, the context may evolve as well. It is versioned using the Template metamodel version number. A document template must support the metamodel that is in the current DSW instance. It is needed to know how the document context looks like especially for :doc:`./document-templates`.
+Document Context is provided to the document templates by document worker. It contains all relevant data about project/questionnaire with replies, related knowledge model, author, and more. As KM evolves, the context may evolve as well. It is versioned using the Template metamodel version number. A document template must support the metamodel that is in the current |project_name| instance. It is needed to know how the document context looks like especially for :doc:`./document-templates`.
 
 +-------------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                            | Changes (brief)                         | Since DSW |
@@ -75,7 +75,7 @@ Document Context is provided to the document templates by document worker. It co
 Template (.json file)
 =====================
 
-Each template has its descriptor file ``template.json`` which contains all the information about the template, its format(s) and steps how to produce the document(s). It is also versioned by the Template metamodel version number. This file also contains the actual number of the supported version... With local :doc:`./document-templates`, we will need to manage the file according to the schema; however, when :doc:`../../application/document-templates/editors/index` are used, we will define it using forms directly in DSW.
+Each template has its descriptor file ``template.json`` which contains all the information about the template, its format(s) and steps how to produce the document(s). It is also versioned by the Template metamodel version number. This file also contains the actual number of the supported version... With local :doc:`./document-templates`, we will need to manage the file according to the schema; however, when :doc:`../../application/document-templates/editors/index` are used, we will define it using forms directly in |project_name|.
 
 .. NOTE::
 

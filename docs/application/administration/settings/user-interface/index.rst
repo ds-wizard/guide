@@ -1,7 +1,7 @@
 User Interface Settings
 ***********************
 
-User Interface (UI) settings allow us to manage how the DSW instance looks like: styling, titles, or the dashboard shown when user logs information.
+User Interface (UI) settings allow us to manage how the |project_name| instance looks like: styling, titles, or the dashboard shown when user logs information.
 
 
 ----

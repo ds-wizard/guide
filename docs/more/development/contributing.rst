@@ -2,7 +2,7 @@
 Contributing
 ************
 
-Interested in contributing to the DSW development?
+Interested in contributing to the |project_name| development?
 
 ----
 
@@ -22,7 +22,7 @@ In case you find some bug, please `create an issue <https://github.com/ds-wizard
 Vulnerabilities
 ---------------
 
-If you find an security issue within DSW, please `create appropriate issue <https://github.com/ds-wizard/ds-wizard/issues/new/choose>`__. However, never include sensitive information in the issue as it is publicly available. Such information (e.g. logs) send to us via e-mail `support@ds-wizard.org <support@ds-wizard.org>`__.
+If you find an security issue within |project_name|, please `create appropriate issue <https://github.com/ds-wizard/ds-wizard/issues/new/choose>`__. However, never include sensitive information in the issue as it is publicly available. Such information (e.g. logs) send to us via e-mail `support@ds-wizard.org <support@ds-wizard.org>`__.
 
 Development
 ===========
@@ -42,9 +42,9 @@ Our projects are open source and you can contribute via GitHub (fork and pull re
 Test Policy
 ===========
 
-Testing is essential to ensure the successful construction and implementation of DSW. It is necessary to keep tests updated together with new features and other changes in the code.
+Testing is essential to ensure the successful construction and implementation of |project_name|. It is necessary to keep tests updated together with new features and other changes in the code.
 
-Each component may use its own test suite (unit tests, acceptance tests, integration tests), which shall be described in the CONTRIBUTING file within the corresponding repository. To test all components together, we have the `E2E test suite <https://github.com/ds-wizard/dsw-e2e-tests>`__ (Cypress) that tests according to various use cases, i.e., what can a user do within DSW using its web user interface.
+Each component may use its own test suite (unit tests, acceptance tests, integration tests), which shall be described in the CONTRIBUTING file within the corresponding repository. To test all components together, we have the `E2E test suite <https://github.com/ds-wizard/dsw-e2e-tests>`__ (Cypress) that tests according to various use cases, i.e., what can a user do within |project_name| using its web user interface.
 
 Whenever a new feature is developed, it must be covered by tests. For the E2E test suite, a specific sub-task is created in our JIRA when applicable. All components must pass all tests before releasing (including release candidate versions).
 

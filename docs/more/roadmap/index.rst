@@ -11,7 +11,7 @@ Need to know some info about the latest released version or what is planned?
 
 .. WARNING::
 
-    You should always strive to use the latest version of DSW for both security and user experience reasons. Also, if you are having a self-hosted DSW, please check :doc:`../self-hosted-dsw/upgrade-guidelines` prior to actual upgrade.
+    You should always strive to use the latest version of |project_name| for both security and user experience reasons. Also, if you are having a self-hosted |project_name|, please check :doc:`../self-hosted-dsw/upgrade-guidelines` prior to actual upgrade.
 
 
 Planned Versions
