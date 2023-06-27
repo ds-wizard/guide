@@ -113,6 +113,6 @@ External Resources
 ==================
 
 
-- `How to Configure Integration Question in Data Stewardship Wizard <https://medium.com/@fair-wizard/how-to-configure-integration-question-in-data-stewardship-wizard-57f80333fd7a>`_
-- `How to Improve Integration Question Item Template in DSW <https://medium.com/@fair-wizard/how-to-improve-integration-question-item-template-in-dsw-31d163272166>`_
+- `How to Configure Integration Question in FAIR Wizard <https://fair-wizard.com/blog/how-to-configure-integration-question-in-fair-wizard>`_
+- `How to Improve Integration Question Item Template in FAIR Wizard <https://fair-wizard.com/blog/how-to-improve-integration-question-item-template-in-fair-wizard>`_
 - `Ginger Documentation <https://ginger.tobiasdammers.nl>`_

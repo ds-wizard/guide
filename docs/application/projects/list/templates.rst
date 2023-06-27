@@ -24,4 +24,4 @@ We can either share them with specific users only, or we can simply enable that 
 External Resources
 ==================
 
-- `Project Templates in Data Stewardship Wizard <https://medium.com/@fair-wizard/project-templates-in-data-stewardship-wizard-94cad5227c3>`_
+- `Project Templates in FAIR Wizard <https://fair-wizard.com/blog/project-templates-in-fair-wizard>`_
