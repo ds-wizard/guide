@@ -12,7 +12,7 @@ KM Package (.km file)
 File for import and export of Knowledge Models is a JSON file that contains all KM packages (lists of change events with additional metadata). The structure of events is versioned using the KM metamodel version number and migrations in |project_name| automatically update the KMs when needed. As said, files according to this schema can be exported from :doc:`../../application/knowledge-models/list/index` or :doc:`../../application/knowledge-models/list/detail` and then used for :doc:`../../application/knowledge-models/list/import`.
 
 +-------------------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
-| Metamodel Version | Schema file                                                                                                   | Changes (brief)                         | Since DSW |
+| Metamodel Version | Schema file                                                                                                   | Changes (brief)                         | Since     |
 +===================+===============================================================================================================+=========================================+===========+
 | 13                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v13.json>`__ | New question value types                | 3.12.0    |
 +-------------------+---------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
@@ -47,7 +47,7 @@ Document Context
 Document Context is provided to the document templates by document worker. It contains all relevant data about project/questionnaire with replies, related knowledge model, author, and more. As KM evolves, the context may evolve as well. It is versioned using the Template metamodel version number. A document template must support the metamodel that is in the current |project_name| instance. It is needed to know how the document context looks like especially for :doc:`./document-templates`.
 
 +-------------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
-| Metamodel Version | Schema file                                                                                                            | Changes (brief)                         | Since DSW |
+| Metamodel Version | Schema file                                                                                                            | Changes (brief)                         | Since     |
 +===================+========================================================================================================================+=========================================+===========+
 | 11                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v11.json>`__ | Change template metadata                | 3.20.0    |
 +-------------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
@@ -82,7 +82,7 @@ Each template has its descriptor file ``template.json`` which contains all the i
     Between versions 1 and 5, the structure of ``template.json`` is still the same. Only the document context has been changed.
 
 +-------------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
-| Metamodel Version | Schema file                                                                                                                | Changes (brief)                         | Since DSW |
+| Metamodel Version | Schema file                                                                                                                | Changes (brief)                         | Since     |
 +===================+============================================================================================================================+=========================================+===========+
 | 11                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v11.json>`__ | Change template metadata                | 3.20.0    |
 +-------------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+-----------+
