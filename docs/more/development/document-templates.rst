@@ -12,7 +12,7 @@ Document Templates allows to specify how to export a questionnaire in form of a 
 
     * Your favorite text editor or IDE
     * DSW Template Development Kit (see below)
-    * |project_name| instance (recommended to have local one) with your admin account
+    * |project_name| instance with your admin account
     * Python 3.7+ (with pip) or Docker
 
 
