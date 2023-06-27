@@ -3,7 +3,7 @@ Locales
 
 After navigating to :guilabel:`Locales` (under :guilabel:`Administration`), we can browse and manage a list of locales in the |project_name| instance. Similarly to knowledge models and document templates, each locale has its unique identifier and version. Moreover, each locale has a language code specified. In the list we see the latest version and can quickly navigate to :doc:`./detail` (which includes also older versions) by clicking the locale name or selecting :guilabel:`View detail` from the right item menu of the desired row.
 
-There is always the **Engligh** locale (``wizard:default:1.0.0``) which is embedded and cannot be deleted. For others, we can use :guilabel:`Export` and :guilabel:`Delete` options from the right item menu.
+There is always the **English** locale (``wizard:default:1.0.0``) which is embedded and cannot be deleted. For others, we can use :guilabel:`Export` and :guilabel:`Delete` options from the right item menu.
 
 Another option is to switch other locale to be the default one using :guilabel:`Set default` action. The default locale will be used in case no available locale tgat matching user's preferences (explicit or implicit from the web browser). We can :guilabel:`Disable` or :guilabel:`Enable` locales except the default one (which must be enabled).
 
