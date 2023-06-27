@@ -93,7 +93,7 @@ Here are some recommended sections where to start based on the role:
     :maxdepth: 2
     :caption: More
 
-    more/roadmap/index
+    more/changelog
     more/self-hosted-dsw/index
     more/development/index
     more/miscellaneous/index

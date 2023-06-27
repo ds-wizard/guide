@@ -45,6 +45,7 @@ extensions = [
     'sphinxcontrib.youtube',
     'sphinx.ext.todo',
     'sphinx_toolbox.confval',
+    'sphinxext.rediraffe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -93,3 +94,8 @@ suppress_warnings = [
     # Suppress "WARNING: unknown mimetype (issue with .ico)
     'epub.unknown_project_files',
 ]
+
+
+rediraffe_redirects = {
+    'more/roadmap/index.rst': 'more/changelog.rst'
+}

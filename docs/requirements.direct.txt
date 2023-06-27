@@ -3,3 +3,4 @@ Sphinx
 sphinx-toolbox
 Sphinx-Substitution-Extensions
 sphinxcontrib-youtube
+sphinxext-rediraffe
