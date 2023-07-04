@@ -5,6 +5,9 @@ Questionnaire
 
 Questionnaire is the first tab of the project detail. This is the most imporant part where we fill in all the details about our project.
 
+
+.. _questionnaire-current-phase:
+
 Current Phase
 =============
 
@@ -15,7 +18,14 @@ If the :ref:`knowledge model<knowledge-model>` we use for the :ref:`project<proj
     
     Phase selection widget.
 
-By selecting the phase we are currently in, we can see the desirability of questions. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
+By clicking the phase selection we open the modal window where we can choose the current phase.
+
+.. figure:: questionnaire/phase-selection-modal.png
+    :width: 800
+    
+    Phase selection modal window.
+
+We can see the desirability of questions based on the phase we are currently in. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
 
 There are three desirability states the question can be in:
 

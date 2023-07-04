@@ -3,7 +3,7 @@
 Organization Settings
 *********************
 
-On this page, we can configure **Name**, **Description**, and **Organization ID** for our DSW instance. The organization ID can contain alphanumeric characters and dot symbol (but cannot start or end with dot).
+On this page, we can configure **Name**, **Description**, and **Organization ID** for our |project_name| instance. The organization ID can contain alphanumeric characters and dot symbol (but cannot start or end with dot).
 
 .. NOTE::
 

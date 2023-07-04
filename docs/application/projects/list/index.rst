@@ -19,7 +19,7 @@ We can search for specific projects using the search field or filter them using 
 
 .. NOTE::
 
-    Note that some of the filters can be disabled based on the DSW instance settings or user role.
+    Note that some of the filters can be disabled based on the |project_name| instance settings or user role.
 
 
 We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Create` button.

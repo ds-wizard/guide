@@ -1,7 +1,7 @@
 Integration Question - API
 **************************
 
-:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the DSW questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
+:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the |project_name| questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
 
 
 
@@ -13,7 +13,7 @@ Integration Question - API
 External Service Requirements
 =============================
 
-If we want to connect an external service using the API there are certain requirements for it to make the connection to DSW possible.
+If we want to connect an external service using the API there are certain requirements for it to make the connection to |project_name| possible.
 
 - **Allows search using free text**
   
@@ -21,7 +21,7 @@ If we want to connect an external service using the API there are certain requir
 
 - **Returns a JSON response with a list of results**
 
-  - The response must be JSON so DSW can parse it
+  - The response must be JSON so |project_name| can parse it
   - There needs to be a JSON list where all the items matching the search query are
   
 - **It is possible to construct a link to the selected item**
@@ -113,6 +113,6 @@ External Resources
 ==================
 
 
-- `How to Configure Integration Question in Data Stewardship Wizard <https://medium.com/@fair-wizard/how-to-configure-integration-question-in-data-stewardship-wizard-57f80333fd7a>`_
-- `How to Improve Integration Question Item Template in DSW <https://medium.com/@fair-wizard/how-to-improve-integration-question-item-template-in-dsw-31d163272166>`_
+- `How to Configure Integration Question in FAIR Wizard <https://fair-wizard.com/blog/how-to-configure-integration-question-in-fair-wizard>`_
+- `How to Improve Integration Question Item Template in FAIR Wizard <https://fair-wizard.com/blog/how-to-improve-integration-question-item-template-in-fair-wizard>`_
 - `Ginger Documentation <https://ginger.tobiasdammers.nl>`_

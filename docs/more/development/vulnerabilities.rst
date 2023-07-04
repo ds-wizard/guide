@@ -39,7 +39,7 @@ Basic Hints for Security
 
 * Change or remove default users
 * Adjust default role after registrations based on your needs
-* Provide DSW through proxy with HTTPS (both client and server application)
+* Provide |project_name| through proxy with HTTPS (both client and server application)
 * Backup data regularly (e.g. daily)
 * Use secured SMTP (SSL)
 * Use strong passwords, esp. for administrator accounts

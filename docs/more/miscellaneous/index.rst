@@ -1,7 +1,7 @@
 Miscellaneous
 *************
 
-Additional information related to DSW that might be useful.
+Additional information related to |project_name| that might be useful.
 
 ----
 

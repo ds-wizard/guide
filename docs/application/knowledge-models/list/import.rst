@@ -11,7 +11,7 @@ We can import an existing knowledge model by navigating to :doc:`./index` (:menu
 From DSW Registry
 =================
 
-If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import knowledge models from it by entering the **knowledge model ID** of desired template (e.g. ``dsw:lifesciences:2.4.0``) and pressing the :guilabel:`Import` button.
+If the |project_name| instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import knowledge models from it by entering the **knowledge model ID** of desired template (e.g. ``dsw:lifesciences:2.4.0``) and pressing the :guilabel:`Import` button.
 
 .. NOTE::
 
@@ -27,7 +27,7 @@ If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizar
 From file
 =========
 
-We can import a knowledge model as a KM file. Such a file can be created as an export from DSW (from :doc:`./index` or :doc:`./detail`).
+We can import a knowledge model as a KM file. Such a file can be created as an export from |project_name| (from :doc:`./index` or :doc:`./detail`).
 
 
 .. figure:: import/file.png

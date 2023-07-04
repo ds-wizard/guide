@@ -21,12 +21,17 @@ project = 'Data Stewardship Wizard'
 copyright = '2023, DSW Team'
 author = 'DSW Team'
 
+project_name = 'DSW'
+project_name_full = 'Data Stewardship Wizard'
+
 # The full version, including alpha/beta/rc tags
-version = release = '3.23'
+version = release = '3.25'
 
 rst_prolog = f"""
 
 .. |compose_ver| replace:: {release}
+.. |project_name| replace:: {project_name}
+.. |project_name_full| replace:: {project_name_full}
 
 """
 
@@ -40,6 +45,8 @@ extensions = [
     'sphinxcontrib.youtube',
     'sphinx.ext.todo',
     'sphinx_toolbox.confval',
+    'sphinxext.rediraffe',
+    'sphinx.ext.imgconverter',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -88,3 +95,8 @@ suppress_warnings = [
     # Suppress "WARNING: unknown mimetype (issue with .ico)
     'epub.unknown_project_files',
 ]
+
+
+rediraffe_redirects = {
+    'more/roadmap/index.rst': 'more/changelog.rst'
+}

@@ -21,7 +21,7 @@ The password can be also changed (after selecting :guilabel:`Password` from the 
 User Roles
 ==========
 
-There are three user roles available: researchers, data steward, and admin. Permissions are associated with the roles, basically they affect what the users can do in a DSW instance:
+There are three user roles available: researchers, data steward, and admin. Permissions are associated with the roles, basically they affect what the users can do in a |project_name| instance:
 
 .. raw:: html
 

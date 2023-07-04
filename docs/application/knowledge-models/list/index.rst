@@ -3,7 +3,7 @@
 Knowledge Model List
 ********************
 
-As **data stewards** and **admins**, we can manage the knowledge models that are in our DSW instance. Then, **researchers** are using and browsing the knowledge models. We can access the list of knowledge model from the main menu via :guilabel:`Knowledge Model`. The list can be filtered and sorted by name or creation date.
+As **data stewards** and **admins**, we can manage the knowledge models that are in our |project_name| instance. Then, **researchers** are using and browsing the knowledge models. We can access the list of knowledge model from the main menu via :guilabel:`Knowledge Model`. The list can be filtered and sorted by name or creation date.
 
 For each knowledge model (KM), we can see the latest version in the list. If we want to read more about a specific KM or see the older versions, we need to access the :doc:`./detail` by clicking the name of KM or clicking :guilabel:`Open` from the right item menu (three dots). There are also other options for each item:
 

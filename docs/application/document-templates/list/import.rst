@@ -10,7 +10,7 @@ We can import an existing document template by navigating to :doc:`./index` (:me
 From DSW Registry
 =================
 
-If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import document templates from it by entering the **document template ID** of desired template (e.g. ``dsw:questionnaire-report:2.7.1``) and pressing the :guilabel:`Import` button.
+If the |project_name| instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import document templates from it by entering the **document template ID** of desired template (e.g. ``dsw:questionnaire-report:2.7.1``) and pressing the :guilabel:`Import` button.
 
 .. NOTE::
 
@@ -26,7 +26,7 @@ If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizar
 From file
 =========
 
-We can import a document template as a ZIP package. Such a package can be created as an export from DSW or using the Template Development Kit (see :ref:`document-template-development`).
+We can import a document template as a ZIP package. Such a package can be created as an export from |project_name| or using the Template Development Kit (see :ref:`document-template-development`).
 
 
 .. figure:: import/file.png
