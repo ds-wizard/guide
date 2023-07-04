@@ -17,7 +17,7 @@ This section provides information on how to develop custom content for |project_
     :maxdepth: 1
 
     metamodel-schemas
-    Document Templates<document-templates>
+    Document Templates<document-templates/index>
     integration-questions/index
     Project Importers<importers>
     submission-service

@@ -29,6 +29,8 @@ There are many options how to create and configure a project, such as what :ref:
 So if there are any project templates created in our instance, we can use them to have a smoother start of our project. We just need to give our project a **name** and choose the **project template** from offered options.
 
 
+.. _create-project-custom:
+
 Custom
 ======
 

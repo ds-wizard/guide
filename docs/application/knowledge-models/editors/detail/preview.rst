@@ -1,3 +1,5 @@
+.. _km-editor-preview:
+
 Preview
 *******
 

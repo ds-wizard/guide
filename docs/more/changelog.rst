@@ -10,6 +10,36 @@ Changelog
 .. _tools:
 
 
+.. _v3.25:
+
+3.25
+====
+
+* *Release: 4 July 2023*
+
+* **Features:**
+
+  * Added revoke all to :ref:`active sessions<active-sessions>`.
+  * Added Terms of Service and/or Privacy agreement confirmation during SSO signup when they are set.
+  * :ref:`Preview in KM Editor<km-editor-preview>` now opens on current question (corresponding answers are pre-selected if the question is nested).
+  * Improved :ref:`phase selection<questionnaire-current-phase>` in questionnaire and phase description is now used.
+  * Improved question tags selection when :ref:`creating a new project<create-project-custom>` to make it more clear which questions will be used.
+  * Added support for uploading more files in document template editor.
+  
+* **Bugfixes:**
+  
+  * Fixed links from TODOs or comments to questions in collapsed items (they now expand).
+  * Fixed SMTP configuration without username and password for authentication.
+
+* **Misc:**
+
+  * Added *robots.txt* to client and server to prevent indexing of the applications.
+
+* **More:**
+
+  * `API Changelog 3.24.0 ➔ 3.25.0 <https://api-docs.ds-wizard.org/changelogs/3.24.0-3.25.0.html>`__
+
+
 .. _v3.24.1-backend:
 
 3.24.1 (backend)
