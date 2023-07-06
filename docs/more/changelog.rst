@@ -10,6 +10,18 @@ Changelog
 .. _tools:
 
 
+.. _v3.25.1-fronted:
+
+3.25.1 (frontend)
+=================
+
+* *Release: 6 July 2023*
+
+* **Bugfixes**
+  
+  * Fixed change logo button in settings (affects only instances where this is enabled).
+
+
 .. _v3.25:
 
 3.25
@@ -38,6 +50,18 @@ Changelog
 * **More:**
 
   * `API Changelog 3.24.0 ➔ 3.25.0 <https://api-docs.ds-wizard.org/changelogs/3.24.0-3.25.0.html>`__
+
+
+.. _v3.24.1-fronted:
+
+3.24.1 (frontend)
+=================
+
+* *Release: 6 July 2023*
+
+* **Bugfixes**
+  
+  * Fixed change logo button in settings (affects only instances where this is enabled).
 
 
 .. _v3.24.1-backend:
