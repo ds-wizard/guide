@@ -41,8 +41,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 3.24.X to 3.25.X
 ----------------
 
-*(nothing)*
-
+- We need to run ``wizard-server`` for the first time while ``document-worker`` and ``mailer`` are not running (to ensure database migration to proceed). Then we can start everything as usual.
 
 
 3.23.X to 3.24.X
