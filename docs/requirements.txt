@@ -32,7 +32,7 @@ snowballstemmer==2.2.0
 soupsieve==2.4.1
 Sphinx==7.0.1
 sphinx-autodoc-typehints==1.23.3
-sphinx-basic-ng==1.0.0b1
+sphinx-basic-ng==1.0.0b2
 sphinx-jinja2-compat==0.2.0
 sphinx-prompt==1.5.0
 Sphinx-Substitution-Extensions==2022.2.16
