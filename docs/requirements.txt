@@ -6,7 +6,7 @@ Babel==2.12.1
 beautifulsoup4==4.12.2
 CacheControl==0.13.1
 certifi==2023.5.7
-charset-normalizer==3.1.0
+charset-normalizer==3.2.0
 cssutils==2.7.1
 dict2css==0.3.0
 docutils==0.18.1
