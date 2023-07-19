@@ -6,8 +6,22 @@ Changelog
     https://github.com/sphinx-doc/sphinx/issues/1961#issuecomment-1322281847
 
 .. _frontend-backend:
+.. _frontend:
 .. _backend:
 .. _tools:
+
+
+.. _v3.25.1-backend:
+
+3.25.1 (backend)
+=================
+
+* *Release: 19 July 2023*
+
+* **Bugfixes**
+  
+  * Fixed user activation when logging in for the first time using OpenID, and no Terms of Service or Privacy Policy were set.
+
 
 
 .. _v3.25.2-fronted:
@@ -19,7 +33,7 @@ Changelog
 
 * **Bugfixes**
   
-  * Fix preview of item questions in KM Editor that could sometimes cause two items to have the same value when filling them in.
+  * Fixed preview of item questions in KM Editor that could sometimes cause two items to have the same value when filling them in.
 
 
 
