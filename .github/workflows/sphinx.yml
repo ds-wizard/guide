@@ -30,6 +30,7 @@ jobs:
             
       - name: Install fonts
         run: |
+          sudo apt-get update --fix-missing
           sudo apt-get install ghostscript fonts-freefont-otf
 
       - name: Install dependencies
