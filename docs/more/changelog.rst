@@ -10,6 +10,19 @@ Changelog
 .. _tools:
 
 
+.. _v3.25.2-fronted:
+
+3.25.2 (frontend)
+=================
+
+* *Release: 18 July 2023*
+
+* **Bugfixes**
+  
+  * Fix preview of item questions in KM Editor that could sometimes cause two items to have the same value when filling them in.
+
+
+
 .. _v3.25.1-fronted:
 
 3.25.1 (frontend)
