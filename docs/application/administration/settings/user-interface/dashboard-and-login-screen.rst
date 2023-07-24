@@ -44,6 +44,11 @@ Login Info
 
 It is possible to write a message that users will see before logging in the |project_name| instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our |project_name| instance, how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured), or if there is any news regarding our |project_name| instance.
 
+.. WARNING::
+
+  Defining HTML classes in the login info can overwrite |project_name| application classes. It is recommended to use prefixes for classes, if they are used, to avoid conflicts.
+
+  
 .. _sidebar-login-info:
 
 Sidebar Login Info
