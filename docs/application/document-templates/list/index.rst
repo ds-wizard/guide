@@ -9,7 +9,9 @@ For each document template, we can see the latest version present; however, we c
 
     A document template can be deleted only if it is not used already for documents, projects, or settings.
 
-Each item may be marked with *unsupported metamodel* if the document template is not compatible with the version of |project_name|. Also, *update available* may appear if there is a newer version of the template in the `DSW Registry <https://registry.ds-wizard.org>`__ (and if configured).
+Each item may be marked with *unsupported metamodel* when the document template is not compatible with the version of |project_name|. :doc:`../../../more/development/metamodel-schemas` are used to define structures that developers can interact with. If the template originates from the `DSW Registry <https://registry.ds-wizard.org>`__ and the registry is configured, *update available* will appear.
+
+To see how to configure the registry, read the :ref:`FAQ and Deployment Notes<faq-unsupported-metamodel>`. If your template is not from the registry, you will have to :doc:`../editors/detail/publish` a new version via template editor, which will increase the metamodel version automatically.
 
 Finally, we can use :guilabel:`Import` new document templates by clicking the top right button (see :doc:`./import` for details).
 
