@@ -11,6 +11,38 @@ Changelog
 .. _tools:
 
 
+.. _v3.26:
+
+3.26
+====
+
+* *Release: 1 August 2023*
+
+* **Features:**
+
+  * Added explicit info when there are no questions in a chapter.
+  * Comments tab is now highlighted when comments are open on a specific question.
+
+* **Bugfixes:**
+  
+  * Fixed cursor on radio input in the document template format selection.
+  * Fixed file upload UI in the document template editor.
+  * Fixed description in Markdown inputs.
+  * Fixed deleting queued documents (the dropdown menu was sometimes disappearing).
+  * Fixed link to document template development from the Data Steward dashboard.
+  * Fixed displaying of alphabetical identifiers for answers, choices, and items.
+
+* **Misc:**
+
+  * Default role was changed to Researcher when running a fresh instance.
+  * Deleting users is now much faster.
+  * Upgraded Bootstrap to 5.3.0 in frontend.
+
+* **More:**
+
+  * `API Changelog 3.25.0 ➔ 3.26.0 <https://api-docs.ds-wizard.org/changelogs/3.25.0-3.26.0.html>`__
+
+
 .. _v3.25.1-backend:
 
 3.25.1 (backend)
@@ -18,7 +50,7 @@ Changelog
 
 * *Release: 19 July 2023*
 
-* **Bugfixes**
+* **Bugfixes:**
   
   * Fixed user activation when logging in for the first time using OpenID, and no Terms of Service or Privacy Policy were set.
 
@@ -31,7 +63,7 @@ Changelog
 
 * *Release: 18 July 2023*
 
-* **Bugfixes**
+* **Bugfixes:**
   
   * Fixed preview of item questions in KM Editor that could sometimes cause two items to have the same value when filling them in.
 
@@ -44,7 +76,7 @@ Changelog
 
 * *Release: 6 July 2023*
 
-* **Bugfixes**
+* **Bugfixes:**
   
   * Fixed change logo button in settings (affects only instances where this is enabled).
 
@@ -86,7 +118,7 @@ Changelog
 
 * *Release: 6 July 2023*
 
-* **Bugfixes**
+* **Bugfixes:**
   
   * Fixed change logo button in settings (affects only instances where this is enabled).
 
@@ -98,7 +130,7 @@ Changelog
 
 * *Release: 14 June 2023*
 
-* **Bugfixes**
+* **Bugfixes:**
   
   * Fixed generating documents that contain more than one whitespace in the filename.
 
@@ -143,7 +175,7 @@ Changelog
 
 * *Release: 14 June 2023*
 
-* **Bugfixes**
+* **Bugfixes:**
   
   * Fixed generating documents that contain more than one whitespace in the filename.
 
