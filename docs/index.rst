@@ -90,10 +90,14 @@ Here are some recommended sections where to start based on the role:
     application/profile/index
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: More
 
     more/changelog
+
+.. toctree::
+    :maxdepth: 2
+    
     more/self-hosted-dsw/index
     more/development/index
     more/miscellaneous/index
