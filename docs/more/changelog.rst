@@ -67,6 +67,18 @@ Changelog
   * `API Changelog 3.25.0 ➔ 3.26.0 <https://api-docs.ds-wizard.org/changelogs/3.25.0-3.26.0.html>`__
 
 
+.. _v3.25.1-tools:
+
+3.25.1 (tools)
+==============
+
+* *Release: 10 August 2023*
+
+* **Bugfixes:**
+
+  * Fixed loading custom mail config in mailer.
+
+
 .. _v3.25.3-frontend:
 
 3.25.3 (frontend)
