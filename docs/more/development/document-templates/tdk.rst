@@ -68,11 +68,10 @@ You can use ``--help`` to find out details:
 Environment variables and .env file
 ===================================
 
-To avoid entering API URL and credentials every time, you can use environment variables:
+You can use environment variables to authenticate:
 
-* ``DSW_API`` = URL of |project_name| API with which you want to communicate. Hover mouse over your profile name to find the About section where URL is specified.
-* ``DSW_USERNAME`` = your login (email address) to that |project_name| instance, must be administrator account
-* ``DSW_PASSWORD`` = corresponding password
+* ``DSW_API_URL`` = URL of |project_name| API with which you want to communicate. Hover mouse over your profile name to find the About section where URL is specified.
+* ``DSW_API_KEY`` = your API Key. Hover mouse over your profile name, click on :guilabel:`Edit Profile` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
 
 To make this even easier, you can store those in ``.env`` file in the project root and it will be loaded automatically. Or you can specify the path to a ``.env`` file:
 
