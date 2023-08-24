@@ -72,7 +72,7 @@ Sometimes, we might need to use some secrets (for example for authentication tok
 
 We need to navigate to :guilabel:`Administration → Settings → Knowledge Models` and there is a field called **Integration Config**. It is a YAML organized by the **Integration ID** at the top level and key value pairs for each property.
 
-We can fill some propertes in. So, for example, if the **INtegration ID** of our integration is *ourIntegration* we can write:
+We can fill some propertes in. So, for example, if the **Integration ID** of our integration is *ourIntegration* we can write:
 
 .. code-block:: yaml
 
