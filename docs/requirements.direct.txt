@@ -1,6 +1,6 @@
 furo
 Sphinx
 sphinx-toolbox
+sphinx-reredirects
 Sphinx-Substitution-Extensions
 sphinxcontrib-youtube
-sphinxext-rediraffe
