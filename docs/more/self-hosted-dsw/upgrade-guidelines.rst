@@ -38,6 +38,16 @@ Upgrade process
 
 Usually, nothing special is required for the upgrade. Internal structure changes are migrated automatically using DB migrations and Metamodel migrations *(since 1.8.0)*. See below the changes that need to be done by us *(since 1.10.0)*:
 
+
+.. Warning::
+   
+   Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
+
+3.26.X to 3.27.X
+----------------
+
+*(nothing)*
+
 3.25.X to 3.26.X
 ----------------
 
@@ -47,7 +57,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 3.24.X to 3.25.X
 ----------------
 
-- We need to run ``wizard-server`` for the first time while ``document-worker`` and ``mailer`` are not running (to ensure database migration to proceed). Then we can start everything as usual.
+*(nothing)*
 
 
 3.23.X to 3.24.X
@@ -109,7 +119,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 3.13.X to 3.14.1
 ----------------
 
-- We need to run wizard-server for the first time while document-worker and mailer are not running (to ensure database migration to proceed). Then we can start everything as usual.
+*(nothing)*
 
 3.13.X to 3.14.X
 ----------------
