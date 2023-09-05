@@ -245,7 +245,7 @@ The client also provides a wide variety of style customizations using SASS varia
 * ``_overrides.scss`` = This file is loaded after all other styles. We can use it to override existing styles.
 * ``_variables.scss`` = A lot of values related to styles are defined as variables. The easiest way to customize the style is to define new values for these variables using this file.
 
-For more information about variables and assets, visit `Theming Bootstrap <https://getbootstrap.com/docs/4.0/getting-started/theming/>`__. The color of illustrations can be adjusted using ``$illustrations-color`` variable.
+For more information about variables and assets, visit `Theming Bootstrap <https://getbootstrap.com/docs/5.3/customize/overview/>`__. The color of illustrations can be adjusted using ``$illustrations-color`` variable.
 
 Document Templates
 ==================
