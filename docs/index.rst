@@ -90,14 +90,10 @@ Here are some recommended sections where to start based on the role:
     application/profile/index
 
 .. toctree::
-    :maxdepth: 1
-    :caption: More
-
-    more/changelog
-
-.. toctree::
     :maxdepth: 2
+    :caption: More
     
+    Changelog <https://changelog.ds-wizard.org>
     more/self-hosted-dsw/index
     more/development/index
     more/miscellaneous/index

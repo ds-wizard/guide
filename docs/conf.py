@@ -25,7 +25,7 @@ project_name = 'DSW'
 project_name_full = 'Data Stewardship Wizard'
 
 # The full version, including alpha/beta/rc tags
-version = release = '3.26'
+version = release = '3.27'
 
 rst_prolog = f"""
 
@@ -42,10 +42,10 @@ rst_prolog = f"""
 # ones.
 extensions = [
     'sphinx_substitution_extensions',
+    'sphinx_reredirects',
     'sphinxcontrib.youtube',
     'sphinx.ext.todo',
     'sphinx_toolbox.confval',
-    'sphinxext.rediraffe',
     'sphinx.ext.imgconverter',
 ]
 
@@ -97,6 +97,7 @@ suppress_warnings = [
 ]
 
 
-rediraffe_redirects = {
-    'more/roadmap/index.rst': 'more/changelog.rst'
+redirects = {
+    'more/roadmap/index': 'https://changelog.ds-wizard.org',
+    'more/changelog': 'https://changelog.ds-wizard.org'
 }
