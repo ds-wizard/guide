@@ -25,7 +25,7 @@ project_name = 'DSW'
 project_name_full = 'Data Stewardship Wizard'
 
 # The full version, including alpha/beta/rc tags
-version = release = '3.27'
+version = release = '3.28'
 
 rst_prolog = f"""
 
