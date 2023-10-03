@@ -20,7 +20,7 @@ Configuration files are used for setting the server-side configuration. Since th
 Server Configuration
 --------------------
 
-For reference, see the `configuration <https://github.com/ds-wizard/dsw-deployment-example/blob/main/dsw.yml>`__ of the DSW Deployment example.
+For reference, see the `configuration <https://github.com/ds-wizard/dsw-deployment-example/blob/main/config/application.yml>`__ of the DSW Deployment example.
 
 General
 ^^^^^^^

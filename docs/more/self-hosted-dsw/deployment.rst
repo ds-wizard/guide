@@ -19,8 +19,8 @@ Deployment with Docker
 
 The simplest way is to use `Docker Compose <https://docs.docker.com/compose/>`__. Requirements are just to have Docker installed, privileges for current users, and the Docker daemon started. At least basic knowledge of Docker is required.
 
-1. Clone the `DSW Deployment Example <https://github.com/ds-wizard/dsw-deployment-example>`__ repository.
-2. Check config files (described in Configuration), especially ``dsw.yml`` and ``docker-compose.yml``
+1. Clone the `DSW Deployment Example <https://github.com/ds-wizard/dsw-deployment-example>`__ repository
+2. Check config files (described in :doc:`./configuration`)
 3. Run the |project_name| with Docker compose ``docker-compose up -d``
 4. After starting up, we will be able to open the Wizard in our browser on http://localhost:8080
 5. We can use ``docker-compose logs`` to see the logs and ``docker-compose down`` to stop all the services
