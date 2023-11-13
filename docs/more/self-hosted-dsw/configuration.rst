@@ -217,6 +217,8 @@ There can be multiple integrations configured in a single file. These can be use
 
      Different knowledge models may use different variable naming. Please read the information in README to find out what is required. We recommend authors to stick with ``apiKey`` and ``apiUrl`` variables as our convention.
 
+.. _client-configuration:
+
 Client Configuration
 --------------------
 
@@ -228,24 +230,83 @@ If we are running the client app using “With Docker”, the all we need is to 
         apiUrl: 'http://localhost:3000'
     }
 
-The client also provides a wide variety of style customizations using SASS variables or message localization. Then we can mount it as volumes in case Docker as well:
+Custom Logo
+^^^^^^^^^^^
+
+We can use our own custom logo by mounting it to the client container. The logo must be square and in SVG format.
 
 .. CODE-BLOCK:: yaml
 
-    volumes:
-        # mount SCSS file
-        - /path/to/extra.scss:/src/scss/customizations/_extra.scss
-        - /path/to/overrides.scss:/src/scss/customizations/_overrides.scss
-        - /path/to/variables.scss:/src/scss/customizations/_variables.scss
-        - /path/to/provisioning.json:/configuration/provisioning.json:ro
-        # mount other assets, we can then refere them from scss using '/assets/...'
-        - /path/to/assets:/usr/share/nginx/html/assets
+    dsw-client:
+        volumes:
+        - /path/to/logo.svg:/usr/share/nginx/html/wizard/img/logo.svg
 
-* ``_extra.scss`` = This file is loaded before all other styles. We can use it, for example, to define new styles or import fonts.
-* ``_overrides.scss`` = This file is loaded after all other styles. We can use it to override existing styles.
-* ``_variables.scss`` = A lot of values related to styles are defined as variables. The easiest way to customize the style is to define new values for these variables using this file.
+Favicon
+^^^^^^^
 
-For more information about variables and assets, visit `Theming Bootstrap <https://getbootstrap.com/docs/5.3/customize/overview/>`__. The color of illustrations can be adjusted using ``$illustrations-color`` variable.
+If we changed the logo, we might also want to change the favicon. First, we need to generate the necessary files using, for example, this `Favicon Generator <https://realfavicongenerator.net/>`__. The wizard uses the following files:
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-16x16.png
+- favicon-32x32.png
+- favicon.ico
+- mstile-144x144.png
+- mstile-150x150.png
+- mstile-310x150.png
+- mstile-310x310.png
+- mstile-70x70.png
+- safari-pinned-tab.svg
+- site.webmanifest
+
+They are all in the ``/usr/share/nginx/html/wizard/img/favicon`` folder, so we can mount our generated favicon files from the generator there, or we can mount the whole folder:
+
+.. CODE-BLOCK:: yaml
+
+    dsw-client:
+        volumes:
+        - /path/to/favicon:/usr/share/nginx/html/wizard/img/favicon
+
+Style Customizations
+^^^^^^^^^^^^^^^^^^^^
+
+We can mount a file called `head-extra.html` to the wizard client image to attach extra code to the ``<head>`` tag. This can be used to override some styles or CSS variables. For example, to change a color theme, we only need to override a few Bootstrap variables:
+
+.. CODE-BLOCK:: html
+
+    <style>
+        --bs-bg-primary-color: rgb(255, 255, 255);
+        --bs-btn-primary-active-bg: rgb(18, 128, 106);
+        --bs-btn-primary-color: rgb(255, 255, 255);
+        --bs-btn-primary-active-color: rgb(255, 255, 255);
+        --bs-btn-primary-disabled-color: rgb(255, 255, 255);
+        --bs-btn-primary-hover-bg: rgb(19, 136, 113);
+        --bs-btn-primary-hover-color: rgb(255, 255, 255);
+        --bs-focus-ring-color: 57, 174, 151;
+        --bs-input-focus-border-color: rgb(139, 208, 194);
+        --bs-link-color: rgb(22, 160, 133);
+        --bs-link-color-rgb: 22, 160, 133;
+        --bs-link-hover-color: rgb(18, 128, 106);
+        --bs-link-hover-color-rgb: 18, 128, 106;
+        --bs-primary: rgb(22, 160, 133);
+        --bs-primary-bg: rgb(232, 246, 243);
+        --bs-primary-bg2: rgb(208, 236, 231);
+        --bs-primary-rgb: 22, 160, 133;
+        --illustrations-color: rgb(241, 196, 15);
+    </style>
+
+For more information about what variables can be overridden, see the `CSS variables in Bootstrap documentation <https://getbootstrap.com/docs/5.3/customize/css-variables/>`__.
+
+Once we have the file ready, we need to mount it into the container:
+
+.. CODE-BLOCK:: yaml
+
+    dsw-client:
+        volumes:
+        - /path/to/head-extra.html:/src/head-extra.html
+
 
 Document Templates
 ==================
