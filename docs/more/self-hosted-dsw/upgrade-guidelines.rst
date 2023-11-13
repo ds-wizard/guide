@@ -48,6 +48,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 
 - **(breaking)** Client runs on nested route ``/wizard``, and server runs on nested route ``/wizard-api``. These changes must be reflected in the deployment configuration (such as routing in a reverse proxy) and ``clientUrl`` in the :ref:`config-server`.
 - **(breaking)** :ref:`client-configuration` for a custom logo and theme no longer uses SASS and needs to be updated accordingly.
+- **(breaking)** :ref:`api-keys` created in previous versions will no longer work.
 
 3.27.X to 3.28.X
 ----------------
