@@ -256,61 +256,19 @@ We can freely customize and style templates of documents (DMPs). HTML and CSS kn
 Email Templates
 ===============
 
-Similarly to document templates, we can customize templates for emails sent by the Wizard located in ``templates/mail`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__. And we can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Related>`__ equal to the filename).
+Similarly to document templates, we can customize templates for emails sent by the Wizard located in ``templates`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__. And we can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Related>`__ equal to the filename). We can learn more about the template structure and contents directly from `the mailer GitHub repository <https://github.com/ds-wizard/engine-tools/tree/develop/packages/dsw-mailer/templates>`__.
 
-Templates Structure
--------------------
-
-The structure is following:
-
-* ``templates/mail/_common`` = layout, styles, common files
-* ``templates/mail/_common/attachments`` = attachments for all emails
-* ``templates/mail/_common/images`` = inline images for all emails
-* ``templates/mail/<name>`` = templates specific for this email type, should contain message.html.j2 and message.txt.j2 files (or at least one of them, `mail servers prefer both variants <https://litmus.com/blog/reach-more-people-and-improve-your-spam-score-why-multi-part-email-is-important>`__)
-* ``templates/mail/<name>/attachments`` = attachments specific for email type
-* ``templates/mail/<name>/images`` = inline images specific for email type
-
-All attachments are loaded from the template-specific and common folders and included in to email with the detected `MIME type <https://en.wikipedia.org/wiki/Media_type>`__. It similarly works for inline images, but those are not displayed as attachments, just as `related part <https://en.wikipedia.org/wiki/MIME#Related>`__ to the HTML part (if present). We highly recommend using ASCII-only names without whitespaces and with standard extensions. Also, sending a minimum amount of data via email is suggested.
-
-Templates variables
--------------------
-
-All templates are provided also with variables:
-
-.. TODO:
-
-    links to old documentation?
-
-* ``appTitle`` = from the configuration ``appTitle``
-* ``clientAddress`` = from the configuration ``clientUrl``
-* ``mailName`` = from the configuration ``name``
-* ``user`` = user (subject of an email), structure with attributes accessible via . (dot, e.g. ``user.name``)
-
-Email types
------------
-
-Currently, there are following types of mail:
-
-.. TODO:
-
-    links to old documentation?
-
-* ``registrationConfirmation`` = email sent to user after registration to verify email address, contains ``activationLink`` variable
-* ``registrationCreatedAnalytics`` = email sent to address specified in the configuration about registration of a new user (see Analytics config)
-* ``resetPassword`` = email sent to user when requests resetting a password, contains ``resetLink`` variable
-* ``twoFactorAuth`` = email sent to user when the 2FA is enabled
-
-Docker deployment
------------------
-
-Including our own email templates while using dockerized Wizard is practically the same as for DMP templates. We can also bind whole ``templates/mail`` folders (or even ``templates`` if we want to change both):
+Including our own email templates while using dockerized Wizard is practically the same as for DMP templates. We can also bind whole ``templates`` folders. (or even ``templates`` if we want to change both):
 
 .. CODE-BLOCK:: yaml
 
     mailer:
         image: datastewardshipwizard/mailer
         restart: always
-    volumes:
-        - /dsw/application.yml:/app/config.yml:ro
-        - /dsw/templates/mail:/app/templates:ro
+        depends_on:
+        - postgres
+        - dsw-server
+        volumes:
+        - ./config/application.yml:/app/config/application.yml:ro
+        - ./templates:/home/user/templates:ro
     # ... (continued)
