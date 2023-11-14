@@ -217,6 +217,8 @@ There can be multiple integrations configured in a single file. These can be use
 
      Different knowledge models may use different variable naming. Please read the information in README to find out what is required. We recommend authors to stick with ``apiKey`` and ``apiUrl`` variables as our convention.
 
+.. _client-configuration:
+
 Client Configuration
 --------------------
 
@@ -228,24 +230,83 @@ If we are running the client app using “With Docker”, the all we need is to 
         apiUrl: 'http://localhost:3000'
     }
 
-The client also provides a wide variety of style customizations using SASS variables or message localization. Then we can mount it as volumes in case Docker as well:
+Custom Logo
+^^^^^^^^^^^
+
+We can use our own custom logo by mounting it to the client container. The logo must be square and in SVG format.
 
 .. CODE-BLOCK:: yaml
 
-    volumes:
-        # mount SCSS file
-        - /path/to/extra.scss:/src/scss/customizations/_extra.scss
-        - /path/to/overrides.scss:/src/scss/customizations/_overrides.scss
-        - /path/to/variables.scss:/src/scss/customizations/_variables.scss
-        - /path/to/provisioning.json:/configuration/provisioning.json:ro
-        # mount other assets, we can then refere them from scss using '/assets/...'
-        - /path/to/assets:/usr/share/nginx/html/assets
+    dsw-client:
+        volumes:
+        - /path/to/logo.svg:/usr/share/nginx/html/wizard/img/logo.svg
 
-* ``_extra.scss`` = This file is loaded before all other styles. We can use it, for example, to define new styles or import fonts.
-* ``_overrides.scss`` = This file is loaded after all other styles. We can use it to override existing styles.
-* ``_variables.scss`` = A lot of values related to styles are defined as variables. The easiest way to customize the style is to define new values for these variables using this file.
+Favicon
+^^^^^^^
 
-For more information about variables and assets, visit `Theming Bootstrap <https://getbootstrap.com/docs/5.3/customize/overview/>`__. The color of illustrations can be adjusted using ``$illustrations-color`` variable.
+If we changed the logo, we might also want to change the favicon. First, we need to generate the necessary files using, for example, this `Favicon Generator <https://realfavicongenerator.net/>`__. The wizard uses the following files:
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-16x16.png
+- favicon-32x32.png
+- favicon.ico
+- mstile-144x144.png
+- mstile-150x150.png
+- mstile-310x150.png
+- mstile-310x310.png
+- mstile-70x70.png
+- safari-pinned-tab.svg
+- site.webmanifest
+
+They are all in the ``/usr/share/nginx/html/wizard/img/favicon`` folder, so we can mount our generated favicon files from the generator there, or we can mount the whole folder:
+
+.. CODE-BLOCK:: yaml
+
+    dsw-client:
+        volumes:
+        - /path/to/favicon:/usr/share/nginx/html/wizard/img/favicon
+
+Style Customizations
+^^^^^^^^^^^^^^^^^^^^
+
+We can mount a file called `head-extra.html` to the wizard client image to attach extra code to the ``<head>`` tag. This can be used to override some styles or CSS variables. For example, to change a color theme, we only need to override a few Bootstrap variables:
+
+.. CODE-BLOCK:: html
+
+    <style>
+        --bs-bg-primary-color: rgb(255, 255, 255);
+        --bs-btn-primary-active-bg: rgb(18, 128, 106);
+        --bs-btn-primary-color: rgb(255, 255, 255);
+        --bs-btn-primary-active-color: rgb(255, 255, 255);
+        --bs-btn-primary-disabled-color: rgb(255, 255, 255);
+        --bs-btn-primary-hover-bg: rgb(19, 136, 113);
+        --bs-btn-primary-hover-color: rgb(255, 255, 255);
+        --bs-focus-ring-color: 57, 174, 151;
+        --bs-input-focus-border-color: rgb(139, 208, 194);
+        --bs-link-color: rgb(22, 160, 133);
+        --bs-link-color-rgb: 22, 160, 133;
+        --bs-link-hover-color: rgb(18, 128, 106);
+        --bs-link-hover-color-rgb: 18, 128, 106;
+        --bs-primary: rgb(22, 160, 133);
+        --bs-primary-bg: rgb(232, 246, 243);
+        --bs-primary-bg2: rgb(208, 236, 231);
+        --bs-primary-rgb: 22, 160, 133;
+        --illustrations-color: rgb(241, 196, 15);
+    </style>
+
+For more information about what variables can be overridden, see the `CSS variables in Bootstrap documentation <https://getbootstrap.com/docs/5.3/customize/css-variables/>`__.
+
+Once we have the file ready, we need to mount it into the container:
+
+.. CODE-BLOCK:: yaml
+
+    dsw-client:
+        volumes:
+        - /path/to/head-extra.html:/src/head-extra.html
+
 
 Document Templates
 ==================
@@ -256,61 +317,19 @@ We can freely customize and style templates of documents (DMPs). HTML and CSS kn
 Email Templates
 ===============
 
-Similarly to document templates, we can customize templates for emails sent by the Wizard located in ``templates/mail`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__. And we can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Related>`__ equal to the filename).
+Similarly to document templates, we can customize templates for emails sent by the Wizard located in ``templates`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__. And we can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Related>`__ equal to the filename). We can learn more about the template structure and contents directly from `the mailer GitHub repository <https://github.com/ds-wizard/engine-tools/tree/develop/packages/dsw-mailer/templates>`__.
 
-Templates Structure
--------------------
-
-The structure is following:
-
-* ``templates/mail/_common`` = layout, styles, common files
-* ``templates/mail/_common/attachments`` = attachments for all emails
-* ``templates/mail/_common/images`` = inline images for all emails
-* ``templates/mail/<name>`` = templates specific for this email type, should contain message.html.j2 and message.txt.j2 files (or at least one of them, `mail servers prefer both variants <https://litmus.com/blog/reach-more-people-and-improve-your-spam-score-why-multi-part-email-is-important>`__)
-* ``templates/mail/<name>/attachments`` = attachments specific for email type
-* ``templates/mail/<name>/images`` = inline images specific for email type
-
-All attachments are loaded from the template-specific and common folders and included in to email with the detected `MIME type <https://en.wikipedia.org/wiki/Media_type>`__. It similarly works for inline images, but those are not displayed as attachments, just as `related part <https://en.wikipedia.org/wiki/MIME#Related>`__ to the HTML part (if present). We highly recommend using ASCII-only names without whitespaces and with standard extensions. Also, sending a minimum amount of data via email is suggested.
-
-Templates variables
--------------------
-
-All templates are provided also with variables:
-
-.. TODO:
-
-    links to old documentation?
-
-* ``appTitle`` = from the configuration ``appTitle``
-* ``clientAddress`` = from the configuration ``clientUrl``
-* ``mailName`` = from the configuration ``name``
-* ``user`` = user (subject of an email), structure with attributes accessible via . (dot, e.g. ``user.name``)
-
-Email types
------------
-
-Currently, there are following types of mail:
-
-.. TODO:
-
-    links to old documentation?
-
-* ``registrationConfirmation`` = email sent to user after registration to verify email address, contains ``activationLink`` variable
-* ``registrationCreatedAnalytics`` = email sent to address specified in the configuration about registration of a new user (see Analytics config)
-* ``resetPassword`` = email sent to user when requests resetting a password, contains ``resetLink`` variable
-* ``twoFactorAuth`` = email sent to user when the 2FA is enabled
-
-Docker deployment
------------------
-
-Including our own email templates while using dockerized Wizard is practically the same as for DMP templates. We can also bind whole ``templates/mail`` folders (or even ``templates`` if we want to change both):
+Including our own email templates while using dockerized Wizard is practically the same as for DMP templates. We can also bind whole ``templates`` folders. (or even ``templates`` if we want to change both):
 
 .. CODE-BLOCK:: yaml
 
     mailer:
         image: datastewardshipwizard/mailer
         restart: always
-    volumes:
-        - /dsw/application.yml:/app/config.yml:ro
-        - /dsw/templates/mail:/app/templates:ro
+        depends_on:
+        - postgres
+        - dsw-server
+        volumes:
+        - ./config/application.yml:/app/config/application.yml:ro
+        - ./templates:/home/user/templates:ro
     # ... (continued)
