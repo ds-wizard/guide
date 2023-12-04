@@ -476,21 +476,21 @@ Integration
 -  ``uuid`` (``str``)
 -  ``id`` (``str``)
 -  ``name`` (``str``)
--  ``item_url`` (``str``)
--  ``logo`` (``str``)
+-  ``item_url`` (``Optional[str]``)
+-  ``logo`` (``Optional[str]``)
 -  ``props`` (``dict[str,str]``)
 -  ``rq_method`` (``str``)
 -  ``rq_url`` (``str``)
 -  ``rq_headers`` (``dict[str,str]``)
 -  ``rq_body`` (``str``)
--  ``rs_list_field`` (``str``)
--  ``rs_item_id`` (``str``)
+-  ``rs_list_field`` (``Optional[str]``)
+-  ``rs_item_id`` (``Optional[str]``)
 -  ``rs_item_template`` (``str``)
 -  ``annotations`` (``dict[str,str]``)
 
 Operations:
 
--  ``item(item_id: str) -> str`` - URL of an item identified by string ID
+-  ``item(item_id: str) -> Optional[str]`` - URL of an item identified by string ID
 
 
 .. _odc-tag:
@@ -606,11 +606,11 @@ IntegrationReply
 ^^^^^^^^^^^^^^^^
 
 -  ``value`` (``str``)
--  ``item_id`` (``item_id``) - ID of item if selected using :ref:`odc-integration`
+-  ``item_id`` (``Optional[str]``) - ID of item if selected using :ref:`odc-integration`
 
 Aliases:
 
--  ``id`` (``str``) - same as ``item_id``
+-  ``id`` (``Optional[str]``) - same as ``item_id``
 -  ``is_plain`` (``bool``) - entered by user ignoring the integration
 -  ``is_integration`` (``bool``) - selected by user using the integration
 -  ``url`` (``Optional[str]``) - item URL based :ref:`odc-integration` if selected from it

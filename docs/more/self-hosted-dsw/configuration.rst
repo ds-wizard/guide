@@ -176,7 +176,7 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 Externals
 ^^^^^^^^^
 
-This configuration section is used only by **Document Worker**. We can affect steps for templates that use external tools (``pandoc`` and ``wkhtmltopdf``). It is usually sufficient to keep the defaults. Each of them has configuration options:
+This configuration section is used only by **Document Worker**. We can affect steps for templates that use external tools (``pandoc``). It is usually sufficient to keep the defaults. Each of them has configuration options:
 
 .. confval:: executable
 
