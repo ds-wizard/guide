@@ -1,3 +1,5 @@
+.. _development-integration-widget:
+
 Integration Question - Widget
 *****************************
 
@@ -16,4 +18,4 @@ The configuration is done in the :ref:`knowledge model editor<knowledge-model-ed
 Implementation
 ==============
 
-The actual implementation is done using `DSW Integration Widget SDK <https://github.com/ds-wizard/dsw-integration-widget-sdk>`_. We recommend reading the readme and explore the examples to understand how it works.
+The actual implementation is done using `DSW Integration SDK <https://github.com/ds-wizard/dsw-integration-sdk>`_. We recommend reading the readme and explore the examples to understand how it works.
