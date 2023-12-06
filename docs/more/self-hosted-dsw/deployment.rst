@@ -55,6 +55,10 @@ We can use those accounts for testing or initially make our own admin account an
 
     Having a public instance with default accounts is a **security risk**. We should delete or change default accounts (mainly Albert Einstein) if our |project_name| instance is public as soon as possible.
 
+.. NOTE::
+
+    Do not use UIDs below 10000 as that might introduce a `security risk <https://github.com/dnaprawa/dockerfile-best-practices#do-not-use-a-uid-below-10000>`__.
+
 DSW Registry
 ------------
 

@@ -72,7 +72,6 @@ Each step of template produces output based on its (optional) input and options.
     steps/pandoc
     steps/rdflib-convert
     steps/weasyprint
-    steps/wkhtmltopdf
 
 
 .. _tdk-config:
@@ -91,6 +90,12 @@ Template Metamodels
 ===================
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
+
+Version 12 (since 4.1.0)
+------------------------
+
+* Dropped support of deprecated ``wkhtmltopdf`` (for PDF, ``weasyprint`` is used instead).
+* Changed several properties of ``Integration`` and ``IntegrationReply`` to optional (see :ref:`document-context`).
 
 Version 11 (since 3.20.0)
 -------------------------
