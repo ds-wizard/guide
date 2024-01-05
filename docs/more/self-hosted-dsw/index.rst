@@ -5,7 +5,7 @@ This section explains how to deploy, configure, and maintain |project_name| inst
 
 .. NOTE::
 
-    Before going for self-hosted options, it is a good idea to try out |project_name| using the `already-configured publicly-available instances <https://ds-wizard.org/get-started>`_.
+    Before going for self-hosted options, it is a good idea to try out |project_name| using `existing providers <https://ds-wizard.org/#providers>`_.
 
 
 .. raw:: html
