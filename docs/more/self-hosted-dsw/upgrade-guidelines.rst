@@ -43,6 +43,11 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.2.X to 4.3.X
+----------------
+
+- The document template metamodel version is raised to 13.
+
 4.1.X to 4.2.X
 ----------------
 
@@ -52,6 +57,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 --------------
 
 - **(breaking)** DSW Integration Widget SDK for :ref:`development-integration-widget` and DSW Importer SDK for :ref:`development-importers` are now deprecated. `DSW Integration SDK <https://github.com/ds-wizard/dsw-integration-sdk>`__ should be used instead.
+- The document template metamodel version is raised to 12.
 
 
 3.28.X to 4.0.X

@@ -18,14 +18,14 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Data Stewardship Wizard'
-copyright = '2023, DSW Team'
+copyright = '2024, DSW Team'
 author = 'DSW Team'
 
 project_name = 'DSW'
 project_name_full = 'Data Stewardship Wizard'
 
 # The full version, including alpha/beta/rc tags
-version = release = '4.2'
+version = release = '4.3'
 
 rst_prolog = f"""
 
