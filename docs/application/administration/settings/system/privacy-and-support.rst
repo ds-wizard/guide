@@ -6,4 +6,4 @@ To request users to agree with **Privacy Policy** and/or **Terms of Service** do
 Support
 =======
 
-These settings also allow us to configure **Support Email** that users can use to request help or report issues. Similarly **Support Repository Name** and **Support Repository URL** can be used in case we want users to create tickets in issue tracker of some repository, e.g., on GitHub. These support links are then shown in :guilabel:`Report issue` modal window.
+These settings also allow us to configure **Support Email** that users can use to request help or report issues. Similarly **Support Site Name** and **Support Site URL** can be used in case we want users to create tickets in issue tracker of some repository, e.g., on GitHub. These support links are then shown in :guilabel:`Report issue` modal window.
