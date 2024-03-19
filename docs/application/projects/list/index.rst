@@ -28,6 +28,7 @@ We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Cr
 By clicking the triple dots on each of the item in the list we can access some actions:
 
 - **Open project** - will simply open the project
+- **Create project from this template** - will create a new project from the selected project template (this is only available if the project is also a project template)
 - **Clone** - will create the exact copy of the project
 - **Create migration** - will start a :ref:`project migration<project-migration>`
 - **Delete** - will delete the project (this action cannot be undone)
