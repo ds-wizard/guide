@@ -6,9 +6,9 @@ sphinx:
   configuration: docs/conf.py
 
 formats:
-  - hmtlzip
+  - htmlzip
   - pdf
-  
+
 build:
   os: ubuntu-22.04
   tools:
