@@ -169,6 +169,7 @@ This can be use, for example, to define the FAIR metrics:
 
 And then define which answers affect which FAIR metrics to provide more feedback to the researchers.
 
+How answer affect certain metric is then set up in the :ref:`answer<answer>`.
 
 
 .. _phase:
