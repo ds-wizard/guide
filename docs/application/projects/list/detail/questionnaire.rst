@@ -138,7 +138,7 @@ Multi-Choice Question
 
 Multi-choice question is similar to the options question, however we can choose more there one answer and there are no follow-up questions.
 
-.. figure:: questionnaire/mutli-choice-question.png
+.. figure:: questionnaire/multi-choice-question.png
     
     Multi-choice question with many choices.
 
