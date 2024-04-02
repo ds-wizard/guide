@@ -94,7 +94,7 @@ If the desired answer is not present in the external resource, users can still f
 Multi-Choice Question
 ^^^^^^^^^^^^^^^^^^^^^
 
-The mutli-choice question has a list of :ref:`choices<choice>`. Users can then pick as many of those choices as they wish. There are, however, no follow-up questions available for this question type.
+The multi-choice question has a list of :ref:`choices<choice>`. Users can then pick as many of those choices as they wish. There are, however, no follow-up questions available for this question type.
 
 
 .. _answer:
@@ -117,7 +117,7 @@ If there are some :ref:`metrics<metric>` created in the knowledge model, we can 
 Choice
 ------
 
-A choice is used with :ref:`mutli-choice questions<multi-choice-question>`. It only contains a **label** which is presented to the user.
+A choice is used with :ref:`multi-choice questions<multi-choice-question>`. It only contains a **label** which is presented to the user.
 
 
 .. _reference:
