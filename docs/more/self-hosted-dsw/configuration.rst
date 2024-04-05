@@ -277,24 +277,26 @@ We can mount a file called `head-extra.html` to the wizard client image to attac
 .. CODE-BLOCK:: html
 
     <style>
-        --bs-bg-primary-color: rgb(255, 255, 255);
-        --bs-btn-primary-active-bg: rgb(18, 128, 106);
-        --bs-btn-primary-color: rgb(255, 255, 255);
-        --bs-btn-primary-active-color: rgb(255, 255, 255);
-        --bs-btn-primary-disabled-color: rgb(255, 255, 255);
-        --bs-btn-primary-hover-bg: rgb(19, 136, 113);
-        --bs-btn-primary-hover-color: rgb(255, 255, 255);
-        --bs-focus-ring-color: 57, 174, 151;
-        --bs-input-focus-border-color: rgb(139, 208, 194);
-        --bs-link-color: rgb(22, 160, 133);
-        --bs-link-color-rgb: 22, 160, 133;
-        --bs-link-hover-color: rgb(18, 128, 106);
-        --bs-link-hover-color-rgb: 18, 128, 106;
-        --bs-primary: rgb(22, 160, 133);
-        --bs-primary-bg: rgb(232, 246, 243);
-        --bs-primary-bg2: rgb(208, 236, 231);
-        --bs-primary-rgb: 22, 160, 133;
-        --illustrations-color: rgb(241, 196, 15);
+        :root {
+            --bs-bg-primary-color: rgb(255, 255, 255);
+            --bs-btn-primary-active-bg: rgb(18, 128, 106);
+            --bs-btn-primary-color: rgb(255, 255, 255);
+            --bs-btn-primary-active-color: rgb(255, 255, 255);
+            --bs-btn-primary-disabled-color: rgb(255, 255, 255);
+            --bs-btn-primary-hover-bg: rgb(19, 136, 113);
+            --bs-btn-primary-hover-color: rgb(255, 255, 255);
+            --bs-focus-ring-color: 57, 174, 151;
+            --bs-input-focus-border-color: rgb(139, 208, 194);
+            --bs-link-color: rgb(22, 160, 133);
+            --bs-link-color-rgb: 22, 160, 133;
+            --bs-link-hover-color: rgb(18, 128, 106);
+            --bs-link-hover-color-rgb: 18, 128, 106;
+            --bs-primary: rgb(22, 160, 133);
+            --bs-primary-bg: rgb(232, 246, 243);
+            --bs-primary-bg2: rgb(208, 236, 231);
+            --bs-primary-rgb: 22, 160, 133;
+            --illustrations-color: rgb(241, 196, 15);
+        }
     </style>
 
 For more information about what variables can be overridden, see the `CSS variables in Bootstrap documentation <https://getbootstrap.com/docs/5.3/customize/css-variables/>`__.
