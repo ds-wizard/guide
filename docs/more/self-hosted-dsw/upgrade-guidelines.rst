@@ -332,7 +332,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 --------------
 
 - Configuration of client and several features is now moved from ``application.yml`` file to in-app :ref:`config-settings`; therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start |project_name|, migrate options from ``application.yml`` to :ref:`config-settings` and then optionally clean up ``application.yml`` file.
-- User fiels ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
+- User fields ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
 - Recommended version of MongoDB is updated to 4.2.3.
 
 2.0.X to 2.1.X

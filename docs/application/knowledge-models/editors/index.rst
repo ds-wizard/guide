@@ -3,7 +3,7 @@
 Knowledge Model Editors
 ***********************
 
-Here, we can see a list of all knoweldge model editors. Everyone with the data steward role assigned can see all the knowledge model editors.
+Here, we can see a list of all knowledge model editors. Everyone with the data steward role assigned can see all the knowledge model editors.
 
 .. figure:: index/knowledge-model-editors-list.png
     

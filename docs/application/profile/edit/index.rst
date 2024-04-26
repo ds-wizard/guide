@@ -7,7 +7,7 @@ In case of configured submission services, there might be additional inputs unde
 
 .. figure:: index/form.png
     
-    Form for editting profile with example submission settings.
+    Form for editing profile with example submission settings.
 
 
 .. NOTE::

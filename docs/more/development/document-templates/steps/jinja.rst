@@ -49,8 +49,8 @@ Filters
 
 Within Jinja templates, you can use so-called `filters <https://jinja.palletsprojects.com/en/3.0.x/templates/#filters>`__.Basically, those are functions applied to a first argument using pipe ``|`` symbol.
 
-Bultin Filters
-~~~~~~~~~~~~~~
+Builtin Filters
+~~~~~~~~~~~~~~~
 
 There are several widely used `builtin filters <https://jinja.palletsprojects.com/en/3.0.x/templates/#builtin-filters>`__ directly in Jinja.
 
@@ -182,8 +182,8 @@ Within Jinja templates, you can use so-called `tests <https://jinja.palletsproje
    {% endif %}
 
 
-Bultin Tests
-~~~~~~~~~~~~
+Builtin Tests
+~~~~~~~~~~~~~
 
 There are several widely used `builtin tests <https://jinja.palletsprojects.com/en/3.0.x/templates/#builtin-tests>`__ directly in Jinja.
 

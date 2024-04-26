@@ -21,10 +21,10 @@ Knowledge model consists of several entities connected together. You can see how
    Knowledge model schema
 
 
-Knowlege Model
---------------
+Knowledge Model
+---------------
 
-At the top level, the knowledge model contains :ref:`chapters<chapter>`, and entities refered to elsewhere from the knowledge model: :ref:`metrics<metric>`, :ref:`phases<phase>`, :ref:`question tags<question-tag>`, and :ref:`integrations<integration>`.
+At the top level, the knowledge model contains :ref:`chapters<chapter>`, and entities referred to elsewhere from the knowledge model: :ref:`metrics<metric>`, :ref:`phases<phase>`, :ref:`question tags<question-tag>`, and :ref:`integrations<integration>`.
 
 
 .. _chapter:

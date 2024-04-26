@@ -38,7 +38,7 @@ The configuration is done in the :ref:`knowledge model editor<knowledge-model-ed
 Request Configuration
 ---------------------
 
-In the **Request** section, we configure how to make an HTTP requrests to the external service's API. For that, we need to configure the following (the specific values depends on how the API works):
+In the **Request** section, we configure how to make an HTTP requests to the external service's API. For that, we need to configure the following (the specific values depends on how the API works):
 
 - **Request URL** - what is the URL where we want to send search requests
 - **Request HTTP Method** - what HTTP method should be used
@@ -56,10 +56,10 @@ There is a special property ``${q}`` that we can use within those fields. The pr
 Response Configuration
 ----------------------
 
-In the **Response** section, we configure how to process the JSON respnonse from the external service. For that, we need to configure the following:
+In the **Response** section, we configure how to process the JSON response from the external service. For that, we need to configure the following:
 
 - **Response List Field** - where in the JSON response is the list of items corresponding to the search query
-- **Respone Item ID** - what field represents an item ID in the returned JSON
+- **Response Item ID** - what field represents an item ID in the returned JSON
 - **Response Item Template** - how we want to present the result to the user
 
 We can use Jinja2 templates (`Ginger <https://ginger.tobiasdammers.nl>`_ implementation) in Response Item ID and especially in Response Item Template to make the response item look better.
@@ -72,7 +72,7 @@ Sometimes, we might need to use some secrets (for example for authentication tok
 
 We need to navigate to :guilabel:`Administration → Settings → Knowledge Models` and there is a field called **Integration Config**. It is a YAML organized by the **Integration ID** at the top level and key value pairs for each property.
 
-We can fill some propertes in. So, for example, if the **Integration ID** of our integration is *ourIntegration* we can write:
+We can fill some properties in. So, for example, if the **Integration ID** of our integration is *ourIntegration* we can write:
 
 .. code-block:: yaml
 
