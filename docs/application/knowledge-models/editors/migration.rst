@@ -47,7 +47,7 @@ During the migration, we can see all the changes one by one and can choose wheth
 Cancelling a Knowledge Model Migration
 ======================================
 
-We can cancell the knowledge model migration at any point before we publish the new version of the Child KM. We need to navigate to the :ref:`list of knowledge model editors<knowledge-model-editors>` and choose :guilabel:`Cancel migration` from the dropdown menu for the desired KM editor.
+We can cancel the knowledge model migration at any point before we publish the new version of the Child KM. We need to navigate to the :ref:`list of knowledge model editors<knowledge-model-editors>` and choose :guilabel:`Cancel migration` from the dropdown menu for the desired KM editor.
 
 
 Finishing a Knowledge Model Migration
@@ -64,6 +64,6 @@ The publish screen shows us some information about the knowledge model, such as 
 
 Then we need to add some additional metadata (these fields are pre-filled if there was a previous version published):
 
-- **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX Licens List <https://spdx.org/licenses/>`_.
+- **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX Licenses List <https://spdx.org/licenses/>`_.
 - **Description** - this should be really short and descriptive. It is used, for example, in select boxes when creating a new project to help researchers choose the best knowledge model for their use case.
 - **Readme** - this is where we can describe everything we need about the knowledge model. We can, for example, include a changelog of what changed in what version, etc. We can use :ref:`Markdown<markdown>` in this field to provide some nice formatting.

@@ -21,10 +21,10 @@ Knowledge model consists of several entities connected together. You can see how
    Knowledge model schema
 
 
-Knowlege Model
---------------
+Knowledge Model
+---------------
 
-At the top level, the knowledge model contains :ref:`chapters<chapter>`, and entities refered to elsewhere from the knowledge model: :ref:`metrics<metric>`, :ref:`phases<phase>`, :ref:`question tags<question-tag>`, and :ref:`integrations<integration>`.
+At the top level, the knowledge model contains :ref:`chapters<chapter>`, and entities referred to elsewhere from the knowledge model: :ref:`metrics<metric>`, :ref:`phases<phase>`, :ref:`question tags<question-tag>`, and :ref:`integrations<integration>`.
 
 
 .. _chapter:
@@ -44,6 +44,7 @@ Questions are used to collect the answers from users. Each question has a **titl
 
 Then there are some additional settings based on the **question type**.
 
+
 .. _options-question:
 
 Options Question
@@ -51,12 +52,14 @@ Options Question
 
 The options question contains a closed list of :ref:`answers<answer>` where users can pick one. Answers can have some follow-up questions that are only presented to the user when they pick the answer. So the options question can be used for questionnaire branching.
 
+
 .. _list-question:
 
 List Question
 ^^^^^^^^^^^^^
 
 The list question is used when there are multiple answers and we want to ask more details about those. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
+
 
 .. _value-question:
 
@@ -76,6 +79,7 @@ The value question asks for a single value that users type in. There are many di
 - Color
 
 The input field differs based on the value type (simple input for string, date picker for date, etc.). Some of these have a check whether the entered value is valid (such as valid email or URL) and displays a warning if not.
+
 
 .. _integration-question:
 
@@ -127,7 +131,6 @@ Reference
 
 We can provide some additional references for :ref:`questions<question>` to help users better understand it or learn more details. There are more types of references.
 
-
 URL Reference
 ^^^^^^^^^^^^^
 
@@ -138,6 +141,7 @@ Book Reference
 
 .. warning::
     Book references are deprecated.
+
 
 Resource Page Reference
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,6 +156,7 @@ Expert
 ------
 
 We can provide a contact information to an expert for some :ref:`questions<question>`. An expert has a **name** and an **email**. We can use this, for example, if there is an expert for a specific topics in our institution and we want to make it easy to find out in our customized knowledge model.
+
 
 .. _metric:
 
@@ -189,7 +194,7 @@ Question Tag
 
 We can define question tags on the knowledge model and then assign them to different :ref:`questions<question>`. This can be used to group together questions on the same topic or for the same purpose.
 
-When researchers create a new project from the knowledge model, they can only choose the question groups they are interested in for their research. So we can use this to create a very rich knowledge model but researchers will be able to use only the parts relevant to them.
+When researchers create a new project from the knowledge model, they can only choose the question groups they are interested in for their research. Selection of question tags is done in :ref:`custom project creation<create-project-custom>` So we can use this to create a very rich knowledge model but researchers will be able to use only the parts relevant to them.
 
 
 .. _integration:

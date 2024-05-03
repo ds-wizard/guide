@@ -5,7 +5,7 @@ After navigating to :guilabel:`Locales` (under :guilabel:`Administration`), we c
 
 There is always the **English** locale (``wizard:default:1.0.0``) which is embedded and cannot be deleted. For others, we can use :guilabel:`Export` and :guilabel:`Delete` options from the right item menu.
 
-Another option is to switch other locale to be the default one using :guilabel:`Set default` action. The default locale will be used in case no available locale tgat matching user's preferences (explicit or implicit from the web browser). We can :guilabel:`Disable` or :guilabel:`Enable` locales except the default one (which must be enabled).
+Another option is to switch other locale to be the default one using :guilabel:`Set default` action. The default locale will be used if there isn't an available locale that matches the user's preferences (explicit or implicit from the web browser). We can :guilabel:`Disable` or :guilabel:`Enable` locales except the default one (which must be enabled).
 
 If there is a locale with newer version available in the `DSW Registry <https://registry.ds-wizard.org>`__ (and if configured), *update available* clickable badge may appear. Finally, we can use :guilabel:`Import` to :doc:`./import` and :guilabel:`Create` to :doc:`./create`.
 

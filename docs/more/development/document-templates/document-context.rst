@@ -31,7 +31,7 @@ Document context is an object that carries all information related to a DSW ques
 * ``updatedAt`` = timestamp when the document was last updated
 * ``uuid`` = UUID of the document
 
-This structure is provided to a Jinja template in :doc:`steps/jinja` and outputed from :doc:`steps/json`. We can use the JSON step to observe the actual content of the document context (structure as well as the values). Finally, we can also check :doc:`../metamodel-schemas` (the relevant JSON schema for document context).
+This structure is provided to a Jinja template in :doc:`steps/jinja` and outputted from :doc:`steps/json`. We can use the JSON step to observe the actual content of the document context (structure as well as the values). Finally, we can also check :doc:`../metamodel-schemas` (the relevant JSON schema for document context).
 
 
 Objectified Document Context

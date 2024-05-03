@@ -3,7 +3,7 @@
 Integration Question - Widget
 *****************************
 
-:ref:`Integration question<integration-question>` can be connected to an external resource using a widget integration. When there is this type of question, instead of writing an answer, reserachers click on :guilabel:`Select` button. It will open the widget where they can pick their answer and it is then sent back to the |project_name|. The whole flow is denoted in the following diagram.
+:ref:`Integration question<integration-question>` can be connected to an external resource using a widget integration. When there is this type of question, instead of writing an answer, researchers click on :guilabel:`Select` button. It will open the widget where they can pick their answer and it is then sent back to the |project_name|. The whole flow is denoted in the following diagram.
 
 .. figure:: integration-widget/widget-integration.png
     

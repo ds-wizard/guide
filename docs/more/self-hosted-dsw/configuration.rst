@@ -109,7 +109,7 @@ Information for connection to S3 storage (used for document and document templat
 
 .. WARNING::
 
-    S3 service must be publicly accessible (so users can download documents and export templates or locales). Also, bucket must be created otherwise documents cannot be created and documet tempates / locales imported.
+    S3 service must be publicly accessible (so users can download documents and export templates or locales). Also, bucket must be created otherwise documents cannot be created and document templates / locales imported.
 
 
 Mail
