@@ -96,7 +96,7 @@ If there are some metrics set for the answers, we can see labels with the metric
 
 
 List of Items Question
--------------
+----------------------
 
 List of Items question doesn't have a simple answer but a list of items. Each of the items has the same set of subquestions. For example, a list of items question asking about the project contributors where each item represent one contributor with questions about their name, role, etc.
 
