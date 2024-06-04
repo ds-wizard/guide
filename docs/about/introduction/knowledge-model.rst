@@ -53,12 +53,12 @@ Options Question
 The options question contains a closed list of :ref:`answers<answer>` where users can pick one. Answers can have some follow-up questions that are only presented to the user when they pick the answer. So the options question can be used for questionnaire branching.
 
 
-.. _list-question:
+.. _list-of-items-question:
 
-List Question
-^^^^^^^^^^^^^
+List of Items Question
+^^^^^^^^^^^^^^^^^^^^^^
 
-The list question is used when there are multiple answers and we want to ask more details about those. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
+The list of items question is used when there are multiple answers and we want to ask more details about those. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
 
 
 .. _value-question:

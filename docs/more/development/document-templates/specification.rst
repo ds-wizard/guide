@@ -149,7 +149,7 @@ Version 2 (since 2.6.0)
 -----------------------
 
 * Changed ``questionnaireReplies`` to use path-reply map and removed then redundant ``questionnaireRepliesMap`` from document context.
-* Replies for list question represented as list of UUIDs instead of size used for numeric indexing.
+* Replies for list of items question represented as list of UUIDs instead of size used for numeric indexing.
 
 Version 1 (since 2.5.0)
 -----------------------

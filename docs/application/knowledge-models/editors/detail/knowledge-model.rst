@@ -8,7 +8,7 @@ Navigation
 
 In the top row, we can see the breadcrumbs that show us where we are within the knowledge model. This allows us to quickly jump back up in the hierarchy.
 
-On the lefthand side of the editor, there is a navigation tree reflecting the structure of the knowledge model. We can click on the arrows to expand or collapse individual entities, or click on :guilabel:`Expand all` or :guilabel:`Collapse all`. By clicking on the entity name, we open its editor.
+On the left side of the editor, there is a navigation tree reflecting the structure of the knowledge model. We can click on the arrows to expand or collapse individual entities, or click on :guilabel:`Expand all` or :guilabel:`Collapse all`. By clicking on the entity name, we open its editor.
 
 .. figure:: knowledge-model/navigation.png
     :width: 278

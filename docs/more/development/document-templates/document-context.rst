@@ -591,7 +591,7 @@ Notes:
 ItemListReply
 ^^^^^^^^^^^^^
 
--  ``items`` (``list[str]``) - list of item UUIDs (used in reply paths)
+-  ``items`` (``list[str]``) - list of items UUIDs (used in reply paths)
 
 Aliases:
 
