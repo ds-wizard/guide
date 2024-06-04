@@ -56,7 +56,7 @@ The options question contains a closed list of :ref:`answers<answer>` where user
 .. _list-of-items-question:
 
 List of Items Question
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 The list of items question is used when there are multiple answers and we want to ask more details about those. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
 
