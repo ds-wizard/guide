@@ -3,19 +3,19 @@
 Project List
 ************
 
-In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned to with any role or that are visible by all other logged-in users in the :ref:`project sharing settings<sharing>`. The projects are filtered to those we are explicitely assigned to by default.
+In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned to with any role or that are visible by all other logged-in users in the :ref:`project sharing settings<sharing>`. The projects are filtered to those we are explicitly assigned to by default.
 
 .. figure:: index/project-list.png
     
     Project list with filters.
 
 
-We can search for specific projects using the search field or filter them using additonal filters:
+We can search for specific projects using the search field or filter them using additional filters:
 
 - **Project Template** - if we want to see only :ref:`project templates<project-templates>` or regular projects
 - **Project Tags** - show only the projects that has specific tags assigned
 - **Knowledge Models** - show only the projects created from a specific knowledge model
-- **Users** - filter only the projects with specifc users assigned to them
+- **Users** - filter only the projects with specific users assigned to them
 
 .. NOTE::
 

@@ -25,12 +25,12 @@ We can start a project migration either from the :ref:`project list<project-list
 
 We can see the **original knowledge model**, its **version**, and selected **question tags** on the left side. On the right side we can choose new values for all of these. After we are satisfied with our selection we can click on :guilabel:`Create` button.
 
-Note that the original project will remain unchanged until the migration is finished. So we can cancel it anytime before it is finsihed without affecting the project.
+Note that the original project will remain unchanged until the migration is finished. So we can cancel it anytime before it is finished without affecting the project.
 
 Project Migration
 =================
 
-The next screen is the project migration itself. We can go through all the changes between the orignal and the new knowledge model that affects our answers. During this process, we can also add :ref:`todos<todos>` if we want to come back to a specific question later, after the migration. 
+The next screen is the project migration itself. We can go through all the changes between the original and the new knowledge model that affects our answers. During this process, we can also add :ref:`todos<todos>` if we want to come back to a specific question later, after the migration. 
 
 .. figure:: migration/migration.png
     

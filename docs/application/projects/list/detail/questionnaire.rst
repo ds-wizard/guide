@@ -3,7 +3,7 @@
 Questionnaire
 *************
 
-Questionnaire is the first tab of the project detail. This is the most imporant part where we fill in all the details about our project.
+Questionnaire is the first tab of the project detail. This is the most important part where we fill in all the details about our project.
 
 
 .. _questionnaire-current-phase:
@@ -60,7 +60,7 @@ Each question has an identifier which indicates the chapter it belongs to, as we
 
 Some additional information can also be part of the question:
 
-- **Question tags** - can indicate some additional groupping of questions, for example what DMP templates is this question used for
+- **Question tags** - can indicate some additional grouping of questions, for example what DMP templates is this question used for
 - **Description** - additional information explaining the question
 - **Desirability** - what phase this question become desirable in
 - **List of references** - links to additional external resources related to the question
@@ -88,25 +88,25 @@ Options Question
 
 Options question has a list of pre-set answers and we can choose one from those. There can be some follow-up questions (indicated by the icon by the answer). These questions are displayed only if we select that answer.
 
-If there are some merics set for the answers, we can see labels with the metrics by the answer as well. The color of the label indicates how good or bad the answer is (red means bad, green good, yellow something in between).
+If there are some metrics set for the answers, we can see labels with the metrics by the answer as well. The color of the label indicates how good or bad the answer is (red means bad, green good, yellow something in between).
 
 .. figure:: questionnaire/options-question.png
     
     Options question with a closed set of answers.
 
 
-List Question
+List of Items Question
 -------------
 
-List question doesn't have a simple answer but a list of items. Each of the items has the same set of subquestions. For example, a list question asking about the project contributors where each item represent one contributor with questions about their name, role, etc.
+List of Items question doesn't have a simple answer but a list of items. Each of the items has the same set of subquestions. For example, a list of items question asking about the project contributors where each item represent one contributor with questions about their name, role, etc.
 
-We can simply click on :guilabel:`Add` button under the question to add a new item. Then, we can answer the questions for the item. If the item has a lot of questions, we can use the arrow icon in the item's top left corner to **fold/unfold** the item.
+We can simply click on :guilabel:`Add` button under the question to add a new item. Then, we can answer the questions for the item. If the item has a lot of questions, we can use the arrow icon in the item's top left corner to **fold/unfold** the item. We can also use :guilabel:`Expand all` and :guilabel:`Collapse all` buttons in the question menu to **fold/unfold** all items at once.
 
 There is a trash bin icon in the item's top right corner that we can use to **delete** the item. If there are more than one item, there are also arrow icons that we can use to **change the order** of the items.
 
-.. figure:: questionnaire/list-question.png
+.. figure:: questionnaire/list-of-items-question.png
     
-    List question with a single item.
+    List of items question with a single item.
 
 Value Question
 --------------
@@ -179,7 +179,7 @@ Some value questions (such as email or URL) validates the answer written there. 
 .. figure:: questionnaire/warnings.png
     :width: 487
     
-    Warnings refering to questions with invalid values.
+    Warnings referring to questions with invalid values.
 
 
 Comments
@@ -239,7 +239,7 @@ We can then open the :guilabel:`TODOs` tab from the questionnaire menu to see th
 Version History
 ===============
 
-When we open the :guilabel:`Version history` tab from the questionnaire menu bar we can see the list of all the changes that happened in that questionnaire. We can see who and when made what changes groupped by months and days.
+When we open the :guilabel:`Version history` tab from the questionnaire menu bar we can see the list of all the changes that happened in that questionnaire. We can see who and when made what changes grouped by months and days.
 
 .. figure:: questionnaire/version-history.png
     :width: 320
