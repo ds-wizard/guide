@@ -50,7 +50,7 @@ A template can describe how to produce several formats, each with these metadata
 
 * ``uuid``: UUID of the format (within template)
 * ``name``: display name of the format
-* ``icon``: icon style (CSS classes), preferably `Font Awesome <https://fontawesome.com/v5/search>`__, e.g. ``fas fa-file-word``
+* ``icon``: icon style (CSS classes), preferably `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`__, e.g. ``fas fa-file-word``
 * ``steps``: list of steps for document worker to produce the document with this format, each step has ``name`` and ``options`` (see :ref:`document-worker-steps`)
 
 
