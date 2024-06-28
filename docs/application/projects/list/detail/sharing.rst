@@ -11,6 +11,19 @@ We can share project with other |project_name| users or even external collaborat
     Project sharing settings.
 
 
+If we want to only see how Sharing is set up or copy the project link, we can use the arrow button which is a part of the :guilabel:`Share` button.
+
+.. figure:: sharing/share-dropdown.png
+    :width: 300
+    
+    Fast project sharing.
+
+
+.. NOTE::
+
+    When the sharing settings is changed, the changes are saved automatically.
+
+
 There are different roles how we can share the project that can access different project features:
 
 
@@ -141,7 +154,6 @@ Visible by all other logged-in users
 We can enable the :guilabel:`Visible by other logged-in users` toggle to grant access to the project for all other users without the need to explicitly list them. Then, we can also choose what the users can do -- **view**, **comment**, or **edit** the project. We cannot grant **owner** access this way though.
 
 This can be useful, when we want to have an example project accessible by everybody. We can simply enable this and choose that other users can **view** the project. We also want to set this up when we create a :ref:`project template<project-templates>`.
-
 
 
 Public link

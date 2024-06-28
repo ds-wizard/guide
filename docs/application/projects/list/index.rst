@@ -5,6 +5,12 @@ Project List
 
 In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned to with any role or that are visible by all other logged-in users in the :ref:`project sharing settings<sharing>`. The projects are filtered to those we are explicitly assigned to by default.
 
+We can see projects name, label :guilabel:`Template` if the project is a template, and icon indicating sharing settings:
+
+- **Lock icon** - the project can be only accessed by you
+- **People icon** - the project is shared with other users, hovering on the icon provides additional information
+- **Globe icon** - anyone with a link can access the project
+
 .. figure:: index/project-list.png
     
     Project list with filters.
@@ -23,7 +29,6 @@ We can search for specific projects using the search field or filter them using 
 
 
 We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Create` button.
-
 
 By clicking the triple dots on each of the item in the list we can access some actions:
 
