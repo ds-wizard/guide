@@ -35,7 +35,7 @@ Using these settings we can add **OpenID Services** to allow logging into the |p
 *  Configure the client to have the following claims: ``openid``, ``profile``, ``email``
 *  Configure the client to provide the following details in ID tokens: ``email``, ``given_name``, ``family_name``
 
-Back in the |project_name| settings, we can fill **Client ID**, **Client Secret**, and **URL** from our OpenID client together with optional **Parameters** (usually not needed). Finally, we can configure how the log-in button will look like by setting **Icon** (by using `Font Awesome <https://fontawesome.com/v5/search>`_), **Name**, **Background**, and text/icon **Color**.
+Back in the |project_name| settings, we can fill **Client ID**, **Client Secret**, and **URL** from our OpenID client together with optional **Parameters** (usually not needed). Finally, we can configure how the log-in button will look like by setting **Icon** (by using `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), **Name**, **Background**, and text/icon **Color**.
 
 .. NOTE::
 
