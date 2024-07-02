@@ -227,7 +227,7 @@ If we are running the client app using “With Docker”, the all we need is to 
 .. CODE-BLOCK:: javascript
 
     window.dsw = {
-        apiUrl: 'http://localhost:3000'
+        apiUrl: 'http://localhost:3000/wizard-api'
     }
 
 Custom Logo

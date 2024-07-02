@@ -91,6 +91,11 @@ Template Metamodels
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
 
+Version 13 (since 4.3.0)
+------------------------
+
+* Removed states from templates.
+
 Version 12 (since 4.1.0)
 ------------------------
 
