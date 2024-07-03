@@ -27,6 +27,10 @@ General
 
 This configuration section is used only by **Server** and covers basic configuration of the application.
 
+.. NOTE::
+
+    Do not forget to add `/wizard` to your clientUrl
+
 .. confval:: serverPort
 
    :type: Int
@@ -38,7 +42,7 @@ This configuration section is used only by **Server** and covers basic configura
 
    :type: URI
 
-    Address of client application (e.g. `https://localhost:8080 <https://localhost:8080>`__).
+    Address of client application (e.g. `https://localhost:8080/wizard <https://localhost:8080/wizard>`__).
 
 .. confval:: secret
 
