@@ -24,4 +24,5 @@ Moreover, there are also options to :guilabel:`Log out`, see basic information a
 
     Edit Profile<edit/index>
     Change Language<language>
+    About<about>
     
