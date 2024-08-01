@@ -13,6 +13,3 @@ The :guilabel:`API Documentation` link directs to the API documentation presente
     :width: 500
     
     Modal window with versions of the tool's components.
-
-
-----

@@ -1,6 +1,6 @@
-*********************************
-Application Programming Interface
-*********************************
+*******************
+Integration via API
+*******************
 
 An Application Programming Interface (API) allows machines, such as other systems and tools, to perform actions and transfer data based on agreed-upon methods. 
 
@@ -20,7 +20,7 @@ While several public endpoints are accessible without authentication, most endpo
 Example
 =======
 
-After obtaining your authentication token and reviewing the API documentation, you can start making API calls to execute actions and transfer data, easily integrating them into your projects. Here's a simple example using the Requests library in Python:
+After obtaining your authentication token and reviewing the API documentation, you can start making API calls to execute actions and transfer data, easily integrating them into your projects. Here's a simple example using the `Requests library in Python <https://requests.readthedocs.io/en/latest/>`__:
 
 .. code-block::
 
