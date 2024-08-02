@@ -206,6 +206,12 @@ When there are any comments for a question, the comments icon is changed. It has
 
 In the questionnaire menu bar, there is also a :guilabel:`Comments` tab, showing a badge with the number of comments everywhere in the questionnaire. If we open the tab, we can see a list of questions for each chapter where there are some comments. Clicking on the question there will bring us to that question and open the comments side panel.
 
+Assign Comments
+---------------
+
+We can assign comments to a specific user. This is useful when we want to ask someone to reply or when we want to assign a task to someone. We can assign a comment by clicking on the :guilabel:`Assign comment thread` button in the comment. We can also see who the comment is assigned to in the comment list.
+
+When a comments is assigned to a user, they are notified by an email. Comments assigned to us are also visible in the :ref:`profile<profile>`.
 
 Comment Threads
 ---------------
@@ -214,12 +220,20 @@ Comments are organized into comment threads for better clarity. We can either st
 
 When the thread is resolved, we can click on the ✔ icon in order to resolve it. Resolved threads can be later viewed by selecting :guilabel:`View resolved comments`. They can also be reopened if needed.
 
+Resolved Comments
+-----------------
+
+When we resolve a comment, it is not deleted but only hidden. We can see all resolved comments by selecting :guilabel:`View resolved comments` from the comments tab. We can also reopen the resolved comment if needed.
+
+.. note::
+
+    The :guilabel:`View resolved comments` switch is only present when there is at least one resolved comment in the questionnaire.
+
 
 Editor Notes
 ------------
 
 Besides comments there are also editor notes which work the same way as comments but they are visible only to project editors and owners. We can use editor notes to internal communication with our team while working on the DMP and then comments to gather the feedback from supervisor or reviewer.
-
 
 .. _todos:
 
