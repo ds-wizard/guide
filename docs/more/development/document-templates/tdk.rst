@@ -70,8 +70,8 @@ Environment variables and .env file
 
 You can use environment variables to authenticate:
 
-* ``DSW_API_URL`` = URL of |project_name| API with which you want to communicate. Hover mouse over your profile name to find the About section where URL is specified.
-* ``DSW_API_KEY`` = your API Key. Hover mouse over your profile name, click on :guilabel:`Edit Profile` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
+* ``DSW_API_URL`` = URL of |project_name| API with which you want to communicate. Hover mouse over your profile name to find the :ref:`About<about>` section where URL is specified.
+* ``DSW_API_KEY`` = your :ref:`API Key<api-keys>`. Hover mouse over your profile name, click on :guilabel:`Edit Profile` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
 
 To make this even easier, you can store those in ``.env`` file in the project root and it will be loaded automatically. Or you can specify the path to a ``.env`` file:
 

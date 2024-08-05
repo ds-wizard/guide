@@ -21,5 +21,6 @@ This section provides information on how to develop custom content for |project_
     integration-questions/index
     Project Importers<importers>
     submission-service
+    Integration via API<api>
     contributing
     vulnerabilities
