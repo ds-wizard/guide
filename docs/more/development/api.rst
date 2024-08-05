@@ -36,4 +36,3 @@ After obtaining your authentication token and reviewing the API documentation, y
     response.raise_for_status()
     user = response.json()
     print(f'This API Key belongs to {user["email"]}')
-
