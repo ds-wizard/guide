@@ -10,29 +10,50 @@ Document Context
 Document context is an object that carries all information related to a DSW questionnaire in order to produce a document. To investigate it, it is the best to use *Questionnaire Report* template with ``JSON`` format. The core fields are:
 
 * ``config`` = object with DSW configuration related to documents, e.g., ``clientUrl`` for referring to the DSW instance
-* ``createdAt`` = timestamp when the document was created
-* ``createdBy`` = object describing author of the document
+* ``document`` = object with the details about the document
+   * ``createdAt`` = when the document was created (initial creation, not final generation of the document)
+   * ``createdBy`` = user that created the document
+   * ``documentTemplateId`` = ID of the document template used of the document
+   * ``formatUuid`` = UUID of the format in the document template
+   * ``name`` = name of the document (entered when creating, not file name)
+   * ``uuid``
+* ``extras`` = additional data added by document worker if requested
+* ``groups`` = groups with access to the project
 * ``knowledgeModel`` = object describing used KM for the questionnaire
-   * ``chapterUuids`` = list of UUIDs for chapters
-   * ``integrationUuids`` = list of UUIDs for integrations
-   * ``tagUuids`` = list of UUIDs for tags
+   * ``annotations`` = list of key-value annotations of KM top-level entity
+   * ``chapterUuids`` = list of UUIDs for chapters (ordered)
+   * ``integrationUuids`` = list of UUIDs for integrations (ordered)
+   * ``metricUuids`` = list of UUIDs for metrics (ordered)
+   * ``phaseUuids`` = list of UUIDs for phases (ordered)
+   * ``resourceCollectionUuids`` = list of UUIDs for resource collections (ordered)
+   * ``tagUuids`` = list of UUIDs for tags (ordered)
    * ``entities`` = contains ``questions``, ``answers``, and other maps with UUID-entity pairs
-   * ``name`` = name of the knowledge model
    * ``uuid`` = UUID of the knowledge model
-* ``level`` = current desirability level selected for the questionnaire
-* ``levels`` = list of desirability levels possible
-* ``metrics`` = list of available metrics
+* ``metamodelVersion`` = metamodel version of the document context (document template metamodel version)
 * ``organization`` = object describing organization that runs the DSW instance
+   * ``affiliations`` = list of suggested affiliation within the organization
+   * ``description``
+   * ``name``
+   * ``organizationId``
 * ``package`` = object with metadata about the KM package such as ``version``, ``name``, or ``description``
-* ``questionnaireName`` = name of the questionnaire
-* ``questionnaireReplies`` = map of replies with path-reply pairs, each reply has ``type`` and ``value``
-* ``questionnaireUuid`` = UUID of the questionnaire
+* ``questionnaire`` = object representing the questionnaire
+   * ``createdAt`` = when the questionnaire/project was created
+   * ``createdBy`` = original author who created the questionnaire/project
+   * ``description`` = optional description of the questionnaire/project
+   * ``labels`` = path-list map of labels on questions (i.e. TODOs)
+   * ``name`` = name of the questionnaire/project
+   * ``phaseUuid`` = UUID of the current phase selected
+   * ``replies`` = path-object map of replies to questions
+   * ``updatedAt`` = when the questionnaire/project was last updated
+   * ``uuid`` = UUID of the questionnaire/project
+   * ``versionUuid`` = optional UUID of the current version of the questionnaire
+   * ``versions`` = ordered list of questionnaire versions (objects with details)
 * ``report`` = object that contains report for the questionnaire that contains computed information about number of answered questions as well as metric values
-* ``updatedAt`` = timestamp when the document was last updated
-* ``uuid`` = UUID of the document
+* ``users`` = users with access to the project (each entry contains ``perms`` list and ``user`` object)
 
 This structure is provided to a Jinja template in :doc:`steps/jinja` and outputted from :doc:`steps/json`. We can use the JSON step to observe the actual content of the document context (structure as well as the values). Finally, we can also check :doc:`../metamodel-schemas` (the relevant JSON schema for document context).
 
+.. _document-context-obj:
 
 Objectified Document Context
 ============================
@@ -69,11 +90,14 @@ DocumentContext
 -  ``config`` (:ref:`odc-context-config`)
 -  ``current_phase`` (``Optional[``\ :ref:`odc-phase`\ ``]``)
 -  ``document`` (:ref:`odc-document`)
+-  ``groups`` (``list[``\ :ref:`odc-group-perm`\ ``]``)
 -  ``km`` (:ref:`odc-knowledge-model`)
+-  ``metamodel_version`` (``int``)
 -  ``organization`` (:ref:`odc-organization`)
 -  ``package`` (:ref:`odc-package`)
 -  ``questionnaire`` (:ref:`odc-questionnaire`)
 -  ``report`` (:ref:`odc-report`)
+-  ``users`` (``list[``\ :ref:`odc-user-perm`\ ``]``)
 
 Aliases:
 
@@ -99,6 +123,10 @@ Document
 ~~~~~~~~
 
 -  ``uuid`` (``str``)
+-  ``name`` (``str``)
+-  ``document_template_id`` (``str``)
+-  ``format_uuid`` (``str``)
+-  ``created_by`` (:ref:`odc-user`)
 -  ``created_at`` (``datetime``)
 -  ``updated_at`` (``datetime``)
 
@@ -136,12 +164,16 @@ Questionnaire
 
 -  ``uuid`` (``str``)
 -  ``name`` (``str``)
+-  ``description`` (``Optional[str]``)
 -  ``version`` (``Optional[``\ :ref:`odc-questionnaire-version`\ ``]``)
--  ``versions``
-   (``list[``\ :ref:`odc-questionnaire-version`\ ``]``)
+-  ``versions`` (``list[``\ :ref:`odc-questionnaire-version`\ ``]``)
 -  ``phase`` (``Optional[``\ :ref:`odc-phase`\ ``]``)
+-  ``project_tags`` (``list[str]``)
 -  ``replies`` (:ref:`odc-replies-container`)
+-  ``todos`` (``list[str]``)
 -  ``created_by`` (:ref:`odc-user`)
+-  ``created_at`` (``datetime``)
+-  ``updated_at`` (``datetime``)
 
 
 .. _odc-questionnaire-version:
@@ -176,6 +208,34 @@ User
 -  ``updated_at`` (``datetime``)
 
 
+.. _odc-user-group:
+
+UserGroup
+~~~~~~~~~
+
+-  ``uuid`` (``str``)
+-  ``name`` (``str``)
+-  ``description`` (``str``)
+-  ``private`` (``bool``)
+-  ``members`` (``list[``\ :ref:`odc-user-membership`\ ``]``)
+-  ``created_at`` (``datetime``)
+-  ``updated_at`` (``datetime``)
+
+
+
+.. _odc-user-membership:
+
+UserMembership
+~~~~~~~~~~~~~~
+
+-  ``uuid`` (``str``)
+-  ``first_name`` (``str``)
+-  ``last_name`` (``str``)
+-  ``gravatar_hash`` (``str``)
+-  ``image_url`` (``Optional[str]``)
+-  ``membership_type`` (``str``) - one of: ``member``, ``owner``
+
+
 .. _odc-simple-author:
 
 SimpleAuthor
@@ -186,6 +246,38 @@ SimpleAuthor
 -  ``last_name`` (``str``)
 -  ``image_url`` (``Optional[str]``)
 -  ``gravatar_hash`` (``Optional[str]``)
+
+
+.. _odc-user-perm:
+
+UserPermission
+~~~~~~~~~~~~~~
+
+- ``user`` (:ref:`odc-user`)
+- ``permissions`` (``list[str]``) - contains: ``VIEW``, ``COMMENT``, ``EDIT``, ``ADMIN``
+
+Helpers:
+
+- is_viewer (``bool``)
+- is_commenter (``bool``)
+- is_editor (``bool``)
+- is_owner (``bool``)
+
+
+.. _odc-group-perm:
+
+GroupPermission
+~~~~~~~~~~~~~~~
+
+- ``group`` (:ref:`odc-user-group`)
+- ``permissions`` (``list[str]``) - contains: ``VIEW``, ``COMMENT``, ``EDIT``, ``ADMIN``
+
+Helpers:
+
+- is_viewer (``bool``)
+- is_commenter (``bool``)
+- is_editor (``bool``)
+- is_owner (``bool``)
 
 
 .. _odc-report:
@@ -248,6 +340,7 @@ KnowledgeModel
 -  ``integrations`` (``list[``\ :ref:`odc-integration`\ ``]``)
 -  ``metrics`` (``list[``\ :ref:`odc-metric`\ ``]``)
 -  ``phases`` (``list[``\ :ref:`odc-phase`\ ``]``)
+-  ``resource_collections`` (``list[``\ :ref:`odc-resource-collection`\ ``]``)
 -  ``tags`` (``list[``\ :ref:`odc-tag`\ ``]``)
 
 Aliases:
@@ -279,6 +372,7 @@ dictionaries:
 -  ``phases`` (``dict[str,``\ :ref:`odc-phase`\ ``]``)
 -  ``questions`` (``dict[str,``\ :ref:`odc-question`\ ``]``)
 -  ``references`` (``dict[str,``\ :ref:`odc-reference`\ ``]``)
+-  ``resource_collections (``dict[str,``\ :ref:`odc-resource-collection`\ ``]``)
 -  ``tags`` (``dict[str,``\ :ref:`odc-tag`\ ``]``)
 
 
@@ -368,6 +462,13 @@ ListQuestion
 
 -  ``followups`` (``list[``\ :ref:`odc-question`\ ``]``)
 
+.. _odc-item-select-question:
+
+ItemSelectQuestion
+''''''''''''''''''
+
+-  ``list_question`` (``Optional[``\ :ref:`odc-list-question`\ ``]``)
+
 
 .. _odc-answer:
 
@@ -440,8 +541,30 @@ URLReference
 ResourcePageReference
 '''''''''''''''''''''
 
--  ``short_uuid`` (``str``)
--  ``url`` (``str``) - URL composed using ``client_url`` from :ref:`odc-context-config`
+-  ``resource_page`` (``Optional[``\ :ref:`odc-resource-page`\ ``]``)
+
+
+.. _odc-resource-collection:
+
+ResourceCollection
+^^^^^^^^^^^^^^^^^^
+
+-  ``uuid`` (``str``)
+-  ``title`` (``str``)
+-  ``pages`` (``list[``\ :ref:`odc-resource-page`\ ``]``)
+-  ``annotations`` (``dict[str,str]``)
+
+.. _odc-resource-page:
+
+
+ResourcePage
+^^^^^^^^^^^^
+
+-  ``uuid`` (``str``)
+-  ``title`` (``str``)
+-  ``content`` (``str``)
+-  ``collection`` (:ref:`odc-resource-collection`)
+-  ``annotations`` (``dict[str,str]``)
 
 
 .. _odc-metric:
@@ -601,6 +724,22 @@ Notes:
 
 -  ``question`` is always :ref:`odc-list-question`
 -  You can iterate directly over reply object (``for item in reply``)
+
+
+ItemSelectReply
+^^^^^^^^^^^^^^^
+
+-  ``item_uuid`` (``str``)
+-  ``item_title`` (``str``)
+
+Aliases:
+
+-  ``value`` (``str``) - same as ``item_uuid``
+
+Notes:
+
+-  ``question`` is always :ref:`odc-item-select-question`
+
 
 IntegrationReply
 ^^^^^^^^^^^^^^^^

@@ -86,10 +86,26 @@ Those are local-only metadata used for development of the template. You can use 
 * ``files``: list of patterns to specify files that are part of the document template (it uses Git wildcard-match patterns, so you can also exclude files or directories)
 
 
-Template Metamodels
-===================
+.. _document-template-metamodel-versions:
+
+Document Template Metamodel Versions
+====================================
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
+
+Version 14 (since 4.10.0)
+-------------------------
+
+* Rearranged and enriched document context for clarity and completeness. If you are using the :ref:`object-oriented document context <document-context-obj>` (via ``to_context_obj``), the changes will not affect you and you can start using new attributes/types); otherwise, you need to reflect the following changes in the passed document context ``ctx``:
+
+  * ``config``, ``knowledgeModel``, ``package``, and ``report`` of context stay the same;
+  * ``uuid``, ``createdAt``, and ``updatedAt`` are moved to new ``document`` object that contains additional fields, namely ``createdBy``, ``documentTemplateId``, ``formatUuid``, and ``name``;
+  * ``questionnaireUuid`` (and other ``questionnaire*`` fields) and ``createdBy`` are moved to new ``questionnaire`` object where are additional fields, namely ``labels``, ``createdAt``, and ``updatedAt``;
+  * ``documentTemplateMetamodelVersion`` is renamed to ``metamodelVersion``;
+  * there are new lists ``users`` and ``groups`` containing the information about sharing and permissions of the project (i.e. what users have access to the project and with what permissions).
+
+* Added item select questions.
+* Added resource collections and pages, incl. change in resource page references.
 
 Version 13 (since 4.3.0)
 ------------------------
