@@ -38,7 +38,6 @@ There are three desirability states the question can be in:
     If there is no phase defined on the knowledge model, the current phase selection is not visible in the questionnaire detail.
 
 
-
 Chapters
 ========
 
@@ -108,6 +107,7 @@ There is a trash bin icon in the item's top right corner that we can use to **de
     
     List of items question with a single item.
 
+
 Value Question
 --------------
 
@@ -132,7 +132,6 @@ When we pick an answer from the list, we not only have the answer but also **a l
     Integration question with a response from FAIRsharing containing also a link.
 
 
-
 Multi-Choice Question
 ---------------------
 
@@ -142,6 +141,19 @@ Multi-choice question is similar to the options question, however we can choose 
     
     Multi-choice question with many choices.
 
+
+Item Select Question
+--------------------
+
+The item selection question is used together with the list of items question. When creating an item selection question, you must choose one of the existing list of items questions. The answers provided to that list of items question are then offered as possible answers in the item selection question.
+
+.. TODO::
+
+    Add a screenshot of the item select question.
+
+.. .. figure:: questionnaire/item-select-question.png
+    
+..     Item select question with a list of items as possible answers.
 
 
 View settings

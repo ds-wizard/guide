@@ -40,7 +40,7 @@ The knowledge model consists of chapters at the top level. Each chapter has a **
 Question
 --------
 
-Questions are used to collect the answers from users. Each question has a **title** (the actual question), a **description**, a **phase** when it becomes desirable, a list of :ref:`references<reference>` and :ref:`experts<expert>`, and a selection of :ref:`question tags<question-tag>`.
+Questions are used to collect the answers from users. Each question has a **title** (the actual question), a **description**, a **phase** when it becomes desirable, a list of :ref:`resource pages<resource-page>` gathered in a :ref:`resource collection<resource-collection>` or :ref:`URL references<url-reference>` and :ref:`experts<expert>`, and a selection of :ref:`question tags<question-tag>`.
 
 Then there are some additional settings based on the **question type**.
 
@@ -101,6 +101,13 @@ Multi-Choice Question
 The multi-choice question has a list of :ref:`choices<choice>`. Users can then pick as many of those choices as they wish. There are, however, no follow-up questions available for this question type.
 
 
+.. _item-select-question:
+
+Item Select Question
+^^^^^^^^^^^^^^^^^^^^
+
+The item selection question works in conjunction with the :ref:`list of items question<list-of-items-question>`. It is used to select one of the previously created items within a series of interconnected list of items question.
+
 .. _answer:
 
 Answer
@@ -124,30 +131,32 @@ Choice
 A choice is used with :ref:`multi-choice questions<multi-choice-question>`. It only contains a **label** which is presented to the user.
 
 
-.. _reference:
+.. _resource-collection:
 
-Reference
----------
+Resource Collection
+--------------------
 
-We can provide some additional references for :ref:`questions<question>` to help users better understand it or learn more details. There are more types of references.
+We can provide some additional reference resources for :ref:`questions<question>` to help users better understand it or learn more details. There are two types of references.
+
+.. _resource-page:
+
+Resource Page Reference
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A resource page reference is a link to a page in the |project_name| itself. It has **title** which is the name of the page and a **content** that describes what the reference is about. Resource pages are gathered in the resource collections.
+
+.. _url-reference:
 
 URL Reference
-^^^^^^^^^^^^^
+-------------
 
-A URL reference is a simple link to any website. It has **URL** which is the actual link and a **label** that describes what the reference is about.
+A URL reference is a simple link to any website. It has **URL** which is the actual link and a **label** that describes what the reference is about. URL reference is set up on a level of question, not on a level of knowledge model.
 
 Book Reference
 ^^^^^^^^^^^^^^
 
 .. warning::
     Book references are deprecated.
-
-
-Resource Page Reference
-^^^^^^^^^^^^^^^^^^^^^^^
-
-.. warning::
-    Resource page references are not yet implemented.
 
 
 .. _expert:
