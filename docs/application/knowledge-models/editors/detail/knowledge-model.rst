@@ -45,17 +45,16 @@ There are different entities we can edit in the knowledge model, the editor show
 - :ref:`Question<question>`
 - :ref:`Answer<answer>`
 - :ref:`Choice<choice>`
-- :ref:`Reference<reference>`
 - :ref:`Expert<expert>`
 - :ref:`Metric<metric>`
 - :ref:`Phase<phase>`
 - :ref:`Question Tag<question-tag>`
 - :ref:`Integration<integration>`
+- :ref:`Resource Collection<resource-collection>`
 
 .. figure:: knowledge-model/editor-form.png
     
     Example of question editor form.
-
 
 
 Besides their own fields, each entity has so called **Annotations**. They are arbitrary key value pairs that can be assigned to the entity and used later, when :ref:`developing a document template<document-template-development>`.
