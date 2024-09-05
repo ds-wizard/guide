@@ -131,24 +131,31 @@ Choice
 A choice is used with :ref:`multi-choice questions<multi-choice-question>`. It only contains a **label** which is presented to the user.
 
 
+.. _reference:
+
+Reference
+---------
+
+References are used to provide additional information for :ref:`questions<question>`. There are two types of references. :ref:`Resource page reference<resource-page>` and :ref:`URL reference<url-reference>`. resource page references are gathered in the resource collections.
+
 .. _resource-collection:
 
 Resource Collection
---------------------
+^^^^^^^^^^^^^^^^^^^
 
-We can provide some additional reference resources for :ref:`questions<question>` to help users better understand it or learn more details. There are two types of references.
+Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collection is created on a level of a Knowledge Model.
 
 .. _resource-page:
 
-Resource Page Reference
-^^^^^^^^^^^^^^^^^^^^^^^
+Resource Page
+^^^^^^^^^^^^^
 
-A resource page reference is a link to a page in the |project_name| itself. It has **title** which is the name of the page and a **content** that describes what the reference is about. Resource pages are gathered in the resource collections.
+A resource page is a simple page that can be used to provide information for :ref:`questions<question>`. It has a **title** and a **content**. Resource pages are gathered in the :ref:`resource collections<resource-collection>`.
 
 .. _url-reference:
 
 URL Reference
--------------
+^^^^^^^^^^^^^
 
 A URL reference is a simple link to any website. It has **URL** which is the actual link and a **label** that describes what the reference is about. URL reference is set up on a level of question, not on a level of knowledge model.
 
