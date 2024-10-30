@@ -108,6 +108,15 @@ Item Select Question
 
 The item selection question works in conjunction with the :ref:`list of items question<list-of-items-question>`. It is used to select one of the previously created items within a series of interconnected list of items question.
 
+
+.. _file-question:
+
+File Question
+^^^^^^^^^^^^^
+
+The file question is used to upload files. We can configure the **file types** that are allowed to be uploaded and the **maximum file size**.
+
+
 .. _answer:
 
 Answer
