@@ -176,6 +176,19 @@ Questionnaire
 -  ``updated_at`` (``datetime``)
 
 
+.. _odc-questionnaire-file:
+
+QuestionnaireFile
+~~~~~~~~~~~~~~~~~~~~
+
+-  ``uuid`` (``str``)
+-  ``name`` (``str``)
+-  ``size`` (``int``)
+-  ``content_type`` (``str``)
+-  ``reply`` (``Optional[``\ :ref:`odc-file-reply`\ ``]``)
+-  ``download_url`` (``str``)
+
+
 .. _odc-questionnaire-version:
 
 QuestionnaireVersion
@@ -469,6 +482,14 @@ ItemSelectQuestion
 
 -  ``list_question`` (``Optional[``\ :ref:`odc-list-question`\ ``]``)
 
+.. _odc-file-question:
+
+FileQuestion
+''''''''''''
+
+-  ``max_size`` (``Optional[int]``) - maximum file size (in bytes) allowed
+-  ``file_types`` (``Optional[str]``) - comma-separated file type specifications 
+
 
 .. _odc-answer:
 
@@ -709,6 +730,23 @@ Aliases:
 Notes:
 
 -  ``question`` is always :ref:`odc-value-question`
+
+
+.. _odc-file-reply:
+
+FileReply
+^^^^^^^^^^^
+
+-  ``file_uuid`` (``str``)
+-  ``file`` (``Optional[``\ :ref:`odc-questionnaire-file`\ ``]``) - ``None`` if file has been deleted
+
+Aliases:
+
+-  ``value`` (``str``) - same as ``file_uuid``
+
+Notes:
+
+-  ``question`` is always :ref:`odc-file-question`
 
 
 ItemListReply
