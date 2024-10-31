@@ -101,7 +101,7 @@ Version 15 (since 4.12.0)
 Version 14 (since 4.10.0)
 -------------------------
 
-* Rearranged and enriched document context for clarity and completeness. If you are using the :ref:`object-oriented document context <document-context-obj>` (via ``to_context_obj``), the changes will not affect you and you can start using new attributes/types); otherwise, you need to reflect the following changes in the passed document context ``ctx``:
+* Rearranged and enriched document context for clarity and completeness. If you are using the :ref:`object-oriented document context <document-context-obj>` (via ``to_context_obj``), the changes will not affect you and you can start using new attributes/types; otherwise, you need to reflect the following changes in the passed document context ``ctx``:
 
   * ``config``, ``knowledgeModel``, ``package``, and ``report`` of context stay the same;
   * ``uuid``, ``createdAt``, and ``updatedAt`` are moved to new ``document`` object that contains additional fields, namely ``createdBy``, ``documentTemplateId``, ``formatUuid``, and ``name``;
