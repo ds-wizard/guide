@@ -14,6 +14,8 @@ File for import and export of Knowledge Models is a JSON file that contains all 
 +-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                   | Changes (brief)                                      | Since     |
 +===================+===============================================================================================================+======================================================+===========+
+| 16                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v16.json>`__ | File question                                        | 4.12.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | 15                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v15.json>`__ | Item select question, resource collections and pages | 4.10.0    |
 +-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v14.json>`__ | Optional Integration fields                          | 4.1.0     |
@@ -53,7 +55,9 @@ Document Context is provided to the document templates by document worker. It co
 +-------------------+------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                            | Changes (brief)                                   | Since     |
 +===================+========================================================================================================================+===================================================+===========+
-| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v14.json>`__ | new KM entities, project details, and restructure | 4.10.0    |
+| 15                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v15.json>`__ | File question                                     | 4.12.0    |
++-------------------+------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
+| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v14.json>`__ | New KM entities, project details, and restructure | 4.10.0    |
 +-------------------+------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
 | 13                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v13.json>`__ | Removed states from templates                     | 4.3.0     |
 +-------------------+------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
@@ -94,7 +98,9 @@ Each template has its descriptor file ``template.json`` which contains all the i
 +-------------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                                | Changes (brief)                                   | Since     |
 +===================+============================================================================================================================+===================================================+===========+
-| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v14.json>`__ | new KM entities, project details, and restructure | 4.10.0    |
+| 15                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v15.json>`__ | File question                                     | 4.12.0    |
++-------------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
+| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v14.json>`__ | New KM entities, project details, and restructure | 4.10.0    |
 +-------------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+
 | 13                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v13.json>`__ | Removed states from templates                     | 4.3.0     |
 +-------------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+-----------+

@@ -43,6 +43,12 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+
+4.11.X to 4.12.X
+----------------
+
+- Document template metamodel version is raised (from 14 to 15) as File Question has been added (no breaking changes), for details check :ref:`document-template-metamodel-versions`.
+
 4.10.X to 4.11.X
 ----------------
 
