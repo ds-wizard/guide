@@ -156,6 +156,20 @@ The item selection question is used together with the list of items question. Wh
 ..     Item select question with a list of items as possible answers.
 
 
+File Question
+-------------
+
+File question is used when we need to upload a file as an answer. We can simply click on the :guilabel:`Upload File` button and select the file from our computer. We can also drag and drop the file into the input field.
+
+.. TODO::
+
+    Add a screenshot of the file question.
+
+.. .. figure:: questionnaire/file-question.png
+    
+..     File select question with a list of items as possible answers.
+
+
 View settings
 =============
 

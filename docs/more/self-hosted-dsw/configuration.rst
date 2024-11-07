@@ -116,6 +116,13 @@ Information for connection to S3 storage (used for document and document templat
     S3 service must be publicly accessible (so users can download documents and export templates or locales). Also, bucket must be created otherwise documents cannot be created and document templates / locales imported.
 
 
+.. NOTE::
+
+    If you have a problem with downloading documents while running the bucket locally, try to add the following line to the /etc/hosts file:
+    
+    ``127.0.0.1   host.docker.internal``
+
+
 Mail
 ^^^^
 
