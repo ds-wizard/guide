@@ -80,6 +80,7 @@ The value question asks for a single value that users type in. There are many di
 
 The input field differs based on the value type (simple input for string, date picker for date, etc.). Some of these have a check whether the entered value is valid (such as valid email or URL) and displays a warning if not.
 
+Value Question also can have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text based types (text, email, URL), we can set also use a regular expression to create validations.
 
 .. _integration-question:
 
@@ -139,6 +140,11 @@ Choice
 
 A choice is used with :ref:`multi-choice questions<multi-choice-question>`. It only contains a **label** which is presented to the user.
 
+.. _validation:
+
+Validation
+
+Validation is used to define some rules for the answers in Value question type. It can be used to check if the answer is in the correct format, or if it is in the correct range. If the answer doesn't pass the validation, a warning is displayed to the user, however this does not prevent them from creating a document.
 
 .. _reference:
 

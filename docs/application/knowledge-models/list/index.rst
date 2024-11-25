@@ -27,6 +27,11 @@ Finally, there is an option to :doc:`./import` by click the :guilabel:`Import` b
     
     List of all knowledge models with actions.
 
+
+.. NOTE::
+
+    Set deprecated option will apply only for the latest version of Knowledge Model. If there is an older version, that will still be available.
+
 .. raw:: html
     
     <h2>Table of Contents</h2>
