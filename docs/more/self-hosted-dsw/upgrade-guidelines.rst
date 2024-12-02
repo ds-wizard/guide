@@ -46,7 +46,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.12.X to 4.13.X
 ----------------
 
-*(nothing)*
+- Document template metamodel version is raised (from 15 to 16) as Value Question has now added Validations (no breaking changes), for details check :ref:`document-template-metamodel-versions`.
 
 4.11.X to 4.12.X
 ----------------
