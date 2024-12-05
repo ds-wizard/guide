@@ -143,6 +143,7 @@ A choice is used with :ref:`multi-choice questions<multi-choice-question>`. It o
 .. _validation:
 
 Validation
+----------
 
 Validation is used to define some rules for the answers in Value question type. It can be used to check if the answer is in the correct format, or if it is in the correct range. If the answer doesn't pass the validation, a warning is displayed to the user, however this does not prevent them from creating a document.
 
