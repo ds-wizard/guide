@@ -159,7 +159,7 @@ File question is used when we need to upload a file as an answer. We can simply 
 
 .. figure:: questionnaire/file-question.png
     
-    File select question with a list of items as possible answers.
+    File select question with a uploaded file.
 
 
 View settings
