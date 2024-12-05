@@ -113,7 +113,7 @@ Value Question
 
 Value question contains an input field for our answer. This can be a simple text field (such as asking for a project contributor's name), or some additional widget, for example a date picker.
 
-Some of the value types contains a validation (e.g., email or URL). We can still type in an invalid answer, but it will display a warning and also show it in the list of :ref:`warnings<warnings>`.
+All of value question types (except for color) can have validations set on them. We can still type in an invalid answer, but it will display a warning and also show it in the list of :ref:`warnings<warnings>`.
 
 .. figure:: questionnaire/value-question.png
     
@@ -147,13 +147,9 @@ Item Select Question
 
 The item selection question is used together with the list of items question. When creating an item selection question, you must choose one of the existing list of items questions. The answers provided to that list of items question are then offered as possible answers in the item selection question.
 
-.. TODO::
-
-    Add a screenshot of the item select question.
-
-.. .. figure:: questionnaire/item-select-question.png
+.. figure:: questionnaire/item-select-question.png
     
-..     Item select question with a list of items as possible answers.
+    Item select question with a list of items as possible answers.
 
 
 File Question
@@ -161,13 +157,9 @@ File Question
 
 File question is used when we need to upload a file as an answer. We can simply click on the :guilabel:`Upload File` button and select the file from our computer. We can also drag and drop the file into the input field.
 
-.. TODO::
-
-    Add a screenshot of the file question.
-
-.. .. figure:: questionnaire/file-question.png
+.. figure:: questionnaire/file-question.png
     
-..     File select question with a list of items as possible answers.
+    File select question with a uploaded file.
 
 
 View settings
@@ -200,7 +192,7 @@ If there are some project importers available for the project, there is the :gui
 Warnings
 ========
 
-Some value questions (such as email or URL) validates the answer written there. If it is an invalid value, we will see :guilabel:`Warnings` tab in the questionnaire menu bar with a badge showing the number of warnings. If we click on it, we can see a list of all questions that has a warning and we can click on it to navigate quickly to that question.
+All of value question types (except for color) can have validations set on them. If it is an invalid value, we will see :guilabel:`Warnings` tab in the questionnaire menu bar with a badge showing the number of warnings. If we click on it, we can see a list of all questions that has a warning and we can click on it to navigate quickly to that question.
 
 .. figure:: questionnaire/warnings.png
     :width: 487
