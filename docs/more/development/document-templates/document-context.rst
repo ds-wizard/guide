@@ -438,6 +438,7 @@ ValueQuestion
 '''''''''''''
 
 -  ``value_type`` (``str``) - type of value, use alias
+-  ``validations`` (``list[``\ :ref:`odc-value-question-validation`\ ``]``)
 
 Aliases:
 
@@ -445,6 +446,16 @@ Aliases:
 -  ``is_text`` (``bool``)
 -  ``is_number`` (``bool``)
 -  ``is_date`` (``bool``)
+
+.. _odc-value-question-validation:
+
+ValueQuestionValidation
+"""""""""""""""""""""""
+
+-  ``type`` (``str``)
+-  ``full_type`` (``str``)
+-  ``value`` (``str | int | float | None``) - based on the ``type``
+
 
 .. _odc-integration-question:
 

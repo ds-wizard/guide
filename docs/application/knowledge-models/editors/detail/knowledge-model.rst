@@ -45,6 +45,7 @@ There are different entities we can edit in the knowledge model, the editor show
 - :ref:`Question<question>`
 - :ref:`Answer<answer>`
 - :ref:`Choice<choice>`
+- :ref:`Validation<validation>`
 - :ref:`Expert<expert>`
 - :ref:`Metric<metric>`
 - :ref:`Phase<phase>`
