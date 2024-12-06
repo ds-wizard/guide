@@ -19,5 +19,6 @@ Project detail is where we work on our data management plan. In this section, we
     metrics
     preview
     documents
+    files
     settings
     sharing
