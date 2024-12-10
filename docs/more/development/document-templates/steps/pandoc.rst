@@ -26,12 +26,6 @@ Options
 -  (optional, experimental) ``filters`` = additional `Pandoc filters <https://pandoc.org/MANUAL.html#general-options>`__ to be used, need to be located under ``/pandoc/filters`` directory (or other set by ``PANDOC_FILTERS`` environment variable), comma separated
 -  (optional, experimental) ``template`` = `Pandoc template <https://pandoc.org/MANUAL.html#general-options>`__ to be used, need to be located under ``/pandoc/templates`` directory (or other set by ``PANDOC_TEMPLATES`` environment variable)
 
-Notes
-=====
-
--  Pandoc filter ``pandoc-docx-pagebreakpy`` can be found in `addons <../../addons>`__ directory.
--  Pandoc filter ``pandoc-docx-pagebreakpy`` will be removed with the next template metamodel version, use `` for the ``filters`` option instead.
-
 Example
 =======
 
