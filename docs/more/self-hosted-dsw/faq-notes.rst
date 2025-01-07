@@ -65,4 +65,4 @@ Deployment Notes
 - The deployment can vary significantly based on needs and available infrastructure, we cannot help with different kinds of deployments and technologies that we are not experts with.
 - The deployment example serves for local testing purposes and should not be used as is for production. An expert should deploy |project_name| for production while considering local needs and capabilities.
 - Never update production instance without backups and preferably try the update procedure first on a testing environment.
-- Running |project_name| locally is not "free", you need people, time, and infrastructure. With that in mind, consider what `option <https://ds-wizard.org/#providers>`_ is the most suitable for you.
+- Running |project_name| locally is not "free", you need people, time, and infrastructure. With that in mind, consider what `option <https://ds-wizard.org/get-started>`_ is the most suitable for you.
