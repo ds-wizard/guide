@@ -70,3 +70,9 @@ The editor checks for some possible problems, such as empty title for a chapter 
     :width: 317
     
     Warnings in the knowledge model editor.
+
+
+Development with Document Template Editor
+=========================================
+
+It is possible to develop the knowledge model together with the document template. Any changes to the knowledge model are immediately reflected in the document template editor. In the Preview tab we can also save the current preview answer values to the knowledge model and make them visible in the document template editor.

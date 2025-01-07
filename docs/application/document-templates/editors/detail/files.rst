@@ -5,7 +5,7 @@ The :guilabel:`Files` tab in :doc:`./index` allows us to manage the files and di
 
 If we select a text file in the file tree, it is opened in the built-in text editor. We can also open multiple files (the editor supports tabs). Moreover, if we have more files opened, we can see a *split view* icon on the top of the file tree. When we click it, it will split the view and move the opened file to the other group. If there are already two groups, it switches the file between the two groups. We can close the file by clicking cross icon in its tab.
 
-We can easily delete files; when it is selected in the file tree, we can simply click the red trash icon above the file tree. The deletion must be confirmed in the prompt so we will not delete something by accident as it is not reversible operation. To delete folder, we must first delete all files and folders in it. Then it disappears from the file tree.
+We can easily delete a file or a folder; when it is selected in the file tree, we can simply click the red trash icon above the file tree. The deletion must be confirmed in the prompt so we will not delete something by accident as it is not reversible operation. If a folder becomes empty, it will be deleted automatically.
 
 With files and folders we can also use move and rename functionalities, both by clicking their respective icons above the file tree. The move functionality is useful when we want to move a file to another folder. The rename functionality is useful when we want to change the name of a file or folder.
 

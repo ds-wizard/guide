@@ -99,13 +99,17 @@ List of Items Question
 
 List of Items question doesn't have a simple answer but a list of items. Each of the items has the same set of subquestions. For example, a list of items question asking about the project contributors where each item represent one contributor with questions about their name, role, etc.
 
-We can simply click on :guilabel:`Add` button under the question to add a new item. Then, we can answer the questions for the item. If the item has a lot of questions, we can use the arrow icon in the item's top left corner to **fold/unfold** the item. We can also use :guilabel:`Expand all` and :guilabel:`Collapse all` buttons in the question menu to **fold/unfold** all items at once.
+We can simply click on :guilabel:`Add` button under the question to add a new item. Then, we can answer the questions for the item. If the item has a lot of questions, we can use the arrow icon in the item's top left corner to **fold/unfold** the item. We can also use :guilabel:`Expand all` and :guilabel:`Collapse all` buttons in the question menu to **fold/unfold** all items at once. The :guilabel:`Expand all` and :guilabel:`Collapse all` buttons are visible before the listed items if there are at least two items and also below the listed items, if there are more than two items. 
 
 There is a trash bin icon in the item's top right corner that we can use to **delete** the item. If there are more than one item, there are also arrow icons that we can use to **change the order** of the items.
 
+.. TODO::
+
+    Update the screenshot.
+
 .. figure:: questionnaire/list-of-items-question.png
     
-    List of items question with a single item.
+    List of items question with a multiple items.
 
 
 Value Question
@@ -203,7 +207,7 @@ All of value question types (except for color) can have validations set on them.
 Comments
 ========
 
-We sometimes want to leave comments to discuss things with our team or just reminders for ourselves. We can write comments to each question in the questionnaire.
+We sometimes want to leave comments to discuss things with our team or just reminders for ourselves. We can write comments to each question in the questionnaire. The comments can be browsed using the navigation buttons.
 
 .. figure:: questionnaire/comments.png
     :width: 603
