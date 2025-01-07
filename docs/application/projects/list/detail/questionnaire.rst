@@ -103,10 +103,6 @@ We can simply click on :guilabel:`Add` button under the question to add a new it
 
 There is a trash bin icon in the item's top right corner that we can use to **delete** the item. If there are more than one item, there are also arrow icons that we can use to **change the order** of the items.
 
-.. TODO::
-
-    Update the screenshot.
-
 .. figure:: questionnaire/list-of-items-question.png
     
     List of items question with a multiple items.

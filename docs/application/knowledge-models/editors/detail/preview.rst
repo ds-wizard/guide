@@ -10,4 +10,4 @@ We can use :guilabel:`Preview` tab to quickly see how the resulting questionnair
     Preview of the resulting questionnaire in the knowledge model editor.
 
 
-If we want to develop the knowledge model together with the document template, we can use the :guilabel:`Save preview values` button. This will save the current preview answer values to the knowledge model and make them visible in the :ref:`document template editor<dt-editor-preview>`.
+If we want to develop the knowledge model together with the document template, we can use the :guilabel:`Save preview values` button. This will save the current preview answer values to the knowledge model and make them visible in the :ref:`document template editor<document-template-editors>`.
