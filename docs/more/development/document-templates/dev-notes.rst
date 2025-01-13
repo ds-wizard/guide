@@ -43,3 +43,11 @@ Styling MS Word Documents
 **Issue**: CSS and HTML styling is not appearing correctly in MS Word documents (transformed from HTML via the Pandoc step).
 
 **Recommendations**: CSS styles do not affect resulting MS Word documents as that is not possible with Pandoc. The Word document will use the matching styles based on certain HTML tags (e.g. ``<title>``, ``<h1>``, ``<p>``, or ``<table>``). You can adjust how those look by creating ``reference.docx`` document with desired styles incl. headers/footers. Ideal way is to download MS Word document generated, adjust styles as needed, and store it as the ``reference.docx`` document. Then, it can be simply added to the document template and used for the :ref:`Pandoc step <document-template-step-pandoc>` via ``args``. Please check directly the `relevant part of the Pandoc documentation <https://pandoc.org/MANUAL.html#option--reference-doc>`_.
+
+
+Compresing Images in MS Word Documents
+======================================
+
+**Issue**: Uncompressed images in MS Word documents can significantly increase the file size, often making it much larger than the original HTML or PDF version.
+
+**Recommendations**: In the ``reference.docx`` document, you can adjust the image compression level to reduce the file size. To do this, open the document ``reference.docx`` and click on an image. Then, navigate to ``Picture Format`` ->  ``Compress Pictures`` in the ``Adjust`` group. In the dialog box, you can select the desired compression level. Alternatively, you can set the default compression level for all images in the document. This will ensure that images are compressed when the document is saved.
