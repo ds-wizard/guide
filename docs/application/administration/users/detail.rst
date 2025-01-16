@@ -3,7 +3,7 @@
 User Detail
 ***********
 
-As administrators, we can edit existing users manually on the detail (selected user from  the :ref:`users list<users-list>`). It is possible to change all properties of the user, including possibility to change whether the user account is active or inactive. 
+As admins, we can edit existing users manually on the detail (selected user from  the :ref:`users list<users-list>`). It is possible to change all properties of the user, including possibility to change whether the user account is active or inactive. 
 
 .. figure:: detail/profile.png
     
