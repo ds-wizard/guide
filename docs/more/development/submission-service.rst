@@ -3,7 +3,7 @@
 Submission Service
 ******************
 
-As administrators, we can configure submission services using :doc:`../../application/administration/settings/content/document-submission`. The configured HTTP request is then used when a user clicks :guilabel:`Submit` for an allowed document for submission and selected the desired submission service. The document is sent as a body of the request (or as multipart, based on the configuration) to the external service that should process it and return HTTP response with status code, and possibly also the `Location` header and some textual message.
+As admins, we can configure submission services using :doc:`../../application/administration/settings/content/document-submission`. The configured HTTP request is then used when a user clicks :guilabel:`Submit` for an allowed document for submission and selected the desired submission service. The document is sent as a body of the request (or as multipart, based on the configuration) to the external service that should process it and return HTTP response with status code, and possibly also the `Location` header and some textual message.
 
 Usually, we will need a simple proxy service to be developed that will accommodate this to API of some information system, database, storage, or other service. For example, such a proxy service will be able to receive the JSON documents from |project_name|, retrieve additional information through |project_name| API as needed, transform it to some other resulting artifact and store it in some local database that is used by other systems.
 

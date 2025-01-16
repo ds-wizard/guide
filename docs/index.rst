@@ -49,7 +49,7 @@ Here are some recommended sections where to start based on the role:
       - Application
     * - :ref:`projects`
       - :ref:`knowledge-models`
-      - :ref:`documents`
+      -
     * - 
       - :ref:`document-templates`
       - :ref:`administration`
@@ -85,7 +85,6 @@ Here are some recommended sections where to start based on the role:
     application/knowledge-models/index
     application/document-templates/index
     application/projects/index
-    application/documents/index
     application/administration/index
     application/profile/index
 
