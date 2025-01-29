@@ -1,5 +1,5 @@
-Documents
-*********
+Project Documents
+*****************
 
 As admins, we can quickly browse all documents stored in the |project_name| instance by navigating to :guilabel:`Documents` from the projects menu. It is possible to search for a document by name or sort them using their name or creation timestamp.
 

@@ -1,5 +1,5 @@
-Files
-*****
+Project Files
+*************
 
 As admins, we can quickly browse all files stored in the |project_name| instance by navigating to :guilabel:`Files` from the projects menu. It is possible to search for a file by name or sort them using their creation timestamp, name or size.
 
