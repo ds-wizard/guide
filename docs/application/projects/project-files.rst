@@ -10,7 +10,7 @@ Each file has a name, size, a link to the project it was uploaded to and user wh
     It is not recommended to delete files from the list without informing the project team, as it can lead to confusion among researchers. Admins should always communicate with the project team before deleting files.
 
 
-.. figure:: files/files.png
+.. figure:: project-files/files.png
     
     List of all files across projects.
 

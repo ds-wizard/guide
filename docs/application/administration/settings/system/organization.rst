@@ -9,10 +9,6 @@ The organization ID is used as a part of knowledge models and document templates
 
 The **Affiliations** list is used to pre-define a list of possible affiliations (on per line) that will be suggested to users while they register or update their profiles.
 
-.. TODO::
-
-    Add screenshot
-
 .. NOTE::
 
     It is recommended to use period as for domain name or to use it for capturing organizational structure in the ID, for example, ``faculty.university`` or ``group.faculty.university``.
