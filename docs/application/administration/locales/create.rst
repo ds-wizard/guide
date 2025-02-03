@@ -5,6 +5,12 @@ We can create a new locale directly in |project_name| by pressing :guilabel:`Cre
 
 Finally, a PO file is requested from us. We can create such PO file in a standard (`gettext <https://www.gnu.org/software/gettext/>`__-based) way. The needed POT file is always part of the release attachments of the `wizard client application <https://github.com/ds-wizard/engine-frontend/tags>`__ (select the desired release and there is ``wizard.pot`` asset).
 
-.. TODO::
+.. figure:: create/form.png
+    
+    Form for creating a new locale.
 
-    Add screenshot
+
+.. NOTE::
+
+    Locales can be used not only for translations but also for customizing the |project_name| to a specific domain.
+

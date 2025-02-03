@@ -7,7 +7,7 @@ Each document has a name, format, specific size (if the generation is completed)
 
 In case that there is a document that was not generated due to an error, we can check the error message. Also, if there are some documents got stuck in :guilabel:`Queued` or :guilabel:`In Progress` status, we should check the deployment (especially of the document worker component).
 
-.. figure:: documents/documents.png
+.. figure:: project-documents/documents.png
     
     List of all documents across projects.
 
