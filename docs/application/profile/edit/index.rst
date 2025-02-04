@@ -27,7 +27,8 @@ If we want to :doc:`./password`, we need to switch to :guilabel:`Password` from 
 .. toctree::
     :maxdepth: 2
 
-    Change Password<password>
+    Password<password>
     API Keys<api-keys>
     Active Sessions<active-sessions>
+    Submission Settings<submission-settings>
     
