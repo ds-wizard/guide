@@ -5,7 +5,7 @@ FAQ and Deployment Notes
 Frequently Asked Questions
 ==========================
 
-This section tries to cover the common deployment issues people have and suggest what next steps should be done.
+This section tries to cover the common deployment and other issues related to instance management people have and suggest what next steps should be done.
 
 Why something is not running; what should I do?
 -----------------------------------------------
@@ -42,21 +42,35 @@ You should always check :doc:`upgrade-guidelines` before upgrading, be sure that
 Document templates show "Unsupported Metamodel", what should I do?
 ------------------------------------------------------------------
 
-You need to update your document templates so those are compatible with your |project_name| version, e.g. from DSW Registry. If those are your own document templates, you need to update them according to :doc:`upgrade-guidelines`.
+There are two cases:
 
-You can follow this guide:
+- You are using a document template from DSW Registry.
+- You are using your own document template.
 
-1. Go to Settings -> Content Settings -> DSW Registry
+For the first case, you need to import newer version from DSW Registry. Templates in Registry are managed by the DSW Team which ensure that they are always up to date. If those are your own document templates, you need to update them according to :ref:`document-template-metamodel-versions`.
+
+To update from DSW Registry, you need to have in connected with your DSW instance. If you can see the :guilabel:`Update Available` badge, you can update the template. If you cannot see the badge, you should check if you are connected to the DSW Registry.
+
+To connect to the DSW Registry and import new templates from there, you can follow this guide:
+
+1. Go to Administration -> Settings -> Content Settings -> DSW Registry
 2. Click on Enabled
 3. Click on Sign Up
 4. Fill out your email
 5. With a token you will get to login to https://registry.ds-wizard.org
-6. Open Questionnaire Report
-7. Copy the Template ID
-8. Go back to Wizard -> Document Templates -> List
+6. Open desired template
+7. Copy the Document Template ID
+8. Go back to DSW -> Document Templates -> List
 9. Click on Import
-10. Paste the Template ID
+10. Paste the Document Template ID
 11. Click on Import
+
+.. NOTE::
+
+    The Sign up to the DSW Registry must be done by an admin. Once the admin signs up, data stewards can import and update templates from the DSW Registry.
+
+
+Templates imported this way will have the :guilabel:`Update Available` badge when a new version is available in the Registry.
 
 Deployment Notes
 ================

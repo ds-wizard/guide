@@ -14,6 +14,7 @@ Additional information related to |project_name| that might be useful.
     :maxdepth: 1
 
     dsw-registry
-    markdown-cheatsheet  
-    help  
+    markdown-cheatsheet
+    keyboard-shortcuts
+    help
     
