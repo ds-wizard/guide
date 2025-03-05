@@ -26,7 +26,7 @@ If the |project_name| instance is connected to the `DSW Registry <https://regist
 From file
 =========
 
-We can import a document template as a ZIP package. Such a package can be created as an export from |project_name| or using the Template Development Kit (see :ref:`document-template-development`).
+We can import a document template as a ZIP package. Such a package can be created as an export from |project_name| or using the Template Development Kit (see :ref:`document-template-development`). We can also select multiple files at once.
 
 
 .. figure:: import/file.png
