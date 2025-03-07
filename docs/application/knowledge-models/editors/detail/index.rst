@@ -6,7 +6,7 @@ Knowledge Model Editor
 Knowledge model editor is where we build knowledge models. In this section, we will see what entities we can add there, how they are connected, how to work with the editor and how to publish the knowledge model.
 
 
-.. figure:: index/km-editor.png
+.. figure:: index/knowledge-model-editor.png
     
     Knowledge model editor.
 
