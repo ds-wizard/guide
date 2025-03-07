@@ -27,7 +27,7 @@ If the |project_name| instance is connected to the `DSW Registry <https://regist
 From file
 =========
 
-We can import a knowledge model as a KM file. Such a file can be created as an export from |project_name| (from :doc:`./index` or :doc:`./detail`).
+We can import a knowledge model as a KM file. Such a file can be created as an export from |project_name| (from :doc:`./index` or :doc:`./detail`). We can also select multiple files at once.
 
 
 .. figure:: import/file.png

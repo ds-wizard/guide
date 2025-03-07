@@ -179,6 +179,11 @@ In the questionnaire tab, there is a menu bar with various options. The first on
     Different view options accessible form the questionnaire toolbar.
 
 
+.. NOTE::
+
+    If at least one of the options is turned off, a red dot will be displayed next to the :guilabel:View button.
+
+
 Import answers
 ==============
 

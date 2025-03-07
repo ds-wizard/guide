@@ -25,7 +25,7 @@ project_name = 'DSW'
 project_name_full = 'Data Stewardship Wizard'
 
 # The full version, including alpha/beta/rc tags
-version = release = '4.15'
+version = release = '4.16'
 
 rst_prolog = f"""
 
@@ -84,7 +84,7 @@ html_theme_options = {
         'sidebar-item-spacing-horizontal': '.75rem',
     },
     'sidebar_hide_name': True,
-    'top_of_page_button': None,
+    'top_of_page_buttons': [],
 }
 
 

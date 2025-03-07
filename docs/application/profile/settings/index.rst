@@ -1,7 +1,7 @@
-Edit Profile
-************
+User settings
+*************
 
-After navigating to :guilabel:`Edit profile` from the :doc:`../index` menu, we can change the information of our profile: **Email** address, **First name**, **Last name**, and **Affiliation**. We need to submit the changes by clicking :guilabel:`Save` button.
+After navigating to :guilabel:`User settings` from the :doc:`../index` menu, we can change the information of our profile: **Email** address, **First name**, **Last name**, and **Affiliation**. We need to submit the changes by clicking :guilabel:`Save` button.
 
 In case of configured submission services, there might be additional inputs under **Submission Settings** such as API tokens or other information used for the document submission.
 
