@@ -5,7 +5,12 @@ After navigating to :guilabel:`Locales` (under :guilabel:`Administration`), we c
 
 The |project_name| UI and emails can be localized to different languages. The preferred language is determined by the user's browser settings or by the user's profile settings.
 
-There is always the **English** locale (``wizard:default:1.0.0``) which is embedded and cannot be deleted. For others, we can use :guilabel:`Export` and :guilabel:`Delete` options from the right item menu.
+.. NOTE::
+
+    Locales can be used not only for translations but also for customizing the |project_name| to a specific domain.
+    
+
+There is always the **English** locale (``~:default:1.0.0``) which is embedded and cannot be deleted. For others, we can use :guilabel:`Export` and :guilabel:`Delete` options from the right item menu.
 
 Another option is to switch other locale to be the default one using :guilabel:`Set default` action. The default locale will be used if there isn't an available locale that matches the user's preferences (explicit or implicit from the web browser). We can :guilabel:`Disable` or :guilabel:`Enable` locales except the default one (which must be enabled).
 
@@ -16,6 +21,9 @@ If there is a locale with newer version available in the `DSW Registry <https://
 
     We support community of DSW translators by managing the repository `ds-wizard/wizard-client-locales <https://github.com/ds-wizard/wizard-client-locales>`__ and service for translating using web browser `localize.ds-wizard.org <https://localize.ds-wizard.org>`__.
 
+.. TODO::
+
+    Update screenshot
 
 .. figure:: index/list.png
     
