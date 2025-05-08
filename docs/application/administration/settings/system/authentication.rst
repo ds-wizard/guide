@@ -27,7 +27,7 @@ Another option is whether the **Two-Factor Authentication** (2FA) is enabled. If
 External
 ========
 
-Using these settings we can add **OpenID Services** to allow logging into the |project_name| instance via external identity provider. First, press :guilabel:`Add` and fill **ID** of the service (use only lowercase alphanumeric characters or dash symbols). Then, we should prepare the client application on the side of OpenID service:
+Using these settings we can add **OpenID Services** to allow logging into the |project_name| instance via external identity provider. First, press :guilabel:`Add` and fill **ID** of the service. Then, we should prepare the client application on the side of OpenID service:
 
 *  Use **Callback URL** (and optionally **Logout URL**) to create the client
 *  Obtain **Client ID** and **Client Secret**

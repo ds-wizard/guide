@@ -3,7 +3,7 @@
 Organization Settings
 *********************
 
-On this page, we can configure **Name**, **Description**, **Organization ID** for our |project_name| instance and **Affiliations**. The organization ID can contain alphanumeric characters and dot symbol (but cannot start or end with dot).
+On this page, we can configure **Name**, **Description**, **Organization ID** for our |project_name| instance and **Affiliations**.
 
 The organization ID is used as a part of knowledge models and document templates IDs. That ID is also used in the :ref:`dsw-registry` to identify the organization. 
 
