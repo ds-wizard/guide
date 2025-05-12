@@ -1,7 +1,7 @@
-..  _project-importers:
+..  _importers:
 
-Project Importers
-*****************
+Importers
+*********
 
 .. WARNING::
 
@@ -17,7 +17,7 @@ We can use project importers to import data from different |project_name| instan
 
 If we navigate to :guilabel:`Projects → Importers`, we can see the list of all available importers. We can enable or disable them by clicking on the triple dots icon and choosing the appropriate action.
 
-.. figure:: project-importers/importers.png
+.. figure:: importers/importers.png
     
     List of project importers where we can enable or disable them.
 

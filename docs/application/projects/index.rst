@@ -22,6 +22,6 @@ Projects are mainly used by the researchers. We have the introduction video abou
     :maxdepth: 2
 
     List<list/index>
-    Files<project-files>
-    Documents<project-documents>
-    Importers<project-importers>
+    Files<files>
+    Documents<documents>
+    Importers<importers>
