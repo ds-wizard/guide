@@ -47,6 +47,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx_toolbox.confval',
     'sphinx.ext.imgconverter',
+    'notfound.extension',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
