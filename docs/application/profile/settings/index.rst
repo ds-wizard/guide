@@ -29,6 +29,7 @@ If we want to :doc:`./password`, we need to switch to :guilabel:`Password` from 
 
     Password<password>
     Language<language>
+    Tours<tours>
     API Keys<api-keys>
     Active Sessions<active-sessions>
     Submission Settings<submission-settings>

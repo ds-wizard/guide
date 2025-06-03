@@ -46,7 +46,9 @@ In the **Request** section, we configure how to make an HTTP requests to the ext
 - **Request HTTP Body** - if we need to send some HTTP body
 - **Allow Empty Search** - some APIs don't work if we try to search with an empty string, turn this of it's the case
 
-There is a special property ``${q}`` that we can use within those fields. The property represents the string that users type to the questionnaire. So for example, we can write **Request URL** as:
+There is a special property ``${q}`` that we can use within those fields. The property represents the string that users type to the questionnaire. When configuring ``Request HTTP Headers`` and ``Request HTTP Body``, we can also use other variables such as ``props`` to pass the search query to the API.
+
+So for example, we can write **Request URL** as:
 
 .. code-block::
 
