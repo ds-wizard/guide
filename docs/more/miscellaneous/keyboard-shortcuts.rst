@@ -8,10 +8,6 @@ Modal Dialogs
 
 Modal Dialogs are used for various purposes. Example might be a confirmation dialog before deleting an entity. They can be controlled using keyboard shortcuts. The following table lists all available shortcuts:
 
-.. TODO::
-
-    Add Modal screenshot as an example
-
 +-------------------+---------------------+
 | Shortcut          | Description         |
 +===================+=====================+

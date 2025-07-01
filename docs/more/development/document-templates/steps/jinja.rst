@@ -200,6 +200,47 @@ Custom Tests
   - Example: ``parent is of_type "ListQuestion"``
 
 
+Replies Extraction
+------------------
+
+.. warning::
+  
+    This is experimental feature introduced in 4.20 release and might change in the future.
+
+You can use the following Jinja filter to extract replies easily while using KM annotations.
+
+With default configuration, you should use ``json.key`` and ``json.value`` annotations on questions and answers/choices to easily extract replies from the document context:
+
+.. code:: jinja
+
+    {%- set dc = ctx|to_context_obj -%}
+    {%- set object = dc|extract_replies -%}
+    {{ object|tojson(indent=2) }}
+
+Alternatively, you can adjust configuration and pass it as argument to the ``extract_replies`` filter:
+
+.. code:: jinja
+
+    {%- set dc = ctx|to_context_obj -%}
+    {%- set config = {
+        'variant': 'simple',
+        'version': '1',
+        'annotations': {
+            'key': 'json.key',
+            'value': 'json.value',
+        },
+        'options': {
+            'include_reply_objects': True,
+        },
+    } -%}
+    {%- set object = dc|extract_replies(config) -%}
+    {{ object|tojson(indent=2) }}
+
+Currently, only the ``simple`` variant is supported, which extracts replies from the document context and returns a dictionary with keys as question UUIDs and values as replies. The ``version`` is used for future compatibility, but currently only version ``1`` is supported.
+
+The extract object contains all annotated replies in nested objects. It uses underscored-name attributes for internal use to avoid conflicts with the original annotations. There are fields like ``_value``, ``_uuid``, ``_label``, or ``_path`` based on the type of questions and reply.
+
+
 Notes
 =====
 
