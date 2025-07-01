@@ -21,10 +21,6 @@ If there is a locale with newer version available in the `DSW Registry <https://
 
     We support community of DSW translators by managing the repository `ds-wizard/wizard-client-locales <https://github.com/ds-wizard/wizard-client-locales>`__ and service for translating using web browser `localize.ds-wizard.org <https://localize.ds-wizard.org>`__.
 
-.. TODO::
-
-    Update screenshot
-
 .. figure:: index/list.png
     
     List of locales.
