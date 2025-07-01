@@ -60,6 +60,8 @@ List of Items Question
 
 The list of items question is used when there are multiple answers and we want to ask more details about those. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
 
+For each item, the answer to the first question in the list of items question is used as a label for the item. It can be any type of question.
+
 
 .. _value-question:
 
