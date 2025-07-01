@@ -7,7 +7,7 @@ Tours showcase features and workflows. Every tour is displayed to the user once,
 
 We can reset the tours here, so we can see them again.
 
-.. figure:: tours/list.png
+.. figure:: tours/reset.png
 
     List of tours.
 
