@@ -147,7 +147,7 @@ Multi-choice question is similar to the options question, however we can choose 
 Item Select Question
 --------------------
 
-The item selection question is used together with the list of items question. When creating an item selection question, you must choose one of the existing list of items questions. The answers provided to that list of items question are then offered as possible answers in the item selection question.
+The item selection question is used together with the list of items question. When creating an item selection question, you must choose one of the existing list of items questions. The answers provided to that list of items question are then offered as possible answers in the item selection question. There is also a link to the item in the list of items question, so we can easily navigate to the item and edit it if needed. If there is no answer available in the list of items question, there is a link to create a new item.
 
 .. figure:: questionnaire/item-select-question.png
     

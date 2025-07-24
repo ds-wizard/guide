@@ -35,7 +35,7 @@ These are the basic Markdown elements supported by all applications.
                         <h2>Heading 2</h2>
                     </td>
                     <td class="td-markdown-code">
-                        # Heading 2
+                        ## Heading 2
                     </td>
                 </tr>
                 <tr>
@@ -43,7 +43,7 @@ These are the basic Markdown elements supported by all applications.
                         <h3>Heading 3</h3>
                     </td>
                     <td class="td-markdown-code">
-                        # Heading 3
+                        ### Heading 3
                     </td>
                 </tr>
                 <tr>
@@ -51,7 +51,7 @@ These are the basic Markdown elements supported by all applications.
                         <h4>Heading 4</h4>
                     </td>
                     <td class="td-markdown-code">
-                        # Heading 4
+                        #### Heading 4
                     </td>
                 </tr>
                 <tr>
@@ -59,7 +59,7 @@ These are the basic Markdown elements supported by all applications.
                         <h5>Heading 5</h5>
                     </td>
                     <td class="td-markdown-code">
-                        # Heading 5
+                        ##### Heading 5
                     </td>
                 </tr>
                 <tr>
@@ -67,7 +67,7 @@ These are the basic Markdown elements supported by all applications.
                         <h6>Heading 6</h6>
                     </td>
                     <td class="td-markdown-code">
-                        # Heading 6
+                        ###### Heading 6
                     </td>
                 </tr>
                 <tr>
