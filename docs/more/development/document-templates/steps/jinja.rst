@@ -84,7 +84,7 @@ We provide several filters that can be used for conversion of values:
 
 - ``markdown`` = *Converts markdown to HTML*
 
-  - Example: ``x|roman``
+  - Example: ``x|markdown``
   - Arguments:
 
     -  ``md_text`` - string containing Markdown syntax

@@ -16,3 +16,4 @@ System settings allow us to configure basics about the organization running the 
     Organization<organization>
     Authentication<authentication>
     Privacy & Support<privacy-and-support>
+    Features<features>

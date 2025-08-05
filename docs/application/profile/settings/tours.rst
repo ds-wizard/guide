@@ -11,4 +11,3 @@ We can reset the tours here, so we can see them again.
 
     List of tours.
 
-    

@@ -35,7 +35,7 @@ We can use the project as a :ref:`project template<project-templates>`. If we en
     Project template options are visible only for Data Stewards or Admins.
 
 
-*Unsupported metamodel* can appear, when the document template is not compatible with the version of |project_name|. Researchers should contact their Data Steward or Administrator in this case.
+:guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of |project_name|. Researchers should contact their Data Steward or Administrator in this case.
 
 Knowledge Model
 ===============

@@ -16,11 +16,16 @@ That is what the knowledge model migration is for. Once a new version of the Par
 Creating a Knowledge Model Migration
 ====================================
 
-We can start the knowledge model migration from the :ref:`list of knowledge model editors<knowledge-model-editors>`. If there is a newer version of the Parent KM available for particular knowledge model editor, we can see the :guilabel:`update available` badge next to the name of the editor. 
+We can start the knowledge model migration from the :ref:`list of knowledge model editors<knowledge-model-editors>`. If there is a newer version of the Parent KM available for particular knowledge model editor, we can see a yellow :guilabel:`update available` badge next to the name of the editor.
+
+.. WARNING::
+
+    If there are some unpublished changes in the Child KM, we cannot start the migration (there will be no :guilabel:`update available` badge). We need to publish the changes first.
+
 
 .. figure:: migration/update-available.png
     :width: 476
-    
+
     Badge indicating that there is a newer version of the Parent KM.
 
 

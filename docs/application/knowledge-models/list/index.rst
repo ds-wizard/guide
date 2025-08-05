@@ -3,7 +3,7 @@
 Knowledge Model List
 ********************
 
-As **data stewards** and **admins**, we can manage the knowledge models that are in our |project_name| instance. Then, **researchers** are using and browsing the knowledge models. We can access the list of knowledge model from the main menu via :guilabel:`Knowledge Model`. The list can be filtered and sorted by name or creation date.
+As **data stewards** and **admins**, we can manage the knowledge models that are in our |project_name|. We can access the list of knowledge model from the main menu via :guilabel:`Knowledge Model`. The list can be filtered and sorted by name or creation date. We can also search for a specific knowledge model by its id, name or version. The list shows the name, version, id, author, description and last update.
 
 For each knowledge model (KM), we can see the latest version in the list. If we want to read more about a specific KM or see the older versions, we need to access the :doc:`./detail` by clicking the name of KM or clicking :guilabel:`Open` from the right item menu (three dots). There are also other options for each item:
 
@@ -15,11 +15,16 @@ For each knowledge model (KM), we can see the latest version in the list. If we 
 - :guilabel:`Set deprecated` or :guilabel:`Restore` for setting a KM deprecated when we no longer want the **researchers** to use it.
 - :guilabel:`Delete` for all versions of the KM (possible only if is not used in any projects or linked in other KMs and editors).
 
+If a newer version of the knowledge model is available in the `DSW Registry <https://registry.ds-wizard.org/>`__, a yellow :guilabel:`update available` badge, which we can use for quick update of the template to the latest version, will appear.
+
+Finally, there is an option to :doc:`./import` by clicking the :guilabel:`Import` button in the top right part of the screen.
+
 .. NOTE::
 
-    The options in the item menu are based on the role of a current user, e.g. a **researcher** cannot create KM editor.
+    You can import multiple knowledge models from file at once.
 
-For **data stewards** and **admins**, *update available* may appear if there is a newer version of the knowledge model in the `DSW Registry <https://registry.ds-wizard.org>`__ (and if configured).
+
+For **data stewards** and **admins**, :guilabel:`update available` badge may appear if there is a newer version of the knowledge model in the `DSW Registry <https://registry.ds-wizard.org>`__ (and if configured).
 
 Finally, there is an option to :doc:`./import` by click the :guilabel:`Import` button in the top right part of the screen.
 

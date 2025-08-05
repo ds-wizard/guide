@@ -17,7 +17,7 @@ In the top pane, we can see the options based on our role:
 - :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` for to create a fork (some more specific KM based on this one).
 - :guilabel:`Create project` is a shortcut to :doc:`../../projects/list/create` with this KM.
 - :guilabel:`Set deprecated` or :guilabel:`Restore` for setting a KM deprecated when we no longer want the **researchers** to use it.
-- :guilabel:`Delete` the specific version of the KM (possible only if is not used in any projects or linked in other KMs and editors).
+- :guilabel:`Delete` the specific version of the KM (possible only if is not used in any projects or linked in other KMs and editors, cannot be undone).
 
 If we are not seeing the latest version of the KM, a warning message is shown in the top. Similarly, we will see a notification that update is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org>`__ (if configured).
 

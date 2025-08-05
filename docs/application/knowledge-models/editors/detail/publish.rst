@@ -5,7 +5,7 @@ Publish
 
 Before the knowledge model can be used by researchers in their projects, we need to publish it. We can do that by clicking the :guilabel:`Publish` button in the top right corner of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
 
-If we click the button, we are prompted with the metadata details to check them before publishing. We cannot change anything here, so if we want to change it, we have to press Cancel and edit the details on the :guilabel:`Settings` tab of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
+If we click the button, we are prompted with the metadata details to check them before publishing. We cannot change anything here, so if we want to change it, we have to click the link to :guilabel:`Settings` or press :guilabel:`Cancel` and edit the details on the :guilabel:`Settings` tab of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
 
 .. figure:: publish/publish-modal.png
     :width: 528

@@ -39,8 +39,8 @@ You should always check :doc:`upgrade-guidelines` before upgrading, be sure that
 
 .. _faq-unsupported-metamodel:
 
-Document templates show "Unsupported Metamodel", what should I do?
-------------------------------------------------------------------
+Document templates show :guilabel:`unsupported metamodel`
+---------------------------------------------------------
 
 There are two cases:
 
