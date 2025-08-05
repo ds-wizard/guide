@@ -43,6 +43,11 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.20.X to 4.21.X
+----------------
+
+- Before updating, check if all submission services have unique IDs, otherwise the migration will fail. Also check if document templates and their versions used by submission services are present in the instance.
+
 4.19.X to 4.20.X
 ----------------
 
