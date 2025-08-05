@@ -19,7 +19,7 @@ For each knowledge model (KM), we can see the latest version in the list. If we 
 
     The options in the item menu are based on the role of a current user, e.g. a **researcher** cannot create KM editor.
 
-For **data stewards** and **admins**, *update available* may appear if there is a newer version of the knowledge model in the `DSW Registry <https://registry.ds-wizard.org>`__ (and if configured).
+For **data stewards** and **admins**, :guilabel:`update available` badge may appear if there is a newer version of the knowledge model in the `DSW Registry <https://registry.ds-wizard.org>`__ (and if configured).
 
 Finally, there is an option to :doc:`./import` by click the :guilabel:`Import` button in the top right part of the screen.
 

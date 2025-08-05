@@ -15,7 +15,7 @@ The following video explains all aspects of Project Migration.
 Creating a Project Migration
 ============================
 
-We can start a project migration either from the :ref:`project list<project-list>`, or from the :ref:`project settings<project-settings>`. Sometimes, when there is a newer version of the knowledge model available, we can see a tag :guilabel:`update available` next to the project name. We can click on the tag to start the migration as well.
+We can start a project migration either from the :ref:`project list<project-list>`, or from the :ref:`project settings<project-settings>`. Sometimes, when there is a newer version of the knowledge model available, we can see a tag :guilabel:`update available` badge next to the project name. We can click on the tag to start the migration as well.
 
 .. figure:: migration/create.png
     
