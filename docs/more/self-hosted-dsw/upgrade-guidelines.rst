@@ -46,7 +46,11 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.20.X to 4.21.X
 ----------------
 
-- Before updating, check if all submission services have unique IDs, otherwise the migration will fail. Also check if document templates and their versions used by submission services are present in the instance.
+Before updating check following, otherwise the migration will fail:
+
+- All authentication services have unique IDs
+- All submission services have unique IDs
+- Document templates and their versions used by submission services are present in the instance
 
 4.19.X to 4.20.X
 ----------------
