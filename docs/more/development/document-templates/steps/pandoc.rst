@@ -7,6 +7,8 @@ Step: ``pandoc``
 
 Transformation step that converts Pandoc-compatible document formats.
 
+Currently, we use version **3.6.4**. For more information, please refer to the `official documentation <https://pandoc.org/MANUAL.html>`_.
+
 Input
 =====
 
