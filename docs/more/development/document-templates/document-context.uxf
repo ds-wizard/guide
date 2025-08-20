@@ -165,7 +165,7 @@ choices: list[Choice]</panel_attributes>
     <panel_attributes>IntegrationQuestion
 --
 integration: Integration
-props: dict[str,str]</panel_attributes>
+variables: dict[str,str]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -208,20 +208,15 @@ annotations: dict[str,str]</panel_attributes>
       <x>912</x>
       <y>776</y>
       <w>152</w>
-      <h>144</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>/Integration/
 --
 uuid: str
-id: str
 name: str
 type: str
-logo: Optional[str]
-props: dict[str,str]
-item_url: Optional[str]
-annotations: dict[str,str]
---
-item(item_id: str) -&gt; str</panel_attributes>
+variables: dict[str,str]
+annotations: dict[str,str]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -477,17 +472,20 @@ iterate_by_suffix(path_suffix: str): Iterable[Reply]</panel_attributes>
       <x>632</x>
       <y>1088</y>
       <w>128</w>
-      <h>104</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>IntegrationReply
 --
+type: str
 value: str
 item_id: Optional[str]
-is_plain: bool
-is_integration: bool
+raw: Optional[Any]
 --
 id: Optional[str]
-url: Optional[str]</panel_attributes>
+url: Optional[str]
+is_plain: bool
+is_integration: bool
+is_legacy_integration: bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -1199,14 +1197,14 @@ m2=0..*
       <x>1024</x>
       <y>456</y>
       <w>1056</w>
-      <h>752</h>
+      <h>792</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=answer
 m2=1
 
 </panel_attributes>
-    <additional_attributes>10.0;880.0;10.0;910.0;1290.0;910.0;1290.0;10.0</additional_attributes>
+    <additional_attributes>10.0;880.0;10.0;960.0;1290.0;960.0;1290.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1241,15 +1239,15 @@ m2=0..*
     <coordinates>
       <x>256</x>
       <y>800</y>
-      <w>1568</w>
-      <h>424</h>
+      <w>1624</w>
+      <h>464</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=choices
 m2=0..*
 
 </panel_attributes>
-    <additional_attributes>10.0;450.0;10.0;500.0;1920.0;500.0;1920.0;10.0</additional_attributes>
+    <additional_attributes>10.0;450.0;10.0;550.0;1990.0;550.0;1990.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1418,7 +1416,7 @@ annotations: dict[str,str]</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1624</x>
+      <x>1696</x>
       <y>880</y>
       <w>144</w>
       <h>72</h>
@@ -1447,7 +1445,7 @@ m2=experts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1400</x>
+      <x>1488</x>
       <y>880</y>
       <w>176</w>
       <h>56</h>
@@ -1461,7 +1459,7 @@ url: str</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1400</x>
+      <x>1488</x>
       <y>952</y>
       <w>176</w>
       <h>56</h>
@@ -1475,29 +1473,29 @@ resource_page: ResourcePage</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1568</x>
+      <x>1656</x>
       <y>904</y>
-      <w>72</w>
+      <w>56</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1568</x>
+      <x>1656</x>
       <y>904</y>
-      <w>72</w>
+      <w>56</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;30.0;10.0;30.0;100.0;10.0;100.0</additional_attributes>
+    <additional_attributes>50.0;10.0;20.0;10.0;20.0;100.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1488</x>
+      <x>1576</x>
       <y>640</y>
       <w>40</w>
       <h>256</h>
@@ -1512,9 +1510,9 @@ m1=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1360</x>
+      <x>1448</x>
       <y>640</y>
-      <w>128</w>
+      <w>56</w>
       <h>368</h>
     </coordinates>
     <panel_attributes>lt=&lt;..
@@ -1522,14 +1520,14 @@ fg=blue
 m2=
 m1=0..*
 </panel_attributes>
-    <additional_attributes>50.0;430.0;30.0;430.0;30.0;270.0;140.0;270.0;140.0;10.0</additional_attributes>
+    <additional_attributes>50.0;430.0;30.0;430.0;30.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1640</x>
       <y>640</y>
-      <w>80</w>
+      <w>144</w>
       <h>256</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -1537,18 +1535,21 @@ m1=0..*
 m2=references
 
 </panel_attributes>
-    <additional_attributes>50.0;300.0;50.0;190.0;10.0;190.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;300.0;140.0;230.0;10.0;230.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1096</x>
-      <y>880</y>
+      <x>1128</x>
+      <y>1032</y>
       <w>152</w>
-      <h>136</h>
+      <h>184</h>
     </coordinates>
-    <panel_attributes>ApiIntegration
+    <panel_attributes>ApiLegacyIntegration
 --
+id: str
+logo: Optional[str]
+item_url: Optional[str]
 rq_url: str
 rq_method: str
 rq_headers: dict[str,str]
@@ -1557,6 +1558,8 @@ rq_empty_search: bool
 rs_list_field: Optional[str]
 rs_item_id: Optional[str]
 rs_item_template: str
+--
+item(item_id: str) -&gt; str
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -1564,36 +1567,41 @@ rs_item_template: str
     <id>UMLClass</id>
     <coordinates>
       <x>912</x>
-      <y>960</y>
+      <y>920</y>
       <w>152</w>
-      <h>48</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>WidgetIntegration
 --
-widget_url: str</panel_attributes>
+id: str
+logo: Optional[str]
+item_url: Optional[str]
+widget_url: str
+--
+item(item_id: str) -&gt; str</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>976</x>
-      <y>912</y>
+      <y>856</y>
       <w>24</w>
-      <h>64</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>976</x>
-      <y>912</y>
-      <w>136</w>
-      <h>56</h>
+      <y>856</y>
+      <w>168</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0;150.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;130.0;60.0;130.0;260.0;190.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1685,14 +1693,14 @@ m2=parent
     <coordinates>
       <x>1624</x>
       <y>640</y>
-      <w>56</w>
+      <w>128</w>
       <h>256</h>
     </coordinates>
     <panel_attributes>lt=..&gt;
 m2=1
 m1=parent
 </panel_attributes>
-    <additional_attributes>10.0;300.0;10.0;10.0</additional_attributes>
+    <additional_attributes>100.0;300.0;100.0;270.0;10.0;270.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -1802,9 +1810,9 @@ m2=pages
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1504</x>
+      <x>1592</x>
       <y>1000</y>
-      <w>176</w>
+      <w>104</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -1812,7 +1820,7 @@ m1=0..*
 m2=resource_page
 
 </panel_attributes>
-    <additional_attributes>180.0;80.0;180.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1827,7 +1835,7 @@ m1=0..*
 m2=resource_\ncollections
 
 </panel_attributes>
-    <additional_attributes>860.0;650.0;860.0;620.0;230.0;620.0;230.0;420.0;110.0;420.0;110.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>860.0;650.0;860.0;600.0;230.0;600.0;230.0;420.0;110.0;420.0;110.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -2093,5 +2101,39 @@ m1=validations
 m2=0..*
 </panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0;190.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1104</x>
+      <y>864</y>
+      <w>296</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>ApiIntegration
+--
+allow_custom_reply: bool
+request_method: str
+request_url: str
+request_headers: dict[str,str]
+request_body: str
+request_allow_empty_search: bool
+response_list_field: Optional[str]
+response_item_id: Optional[str]
+response_item_template: str
+response_item_template_for_selection: Optional[str]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>976</x>
+      <y>856</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;160.0;60.0</additional_attributes>
   </element>
 </diagram>
