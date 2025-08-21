@@ -40,6 +40,7 @@ Document context is an object that carries all information related to a DSW ques
    * ``createdAt`` = when the questionnaire/project was created
    * ``createdBy`` = original author who created the questionnaire/project
    * ``description`` = optional description of the questionnaire/project
+   * ``files`` = list of questionnaire files (each has ``uuid``, ``fileName``, ``fileSize``, and ``contentType``)
    * ``labels`` = path-list map of labels on questions (i.e. TODOs)
    * ``name`` = name of the questionnaire/project
    * ``phaseUuid`` = UUID of the current phase selected
