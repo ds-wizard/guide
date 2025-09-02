@@ -9,4 +9,9 @@ We can either click the :guilabel:`Configure secrets` or navigate there through 
 
 We can fill some properties in. So, for example, if we want to create a secret ``apiUrl``, we need to click on :guilabel:`Create secret`, fill the name and value, and save it.
 
+.. figure:: secrets/secrets.png
+    
+    List of knowledge model secrets.
+
+
 Then we can go back to the knowledge model editor and in the **Advanced Integration Configuration**, we can click the copy button next to the Secret we want to use (we have the same copy button for Variables). This copies the secret name in the Jinja2 format ``{{ secrets.apiUrl }}``, which we can then use in the request configuration.
