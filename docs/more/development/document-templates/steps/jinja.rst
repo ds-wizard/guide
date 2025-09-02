@@ -197,7 +197,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Returns an empty string if not possible to extract it from the reply. Suitable for ``AnswerReply``, ``StringReply`` and ``IntegrationReply``.
   - Example: ``reply|reply_str_value``
   - Arguments:
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 - ``reply_int_value`` = *Extracts integer value from a reply if possible*
 
@@ -205,7 +205,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Example: ``reply|reply_int_value``
   - Arguments:
 
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 - ``reply_float_value`` = *Extracts float value from a reply if possible*
 
@@ -213,7 +213,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Example: ``reply|reply_float_value``
   - Arguments:
     
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 - ``reply_items`` = *Extracts list of strings from a reply if possible*
 
@@ -221,7 +221,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Example: ``reply|reply_items``
   - Arguments:
 
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 Special
 ~~~~~~~
