@@ -1,3 +1,5 @@
+.. _document-submission-settings:
+
 Document Submission Settings
 ****************************
 

@@ -48,12 +48,14 @@ Commands
 
 There are these basic commands:
 
-* ``new`` = create a new template project, it launches a simple interactive wizard for template metadata
-* ``list`` = list all templates (latest versions) from configured |project_name|
+* ``config`` = manage shared user configuration (~/.dsw-tdk).
 * ``get`` = download a template project with specified template ID from |project_name|
-* ``put`` = upload the local template project to |project_name| (once or continually on-change when ``--watch`` flag is used)
-* ``verify`` = check the metadata of the local template project
+* ``list`` = list all templates (latest versions) from configured |project_name|
+* ``new`` = create a new template project, it launches a simple interactive wizard for template metadata
 * ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to |project_name| via its web interface)
+* ``put`` = upload the local template project to |project_name| (once or continually on-change when ``--watch`` flag is used)
+* ``unpackage`` = extract a ZIP distribution package into the local template project directory
+* ``verify`` = check the metadata of the local template project
 
 Default template directory is current one for ``put``, ``verify``, and ``package``. But ``new`` and ``get`` will create a new folder according to the template ID if not explicitly set in other way.
 
@@ -71,7 +73,7 @@ Environment variables and .env file
 You can use environment variables to authenticate:
 
 * ``DSW_API_URL`` = URL of |project_name| API with which you want to communicate. Hover mouse over your profile name to find the :ref:`About<about>` section where URL is specified.
-* ``DSW_API_KEY`` = your :ref:`API Key<api-keys>`. Hover mouse over your profile name, click on :guilabel:`Edit Profile` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
+* ``DSW_API_KEY`` = your :ref:`API Key<api-keys>`. Hover mouse over your profile name, click on :guilabel:`User Settings` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
 
 To make this even easier, you can store those in ``.env`` file in the project root and it will be loaded automatically. Or you can specify the path to a ``.env`` file:
 
@@ -79,3 +81,8 @@ To make this even easier, you can store those in ``.env`` file in the project ro
 
     dsw-tdk --dot-env /path/to/.env list
 
+
+Shared Configuration
+====================
+
+Using the ``config`` command, you can manage shared user configuration stored in the `~/.dsw-tdk` directory. This shared configuration is then applied across all DSW projects, so you don’t need to set it up for each project individually.

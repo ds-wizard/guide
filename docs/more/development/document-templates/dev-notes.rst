@@ -37,6 +37,14 @@ Misplaced Content in PDF
 **Recommendations**: First, avoid incorrect HTML structures such as empty list items, nested paragraphs, tables without ``tbody`` etc. Then also make sure that the page, footer and header sizes are correctly set via CSS. Similarly, you can prevent page break using CSS. In case of issues, also refer to the :ref:`WeasyPrint step <document-template-step-weasyprint>` or directly the `WeasyPrint documentation <https://doc.courtbouillon.org/weasyprint/>`_.
 
 
+Issues with PDF Formatting
+==========================
+
+**Issue**: PDF is rendered differently than if I check HTML in print view of browser.
+
+**Recommendations**: This is done via :ref:`document-template-step-weasyprint` thus the `WeasyPrint <https://weasyprint.org/>`_ library. Please check their documentation, recommendation and issues. It is also useful to search (e.g. via Google) specifically how to achieve certain styling/layouting in WeasyPrint.
+
+
 Styling MS Word Documents
 =========================
 
@@ -45,8 +53,8 @@ Styling MS Word Documents
 **Recommendations**: CSS styles do not affect resulting MS Word documents as that is not possible with Pandoc. The Word document will use the matching styles based on certain HTML tags (e.g. ``<title>``, ``<h1>``, ``<p>``, or ``<table>``). You can adjust how those look by creating ``reference.docx`` document with desired styles incl. headers/footers. Ideal way is to download MS Word document generated, adjust styles as needed, and store it as the ``reference.docx`` document. Then, it can be simply added to the document template and used for the :ref:`Pandoc step <document-template-step-pandoc>` via ``args``. Please check directly the `relevant part of the Pandoc documentation <https://pandoc.org/MANUAL.html#option--reference-doc>`_.
 
 
-Compresing Images in MS Word Documents
-======================================
+Compressing Images in MS Word Documents
+=======================================
 
 **Issue**: Uncompressed images in MS Word documents can significantly increase the file size, often making it much larger than the original HTML or PDF version.
 

@@ -177,13 +177,6 @@ URL Reference
 
 A URL reference is a simple link to any website. It has **URL** which is the actual link and a **label** that describes what the reference is about. URL reference is set up on a level of question, not on a level of knowledge model.
 
-Book Reference
-^^^^^^^^^^^^^^
-
-.. warning::
-    Book references are deprecated.
-
-
 .. _expert:
 
 Expert
@@ -242,6 +235,16 @@ API Integration
 ^^^^^^^^^^^^^^^
 
 API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so |project_name| can use the API.
+
+API Integration (Legacy)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. WARNING::
+
+    This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
+
+API integration connects to an external service API to search for the answers. We need to set the **Request** configuration, so |project_name| can use the API. Then we can test the connection using the **Test Search Query** button. Based on the response, response values are shown and can be selected from.
 
 
 Widget Integration

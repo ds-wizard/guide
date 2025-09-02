@@ -43,6 +43,13 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.21.X to 4.22.X
+----------------
+
+- Document template metamodel version is raised (from 16 to 17.0) due to new type of API Integration in KM and way of versioning document template metamodel, for details check :ref:`document-template-metamodel-versions`.
+- It is necessary to delete any user properties belonging to :ref:`Document Submission <document-submission-settings>` that no longer exist in the system. Otherwise, the migration will fail. This can be done either through the UI or directly in the database.
+- It is recommended to migrate API integrations to the new version as soon as possible. The legacy API integration will be removed in the future.
+
 4.20.X to 4.21.X
 ----------------
 

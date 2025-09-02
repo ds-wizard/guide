@@ -44,6 +44,72 @@ The following variables are set:
 -  ``secrets`` = dictionary of secret values, only if enabled by configuration file
 -  ``requests`` = wrapper of `requests <https://requests.readthedocs.io/en/latest/>`__ module only if enabled by configuration file
 
+Functions
+---------
+
+There are the following functions available on the global.
+
+``assets``
+~~~~~~~~~~
+
+The ``assets(file)`` function serves to retrieve Asset object from either a static file in a document template or a questionnaire file. Therefore, the `file` argument can be one the three following:
+
+- ``string`` value with path to asset file within the template (relative from its root), e.g. ``"assets/logo.png"``;
+- :ref:`odc-questionnaire-file` object from :ref:`document-context-obj`, e.g. from reply to a File Question passing file from it simply as ``reply.file``;
+- ``dict`` representing a questionnaire file retrieved from regular :ref:`document-context`, e.g. ``ctx['questionnaire']['files'][fileUuid]``.
+
+As a result you get either ``Asset`` object as described below or ``None`` in case no such asset is found.
+
+.. code-block:: jinja
+  :caption: Example of using ``assets`` function with static template file
+
+  {%- set asset = assets("assets/logo.png") -%}
+  {%- if asset and asset.is_image -%}
+    <img src="{{ asset.data_url }}" alt="Our logo" />
+  {%- endif -%}
+
+
+.. code-block:: jinja
+  :caption: Example of using ``assets`` function with :ref:`document-context-obj`
+
+  {%- set dc = ctx|to_context_obj -%}
+  {# Get the file from the questionnaire files using the reply.file UUID #}
+  {%- set file = dc.questionnaire.files[reply.file] -%}
+  {%- set asset = assets(file) -%}
+  {%- if file and asset and asset.is_image -%}
+    <img src="{{ asset.data_url }}" alt="{{ asset.name }}" />
+  {%- elif file -%}
+    <p>Questionnaire file {{ file.name }} ({{ file.uuid }}) is not an image.</p>
+  {%- else -%}
+    <p>Questionnaire file does not exist.</p>
+  {%- endif -%}
+
+
+.. code-block:: jinja
+  :caption: Example of using ``assets`` function with :ref:`document-context`
+
+  {%- for ctxFile in ctx.questionnaire.files -%}
+    {%- set asset = assets(ctxFile) -%}
+    {%- if asset and asset.is_image -%}
+      <img src="{{ asset.data_url }}" alt="{{ asset.name }}" />
+    {%- elif asset -%}
+      <p>Questionnaire file {{ asset.name }} ({{ asset.uuid }}) is not an image.</p>
+    {%- else -%}
+      <p>Questionnaire file not found.</p>
+    {%- endif -%}
+  {%- endfor -%}
+
+
+Every ``Asset`` object returned by ``assets()`` function has the following attributes:
+
+- ``name`` - original name (file name)
+- ``content_type`` - MIME type
+- ``data`` - data stored as bytes
+- ``data_base64`` - base64-encoded data
+- ``data_url`` - data URL (convenient for use in `<img>` tags)
+- ``is_image`` - boolean flag indicating if the asset is an image
+
+
 Filters
 -------
 
@@ -131,7 +197,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Returns an empty string if not possible to extract it from the reply. Suitable for ``AnswerReply``, ``StringReply`` and ``IntegrationReply``.
   - Example: ``reply|reply_str_value``
   - Arguments:
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 - ``reply_int_value`` = *Extracts integer value from a reply if possible*
 
@@ -139,7 +205,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Example: ``reply|reply_int_value``
   - Arguments:
 
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 - ``reply_float_value`` = *Extracts float value from a reply if possible*
 
@@ -147,7 +213,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Example: ``reply|reply_float_value``
   - Arguments:
     
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 - ``reply_items`` = *Extracts list of strings from a reply if possible*
 
@@ -155,7 +221,7 @@ These filters are handy when you need to work with ``repliesMap`` from the plain
   - Example: ``reply|reply_items``
   - Arguments:
 
-    -  ``reply`` - object that might a reply
+    -  ``reply`` - object that might be a reply
 
 Special
 ~~~~~~~

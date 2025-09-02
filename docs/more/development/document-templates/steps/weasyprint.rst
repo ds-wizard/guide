@@ -5,7 +5,9 @@ Step: ``weasyprint``
 
 |badge-status| |badge-metamodel|
 
-Transformation step that converts HTML file from previous step to PDF using `WeasyPrint <https://weasyprint.org/>`__.
+Transformation step that converts HTML file from previous step to PDF using `WeasyPrint <https://weasyprint.org/>`_.
+
+Currently, we use version **66.0**. For more information, please refer to the `official documentation <https://doc.courtbouillon.org/weasyprint/v66.0/>`_.
 
 Input
 =====

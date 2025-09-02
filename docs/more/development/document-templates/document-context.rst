@@ -40,6 +40,7 @@ Document context is an object that carries all information related to a DSW ques
    * ``createdAt`` = when the questionnaire/project was created
    * ``createdBy`` = original author who created the questionnaire/project
    * ``description`` = optional description of the questionnaire/project
+   * ``files`` = list of questionnaire files (each has ``uuid``, ``fileName``, ``fileSize``, and ``contentType``)
    * ``labels`` = path-list map of labels on questions (i.e. TODOs)
    * ``name`` = name of the questionnaire/project
    * ``phaseUuid`` = UUID of the current phase selected
@@ -463,7 +464,7 @@ IntegrationQuestion
 '''''''''''''''''''
 
 -  ``integration`` (:ref:`odc-integration`)
--  ``props`` (``dict[str,str]``)
+-  ``variables`` (``dict[str,str]``)
 
 .. _odc-options-question:
 
@@ -629,11 +630,34 @@ Integration
 ^^^^^^^^^^^
 
 -  ``uuid`` (``str``)
--  ``id`` (``str``)
 -  ``name`` (``str``)
+-  ``type`` (``str``)
+-  ``variables`` (``dict[str,str]``)
+-  ``annotations`` (``dict[str,str]``)
+
+.. _odc-api-integration:
+
+ApiIntegration
+''''''''''''''
+
+-  ``allow_custom_reply`` (``bool``)
+-  ``request_method`` (``str``)
+-  ``request_url`` (``str``)
+-  ``request_headers`` (``dict[str,str]``)
+-  ``request_body`` (``str``)
+-  ``request_allow_empty_search`` (``bool``)
+-  ``response_list_field`` (``str``)
+-  ``response_item_template`` (``str``)
+-  ``response_item_template_for_selection`` (``str``)
+
+.. _odc-api-legacy-integration:
+
+ApiLegacyIntegration
+''''''''''''''''''''
+
+-  ``id`` (``str``)
 -  ``item_url`` (``Optional[str]``)
 -  ``logo`` (``Optional[str]``)
--  ``props`` (``dict[str,str]``)
 -  ``rq_method`` (``str``)
 -  ``rq_url`` (``str``)
 -  ``rq_headers`` (``dict[str,str]``)
@@ -641,7 +665,20 @@ Integration
 -  ``rs_list_field`` (``Optional[str]``)
 -  ``rs_item_id`` (``Optional[str]``)
 -  ``rs_item_template`` (``str``)
--  ``annotations`` (``dict[str,str]``)
+
+Operations:
+
+-  ``item(item_id: str) -> Optional[str]`` - URL of an item identified by string ID
+
+.. _odc-widget-integration:
+
+WidgetIntegration
+'''''''''''''''''
+
+-  ``id`` (``str``)
+-  ``item_url`` (``Optional[str]``)
+-  ``logo`` (``Optional[str]``
+-  ``widget_url`` (``str``)
 
 Operations:
 
@@ -746,7 +783,7 @@ Notes:
 .. _odc-file-reply:
 
 FileReply
-^^^^^^^^^^^
+^^^^^^^^^
 
 -  ``file_uuid`` (``str``)
 -  ``file`` (``Optional[``\ :ref:`odc-questionnaire-file`\ ``]``) - ``None`` if file has been deleted
@@ -793,15 +830,18 @@ Notes:
 IntegrationReply
 ^^^^^^^^^^^^^^^^
 
--  ``value`` (``str``)
--  ``item_id`` (``Optional[str]``) - ID of item if selected using :ref:`odc-integration`
+-  ``type`` (``str``) - one of: ``PlainType``, ``IntegrationType``, ``IntegrationLegacyType``
+-  ``value`` (``str``) - rendered value from integration (or plain reply)
+-  ``raw`` (``Optional[Any]``) - returned raw value from API if using API integration
+-  ``item_id`` (``Optional[str]``) - ID of item if selected using legacy API or Widget integration
 
 Aliases:
 
 -  ``id`` (``Optional[str]``) - same as ``item_id``
 -  ``is_plain`` (``bool``) - entered by user ignoring the integration
 -  ``is_integration`` (``bool``) - selected by user using the integration
--  ``url`` (``Optional[str]``) - item URL based :ref:`odc-integration` if selected from it
+-  ``is_legacy_integration`` (``bool``) - selected by user using the legacy integration
+-  ``url`` (``Optional[str]``) - item URL present
 
 
 .. |document-context-diagram| image:: ./document-context.svg

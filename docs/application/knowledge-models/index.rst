@@ -18,5 +18,6 @@ This section covers how to manage existing :ref:`knowledge models<knowledge-mode
 
     List<list/index>
     Editors<editors/index>
+    Secrets<secrets>
     
     

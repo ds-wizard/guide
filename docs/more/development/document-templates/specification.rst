@@ -93,6 +93,14 @@ Document Template Metamodel Versions
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
 
+Version 17.0 (since 4.22.0)
+---------------------------
+
+* Switched to semantic versioning (``MAJOR.MINOR``) for document template metamodel in order to avoid unnecessary changes in template. For example, template for 17.2 will work with DSW that supports 17.MINOR where MINOR≥2; however, will not work with DSW that supports 17.0 or 17.1. All older versions are considered as MAJOR with MINOR=0.
+* Renamed ``ApiIntegration`` to ``ApiLegacyIntegration`` and introduced new ``ApiIntegration``. Added optional ``raw`` field to ``IntegrationReply`` to support the new integration that allows to store response item from API directly.
+* Renamed ``props`` to ``variables`` (in all integrations and ``IntegrationQuestion``).
+* Updated `WeasyPrint <https://weasyprint.org/>`_ dependency (used in :ref:`document-template-step-weasyprint`) from 60.2 to 66.0 which may cause necessary changes in CSS formatting of HTML in order to produce identical PDF (esp. avoid ``height: 100%`` styling).
+
 Version 16 (since 4.13.0)
 -------------------------
 
