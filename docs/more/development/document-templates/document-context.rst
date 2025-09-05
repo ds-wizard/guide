@@ -677,7 +677,7 @@ WidgetIntegration
 
 -  ``id`` (``str``)
 -  ``item_url`` (``Optional[str]``)
--  ``logo`` (``Optional[str]``
+-  ``logo`` (``Optional[str]``)
 -  ``widget_url`` (``str``)
 
 Operations:
