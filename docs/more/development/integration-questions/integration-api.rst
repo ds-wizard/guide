@@ -27,6 +27,11 @@ If we want to connect an external service using the API there are certain requir
 Configuration
 =============
 
+.. NOTE::
+
+    If we create a knowledge model editor from the ``Common DSW Knowledge Model``, we can see examples of integrations using various APIs.
+    
+
 The configuration is done in the :ref:`knowledge model editor<knowledge-model-editor>`. First of all, we need to create a new integration and choose its **Type** to be **API**. Then we need to fill the integration **Name**.
   
 Advanced Integration Configuration
@@ -91,22 +96,23 @@ Advance Response Configuration
 The Advance response configuration allows to set **Response Item Template for Selection** which can be used to define how the selection of items from the integration will be presented before selection.
 
 Integration Question - API (Legacy)
-***********************************
+===================================
 
 .. WARNING::
 
     This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
 
 
-:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the |project_name| questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
-
-.. figure:: integration-api/api-integration.png
-    
-    How integration question connected to, for example, FAIRsharing API works.
+:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the |project_name| questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item.
 
 
 External Service Requirements (Legacy)
 ======================================
+
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
 
 If we want to connect an external service using the API there are certain requirements for it to make the connection to |project_name| possible.
 
@@ -126,10 +132,20 @@ If we want to connect an external service using the API there are certain requir
 Configuration (Legacy)
 ======================
 
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
+
 The configuration is done in the :ref:`knowledge model editor<knowledge-model-editor>`. First of all, we need to create a new integration and choose its **Type** to be **API**. Then, there are some metadata, such as **ID**, **Name**, or **Logo URL**.
 
 Request Configuration (Legacy)
 ------------------------------
+
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
 
 In the **Request** section, we configure how to make an HTTP requests to the external service's API. For that, we need to configure the following (the specific values depends on how the API works):
 
@@ -151,6 +167,11 @@ So for example, we can write **Request URL** as:
 Response Configuration (Legacy)
 -------------------------------
 
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
+
 In the **Response** section, we configure how to process the JSON response from the external service. For that, we need to configure the following:
 
 - **Response List Field** - where in the JSON response is the list of items corresponding to the search query
@@ -162,6 +183,11 @@ We can use Jinja2 templates (`Ginger <https://ginger.tobiasdammers.nl>`_ impleme
 
 Secrets and Other Properties (Legacy)
 -------------------------------------
+
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
 
 Sometimes, we might need to use some secrets (for example for authentication token), additional properties (such as API URL if we want to use different one for testing and production), or basically any information that we do not want to include in the knowledge model. In that case, we can define some properties in the instance settings.
 
@@ -198,6 +224,11 @@ And we can add a header such as:
 Video Tutorial (Legacy)
 =======================
 
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
+
 We have the following video tutorial showing how to set up the integration question using API.
 
 .. youtube:: x-kx6ppVBo0
@@ -207,6 +238,11 @@ We have the following video tutorial showing how to set up the integration quest
 
 External Resources (Legacy)
 ===========================
+
+.. WARNING::
+
+    This section covers legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
+
 
 - `How to Configure Integration Question in FAIR Wizard <https://fair-wizard.com/blog/how-to-configure-integration-question-in-fair-wizard>`_
 - `How to Improve Integration Question Item Template in FAIR Wizard <https://fair-wizard.com/blog/how-to-improve-integration-question-item-template-in-fair-wizard>`_

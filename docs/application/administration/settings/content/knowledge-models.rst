@@ -15,12 +15,7 @@ Integration Config (Legacy)
 
    Integration Config belongs to the legacy integration type. This integration type is deprecated and will be removed in the future. Please use the new **API integration** type instead.
 
-   New API integration uses secrets.
-
-
-.. TODO::
-
-    Add link to the new API integration secrets documentation.
+   New API integration uses :ref:`Secrets<knowledge-model-secrets>`.
 
 
 The integrations specified in Knowledge Models can use configuration values (typically secrets such as API keys or tokens) from YAML configuration specified in :ref:`integration.yml file<integration-yml-file>` or the content specified here under **Integration Config**. The value here can be for example:
