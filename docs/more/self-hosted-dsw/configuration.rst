@@ -128,7 +128,6 @@ Mail
 
 This configuration section is used only by **Mailer**. It must be filled with SMTP connection information to allow sending emails (registration verification, password recovery, project invitation, etc.).
 
-
 .. confval:: mail.enabled
 
    :type: String
@@ -146,6 +145,72 @@ This configuration section is used only by **Mailer**. It must be filled with SM
    :type: String
 
     Email address from which the emails will be sent.
+
+.. confval:: mail.provider
+
+   :type: String
+   :default: ``smtp``
+
+    Possible values are currently: ``smtp`` and ``amazonses``. Then based on the provider, the corresponding configuration section must be filled.
+
+.. confval:: mail.smtp.host
+
+   :type: String
+
+    Hostname or IP address of SMTP server.
+
+.. confval:: mail.smtp.port
+
+   :type: Int
+
+    Port that is used for SMTP on the server (usually ``25`` for plain, ``465`` for SSL, or ``587`` for STARTTLS).
+
+.. confval:: mail.smtp.security
+
+    :type: String
+    :default: ``plain``
+    
+     Security of the SMTP connection. Possible values are: ``plain``, ``ssl``, and ``tls``.
+
+.. confval:: mail.smtp.username
+
+   :type: String
+
+    Username for the SMTP connection. (If no username/password is given, it is assumed that no authentication is needed.)
+
+.. confval:: mail.smtp.password
+
+    :type: String
+    
+     Password for the SMTP connection. (If no username/password is given, it is assumed that no authentication is needed.)
+
+.. confval:: mail.smtp.timeout
+
+   :type: Float
+   :default: ``5``
+
+    Optional timeout for SMTP connection in seconds.
+
+.. confval:: mail.amazonSes.region
+
+   :type: String
+
+    AWS region for Amazon Simple Email Service (SES).
+
+.. confval:: mail.amazonSes.accessKeyId
+
+    :type: String
+    
+     Access Key ID for AWS.
+
+.. confval:: mail.amazonSes.secretAccessKey
+
+    :type: String
+    
+     Secret Access Key for AWS.
+
+
+While the following SMTP configuration still works, it is discouraged to use as **deprecated**:
 
 .. confval:: mail.host
 
@@ -165,6 +230,13 @@ This configuration section is used only by **Mailer**. It must be filled with SM
    :default: ``false``
 
     If SMTP connection is encrypted via SSL (we highly recommend this).
+
+.. confval:: mail.security
+
+   :type: String
+   :default: ``plain``
+
+    Security of the SMTP connection. Possible values are: ``plain``, ``ssl`` and ``tls``. (``ssl`` is used if ``mail.ssl`` is ``true``.)
 
 .. confval:: mail.authEnabled
 
