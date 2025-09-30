@@ -1,4 +1,4 @@
-.. _markdown:
+.. _markdown-cheatsheet:
 
 Markdown Cheatsheet
 *******************
