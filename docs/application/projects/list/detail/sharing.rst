@@ -11,6 +11,11 @@ We can share project with other |project_name| users or even external collaborat
     Project sharing settings.
 
 
+.. NOTE::
+
+    It is not possible to remove last project owner. To change the project owner, we need to add another user as an owner first.
+
+
 If we want to only see how Sharing is set up or copy the project link, we can use the arrow button which is a part of the :guilabel:`Share` button.
 
 .. figure:: sharing/share-dropdown.png

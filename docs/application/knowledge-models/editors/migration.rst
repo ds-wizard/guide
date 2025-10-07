@@ -71,4 +71,4 @@ Then we need to add some additional metadata (these fields are pre-filled if the
 
 - **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX Licenses List <https://spdx.org/licenses/>`_.
 - **Description** - this should be really short and descriptive. It is used, for example, in select boxes when creating a new project to help researchers choose the best knowledge model for their use case.
-- **Readme** - this is where we can describe everything we need about the knowledge model. We can, for example, include a changelog of what changed in what version, etc. We can use :ref:`Markdown<markdown>` in this field to provide some nice formatting.
+- **Readme** - this is where we can describe everything we need about the knowledge model. We can, for example, include a changelog of what changed in what version, etc. We can use :ref:`Markdown<markdown-cheatsheet>` in this field to provide some nice formatting.

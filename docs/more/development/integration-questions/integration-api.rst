@@ -3,7 +3,7 @@ Integration Question - API
 
 :ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the |project_name| questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
 
-We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/stable/>`_ to construct everything in integrations.
+We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/stable/>`_ to construct everything in integrations. We also have this :ref:`cheatsheet<jinja-cheatsheet>` available.
 
 .. figure:: integration-api/api-integration.png
     
@@ -78,6 +78,11 @@ Then we can view the **Request Details** and **Response**. In case of error we c
 
 Response Configuration
 ----------------------
+
+.. WARNING::
+
+    We need to run a valid test request before we can configure the response.
+
 
 In the **Response** section, we configure how to process the JSON response from the external service. For that, we need to configure the following:
 
