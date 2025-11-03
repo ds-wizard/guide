@@ -15,3 +15,14 @@ Modal Dialogs are used for various purposes. Example might be a confirmation dia
 +-------------------+---------------------+
 | `Enter`           | Confirm the action  |
 +-------------------+---------------------+
+
+Form Fields
+===========
+
+Form fields can be controlled using keyboard shortcuts. Depending on the operating system we can use either `Ctrl` or `Cmd` key. Together with Enter key we can submit any form.
+
++----------------------+----------------------+
+| Shortcut             | Description          |
++======================+======================+
+| `Ctrl/Cmd` + `Enter` | Submit form          |
++----------------------+----------------------+
