@@ -154,7 +154,7 @@ Validation is used to define some rules for the answers in Value question type. 
 Reference
 ---------
 
-References are used to provide additional information for :ref:`questions<question>`. There are two types of references. :ref:`Resource page reference<resource-page>` and :ref:`URL reference<url-reference>`. resource page references are gathered in the resource collections.
+References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. resource page references are gathered in the resource collections.
 
 .. _resource-collection:
 
@@ -176,6 +176,13 @@ URL Reference
 ^^^^^^^^^^^^^
 
 A URL reference is a simple link to any website. It has **URL** which is the actual link and a **label** that describes what the reference is about. URL reference is set up on a level of question, not on a level of knowledge model.
+
+.. _cross-reference:
+
+Cross Reference
+^^^^^^^^^^^^^^^
+
+A cross reference is a link to another question within the same knowledge model. It has **question** which is the referenced question selected from dropdown list and a **description** that describes what the reference is about.
 
 .. _expert:
 
