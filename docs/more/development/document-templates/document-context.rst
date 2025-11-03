@@ -426,8 +426,9 @@ get a more specific one and never just a ``Question``.
 
 Aliases:
 
--  ``url_references`` (``list[``\ :ref:`odc-url-reference`\ ``]``)
+-  ``cross_references`` (``list[``\ :ref:`odc-cross-reference`\ ``]``)
 -  ``resource_page_references`` (``list[``\ :ref:`odc-resource-page-reference`\ ``]``)
+-  ``url_references`` (``list[``\ :ref:`odc-url-reference`\ ``]``)
 
 Notes:
 
@@ -561,13 +562,13 @@ As for the :ref:`odc-question` class, ``Reference`` is also a superclass and you
 -  ``type`` (``str``)
 -  ``annotations`` (``dict[str,str]``)
 
-.. _odc-url-reference:
+.. _odc-cross-reference:
 
-URLReference
-''''''''''''
+CrossReference
+''''''''''''''
 
--  ``label`` (``str``)
--  ``url`` (``str``)
+-  ``target_uuid`` (``str``)
+-  ``description`` (``str``)
 
 .. _odc-resource-page-reference:
 
@@ -575,6 +576,14 @@ ResourcePageReference
 '''''''''''''''''''''
 
 -  ``resource_page`` (``Optional[``\ :ref:`odc-resource-page`\ ``]``)
+
+.. _odc-url-reference:
+
+URLReference
+''''''''''''
+
+-  ``label`` (``str``)
+-  ``url`` (``str``)
 
 
 .. _odc-resource-collection:
