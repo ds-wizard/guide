@@ -1446,8 +1446,8 @@ m2=experts
     <id>UMLClass</id>
     <coordinates>
       <x>1488</x>
-      <y>880</y>
-      <w>176</w>
+      <y>760</y>
+      <w>104</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>URLReference
@@ -1473,13 +1473,13 @@ resource_page: ResourcePage</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1656</x>
-      <y>904</y>
-      <w>56</w>
-      <h>24</h>
+      <x>1584</x>
+      <y>784</y>
+      <w>128</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;160.0;50.0;160.0;50.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1498,14 +1498,14 @@ resource_page: ResourcePage</panel_attributes>
       <x>1576</x>
       <y>640</y>
       <w>40</w>
-      <h>256</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;..
 fg=blue
 m2=
 m1=0..*
 </panel_attributes>
-    <additional_attributes>10.0;300.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -2135,5 +2135,30 @@ response_item_template_for_selection: Optional[str]
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0;160.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1488</x>
+      <y>872</y>
+      <w>104</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>CrossReference
+--
+target_uuid: str
+description: str</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1584</x>
+      <y>904</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -11,7 +11,7 @@ Questionnaire is the first tab of the project detail. This is the most important
 Current Phase
 =============
 
-If the :ref:`knowledge model<knowledge-model>` we use for the :ref:`project<project>` has :ref:`phases<phase>` defined, we can see a phase selection in the questionnaire detail. Different questions become desirable based on the selected phase. For example, some should be answered before submitting the proposal, while others can be filled later.
+If the :ref:`knowledge model<knowledge-model>` we use for the :ref:`project<project>` has :ref:`phases<phase>` defined, we can see a phase selection in the questionnaire detail. Different questions become desirable based on the selected phase. For example, some should be answered before submitting the proposal, while others can be filled later. The phase progress is also visible.
 
 .. figure:: questionnaire/phase-selection.png
     :width: 299
@@ -206,6 +206,19 @@ All of value question types (except for color) can have validations set on them.
     
     Warnings referring to questions with invalid values.
 
+.. _todos:
+
+TODOs
+=====
+
+When we are filling in the questionnaire, we can stumble upon a question that we don't know how to answer yet, but we don't want to forget to come back to that question. We can click on :guilabel:`+ Add TODO` to add a TODO to the question.
+
+We can then open the :guilabel:`TODOs` tab from the questionnaire menu to see the list of all questions with assigned TODO in the questionnaire. By clicking on a question there, we can quickly jump back to that question and fill it.
+
+.. figure:: questionnaire/todos.png
+    :width: 334
+    
+    List of TODOs.
 
 Comments
 ========
@@ -260,21 +273,6 @@ Editor Notes
 
 Besides comments there are also editor notes which work the same way as comments but they are visible only to project editors and owners. We can use editor notes to internal communication with our team while working on the DMP and then comments to gather the feedback from supervisor or reviewer.
 
-.. _todos:
-
-TODOs
-=====
-
-When we are filling in the questionnaire, we can stumble upon a question that we don't know how to answer yet, but we don't want to forget to come back to that question. We can click on :guilabel:`+ Add TODO` to add a TODO to the question.
-
-We can then open the :guilabel:`TODOs` tab from the questionnaire menu to see the list of all questions with assigned TODO in the questionnaire. By clicking on a question there, we can quickly jump back to that question and fill it.
-
-.. figure:: questionnaire/todos.png
-    :width: 334
-    
-    List of TODOs.
-
-
 Version History
 ===============
 
@@ -313,3 +311,14 @@ We can also revert a questionnaire to an older version. We can simply find the d
 .. WARNING::
     
     Reverting to an older version cannot be undone. It is therefore recommended to create a copy of the project before reverting.
+
+Search
+======
+
+Search is accessible from the questionnaire menu bar by clicking on the :guilabel:`🔍` button. A search side panel opens where we can type in our search query. The search works in real-time, so while we are typing, the results are displayed below. We can fulltext search in questions and answers. In questions not only the question name but also description and references. The search is case insensitive.
+
+We can click on any of the search results to quickly navigate to that question in the questionnaire.
+
+.. TODO::
+
+    Add screenshot of the search panel.
