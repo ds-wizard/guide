@@ -46,7 +46,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.24.X to 4.25.X
 ----------------
 
-- Updated the endpoints in the sections related to the Knowledge Model and the Knowledge Model Editor. Please check the API documentation for the new endpoints.
+- Endpoints in the sections related to the Knowledge Model and the Knowledge Model Editor have been updated. Please check the API documentation for the new endpoints.
 - All Document Submissions with no Submission service defined will be deleted during migration. This can happen if the Submission service used by the Document Submission was deleted or renamed.
 - It is necessary to finish all Knowledge Model migrations, either by completing or deleting them, before upgrading. The upgrade will delete any ongoing migrations.
 
