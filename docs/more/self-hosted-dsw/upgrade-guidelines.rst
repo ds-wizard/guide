@@ -43,6 +43,13 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.24.X to 4.25.X
+----------------
+
+- Endpoints in the sections related to the Knowledge Model and the Knowledge Model Editor have been updated. Please check the API documentation for the new endpoints.
+- All Document Submissions with no Submission service defined will be deleted during migration. This can happen if the Submission service used by the Document Submission was deleted or renamed.
+- It is necessary to finish all Knowledge Model migrations, either by completing or deleting them, before upgrading. The upgrade will delete any ongoing migrations.
+
 4.23.X to 4.24.X
 ----------------
 
