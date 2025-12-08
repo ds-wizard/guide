@@ -1,3 +1,8 @@
+Features
+********
+
+Settings of various miscellaneous features.
+
 Tours
 =====
 
