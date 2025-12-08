@@ -14,6 +14,8 @@ File for import and export of Knowledge Models is a JSON file that contains all 
 +-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                   | Changes (brief)                                      | Since     |
 +===================+===============================================================================================================+======================================================+===========+
+| 19                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v19.json>`__ | Changed event structure internally                   | 4.25.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | 18                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v18.json>`__ | New API integration, props to variables rename       | 4.22.0    |
 +-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | 17                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v17.json>`__ | Value question validations                           | 4.13.0    |
