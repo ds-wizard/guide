@@ -115,7 +115,16 @@ Aliases:
 ContextConfig
 ~~~~~~~~~~~~~
 
--  ``client_url`` (``str``) - base URL of the DSW instance (client app)
+- ``app_title`` (``str``) - passed by backend from Settings
+- ``app_title_short`` (``str``) - passed by backend from Settings
+- ``client_url`` (``str``) - base URL of the DSW instance (client app)
+- ``illustrations_color`` (``str``) - passed by backend from Settings + default in deployment config
+- ``logo_url`` (``str``) - passed by backend from Settings + default in deployment config
+- ``primary_color`` (``str``) - passed by backend from Settings + default in deployment config
+- ``service_domain_name`` (``str``) - deployment config (ds-wizard.org)
+- ``service_name`` (``str``) - deployment config (Data Stewardship Wizard)
+- ``service_name_short`` (``str``) - deployment config (DSW)
+- ``service_url`` (``str``) - deployment config (https://ds-wizard.org)
 
 
 .. _odc-document:
