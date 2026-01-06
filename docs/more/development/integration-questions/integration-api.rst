@@ -74,7 +74,7 @@ Test
 
 In this section we can test the API integration. After filling in **Request Configuration**, **Test Search Query**, and optionally **Test Variables** we can use the **Load** button to send a test request to the API and see the response.
 
-Then we can view the **Request Details** and **Response**. In case of error we can check the logs for more information. In case of success, we can see the response JSON and use it to fill the **Response Configuration**.
+Then we can view the **Request Details** and **Response**. In case of a large response, there will be no syntax highlighting for better performance. Otherwise, the response JSON will be syntax highlighted for better readability. There is also a **Copy response** button to copy the whole response JSON. In case of error we can check the logs for more information. In case of success, we can see the response JSON and use it to fill the **Response Configuration**.
 
 Response Configuration
 ----------------------
