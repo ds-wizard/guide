@@ -43,10 +43,17 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.25.X to 4.26.X
+----------------
+
+- API Endpoints in the sections related to the Questionnaire were renamed to Project to match the DSW UI. Please check the API documentation for the new endpoints.
+- Due to changes in the API, it is necessary to rename `questionnaire-files` in S3 to `project-files`.
+- Document template metamodel version is raised (from 17.0 to 17.1) due to new type of API Integration in KM and way of versioning document template metamodel, for details check :ref:`document-template-metamodel-versions`.
+
 4.24.X to 4.25.X
 ----------------
 
-- Endpoints in the sections related to the Knowledge Model and the Knowledge Model Editor have been updated. Please check the API documentation for the new endpoints.
+- API Endpoints in the sections related to the Knowledge Model and the Knowledge Model Editor have been updated. Please check the API documentation for the new endpoints.
 - All Document Submissions with no Submission service defined will be deleted during migration. This can happen if the Submission service used by the Document Submission was deleted or renamed.
 - It is necessary to finish all Knowledge Model migrations, either by completing or deleting them, before upgrading. The upgrade will delete any ongoing migrations.
 

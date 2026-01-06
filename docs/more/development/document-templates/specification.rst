@@ -93,6 +93,11 @@ Document Template Metamodel Versions
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
 
+Version 17.1 (since 4.26.0)
+---------------------------
+
+* Added configurable instance properties for Document Templates, see :ref:`odc-context-config`.
+
 Version 17.0 (since 4.22.0)
 ---------------------------
 
