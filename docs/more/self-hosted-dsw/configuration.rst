@@ -279,6 +279,82 @@ This configuration section is used only by **Document Worker**. We can affect st
 
     Optional for limiting time given to run the tool.
 
+Document Context
+^^^^^^^^^^^^^^^^
+
+This configuration section is used only by **Document Worker**. It allows us to affect some variables that can be used inside document templates.
+
+.. confval:: documentContext.serviceName
+
+   :type: String
+   :default: ``Data Stewardship Wizard``
+
+   Name of the service operating the |project_name| instance.
+
+
+.. confval:: documentContext.serviceNameShort
+
+   :type: String
+   :default: ``DSW``
+
+    Short name of the service operating the |project_name| instance.
+
+
+.. confval:: documentContext.serviceUrl
+
+   :type: String
+   :default: ``https://ds-wizard.org``
+
+    URL of the service operating the |project_name| instance.
+
+
+.. confval:: documentContext.serviceDomainName
+    
+   :type: String
+   :default: ``ds-wizard.org``
+
+    Domain name of the service operating the |project_name| instance.
+
+
+.. confval:: documentContext.defaultPrimaryColor
+
+   :type: String
+   :default: ``#0033aa``
+
+    Default primary color used in generated documents (if not overridden).
+
+
+.. confval:: documentContext.defaultIllustrationsColor
+
+   :type: String
+   :default: ``#0033aa``
+
+    Default secondary color used in generated documents (if not overridden).
+
+
+.. confval:: documentContext.defaultLogoUrl
+
+   :type: String
+   :default: ``{{clientUrl}}/assets/logo.svg``
+
+    Default logo URL used in generated documents (if not overridden).
+
+
+.. confval:: documentContext.appTitle
+    
+   :type: String
+   :default: ``DS Wizard``
+
+    Title of the application used in generated documents (if not overridden).
+
+
+.. confval:: documentContext.appTitleShort
+
+   :type: String
+   :default: ``DSW``
+
+    Short title of the application used in generated documents (if not overridden).
+
 
 .. _integration-yml-file:
 
