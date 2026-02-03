@@ -29,4 +29,5 @@ Examples
     document-context
     tdk
     Template Specification<specification>
+    document-worker-plugins
     Development Notes<dev-notes>

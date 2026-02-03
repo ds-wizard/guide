@@ -58,13 +58,10 @@ Here are some recommended sections where to start based on the role:
       - More
     * - 
       - :ref:`document-template-development`
-      - :ref:`submission-service`
+      - :ref:`configuration-plugins`
     * - 
       - :ref:`integration_questions`
-      - 
-    * - 
-      - :ref:`importers`
-      - 
+      - :ref:`submission-service`
 
 
 .. raw:: html

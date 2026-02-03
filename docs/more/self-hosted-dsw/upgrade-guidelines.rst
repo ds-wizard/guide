@@ -1,3 +1,5 @@
+..  _upgrade-guidelines:
+
 Upgrade Guidelines
 ******************
 
@@ -182,7 +184,7 @@ Before updating check following, otherwise the migration will fail:
 4.0.X to 4.1.X
 --------------
 
-- **(breaking)** DSW Integration Widget SDK for :ref:`development-integration-widget` and DSW Importer SDK for :ref:`development-importers` are now deprecated. `DSW Integration SDK <https://github.com/ds-wizard/dsw-integration-sdk>`__ should be used instead.
+- **(breaking)** DSW Integration Widget SDK for :ref:`development-integration-widget` and DSW Importer SDK for importers are now deprecated. `DSW Integration SDK <https://github.com/ds-wizard/dsw-integration-sdk>`__ should be used instead.
 - The document template metamodel version is raised to 12.
 
 
@@ -447,20 +449,20 @@ Before updating check following, otherwise the migration will fail:
 2.1.X to 2.2.X
 --------------
 
-- Configuration of client and several features is now moved from ``application.yml`` file to in-app :ref:`config-settings`; therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start |project_name|, migrate options from ``application.yml`` to :ref:`config-settings` and then optionally clean up ``application.yml`` file.
+- Configuration of client and several features is now moved from ``application.yml`` file to in-app settings. therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start |project_name|, migrate options from ``application.yml`` in-app settings and then optionally clean up ``application.yml`` file.
 - User fields ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
 - Recommended version of MongoDB is updated to 4.2.3.
 
 2.0.X to 2.1.X
 --------------
 
-- There is a significant change related to new *Document Worker* that handles generation of documents from templates and filled questionnaires. We need to run RabbitMQ and document-worker with correct configuration according to server, see :ref:`installation-docker` and :doc:`configuration` for details.
+- There is a significant change related to new *Document Worker* that handles generation of documents from templates and filled questionnaires. We need to run RabbitMQ and document-worker with correct configuration according to server, see :ref:`installation-docker` and :doc:`./configuration/configuration` for details.
 
 1.10.X to 2.0.X
 ---------------
 
 - Changing the major version actually does not mean any problem in migration, it has been made due to significant internal changes (restructuring, new repositories, etc.)
-- If we are using Docker for running |project_name|, we need to change it according to new documentation of :ref:`installation-docker` and :doc:`configuration`.
+- If we are using Docker for running |project_name|, we need to change it according to new documentation of :ref:`installation-docker` and :doc:`./configuration/configuration`.
 - Crontab image is no longer needed.
 - A DMP template configuration file must contain list of ``allowedKMs`` (see the default *root* template).
 

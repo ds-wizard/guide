@@ -5,7 +5,10 @@ Project Importers Development
 
 .. WARNING::
 
-    Project importers are an experimental feature.
+    Project importers are discontinued and will be removed in future releases. Importers are now implemented as plugins, more information on configuration can be found here: :ref:`plugins configuration<configuration-plugins>`.
+    
+    We can also develop new plugins, more information on development can be found here: :ref:`plugins development<development-plugins>`.
+
 
 Project importers are can be used to import the data from an external resource to |project_name| questionnaire. The importer creates the replies based on the data, therefore it needs to know the structure of the knowledge model it is compatible with.
 
