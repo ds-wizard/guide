@@ -1,3 +1,5 @@
+..  _faq-notes:
+
 FAQ and Deployment Notes
 ************************
 

@@ -1,16 +1,7 @@
-Configuration
-*************
-
-
-.. _config-settings:
-
-Settings
-========
-
-Most of the configuration is done through :ref:`Settings<settings>` (accessible by Administrator).
+..  _configuration-files:
 
 Configuration Files
-===================
+*******************
 
 Configuration files are used for setting the server-side configuration. Since the 3.0 release, the configuration for server and document worker components has overlapped. Therefore, we can have a single configuration file for both.
 
@@ -18,12 +9,12 @@ Configuration files are used for setting the server-side configuration. Since th
 .. _config-server:
 
 Server Configuration
---------------------
+====================
 
 For reference, see the `configuration <https://github.com/ds-wizard/dsw-deployment-example/blob/main/config/application.yml>`__ of the DSW Deployment example.
 
 General
-^^^^^^^
+-------
 
 This configuration section is used only by **Server** and covers basic configuration of the application.
 
@@ -69,7 +60,7 @@ If we need to change our ``secret``, we need also replace all values encrypted b
 4. If we also use some “user properties” (for the Document Submission feature), let our users know to change the values in their profiles.
 
 Database
-^^^^^^^^
+--------
 
 Information for connection to PostgreSQL database.
 
@@ -80,7 +71,7 @@ Information for connection to PostgreSQL database.
     PostgreSQL database `connection string <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING>`__ (typically: ``postgresql://{username}:{password}@{hostname}:{port}/{dbname}``, for example, ``postgresql://postgres:postgres@localhost:5432/postgres``).
 
 S3
-^^
+--
 
 Information for connection to S3 storage (used for document and document template assets).
 
@@ -124,7 +115,7 @@ Information for connection to S3 storage (used for document and document templat
 
 
 Mail
-^^^^
+----
 
 This configuration section is used only by **Mailer**. It must be filled with SMTP connection information to allow sending emails (registration verification, password recovery, project invitation, etc.).
 
@@ -257,7 +248,7 @@ While the following SMTP configuration still works, it is discouraged to use as 
     Password for the SMTP connection.
 
 Externals
-^^^^^^^^^
+---------
 
 This configuration section is used only by **Document Worker**. We can affect steps for templates that use external tools (``pandoc``). It is usually sufficient to keep the defaults. Each of them has configuration options:
 
@@ -359,7 +350,7 @@ This configuration section is used only by **Document Worker**. It allows us to 
 .. _integration-yml-file:
 
 Integrations Configuration
---------------------------
+==========================
 
 Integrations in the |project_name| use external APIs. Sometimes, we might need some configured variables, such as API keys or endpoints. For example, integration with ID ``dbase`` might use the following configuration.
 
@@ -379,7 +370,7 @@ There can be multiple integrations configured in a single file. These can be use
 .. _client-configuration:
 
 Client Configuration
---------------------
+====================
 
 If we are running the client app using “With Docker”, the all we need is to specify ``API_URL`` environment variable inside ``docker-compose.yml``. In case we want to run the client locally, we need to create a ``config.js`` file in the project root:
 
@@ -390,7 +381,7 @@ If we are running the client app using “With Docker”, the all we need is to 
     }
 
 Custom Logo
-^^^^^^^^^^^
+-----------
 
 We can use our own custom logo by mounting it to the client container. The logo must be square and in SVG format.
 
@@ -401,7 +392,7 @@ We can use our own custom logo by mounting it to the client container. The logo 
         - /path/to/logo.svg:/usr/share/nginx/html/wizard/img/logo.svg
 
 Favicon
-^^^^^^^
+-------
 
 If we changed the logo, we might also want to change the favicon. First, we need to generate the necessary files using, for example, this `Favicon Generator <https://realfavicongenerator.net/>`__. The wizard uses the following files:
 
@@ -429,7 +420,7 @@ They are all in the ``/usr/share/nginx/html/wizard/img/favicon`` folder, so we c
         - /path/to/favicon:/usr/share/nginx/html/wizard/img/favicon
 
 Style Customizations
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 We can mount a file called `head-extra.html` to the wizard client image to attach extra code to the ``<head>`` tag. This can be used to override some styles or CSS variables. For example, to change a color theme, we only need to override a few Bootstrap variables:
 
@@ -468,29 +459,3 @@ Once we have the file ready, we need to mount it into the container:
         volumes:
         - /path/to/head-extra.html:/src/head-extra.html
 
-
-Document Templates
-==================
-
-We can freely customize and style templates of documents (DMPs). HTML and CSS knowledge is required, and for doing more complex templates that use some conditions, loops, or macros, knowledge of `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__ (pure Python implementation) is useful. For more information, please read :ref:`the following section<document-template-development>`.
-
-
-Email Templates
-===============
-
-Similarly to document templates, we can customize templates for emails sent by the Wizard located in ``templates`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/3.1.x/>`__. And we can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Related>`__ equal to the filename). We can learn more about the template structure and contents directly from `the mailer GitHub repository <https://github.com/ds-wizard/engine-tools/tree/develop/packages/dsw-mailer/templates>`__.
-
-Including our own email templates while using dockerized Wizard is practically the same as for DMP templates. We can also bind whole ``templates`` folders. (or even ``templates`` if we want to change both):
-
-.. CODE-BLOCK:: yaml
-
-    mailer:
-        image: datastewardshipwizard/mailer
-        restart: always
-        depends_on:
-        - postgres
-        - dsw-server
-        volumes:
-        - ./config/application.yml:/app/config/application.yml:ro
-        - ./templates:/home/user/templates:ro
-    # ... (continued)

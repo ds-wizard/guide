@@ -189,9 +189,7 @@ In the questionnaire tab, there is a menu bar with various options. The first on
 Import answers
 ==============
 
-Questionnaire answers can be imported for various sources using :ref:`project importers<importers>`.
-
-If there are some project importers available for the project, there is the :guilabel:`Import answers` button in the questionnaire menu bar. We can choose one of the available importers there and then follow the instructions in the importer window.
+Questionnaire answers can be imported for various sources using :ref:`importer plugins<configuration-plugins>`. The importer plugins needs to be enabled by the administrator first, then they are available in the questionnaire menu bar. The :guilabel:`Import answers` button is only visible if there is at least one importer plugin available for the project.
 
 
 .. _warnings:

@@ -74,7 +74,7 @@ As a result you get either ``Asset`` object as described below or ``None`` in ca
 
   {%- set dc = ctx|to_context_obj -%}
   {# Get the file from the questionnaire files using the reply.file UUID #}
-  {%- set file = dc.questionnaire.files[reply.file] -%}
+  {%- set file = dc.questionnaire.files[reply.file.uuid] -%}
   {%- set asset = assets(file) -%}
   {%- if file and asset and asset.is_image -%}
     <img src="{{ asset.data_url }}" alt="{{ asset.name }}" />

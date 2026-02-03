@@ -180,6 +180,7 @@ Questionnaire
 -  ``phase`` (``Optional[``\ :ref:`odc-phase`\ ``]``)
 -  ``project_tags`` (``list[str]``)
 -  ``replies`` (:ref:`odc-replies-container`)
+-  ``files`` (``dict[str, ``\ :ref:`odc-questionnaire-file`\ ``]``)
 -  ``todos`` (``list[str]``)
 -  ``created_by`` (:ref:`odc-user`)
 -  ``created_at`` (``datetime``)
