@@ -49,8 +49,8 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.26.X to 4.27.X
 ----------------
 
-- API endpoints in the sections related to Locales were updated. The primary key was changed from ID to UUID. Please check the API documentation for the new endpoints.
-- Due to changes in the API, it is necessary to migrate the locales in S3. You can use this script: https://github.com/ds-wizard/dsw-locale-migration-script
+- API endpoints in the sections related to Locales were updated. The primary identifier was changed from ID to UUID. Please check the API documentation for the new endpoints.
+- Due to the locale changes, it is necessary to migrate the locales in S3. You can use this script: https://github.com/ds-wizard/dsw-locale-migration-script
 
 4.25.X to 4.26.X
 ----------------
