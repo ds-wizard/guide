@@ -9,6 +9,8 @@ Once the questionnaire is completed, a DMP can be easily generated using a selec
 
 But the benefits of using |project_name| go beyond just creating a DMP. Researchers also learn how to handle data correctly, make it FAIR, maintain it throughout the project, and curate it long-term. This intelligent, guided, and efficient approach to composing DMPs is useful for ELIXIR nodes, research institutions, and individual researchers alike.
 
+You are welcome to join the `Discord community <https://discord.gg/MW3H9tdMcT>`__ where you can ask questions, share your experience, and get help from other users and administrators of |project_name|.
+
 .. youtube:: gcSPG_dyVUQ
     :width: 100%
     :align: center
