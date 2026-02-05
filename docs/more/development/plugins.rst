@@ -12,7 +12,7 @@ This page provides information on how to develop plugins for |project_name|. Inf
 
 If we want to extend |project_name| with new features, we can create plugins that will add the desired functionality.
 
-To develop a plugin, we will need the DSW Plugin SDK, which is a library that will help us create, test, and deploy plugins for |project_name|. The SDK provides a framework for building plugins, as well as documentation and examples to get us started.
+To develop a plugin, we will need the DSW Plugin SDK, which is a library that will help us create, test, and deploy plugins for |project_name|. The SDK provides a framework for building plugins, as well as documentation and examples to get us started. The DSW Plugin SDK can be found here: https://github.com/ds-wizard/dsw-plugin-sdk.
 
 There are two templates we can use to create a new plugin:
 
