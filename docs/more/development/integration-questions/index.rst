@@ -1,4 +1,4 @@
-.. _integration_questions:
+.. _integration-questions:
 
 Integration Questions
 *********************
