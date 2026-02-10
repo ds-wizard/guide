@@ -16,8 +16,7 @@ This section explains how to deploy, configure, and maintain |project_name| inst
 .. toctree::
     :maxdepth: 2
 
-    Deployment<deployment>
-    Configuration<configuration/index>
-    Upgrade-guidelines<upgrade-guidelines>
-    Faq-notes<faq-notes>
-
+    deployment
+    configuration/index
+    upgrade-guidelines
+    faq-notes

@@ -72,4 +72,5 @@ Compressing Images in MS Word Documents
 
 **Issue**: Uncompressed images in MS Word documents can significantly increase the file size, often making it much larger than the original HTML or PDF version.
 
-**Recommendations**: In the ``reference.docx`` document, you can adjust the image compression level to reduce the file size. To do this, open the document ``reference.docx`` and click on an image. Then, navigate to ``Picture Format`` ->  ``Compress Pictures`` in the ``Adjust`` group. In the dialog box, you can select the desired compression level. Alternatively, you can set the default compression level for all images in the document. This will ensure that images are compressed when the document is saved.
+**Recommendations**: In the ``reference.docx`` document, you can adjust the image compression level to reduce the file size. To do this, open the document ``reference.docx`` and click on an image. Then, navigate to ``Picture Format`` -> ``Compress Pictures`` in the ``Adjust`` group. In the dialog box, you can select the desired compression level. Alternatively, you can set the default compression level for all images in the document. This will ensure that images are compressed when the document is saved.
+ 
