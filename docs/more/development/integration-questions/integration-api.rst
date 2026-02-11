@@ -24,6 +24,8 @@ If we want to connect an external service using the API there are certain requir
   - The response must be JSON so |project_name| can parse it
   - There needs to be a JSON list where all the items matching the search query are
 
+.. _integration-api-configuration:
+
 Configuration
 =============
 
