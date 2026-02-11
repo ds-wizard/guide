@@ -21,4 +21,5 @@ There are two ways of how we can connect |project_name| to these services:
     :maxdepth: 1
 
     API<integration-api>
+    Migration<migration>
     Widget<integration-widget>
