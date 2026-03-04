@@ -19,7 +19,6 @@ This section provides information on how to develop custom content for |project_
     metamodel-schemas
     Document Templates<document-templates/index>
     integration-questions/index
-    Project Importers<importers>
     submission-service
     Integration via API<api>
     plugins

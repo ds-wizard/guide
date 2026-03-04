@@ -50,7 +50,21 @@ Styling MS Word Documents
 
 **Issue**: CSS and HTML styling is not appearing correctly in MS Word documents (transformed from HTML via the Pandoc step).
 
-**Recommendations**: CSS styles do not affect resulting MS Word documents as that is not possible with Pandoc. The Word document will use the matching styles based on certain HTML tags (e.g. ``<title>``, ``<h1>``, ``<p>``, or ``<table>``). You can adjust how those look by creating ``reference.docx`` document with desired styles incl. headers/footers. Ideal way is to download MS Word document generated, adjust styles as needed, and store it as the ``reference.docx`` document. Then, it can be simply added to the document template and used for the :ref:`Pandoc step <document-template-step-pandoc>` via ``args``. Please check directly the `relevant part of the Pandoc documentation <https://pandoc.org/MANUAL.html#option--reference-doc>`_.
+**Recommendations**:
+
+- CSS styles do not affect resulting MS Word documents as that is not possible with Pandoc. The Word document will use the matching styles based on certain HTML tags (e.g. ``<title>``, ``<h1>``, ``<p>``, or ``<table>``). You can adjust how those look by creating ``reference.docx`` document with desired styles incl. headers/footers. Ideal way is to download MS Word document generated, adjust styles as needed, and store it as the ``reference.docx`` document. Then, it can be simply added to the document template and used for the :ref:`Pandoc step <document-template-step-pandoc>` via ``args``. Please check directly the `relevant part of the Pandoc documentation <https://pandoc.org/MANUAL.html#option--reference-doc>`_.
+- HTML only supports heading levels up to ``<h6>``, while MS Word supports more levels (up to 9). To set style for >6 level, you can set the style in ``reference.docx`` and use following code:
+
+.. code:: html
+
+    <div data-custom-style="Heading 7">
+        <p>YOUR TITLE</p>
+    </div>
+
+
+.. note::
+
+    In the ``reference.docx`` document, you need to go to ``Styles Pane`` and edit the styles there, other methods do not work. See the Pandoc documentation for more details.
 
 
 Compressing Images in MS Word Documents
