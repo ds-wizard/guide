@@ -51,11 +51,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 
 - **Project Importers** were removed. They can be replaced by :ref:`configuration-plugins`.
 - API endpoints in sections related to **Document Templates** and **Knowledge Models** were updated. The primary identifier was changed from ``ID`` to ``UUID``. Please check the API documentation for the new endpoints.
-- Due to Document Template changes, it is necessary to migrate Document Templates in S3. You can use this script: 
-
-.. TODO::
-
-   Add script link
+- Due to Document Template changes, it is necessary to migrate Document Templates in S3. You can use this script: https://github.com/ds-wizard/dsw-templates-migration-script
 
 4.26.X to 4.27.X
 ----------------
