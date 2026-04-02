@@ -93,6 +93,14 @@ Document Template Metamodel Versions
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
 
+Version 18.0 (since 4.29.0)
+---------------------------
+
+* Renamed ``questionnaire`` to ``project``
+* Renamed ``package`` to ``knowledgeModelPackage`` (to `km_package`` in the objectified context)
+* Removed ``WidgetIntegration`` and ``ApiLegacyIntegration`` and replaced them with new ``PluginIntegration`` that can be used for both widget and API integrations (and also other types of integrations in the future, e.g., CLI or database integration). If you are using those legacy integrations, you need to rename them to ``PluginIntegration`` and reflect the following changes in the template:
+* Removed ``roles``, ``permissions``, and ``sources`` from user object in context
+
 Version 17.1 (since 4.26.0)
 ---------------------------
 

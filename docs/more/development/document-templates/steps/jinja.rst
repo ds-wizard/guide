@@ -55,7 +55,7 @@ There are the following functions available on the global.
 The ``assets(file)`` function serves to retrieve Asset object from either a static file in a document template or a questionnaire file. Therefore, the `file` argument can be one the three following:
 
 - ``string`` value with path to asset file within the template (relative from its root), e.g. ``"assets/logo.png"``;
-- :ref:`odc-questionnaire-file` object from :ref:`document-context-obj`, e.g. from reply to a File Question passing file from it simply as ``reply.file``;
+- :ref:`odc-project-file` object from :ref:`document-context-obj`, e.g. from reply to a File Question passing file from it simply as ``reply.file``;
 - ``dict`` representing a questionnaire file retrieved from regular :ref:`document-context`, e.g. ``ctx['questionnaire']['files'][fileUuid]``.
 
 As a result you get either ``Asset`` object as described below or ``None`` in case no such asset is found.
