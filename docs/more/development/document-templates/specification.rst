@@ -97,9 +97,10 @@ Version 18.0 (since 4.29.0)
 ---------------------------
 
 * Renamed ``questionnaire`` to ``project``
-* Renamed ``package`` to ``knowledgeModelPackage`` (to `km_package`` in the objectified context)
+* Renamed ``package`` to ``knowledgeModelPackage`` (to ``km_package`` in the objectified context)
 * Removed ``WidgetIntegration`` and ``ApiLegacyIntegration`` and replaced them with new ``PluginIntegration`` that can be used for both widget and API integrations (and also other types of integrations in the future, e.g., CLI or database integration). If you are using those legacy integrations, you need to rename them to ``PluginIntegration`` and reflect the following changes in the template:
 * Removed ``roles``, ``permissions``, and ``sources`` from user object in context
+* Value of ``StringReply`` (if value type is ``TextQuestionValueType``) can be now with Markdown syntax. You can use ``markdown_html`` or ``markdown_plain`` helpers to get the value rendered as HTML or plain text, respectively.
 
 Version 17.1 (since 4.26.0)
 ---------------------------

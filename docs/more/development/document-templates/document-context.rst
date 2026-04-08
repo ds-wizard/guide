@@ -764,6 +764,8 @@ Aliases:
    number
 -  ``as_datetime`` (``Optional[datetime]``) - tries to cast the value to
    a timestamp
+-  ``markdown_html`` (``str``) - renders the value as Markdown and returns HTML
+-  ``markdown_plain`` (``str``) - renders the value as Markdown and returns plain text (without formatting)
 
 Notes:
 
