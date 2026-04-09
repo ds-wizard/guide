@@ -45,6 +45,10 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.28.X to 4.29.X
+----------------
+
+*(nothing)*
 
 4.27.X to 4.28.X
 ----------------
