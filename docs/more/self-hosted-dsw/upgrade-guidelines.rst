@@ -198,7 +198,7 @@ Before updating check following, otherwise the migration will fail:
 4.0.X to 4.1.X
 --------------
 
-- **(breaking)** DSW Integration Widget SDK for :ref:`development-integration-widget` and DSW Importer SDK for importers are now deprecated. `DSW Integration SDK <https://github.com/ds-wizard/dsw-integration-sdk>`__ should be used instead.
+- **(breaking)** DSW Integration Widget SDK and DSW Importer SDK for importers are now deprecated. `DSW Integration SDK <https://github.com/ds-wizard/dsw-integration-sdk>`__ should be used instead.
 - The document template metamodel version is raised to 12.
 
 

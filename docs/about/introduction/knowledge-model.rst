@@ -244,12 +244,6 @@ API Integration
 API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so |project_name| can use the API.
 
 
-Widget Integration
-^^^^^^^^^^^^^^^^^^
-
-Widget integration doesn't use an API but a widget implemented using the `DSW Integration Widget SDK <https://github.com/ds-wizard/dsw-integration-widget-sdk>`_. Then we need to configure the **widget URL** where the widget is deployed.
-
-
 .. _annotations:
 
 Annotations
