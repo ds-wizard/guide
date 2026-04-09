@@ -1,7 +1,7 @@
 .. _dsw-registry-settings:
 
-DSW Registry Settings
-*********************
+DSW Registry
+************
 
 In this settings, we can configure a connection to DSW Registry that will allow import of various content (Knowledge Models, Document Templates, and Locales) to our |project_name| instance.
 

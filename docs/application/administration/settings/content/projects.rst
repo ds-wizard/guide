@@ -1,5 +1,5 @@
-Projects Settings
-*****************
+Projects
+********
 
 Project Visibility
 ==================

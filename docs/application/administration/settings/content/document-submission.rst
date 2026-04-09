@@ -1,7 +1,7 @@
 .. _document-submission-settings:
 
-Document Submission Settings
-****************************
+Document Submission
+*******************
 
 If we enable the **Document Submission** feature, users will be able to see :guilabel:`Submit` option for their documents. After selecting it, they will be prompted to select a service compatible with the document where they want to submit it.
 

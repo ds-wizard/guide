@@ -1,7 +1,7 @@
 .. _organization-settings:
 
-Organization Settings
-*********************
+Organization
+************
 
 On this page, we can configure **Name**, **Description**, **Organization ID** for our |project_name| instance and **Affiliations**.
 

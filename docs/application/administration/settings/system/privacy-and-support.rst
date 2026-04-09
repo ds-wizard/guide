@@ -1,5 +1,5 @@
-Privacy & Support Settings
-**************************
+Privacy & Support
+*****************
 
 To request users to agree with **Privacy Policy** and/or **Terms of Service** documents, we can configure URLs to locate such documents. Then, when new users register to the service, they will be prompted to agree with the linked documents. Note that usually you should inform already registered users in case you change such documents.
 
