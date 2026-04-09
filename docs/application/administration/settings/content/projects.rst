@@ -1,5 +1,5 @@
-Projects Settings
-*****************
+Projects
+********
 
 Project Visibility
 ==================
@@ -26,7 +26,7 @@ If we want to let users select sharing option of their projects within the |proj
 Anonymous Projects
 ==================
 
-If we have enabled :ref:`Public Knowledge Models<settings-km-public>`, we can also allow anonymous users to create projects where they will be able to fill questionnaires by enabling **Anonymous Projects**. These anonymous project then work as any other projects with public link set to edit permissions. However, if a logged-in user accesses such a project, then such a user may claim the ownership by clicking :guilabel:`Add to my projects` button. Anonymous users cannot create new documents, for that they must register and open the project as a logged-in user.
+If we have set Knowledge Model as Public, we can also allow anonymous users to create projects where they will be able to fill questionnaires by enabling **Anonymous Projects**. These anonymous project then work as any other projects with public link set to edit permissions. However, if a logged-in user accesses such a project, then such a user may claim the ownership by clicking :guilabel:`Add to my projects` button. Anonymous users cannot create new documents, for that they must register and open the project as a logged-in user.
 
 
 Project Creation

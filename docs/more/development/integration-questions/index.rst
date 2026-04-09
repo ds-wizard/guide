@@ -10,7 +10,6 @@ Examples of such integrations that are used within `Common DSW Knowledge Model <
 There are two ways of how we can connect |project_name| to these services:
 
 - **API** - using an API provided by the external service to search for the results
-- **Widget** - using a specialized widget implemented for the connection with the |project_name|
 
 .. raw:: html
     
@@ -22,4 +21,3 @@ There are two ways of how we can connect |project_name| to these services:
 
     API<integration-api>
     Migration<migration>
-    Widget<integration-widget>

@@ -7,7 +7,7 @@ Document Context
 
     To work efficiently with the Document Context, you want to use object instead of the JSON-like one. Please read through `DocumentContext.md <https://github.com/ds-wizard/engine-tools/blob/develop/packages/dsw-document-worker/support/DocumentContext.md>`__ directly (select different version if needed).
 
-Document context is an object that carries all information related to a DSW questionnaire in order to produce a document. To investigate it, it is the best to use *Questionnaire Report* template with ``JSON`` format. The core fields are:
+Document context is an object that carries all information related to a DSW project in order to produce a document. To investigate it, it is the best to use *Questionnaire Report* template with ``JSON`` format. The core fields are:
 
 * ``config`` = object with DSW configuration related to documents, e.g., ``clientUrl`` for referring to the DSW instance
 * ``document`` = object with the details about the document
@@ -19,7 +19,7 @@ Document context is an object that carries all information related to a DSW ques
    * ``uuid``
 * ``extras`` = additional data added by document worker if requested
 * ``groups`` = groups with access to the project
-* ``knowledgeModel`` = object describing used KM for the questionnaire
+* ``knowledgeModel`` = object describing used KM for the project
    * ``annotations`` = list of key-value annotations of KM top-level entity
    * ``chapterUuids`` = list of UUIDs for chapters (ordered)
    * ``integrationUuids`` = list of UUIDs for integrations (ordered)
@@ -35,21 +35,21 @@ Document context is an object that carries all information related to a DSW ques
    * ``description``
    * ``name``
    * ``organizationId``
-* ``package`` = object with metadata about the KM package such as ``version``, ``name``, or ``description``
-* ``questionnaire`` = object representing the questionnaire
-   * ``createdAt`` = when the questionnaire/project was created
-   * ``createdBy`` = original author who created the questionnaire/project
-   * ``description`` = optional description of the questionnaire/project
-   * ``files`` = list of questionnaire files (each has ``uuid``, ``fileName``, ``fileSize``, and ``contentType``)
+* ``knowledgeModelPackage`` = object with metadata about the KM package such as ``version``, ``name``, or ``description``
+* ``project`` = object representing the project
+   * ``createdAt`` = when the project was created
+   * ``createdBy`` = original author who created the project
+   * ``description`` = optional description of the project
+   * ``files`` = list of project files (each has ``uuid``, ``fileName``, ``fileSize``, and ``contentType``)
    * ``labels`` = path-list map of labels on questions (i.e. TODOs)
-   * ``name`` = name of the questionnaire/project
+   * ``name`` = name of the project
    * ``phaseUuid`` = UUID of the current phase selected
    * ``replies`` = path-object map of replies to questions
-   * ``updatedAt`` = when the questionnaire/project was last updated
-   * ``uuid`` = UUID of the questionnaire/project
-   * ``versionUuid`` = optional UUID of the current version of the questionnaire
-   * ``versions`` = ordered list of questionnaire versions (objects with details)
-* ``report`` = object that contains report for the questionnaire that contains computed information about number of answered questions as well as metric values
+   * ``updatedAt`` = when the project was last updated
+   * ``uuid`` = UUID of the project
+   * ``versionUuid`` = optional UUID of the current version of the project
+   * ``versions`` = ordered list of project versions (objects with details)
+* ``report`` = object that contains report for the project that contains computed information about number of answered questions as well as metric values
 * ``users`` = users with access to the project (each entry contains ``perms`` list and ``user`` object)
 
 This structure is provided to a Jinja template in :doc:`steps/jinja` and outputted from :doc:`steps/json`. We can use the JSON step to observe the actual content of the document context (structure as well as the values). Finally, we can also check :doc:`../metamodel-schemas` (the relevant JSON schema for document context).
@@ -93,10 +93,10 @@ DocumentContext
 -  ``document`` (:ref:`odc-document`)
 -  ``groups`` (``list[``\ :ref:`odc-group-perm`\ ``]``)
 -  ``km`` (:ref:`odc-knowledge-model`)
--  ``metamodel_version`` (``int``)
+-  ``metamodel_version`` (``str``)
 -  ``organization`` (:ref:`odc-organization`)
--  ``package`` (:ref:`odc-package`)
--  ``questionnaire`` (:ref:`odc-questionnaire`)
+-  ``km_package`` (:ref:`odc-km-package`)
+-  ``project`` (:ref:`odc-project`)
 -  ``report`` (:ref:`odc-report`)
 -  ``users`` (``list[``\ :ref:`odc-user-perm`\ ``]``)
 
@@ -105,9 +105,8 @@ Aliases:
 -  ``e`` (:ref:`odc-knowledge-model-entities`) - same as ``km.entities``
 -  ``doc`` (:ref:`odc-document`) - same as ``document``
 -  ``org`` (:ref:`odc-organization`) - same as ``organization``
--  ``pkg`` (:ref:`odc-package`) - same as ``package``
--  ``qtn`` (:ref:`odc-questionnaire`) - same as ``questionnaire``
--  ``replies`` (:ref:`odc-replies-container`) - same as ``questionnaire.replies``
+-  ``pkg`` (:ref:`odc-km-package`) - same as ``km_package``
+-  ``replies`` (:ref:`odc-replies-container`) - same as ``project.replies``
 
 
 .. _odc-context-config:
@@ -152,10 +151,10 @@ Organization
 -  ``affiliations`` (``list[str]``)
 
 
-.. _odc-package:
+.. _odc-km-package:
 
-Package
-~~~~~~~
+KnowledgeModelPackage
+~~~~~~~~~~~~~~~~~~~~~
 
 -  ``id`` (``str``) - full ID of KM Package
 -  ``organization_id`` (``str``)
@@ -167,30 +166,30 @@ Package
 -  ``created_at`` (``datetime``)
 
 
-.. _odc-questionnaire:
+.. _odc-project:
 
-Questionnaire
-~~~~~~~~~~~~~
+Project
+~~~~~~~
 
 -  ``uuid`` (``str``)
 -  ``name`` (``str``)
 -  ``description`` (``Optional[str]``)
--  ``version`` (``Optional[``\ :ref:`odc-questionnaire-version`\ ``]``)
--  ``versions`` (``list[``\ :ref:`odc-questionnaire-version`\ ``]``)
+-  ``version`` (``Optional[``\ :ref:`odc-project-version`\ ``]``)
+-  ``versions`` (``list[``\ :ref:`odc-project-version`\ ``]``)
 -  ``phase`` (``Optional[``\ :ref:`odc-phase`\ ``]``)
 -  ``project_tags`` (``list[str]``)
 -  ``replies`` (:ref:`odc-replies-container`)
--  ``files`` (``dict[str, ``\ :ref:`odc-questionnaire-file`\ ``]``)
+-  ``files`` (``dict[str, ``\ :ref:`odc-project-file`\ ``]``)
 -  ``todos`` (``list[str]``)
 -  ``created_by`` (:ref:`odc-user`)
 -  ``created_at`` (``datetime``)
 -  ``updated_at`` (``datetime``)
 
 
-.. _odc-questionnaire-file:
+.. _odc-project-file:
 
-QuestionnaireFile
-~~~~~~~~~~~~~~~~~~~~
+ProjectFile
+~~~~~~~~~~~
 
 -  ``uuid`` (``str``)
 -  ``name`` (``str``)
@@ -200,10 +199,10 @@ QuestionnaireFile
 -  ``download_url`` (``str``)
 
 
-.. _odc-questionnaire-version:
+.. _odc-project-version:
 
-QuestionnaireVersion
-~~~~~~~~~~~~~~~~~~~~
+ProjectVersion
+~~~~~~~~~~~~~~
 
 -  ``uuid`` (``str``)
 -  ``event_uuid`` (``str``)
@@ -223,11 +222,8 @@ User
 -  ``first_name`` (``str``)
 -  ``last_name`` (``str``)
 -  ``email`` (``str``)
--  ``role`` (``str``) - one of: ``admin``, ``dataSteward``, ``researcher``
 -  ``image_url`` (``Optional[str]``)
 -  ``affiliation`` (``Optional[str]``)
--  ``permissions`` (``list[str]``)
--  ``sources`` (``list[str]``)
 -  ``created_at`` (``datetime``)
 -  ``updated_at`` (``datetime``)
 
@@ -669,39 +665,14 @@ ApiIntegration
 -  ``response_item_template`` (``str``)
 -  ``response_item_template_for_selection`` (``str``)
 
-.. _odc-api-legacy-integration:
+.. _odc-plugin-integration:
 
-ApiLegacyIntegration
-''''''''''''''''''''
-
--  ``id`` (``str``)
--  ``item_url`` (``Optional[str]``)
--  ``logo`` (``Optional[str]``)
--  ``rq_method`` (``str``)
--  ``rq_url`` (``str``)
--  ``rq_headers`` (``dict[str,str]``)
--  ``rq_body`` (``str``)
--  ``rs_list_field`` (``Optional[str]``)
--  ``rs_item_id`` (``Optional[str]``)
--  ``rs_item_template`` (``str``)
-
-Operations:
-
--  ``item(item_id: str) -> Optional[str]`` - URL of an item identified by string ID
-
-.. _odc-widget-integration:
-
-WidgetIntegration
+PluginIntegration
 '''''''''''''''''
 
--  ``id`` (``str``)
--  ``item_url`` (``Optional[str]``)
--  ``logo`` (``Optional[str]``)
--  ``widget_url`` (``str``)
-
-Operations:
-
--  ``item(item_id: str) -> Optional[str]`` - URL of an item identified by string ID
+-  ``plugin_uuid`` (``str``)
+-  ``integration_id`` (``str``)
+-  ``settings`` (``object``) - plugin-specific settings object
 
 
 .. _odc-tag:
@@ -793,6 +764,8 @@ Aliases:
    number
 -  ``as_datetime`` (``Optional[datetime]``) - tries to cast the value to
    a timestamp
+-  ``markdown_html`` (``str``) - renders the value as Markdown and returns HTML
+-  ``markdown_plain`` (``str``) - renders the value as Markdown and returns plain text (without formatting)
 
 Notes:
 
@@ -805,7 +778,7 @@ FileReply
 ^^^^^^^^^
 
 -  ``file_uuid`` (``str``)
--  ``file`` (``Optional[``\ :ref:`odc-questionnaire-file`\ ``]``) - ``None`` if file has been deleted
+-  ``file`` (``Optional[``\ :ref:`odc-project-file`\ ``]``) - ``None`` if file has been deleted
 
 Aliases:
 
@@ -849,18 +822,14 @@ Notes:
 IntegrationReply
 ^^^^^^^^^^^^^^^^
 
--  ``type`` (``str``) - one of: ``PlainType``, ``IntegrationType``, ``IntegrationLegacyType``
+-  ``type`` (``str``) - one of: ``PlainType``, ``IntegrationType``
 -  ``value`` (``str``) - rendered value from integration (or plain reply)
--  ``raw`` (``Optional[Any]``) - returned raw value from API if using API integration
--  ``item_id`` (``Optional[str]``) - ID of item if selected using legacy API or Widget integration
+-  ``raw`` (``Optional[Any]``) - returned raw value stored from API or plugin (e.g., JSON object)
 
 Aliases:
 
--  ``id`` (``Optional[str]``) - same as ``item_id``
 -  ``is_plain`` (``bool``) - entered by user ignoring the integration
 -  ``is_integration`` (``bool``) - selected by user using the integration
--  ``is_legacy_integration`` (``bool``) - selected by user using the legacy integration
--  ``url`` (``Optional[str]``) - item URL present
 
 
 .. |document-context-diagram| image:: ./document-context.svg

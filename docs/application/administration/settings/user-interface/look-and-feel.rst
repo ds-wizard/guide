@@ -1,5 +1,5 @@
-Look & Feel Settings
-********************
+Look & Feel
+***********
 
 This part of settings allows us to adjust how the |project_name| instance looks like. 
 

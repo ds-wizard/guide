@@ -1,5 +1,5 @@
-Authentication Settings
-***********************
+Authentication
+**************
 
 The **Default Role** settings option allows us to define which role is assigned to new users (see :ref:`user roles<user-roles>` for details about permissions).
 

@@ -13,6 +13,5 @@ This part of settings allows us to configure various content-related things such
     :maxdepth: 2
 
     DSW Registry<dsw-registry>
-    Knowledge Models<knowledge-models>
     Projects<projects>
     Document Submission<document-submission>

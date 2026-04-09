@@ -412,7 +412,7 @@ updated_at: datetime</panel_attributes>
       <x>16</x>
       <y>408</y>
       <w>136</w>
-      <h>168</h>
+      <h>128</h>
     </coordinates>
     <panel_attributes>User
 --
@@ -420,11 +420,8 @@ uuid: str
 first_name: str
 last_name: str
 email: str
-role: str
 image_url: Optional[str]
 affiliation: Optional[str]
-permissions: list[str]
-sources: list[str]
 created_at: datetime
 updated_at: datetime</panel_attributes>
     <additional_attributes/>
@@ -472,20 +469,16 @@ iterate_by_suffix(path_suffix: str): Iterable[Reply]</panel_attributes>
       <x>632</x>
       <y>1088</y>
       <w>128</w>
-      <h>144</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>IntegrationReply
 --
 type: str
 value: str
-item_id: Optional[str]
 raw: Optional[Any]
 --
-id: Optional[str]
-url: Optional[str]
 is_plain: bool
-is_integration: bool
-is_legacy_integration: bool</panel_attributes>
+is_integration: bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -838,16 +831,16 @@ m2=versions
     <id>Relation</id>
     <coordinates>
       <x>48</x>
-      <y>568</y>
+      <y>528</y>
       <w>128</w>
-      <h>176</h>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 m2=created_by
 
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;190.0;140.0;190.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0;140.0;240.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1076,16 +1069,16 @@ m2=chapters
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>256</y>
+      <y>264</y>
       <w>168</w>
-      <h>168</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..*
 m2=metrics
 
 </panel_attributes>
-    <additional_attributes>190.0;10.0;100.0;10.0;100.0;180.0;10.0;180.0</additional_attributes>
+    <additional_attributes>190.0;10.0;100.0;10.0;100.0;170.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1540,45 +1533,16 @@ m2=references
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1128</x>
-      <y>1032</y>
-      <w>152</w>
-      <h>184</h>
-    </coordinates>
-    <panel_attributes>ApiLegacyIntegration
---
-id: str
-logo: Optional[str]
-item_url: Optional[str]
-rq_url: str
-rq_method: str
-rq_headers: dict[str,str]
-rq_body: str
-rq_empty_search: bool
-rs_list_field: Optional[str]
-rs_item_id: Optional[str]
-rs_item_template: str
---
-item(item_id: str) -&gt; str
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>912</x>
-      <y>920</y>
+      <y>952</y>
       <w>152</w>
-      <h>96</h>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>WidgetIntegration
+    <panel_attributes>PluginIntegration
 --
-id: str
-logo: Optional[str]
-item_url: Optional[str]
-widget_url: str
---
-item(item_id: str) -&gt; str</panel_attributes>
+plugin_uuid: str
+integration_id: str
+settings: dict</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -1587,21 +1551,10 @@ item(item_id: str) -&gt; str</panel_attributes>
       <x>976</x>
       <y>856</y>
       <w>24</w>
-      <h>80</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>976</x>
-      <y>856</y>
-      <w>168</w>
-      <h>224</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;130.0;60.0;130.0;260.0;190.0;260.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
