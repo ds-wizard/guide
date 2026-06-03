@@ -40,17 +40,9 @@ Project Creation
 Summary Report
 ==============
 
-We can turn **Summary Report** on or off. It is a feature that allows users to generate and see a summary report in their projects.
+We can turn **Summary Report** on or off. It is a feature that allows users to generate and see a **Summary Report** in their projects.
 
-
-Feedback
-========
-
-In case we want to allow users to provide feedback specific to questions directly from :ref:`questionnaires<project-questionnaire>`, we can enable **Feedback** and configure a GitHub repository which will be used as an issue tracker. We should have a bot/service account created with access to the GitHub repository and obtain `Personal Access Token <https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line>`_. This account will be used to create the GitHub issues in the repository. Then, we need to simply fill **GitHub Repository Owner**, **GitHub Repository Name**, and the **Access Token**.
-
-.. NOTE::
-
-    The **Access Token** value is encrypted in the database.
+The **Summary Report** shows how many questions are answered and unanswered in each chapter. It can either count all questions in the Knowledge Model or only the questions required for the project’s current phase. Questions from later phases are ignored in the phase-based view. If a parent question is unanswered, its child questions are not counted separately. Chapter results are combined into the total **Summary Report**.
 
 
 Project Tagging

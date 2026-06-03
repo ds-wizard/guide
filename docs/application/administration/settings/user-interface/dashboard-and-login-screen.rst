@@ -42,7 +42,7 @@ We can select the **Dashboard Style** whether the user should see a standard **w
 Login Info
 ==========
 
-It is possible to write a message that users will see before logging in the |project_name| instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our |project_name| instance, how they should log in (e.g. if we have more :ref:`authentication services<auth-services>` configured), or if there is any news regarding our |project_name| instance.
+It is possible to write a message that users will see before logging in the |project_name| instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our |project_name| instance, how they should log in (e.g. if we have more authentication services configured), or if there is any news regarding our |project_name| instance.
 
 .. WARNING::
 

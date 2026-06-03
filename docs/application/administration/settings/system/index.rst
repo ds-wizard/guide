@@ -15,6 +15,7 @@ System settings allow us to configure basics about the organization running the 
 
     Organization<organization>
     Authentication<authentication>
+    OpenID<openid>
     Privacy & Support<privacy-and-support>
     Features<features>
     Plugins<plugins>

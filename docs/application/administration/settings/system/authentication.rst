@@ -21,27 +21,4 @@ For internal authentication, we can set whether the **Registration** is enabled 
 
 Another option is whether the **Two-Factor Authentication** (2FA) is enabled. If enabled, once users try to log in using credentials, they receive an email message with one-time code to confirm the login. Moreover, we can configure **Code Length** (how many character the code has) and **Expiration** period in seconds.
 
-
-.. _auth-services:
-
-External
-========
-
-Using these settings we can add **OpenID Services** to allow logging into the |project_name| instance via external identity provider. First, press :guilabel:`Add` and fill **ID** of the service. Then, we should prepare the client application on the side of OpenID service:
-
-*  Use **Callback URL** (and optionally **Logout URL**) to create the client
-*  Obtain **Client ID** and **Client Secret**
-*  Obtain OpenID endpoint **URL** (we may get one ending with ``/.well-known/openid-configuration``, if so we just use the part before this suffix)
-*  Configure the client to have the following claims: ``openid``, ``profile``, ``email``
-*  Configure the client to provide the following details in ID tokens: ``email``, ``given_name``, ``family_name``
-
-Back in the |project_name| settings, we can fill **Client ID**, **Client Secret**, and **URL** from our OpenID client together with optional **Parameters** (usually not needed). Finally, we can configure how the log-in button will look like by setting **Icon** (by using `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), **Name**, **Background**, and text/icon **Color**.
-
-.. NOTE::
-
-    After setting a new OpenID service, we should directly test it and verify that the configuration works well. For that, we can simply open our |project_name| instance in a new anonymous window of the web browser.
-
-
-.. figure:: authentication/openid.png
-    
-    Example configuration of OpenID service.
+We can also set up **Session Expiration** and **User Email Link Expiration** in hours. The first one defines how long the user session is valid before the user needs to log in again. The second one defines how long the email links (e.g., for password reset) are valid before they expire and cannot be used anymore.
