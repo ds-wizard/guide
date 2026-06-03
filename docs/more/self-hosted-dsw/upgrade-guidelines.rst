@@ -45,6 +45,11 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.30.X to 4.31.X
+----------------
+
+- ``callbackUrl`` and ``logoutUrl`` in :ref:`openid-settings` changed. It is necessary to adjust those values in the **OpenID** provider.
+
 4.29.X to 4.30.X
 ----------------
 
@@ -217,7 +222,7 @@ Before updating check following, otherwise the migration will fail:
 - **(breaking)** The client runs on the nested route ``/wizard``, and the server runs on the nested route ``/wizard-api``. These changes must be reflected in the deployment configuration (such as routing in a reverse proxy) and the ``clientUrl`` in the :ref:`config-server`.
 - **(breaking)** :ref:`client-configuration` for a custom logo and theme no longer uses SASS and needs to be updated accordingly.
 - **(breaking)** :ref:`api-keys` created in previous versions will no longer work.
-- **(breaking)** The callback URL for :ref:`OpenID <auth-services>` (such as Google or Life Science Login) has changed due to the nested route, so it has to be set up, for example:
+- **(breaking)** The callback URL for OpenID Auth Services (such as Google or Life Science Login) has changed due to the nested route, so it has to be set up, for example:
   
   - Before: ``https://researchers.ds-wizard.org/auth/google/callback``
   - After: ``https://researchers.ds-wizard.org/wizard/auth/google/callback``

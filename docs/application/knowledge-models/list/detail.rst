@@ -13,6 +13,7 @@ In the top pane, we can see the options based on our role:
 
 - :guilabel:`Preview` can be used to check the content of the KM via the :doc:`./preview` feature.
 - :guilabel:`Export` for exporting the latest version of the KM as a file.
+- :guilabel:`Compare` for comparing the current version of the KM with another version (see :doc:`./compare`).
 - :guilabel:`Create KM editor` is a shortcut for :doc:`../editors/create` for creating a new version.
 - :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` for to create a fork (some more specific KM based on this one).
 - :guilabel:`Create project` is a shortcut to :doc:`../../projects/list/create` with this KM.

@@ -7,8 +7,10 @@ As **data stewards** and **admins**, we can manage the knowledge models that are
 
 For each knowledge model (KM), we can see the latest version in the list. If we want to read more about a specific KM or see the older versions, we need to access the :doc:`./detail` by clicking the name of KM or clicking :guilabel:`Open` from the right item menu (three dots). There are also other options for each item:
 
+- :guilabel:`Open` for opening the KM detail (same as clicking the name of the KM).
 - :guilabel:`Preview` to see how :doc:`../../projects/index` generated using this KM would look like.
 - :guilabel:`Export` for exporting the latest version of the KM as a file.
+- :guilabel:`Compare` for comparing the current version of the KM with another version (see :doc:`./compare`).
 - :guilabel:`Create KM editor` is a shortcut for :doc:`../editors/create` for creating a new version.
 - :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` for to create a fork (some more specific KM based on this one).
 - :guilabel:`Create project` is a shortcut to :doc:`../../projects/list/create` with this KM.
@@ -56,4 +58,5 @@ Finally, there is an option to :doc:`./import` by click the :guilabel:`Import` b
     Import<import>
     Detail<detail>
     Preview<preview>
+    Compare<compare>
     

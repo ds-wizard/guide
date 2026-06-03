@@ -69,7 +69,6 @@ Based on our role in the project and specific instance settings there are some a
 
 - :ref:`Add TODO<todos>`
 - :ref:`Add comment<add-comment>`
-- Provide feedback for the question
 
 We can get more information on how various collaboration tools work and can be used in :ref:`Sharing<sharing>`.
 
