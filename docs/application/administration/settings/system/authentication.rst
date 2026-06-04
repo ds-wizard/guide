@@ -12,13 +12,17 @@ The **Default Role** settings option allows us to define which role is assigned 
 Internal
 ========
 
-For internal authentication, we can set whether the **Registration** is enabled or not. If enabled, any user who can visit the |project_name| instance may sign up (and obtain the default role).
+For internal authentication, we can set:
+
+- **Registration** - whether users can sign up on their own or not.
+- **Non-Admin Login** - whether non-admin users can log in to the |project_name| instance or not.
+- **Two-Factor Authentication** - whether users need to confirm their login with a one-time code sent to their email address or not.
+- **Session Expiration** - how long the user session is valid before the user needs to log in again in hours.
+- **User Email Link Expiration** - how long the email links (e.g., for password reset) are valid before they expire and cannot be used anymore in hours.
 
 .. NOTE::
 
-    In case we are using OpenID or creating user accounts manually, registrations should be disabled.
+    In case we are using OpenID or creating user accounts manually, registrations should be disabled. It is recommended to also disable non-admin login.
 
 
-Another option is whether the **Two-Factor Authentication** (2FA) is enabled. If enabled, once users try to log in using credentials, they receive an email message with one-time code to confirm the login. Moreover, we can configure **Code Length** (how many character the code has) and **Expiration** period in seconds.
-
-We can also set up **Session Expiration** and **User Email Link Expiration** in hours. The first one defines how long the user session is valid before the user needs to log in again. The second one defines how long the email links (e.g., for password reset) are valid before they expire and cannot be used anymore.
+For **Two-Factor Authentication** (2FA) we can also configure **Code Length** (how many character the code has) and **Expiration** period in seconds.

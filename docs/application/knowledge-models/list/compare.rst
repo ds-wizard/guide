@@ -7,7 +7,9 @@ We can compare two versions of a knowledge model by clicking :guilabel:`Compare`
 
 The comparison can be starter in project migration and in KM list and detail.
 
-.. TODO::
+.. figure:: compare/compare.png
+    :width: 500
+    
+    Creating a KM comparison.
 
-    Add screenshot
-
+    

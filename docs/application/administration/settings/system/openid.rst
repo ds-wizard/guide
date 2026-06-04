@@ -28,7 +28,7 @@ Microsoft Azure Setup
 11. Fill description, set ``Expires`` and note it somewhere, then click on ``Add``.
 12. Copy ``Value`` and store it somewhere. You will not able to view it again.
 
-13. Go to OpenID in DSW: ``Admin Center`` → ``Settings`` → ``Organization OpenID`` → ``Create``.
+13. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
 
 14. Fill in a ``Name`` of the service. This name will be used to identify the service in the list of login options, so it should be something descriptive.
 
@@ -72,7 +72,7 @@ ORCID Setup
 
 ORCID requires a redirect URI before it allows us to save the application and obtain credentials. Because DSW generates the callback URL only after the OpenID configuration is saved, we first create the DSW configuration with temporary credentials and then return to ORCID.
 
-1. Go to OpenID in DSW: ``Admin Center`` → ``Settings`` → ``Organization OpenID`` → ``Create``.
+1. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
 2. Fill in a ``Name`` of the service, for example ``ORCID``.
 3. Open the ``Custom`` tab.
 4. Fill in temporary values:
@@ -82,7 +82,7 @@ ORCID requires a redirect URI before it allows us to save the application and ob
 5. Leave ``Parameters`` empty.
 6. (optional) fill Icon (``fab fa-orcid``), ``Background Color`` (``#A6CE39``), and ``Text Color``.
 7. Click on ``Save``.
-8. Copy ``Callback URL`` from DSW. It will look similar to ``https://example.fair-wizard.com/admin/open-id/<uuid>/callback``.
+8. Copy ``Callback URL`` from DSW. It will look similar to ``https://<your-domain>/wizard/open-id/<uuid>/callback``.
 
 9. Go to https://orcid.org/signin and sign in to ORCID.
 10. Open ``Developer Tools`` from the account menu.
@@ -115,7 +115,7 @@ ORCID requires a redirect URI before it allows us to save the application and ob
 Custom Setup
 ============
 
-1. Go to OpenID in DSW: ``Admin Center`` → ``Settings`` → ``Organization OpenID`` → ``Create``.
+1. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
 2. Fill in a ``Name`` of the service. This name will be used to identify the service in the list of login options, so it should be something descriptive.
 3. Open the ``Custom`` tab.
 4. Prepare the OpenID endpoint ``URL``. This is usually the issuer URL of the provider. If the provider gives us a URL ending with ``/.well-known/openid-configuration``, use only the part before this suffix.
