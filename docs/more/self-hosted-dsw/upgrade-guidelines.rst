@@ -48,7 +48,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.30.X to 4.31.X
 ----------------
 
-- ``callbackUrl`` and ``logoutUrl`` in :ref:`openid-settings` changed. It is necessary to adjust those values in the **OpenID** provider.
+- Copy the ``clientId`` and ``clientSecret`` again from your :ref:`openid-settings` provider, as the values currently stored in the wizard are no longer valid. Then take the newly generated ``callbackUrl`` and ``logoutUrl`` from the wizard and configure them in your **OpenID** provider.
 
 4.29.X to 4.30.X
 ----------------
