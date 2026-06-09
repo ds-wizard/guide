@@ -68,7 +68,7 @@ It is possible to easily turn the JSON-like / tree-structured document context i
 
 -  All data types are using Python, e.g., ``str`` is textual string, ``Optional[str]`` is a string or ``None``, ``list[str]`` is a list of strings.
 -  We use ``snake_case`` for naming of attributes and variables, ``PascalCase`` is used for class names.
--  ``datetime`` is the standard `datetime <https://docs.python.org/3/library/datetime.html#datetime-objects>`__ module.
+-  ``datetime`` is the standard `datetime <https://docs.python.org/3/library/datetime.html#datetime-objects>`__ module, supports timezone information.
 
 Diagram
 -------
@@ -760,10 +760,8 @@ StringReply
 
 Aliases:
 
--  ``as_number`` (``Optional[float]``) - tries to cast the value to a
-   number
--  ``as_datetime`` (``Optional[datetime]``) - tries to cast the value to
-   a timestamp
+-  ``as_number`` (``Optional[float]``) - tries to cast the value to a number
+-  ``as_datetime`` (``Optional[datetime]``) - tries to cast the value to a timestamp
 -  ``markdown_html`` (``str``) - renders the value as Markdown and returns HTML
 -  ``markdown_plain`` (``str``) - renders the value as Markdown and returns plain text (without formatting)
 
