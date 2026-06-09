@@ -93,6 +93,11 @@ Document Template Metamodel Versions
 
 Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
 
+Version 18.1 (since 4.31.0)
+---------------------------
+
+* Added support for Python ``datetime`` and ``zoneinfo`` in templates.
+
 Version 18.0 (since 4.29.0)
 ---------------------------
 
