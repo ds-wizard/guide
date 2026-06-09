@@ -132,6 +132,7 @@ We provide several filters that can be used for conversion of values:
 
     -  ``iso_timestamp`` - ``datetime`` or ISO 8601 ``str``
     -  ``fmt`` - datetime format passed to `strftime <https://docs.python.org/3/library/datetime.html#datetime.date.strftime>`__
+    -  ``tz`` (optional) - timezone name (e.g. ``"UTC"``, ``"Europe/Prague"``) for formatting the timestamp; if not provided, UTC is used
 
 - ``of_alphabet`` = *Converts integer to characters*
 
