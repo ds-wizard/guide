@@ -42,6 +42,7 @@ Document context is an object that carries all information related to a DSW proj
    * ``description`` = optional description of the project
    * ``files`` = list of project files (each has ``uuid``, ``fileName``, ``fileSize``, and ``contentType``)
    * ``labels`` = path-list map of labels on questions (i.e. TODOs)
+   * ``language`` = language of the project (optional language code)
    * ``name`` = name of the project
    * ``phaseUuid`` = UUID of the current phase selected
    * ``replies`` = path-object map of replies to questions
@@ -163,6 +164,7 @@ KnowledgeModelPackage
 -  ``versions`` (``list[str]``)
 -  ``name`` (``str``)
 -  ``description`` (``Optional[str]``)
+-  ``language`` (``str``)
 -  ``created_at`` (``datetime``)
 
 
@@ -174,6 +176,7 @@ Project
 -  ``uuid`` (``str``)
 -  ``name`` (``str``)
 -  ``description`` (``Optional[str]``)
+-  ``language`` (``Optional[str]``)
 -  ``version`` (``Optional[``\ :ref:`odc-project-version`\ ``]``)
 -  ``versions`` (``list[``\ :ref:`odc-project-version`\ ``]``)
 -  ``phase`` (``Optional[``\ :ref:`odc-phase`\ ``]``)

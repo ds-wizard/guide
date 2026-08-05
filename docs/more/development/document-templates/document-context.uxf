@@ -327,10 +327,10 @@ updated_at: datetime</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>232</x>
+      <x>200</x>
       <y>344</y>
-      <w>128</w>
-      <h>80</h>
+      <w>160</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Organization
 --
@@ -343,12 +343,12 @@ affiliation: list[str]</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>232</x>
-      <y>432</y>
-      <w>128</w>
-      <h>144</h>
+      <x>200</x>
+      <y>424</y>
+      <w>160</w>
+      <h>136</h>
     </coordinates>
-    <panel_attributes>Package
+    <panel_attributes>KnowledgeModelPackage
 --
 id: str
 organization_id: str
@@ -357,9 +357,8 @@ version: str
 versions: list[str]
 name: str
 description: str
-created_at: datetime
---
-org_id: str</panel_attributes>
+language: str
+created_at: datetime</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -368,7 +367,7 @@ org_id: str</panel_attributes>
       <x>176</x>
       <y>864</y>
       <w>184</w>
-      <h>120</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>QuestionnaireVersion
 --
@@ -385,11 +384,11 @@ updated_at: datetime</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>160</x>
-      <y>632</y>
+      <y>616</y>
       <w>200</w>
-      <h>176</h>
+      <h>200</h>
     </coordinates>
-    <panel_attributes>Questionnaire
+    <panel_attributes>Project
 --
 uuid: str
 name: str
@@ -399,6 +398,7 @@ version: QuestionnaireVersion
 versions: list[QuestionnaireVersion]
 todos: list[str]
 phase: Optional[Phase]
+language: Optional[str]
 replies: RepliesContainer
 files: dict[str, QuestionnaireFile]
 created_by: User
@@ -801,31 +801,31 @@ m2=created_by
     <id>Relation</id>
     <coordinates>
       <x>240</x>
-      <y>976</y>
+      <y>968</y>
       <w>152</w>
-      <h>56</h>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..1
 m2=created_by
 
 </panel_attributes>
-    <additional_attributes>170.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>170.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>240</x>
-      <y>800</y>
+      <y>808</y>
       <w>64</w>
-      <h>80</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..*
 m2=versions
 
 </panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -848,13 +848,13 @@ m2=created_by
       <x>272</x>
       <y>392</y>
       <w>280</w>
-      <h>256</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 m2=qtn
 </panel_attributes>
-    <additional_attributes>10.0;300.0;10.0;260.0;310.0;260.0;310.0;10.0</additional_attributes>
+    <additional_attributes>10.0;280.0;10.0;220.0;310.0;220.0;310.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
