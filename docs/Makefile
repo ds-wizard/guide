@@ -4,6 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = $(shell if [ -x .venv/bin/sphinx-build ]; then echo .venv/bin/sphinx-build; else echo sphinx-build; fi)
+SPHINXAUTOBUILD = $(shell if [ -x .venv/bin/sphinx-autobuild ]; then echo .venv/bin/sphinx-autobuild; else echo sphinx-autobuild; fi)
 SOURCEDIR     = .
 BUILDDIR      = _build
 
@@ -16,7 +17,7 @@ help:
 
 .PHONY: watch
 watch:
-	sphinx-autobuild . _build/html
+	$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
 
 # Catch-all target: route all unknown targets to Sphinx using the new
