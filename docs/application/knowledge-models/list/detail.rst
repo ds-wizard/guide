@@ -14,11 +14,11 @@ In the top bar, we can :guilabel:`Export` the knowledge model as a KM file or :g
 Translations
 ============
 
-A knowledge model has a source language and a published version can have translations for additional languages. These translations are used in projects to show the questionnaire content in the selected language without creating a separate translated fork of the knowledge model.
+A knowledge model has a source language and a published version can have translations for additional languages. These translations are used in projects to show the questionnaire content in the selected language.
 
 Translations are managed for a specific knowledge model version. From the knowledge model detail, users with permission to manage knowledge models can download a translation template, add a translated language, download an existing translation file, or delete a translation.
 
-The translation template is a POT file generated from the published knowledge model. It contains translatable strings from the knowledge model content, such as names, descriptions, answer labels, advice, and resource pages. Translators use this template to prepare a PO file for the target language. The PO file must include a ``Language`` header so DSW can identify the language code.
+The translation template is a POT file generated from the published knowledge model. It contains translatable strings from the knowledge model content, such as names, descriptions, answer labels, advice, and resource pages. Translators use this template to prepare a PO file for the target language.
 
 When a new knowledge model version is published, translations from the previous version or parent knowledge model can be reused during publishing if they are still valid. If knowledge model texts changed, the translation should be reviewed and updated for the new version.
 
