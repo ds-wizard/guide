@@ -34,7 +34,7 @@ If we want to let users select sharing options for their projects within the DSW
 Anonymous Projects
 ==================
 
-If we have set Knowledge Model as Public, we can also allow anonymous users to create projects where they will be able to fill questionnaires by enabling **Anonymous Projects**. These anonymous projects then work as any other projects with public link set to edit permissions. However, if a logged-in user accesses such a project, then they may claim the ownership by clicking the :guilabel:`Add to my projects` button. Anonymous users cannot create new documents; for that, they must register and open the project as a logged-in user.
+If we have set a knowledge model as public, we can also allow anonymous users to create projects where they will be able to fill questionnaires by enabling **Anonymous Projects**. These anonymous projects then work as any other projects with public link set to edit permissions. However, if a logged-in user accesses such a project, then they may claim the ownership by clicking the :guilabel:`Add to my projects` button. Anonymous users cannot create new documents; for that, they must register and open the project as a logged-in user.
 
 
 Project Creation
@@ -50,7 +50,13 @@ Summary Report
 
 We can turn **Summary Report** on or off. It is a feature that allows users to generate and see a **Summary Report** in their projects.
 
-The **Summary Report** shows how many questions are answered and unanswered in each chapter. It can either count all questions in the Knowledge Model or only the questions required for the project’s current phase. Questions from later phases are ignored in the phase-based view. If a parent question is unanswered, its child questions are not counted separately. Chapter results are combined into the total **Summary Report**.
+The **Summary Report** shows how many questions are answered and unanswered in each chapter. It can either count all questions in the knowledge model or only the questions required for the project’s current phase. Questions from later phases are ignored in the phase-based view. If a parent question is unanswered, its child questions are not counted separately. Chapter results are combined into the total **Summary Report**.
+
+
+Feedback
+========
+
+If enabled, users can submit feedback for questions to a configured GitHub repository. The configuration includes the **GitHub Repository Owner**, **GitHub Repository Name**, and **Access Token**.
 
 
 Project Tagging

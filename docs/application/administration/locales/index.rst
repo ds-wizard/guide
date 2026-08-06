@@ -5,6 +5,8 @@ After navigating to :guilabel:`Locales` (under :guilabel:`Administration`), we c
 
 The DSW UI and emails can be localized to different languages. The preferred language is determined by the user's browser settings or by the user's profile settings.
 
+These locales are used for the DSW user interface and emails. They are separate from :ref:`knowledge model locales<knowledge-model-locales>`, which translate questionnaire content provided by a knowledge model.
+
 .. NOTE::
 
     Locales can be used not only for translations but also for customizing the DSW to a specific domain.

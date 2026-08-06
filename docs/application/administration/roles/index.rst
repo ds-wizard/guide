@@ -19,13 +19,12 @@ The **Admin** role cannot be changed or deleted. Other default roles can be adju
 Custom Roles
 ============
 
-Users with permission to manage settings can create custom roles when the default roles do not match the way an organization works. A role has a name, an optional description, and selected permissions.
+Users with permission to manage settings can create custom roles when the default roles do not match the way an organization works. A role has a name and selected permissions.
 
 Custom roles are useful for cases such as:
 
 - a data support role that can view or comment on all projects
 - a user-management role that can manage users without managing settings
-- an analytics role that can access reporting without broader administration access
 - a content-management role that can work with knowledge models or document templates
 
 .. TODO::
@@ -35,11 +34,11 @@ Custom roles are useful for cases such as:
 Role Permissions
 ================
 
-Permissions are grouped by the type of work they enable. The available groups depend on the DSW edition and enabled features.
+Permissions are grouped by the type of work they enable.
 
 Project-related permissions can allow a role to:
 
-- manage project templates
+- manage project templates and create projects directly from knowledge models when project creation is restricted to templates
 - view all projects
 - comment on all projects
 - edit all projects
@@ -47,21 +46,17 @@ Project-related permissions can allow a role to:
 
 Content-related permissions can allow a role to:
 
-- create and use knowledge model editors
-- manage knowledge models
-- manage knowledge model secrets
-- create and use document template editors
+- create and use knowledge model editors, including migration and publishing
+- manage knowledge models, including knowledge model secrets
+- create and use document template editors, including publishing
 - manage document templates
-- manage locales
+
+The editor permissions require the corresponding management permissions. When we enable **Use Knowledge Model Editor**, the role also needs **Manage Knowledge Models**. When we enable **Use Document Template Editor**, the role also needs **Manage Document Templates**.
 
 Administration permissions can allow a role to:
 
 - manage users
 - manage settings
-- manage automations
-- access audit log
-- access integration hub
-- access analytics
 
 .. TODO::
 

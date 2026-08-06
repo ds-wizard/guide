@@ -9,7 +9,7 @@ As Data Stewardship Wizard evolves, the internal structures may change during th
 KM Package (.km file)
 =====================
 
-File for import and export of Knowledge Models is a JSON file that contains all KM packages (lists of change events with additional metadata). The structure of events is versioned using the KM metamodel version number and migrations in DSW automatically update the KMs when needed. As said, files according to this schema can be exported from :doc:`../../application/knowledge-models/list/index` or :doc:`../../application/knowledge-models/list/detail` and then used for :doc:`../../application/knowledge-models/list/import`.
+File for import and export of knowledge models is a JSON file that contains all KM packages (lists of change events with additional metadata). The structure of events is versioned using the KM metamodel version number and migrations in DSW automatically update the KMs when needed. As said, files according to this schema can be exported from :doc:`../../application/knowledge-models/list/index` or :doc:`../../application/knowledge-models/list/detail` and then used for :doc:`../../application/knowledge-models/list/import`.
 
 +-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 | Metamodel Version | Schema file                                                                                                   | Changes (brief)                                      | Since     |

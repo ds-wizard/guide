@@ -28,7 +28,7 @@ We can set a **default document template** and a **default document format**. Th
 Project Template
 ================
 
-We can use the project as a :ref:`project template<project-templates>`. If we enable this option, users can use it when creating a new project :ref:`from project template<from-project-template>`. Note that we also need to make it visible for other logged-in users in :ref:`sharing<sharing>` settings.
+We can use the project as a :ref:`project template<project-templates>`. If we enable this option, users with access to the project can use it when creating a new project :ref:`from project template<from-project-template>`. Project templates follow the same :ref:`sharing<sharing>` policy as projects, so we should share the template with users who should be able to use it.
 
 .. NOTE::
 
@@ -36,6 +36,13 @@ We can use the project as a :ref:`project template<project-templates>`. If we en
 
 
 :guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of DSW. Users should contact the person responsible for document templates or instance administration in this case.
+
+Questionnaire Language
+======================
+
+If the project's knowledge model has :ref:`locales<knowledge-model-locales>`, we can choose the questionnaire language in project settings. The available options are the source language of the knowledge model and any locales added for that knowledge model version.
+
+Changing the questionnaire language changes the knowledge model texts shown in the questionnaire, such as questions, answer labels, descriptions, advice, and resource pages. It does not translate answers that users have typed into the project.
 
 Knowledge Model
 ===============
