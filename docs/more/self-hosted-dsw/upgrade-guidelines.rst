@@ -48,7 +48,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.31.X to 4.32.X
 ----------------
 
-*(nothing)*
+- Review migrated roles after the upgrade. Check which permissions each role has, confirm the default role for new users, and verify any organization-specific access expectations such as project support, user management, analytics, or content management.
 
 4.30.X to 4.31.X
 ----------------

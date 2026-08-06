@@ -3,7 +3,7 @@
 Document Template Editors
 *************************
 
-On this page, we can see a list of all document template editors. Everyone with the data steward role assigned can see all the document template editors and use them.
+On this page, users with permission to use document template editors can see all document template editors and use them.
 
 .. figure:: index/list.png
     

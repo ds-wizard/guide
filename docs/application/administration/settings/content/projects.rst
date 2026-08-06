@@ -11,6 +11,10 @@ If we want to let users select visibility of their projects within the |project_
 * **Visible - Comment** = the project is visible in comment mode to all logged-in users, i.e. all users will be able to see the project in their :ref:`projects list<project-list>`, access it and comment it (but not edit anything unless they are invited with different permissions).
 * **Visible - Edit** = the project is visible in edit mode to all logged-in users, i.e. all users will be able to see the project in their :ref:`projects list<project-list>`, access it, comment it, and also edit it (e.g. answer questions or editor notes).
 
+.. NOTE::
+
+    Project visibility controls access granted through the project itself. Users with global project permissions from their :ref:`role<roles>` may have access to projects independently of these visibility settings.
+
 
 Project Sharing
 ===============
@@ -21,6 +25,10 @@ If we want to let users select sharing option of their projects within the |proj
 * **View with the link** = anyone with the link to the project may open it in view mode and browse it.
 * **Comment with the link** = anyone with the link to the project may open it in comment mode, i.e. browse it and comment on questions.
 * **Edit with the link** = anyone with the link to the project may open it in edit mode, i.e. browse it, comment on questions, and also edit it (e.g. answer questions or editor notes).
+
+.. NOTE::
+
+    Project sharing settings control direct project collaboration and public-link access. They do not replace global project permissions configured in :ref:`roles<roles>`.
 
 
 Anonymous Projects

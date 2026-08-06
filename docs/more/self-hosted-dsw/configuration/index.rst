@@ -5,7 +5,7 @@ This section explains how to configure |project_name| instance on your own.
 
 .. _config-settings:
 
-Most of the configuration is done through :ref:`Settings<settings>` (accessible by Administrator).
+Most of the configuration is done through :ref:`Settings<settings>` (accessible to users with permission to manage settings).
 
 
 
@@ -21,5 +21,4 @@ Most of the configuration is done through :ref:`Settings<settings>` (accessible 
     document-templates
     email-templates
     plugins
-    
-    
+

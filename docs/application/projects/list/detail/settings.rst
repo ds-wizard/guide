@@ -28,14 +28,14 @@ We can set a **default document template** and a **default document format**. Th
 Project Template
 ================
 
-We can use the project as a :ref:`project template<project-templates>`. If we enable this option, researchers can use it when creating a new project :ref:`from project template<from-project-template>`. Note that we also need to make it visible for other logged-in users in :ref:`sharing<sharing>` settings.
+We can use the project as a :ref:`project template<project-templates>`. If we enable this option, users can use it when creating a new project :ref:`from project template<from-project-template>`. Note that we also need to make it visible for other logged-in users in :ref:`sharing<sharing>` settings.
 
 .. NOTE::
 
-    Project template options are visible only for Data Stewards or Admins.
+    Project template options are visible only for users with permission to manage project templates.
 
 
-:guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of |project_name|. Researchers should contact their Data Steward or Administrator in this case.
+:guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of |project_name|. Users should contact the person responsible for document templates or instance administration in this case.
 
 Knowledge Model
 ===============

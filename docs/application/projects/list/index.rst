@@ -3,7 +3,7 @@
 Project List
 ************
 
-In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned to with any role or that are visible by all other logged-in users in the :ref:`project sharing settings<sharing>`. The projects are filtered to those we are explicitly assigned to by default.
+In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned with a project sharing role, projects that are visible to all logged-in users in the :ref:`project sharing settings<sharing>`, or projects available through our global :ref:`role<roles>` permissions. The projects are filtered to those we are explicitly assigned to by default.
 
 We can see projects name, label :guilabel:`Template` if the project is a template, and icon indicating sharing settings:
 
@@ -25,7 +25,7 @@ We can search for specific projects using the search field or filter them using 
 
 .. NOTE::
 
-    Note that some of the filters can be disabled based on the |project_name| instance settings or user role.
+    Note that some of the filters can be disabled based on the |project_name| instance settings or user permissions.
 
 
 We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Create` button.
