@@ -1,11 +1,11 @@
 Settings
 ********
 
-The :guilabel:`Settings` tab, allows us to adjust attributes of the the knowledge model:
+The :guilabel:`Settings` tab allows us to adjust attributes of the knowledge model:
 
 - **Name** - should be short name of the Knowledge Model.
 - **Description** - this should be really short and descriptive.
-- **Knowledge Model ID** - is an unique Knowledge Model identifier.
+- **Knowledge Model ID** - is a unique Knowledge Model identifier.
 - **Version** - this is a number indicating which is the latest version of the Knowledge Model, because it can change over time.
 - **Language** - is the source language of the knowledge model content. It is used as the default questionnaire language and as the source language for knowledge model locales.
 - **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX License List <https://spdx.org/licenses/>`_.

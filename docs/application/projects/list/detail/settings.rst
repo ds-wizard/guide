@@ -28,7 +28,7 @@ We can set a **default document template** and a **default document format**. Th
 Project Template
 ================
 
-We can use the project as a :ref:`project template<project-templates>`. If we enable this option, users can use it when creating a new project :ref:`from project template<from-project-template>`. Note that we also need to make it visible for other logged-in users in :ref:`sharing<sharing>` settings.
+We can use the project as a :ref:`project template<project-templates>`. If we enable this option, users with access to the project can use it when creating a new project :ref:`from project template<from-project-template>`. Project templates follow the same :ref:`sharing<sharing>` policy as projects, so we should share the template with users who should be able to use it.
 
 .. NOTE::
 

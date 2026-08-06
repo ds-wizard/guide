@@ -25,10 +25,11 @@ When a new knowledge model version is published, locales from the previous versi
 In the top pane, we can see the options based on our permissions:
 
 - :guilabel:`Preview` can be used to check the content of the KM via the :doc:`./preview` feature.
-- :guilabel:`Export` for exporting the latest version of the KM as a file.
+- :guilabel:`Export` for exporting the current version of the KM as a file.
+- :guilabel:`Export .pot file` for exporting the translation template for the current version of the KM.
 - :guilabel:`Compare` for comparing the current version of the KM with another version (see :doc:`./compare`).
 - :guilabel:`Create KM editor` is a shortcut for :doc:`../editors/create` for creating a new version.
-- :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` for to create a fork (some more specific KM based on this one).
+- :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` to create a fork (some more specific KM based on this one).
 - :guilabel:`Create project` is a shortcut to :doc:`../../projects/list/create` with this KM.
 - :guilabel:`Set deprecated` or :guilabel:`Restore` for setting a KM deprecated when we no longer want users to use it for new projects.
 - :guilabel:`Set public` or :guilabel:`Set private` for changing the visibility of the KM. Public KM can be viewed by non-logged in users.

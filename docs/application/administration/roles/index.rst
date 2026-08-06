@@ -19,7 +19,7 @@ The **Admin** role cannot be changed or deleted. Other default roles can be adju
 Custom Roles
 ============
 
-Users with permission to manage settings can create custom roles when the default roles do not match the way an organization works. A role has a name, an optional description, and selected permissions.
+Users with permission to manage settings can create custom roles when the default roles do not match the way an organization works. A role has a name and selected permissions.
 
 Custom roles are useful for cases such as:
 
@@ -38,7 +38,7 @@ Permissions are grouped by the type of work they enable.
 
 Project-related permissions can allow a role to:
 
-- manage project templates
+- manage project templates and create projects directly from knowledge models when project creation is restricted to templates
 - view all projects
 - comment on all projects
 - edit all projects
@@ -50,6 +50,8 @@ Content-related permissions can allow a role to:
 - manage knowledge models, including knowledge model secrets
 - create and use document template editors, including publishing
 - manage document templates
+
+The editor permissions require the corresponding management permissions. When we enable **Use Knowledge Model Editor**, the role also needs **Manage Knowledge Models**. When we enable **Use Document Template Editor**, the role also needs **Manage Document Templates**.
 
 Administration permissions can allow a role to:
 
