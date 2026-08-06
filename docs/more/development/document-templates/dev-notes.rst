@@ -34,7 +34,7 @@ Misplaced Content in PDF
 
 **Issue**: It may happen that content is placed over header/footer or incorrectly split between pages. 
 
-**Recommendations**: First, avoid incorrect HTML structures such as empty list items, nested paragraphs, tables without ``tbody`` etc. Then also make sure that the page, footer and header sizes are correctly set via CSS. Similarly, you can prevent page break using CSS. In case of issues, also refer to the :ref:`WeasyPrint step <document-template-step-weasyprint>` or directly the `WeasyPrint documentation <https://doc.courtbouillon.org/weasyprint/>`_.
+**Recommendations**: First, avoid incorrect HTML structures such as empty list items, nested paragraphs, tables without ``tbody`` etc. Then also make sure that the page, footer and header sizes are correctly set via CSS. Similarly, you can prevent page break using CSS. In case of issues, also refer to the :ref:`WeasyPrint step <document-template-step-weasyprint>` or directly the `WeasyPrint documentation <https://doc.courtbouillon.org/weasyprint/stable/>`_.
 
 
 Issues with PDF Formatting
@@ -73,4 +73,3 @@ Compressing Images in MS Word Documents
 **Issue**: Uncompressed images in MS Word documents can significantly increase the file size, often making it much larger than the original HTML or PDF version.
 
 **Recommendations**: In the ``reference.docx`` document, you can adjust the image compression level to reduce the file size. To do this, open the document ``reference.docx`` and click on an image. Then, navigate to ``Picture Format`` -> ``Compress Pictures`` in the ``Adjust`` group. In the dialog box, you can select the desired compression level. Alternatively, you can set the default compression level for all images in the document. This will ensure that images are compressed when the document is saved.
- 

@@ -4,7 +4,7 @@ Deployment
 **********
 
 
-Own |project_name| Instance
+Own DSW Instance
 ===========================
 
 .. WARNING::
@@ -23,7 +23,7 @@ The simplest way is to use `Docker Compose <https://docs.docker.com/compose/>`__
 
 1. Clone the `DSW Deployment Example <https://github.com/ds-wizard/dsw-deployment-example>`__ repository
 2. Check config files (described in :doc:`./configuration/configuration`)
-3. Run the |project_name| with Docker compose ``docker-compose up -d``
+3. Run the DSW with Docker compose ``docker-compose up -d``
 4. After starting up, we will be able to open the Wizard in our browser on http://localhost:8080
 5. We can use ``docker-compose logs`` to see the logs and ``docker-compose down`` to stop all the services
 
@@ -55,16 +55,16 @@ We can use those accounts for testing or initially make our own admin account an
 
 .. WARNING::
 
-    Having a public instance with default accounts is a **security risk**. We should delete or change default accounts (mainly Albert Einstein) if our |project_name| instance is public as soon as possible.
+    Having a public instance with default accounts is a **security risk**. We should delete or change default accounts (mainly Albert Einstein) if our DSW instance is public as soon as possible.
 
 .. NOTE::
 
-    Do not use UIDs below 10000 as that might introduce a `security risk <https://github.com/dnaprawa/dockerfile-best-practices#do-not-use-a-uid-below-10000>`__.
+    Do not use UIDs below 10000 as that might introduce a `security risk <https://github.com/dnaprawa/dockerfile-best-practices>`__.
 
 DSW Registry
 ------------
 
-When we have our own self-hosted instance, it is essential to register within the `DSW Registry <https://registry.ds-wizard.org>`__. It is a source of shared knowledge models, document templates, and locales that can support our deployment. The registry is also integrated inside the |project_name|. Therefore, we can easily pull new versions from the |project_name|. The registration can be done either directly in our |project_name| instance in Settings or via the DSW Registry website.
+When we have our own self-hosted instance, it is essential to register within the `DSW Registry <https://registry.ds-wizard.org>`__. It is a source of shared knowledge models, document templates, and locales that can support our deployment. The registry is also integrated inside the DSW. Therefore, we can easily pull new versions from the DSW. The registration can be done either directly in our DSW instance in Settings or via the DSW Registry website.
 
 
 Initial Knowledge Model, Document Templates, and Locales
@@ -82,7 +82,7 @@ If we want to regularly backup our database (and we should!), all we need to do 
 Deployment Requirements
 -----------------------
 
-The following requirements were estimated using `limiting Docker resources <https://docs.docker.com/compose/compose-file/compose-file-v3/#resources>`__ provided to containers.
+The following requirements were estimated using `limiting Docker resources <https://docs.docker.com/reference/compose-file/deploy/#resources>`__ provided to containers.
 
 +-----------------+----------------+----------------+
 | Component       | Minimal        | Recommended    |

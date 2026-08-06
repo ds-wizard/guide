@@ -30,7 +30,7 @@ We can select the **Dashboard Style** to decide whether the user should see a st
 
   * **Configure Organization Widget** quickly navigates to :doc:`../system/organization` if it is not yet done.
 
-  * **Configure Look and Feel Widget** quickly navigates to :doc:`../user-interface/look-and-feel` to adjust style of the |project_name| instance.
+  * **Configure Look and Feel Widget** quickly navigates to :doc:`../user-interface/look-and-feel` to adjust style of the DSW instance.
 
   * **Connect DSW Registry Widget** quickly navigates to :doc:`../content/dsw-registry` to configure the connection if it has not been configured yet.
 
@@ -42,11 +42,11 @@ We can select the **Dashboard Style** to decide whether the user should see a st
 Login Info
 ==========
 
-It is possible to write a message that users will see before logging in the |project_name| instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our |project_name| instance, how they should log in (e.g. if we have more authentication services configured), or if there is any news regarding our |project_name| instance.
+It is possible to write a message that users will see before logging in the DSW instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our DSW instance, how they should log in (e.g. if we have more authentication services configured), or if there is any news regarding our DSW instance.
 
 .. WARNING::
 
-  Defining HTML classes in the login info can overwrite |project_name| application classes. It is recommended to use prefixes for classes, if they are used, to avoid conflicts.
+  Defining HTML classes in the login info can overwrite DSW application classes. It is recommended to use prefixes for classes, if they are used, to avoid conflicts.
 
   
 .. _sidebar-login-info:

@@ -3,7 +3,7 @@
 Document Template Specification
 *******************************
 
-Each document template in |project_name| has metadata stored. If developing locally with :doc:`./tdk`, you can find and manage them  in ``template.json`` file. In case of using :doc:`../../../application/document-templates/editors/index`, you can manage them on **Settings** tab.
+Each document template in DSW has metadata stored. If developing locally with :doc:`./tdk`, you can find and manage them  in ``template.json`` file. In case of using :doc:`../../../application/document-templates/editors/index`, you can manage them on **Settings** tab.
 
 
 Specification Structure
@@ -17,10 +17,10 @@ Specification Structure
 * ``description`` = short description of the template
 * ``license`` = name of the used license
 * ``readme`` = longer description usually containing changelog
-* ``metamodelVersion`` = supported version of template metamodel, it affects with which |project_name| version is can be used
+* ``metamodelVersion`` = supported version of template metamodel, it affects with which DSW version is can be used
 * ``allowedPackages`` = list of package filters (see :ref:`document-template-package-filter`) to specify supported packages
 * ``formats`` = list of available formats (see below :ref:`document-template-format`) with specified steps for generation
-* ``_tdk`` = TDK configuration for local development (not stored in |project_name|, see :ref:`tdk-config`)
+* ``_tdk`` = TDK configuration for local development (not stored in DSW, see :ref:`tdk-config`)
 
 
 .. NOTE::
@@ -79,7 +79,7 @@ Each step of template produces output based on its (optional) input and options.
 TDK Config
 ----------
 
-Those are local-only metadata used for development of the template. You can use them in versioned ``template.json`` but those are never stored directly in |project_name|.
+Those are local-only metadata used for development of the template. You can use them in versioned ``template.json`` but those are never stored directly in DSW.
 
 * ``version``: metadata version for needs of migrations
 * ``readmeFile``: files used to get content for ``readme`` of the template, usually ``README.md``
@@ -222,4 +222,4 @@ Version 2 (since 2.6.0)
 Version 1 (since 2.5.0)
 -----------------------
 
-* Initial version of metamodel, introduced in |project_name| 2.5.0 as start of versioning.
+* Initial version of metamodel, introduced in DSW 2.5.0 as start of versioning.

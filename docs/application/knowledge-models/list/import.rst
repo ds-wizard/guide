@@ -27,7 +27,7 @@ We can import a knowledge model from the `DSW Registry <https://registry.ds-wiza
 From file
 =========
 
-We can import a knowledge model as a KM file. Such a file can be created as an export from |project_name| (from :doc:`./index` or :doc:`./detail`). We can also select multiple files at once.
+We can import a knowledge model as a KM file. Such a file can be created as an export from DSW (from :doc:`./index` or :doc:`./detail`). We can also select multiple files at once.
 
 .. figure:: import/file.png
     :width: 500
