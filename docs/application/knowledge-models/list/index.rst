@@ -42,7 +42,7 @@ Finally, there is an option to :doc:`./import` by clicking the :guilabel:`Import
 
 .. NOTE::
 
-    Set deprecated option will apply only for the latest version of Knowledge Model. If there is an older version, that will still be available.
+    Set deprecated option will apply only for the latest version of the knowledge model. If there is an older version, that will still be available.
 
 .. raw:: html
     

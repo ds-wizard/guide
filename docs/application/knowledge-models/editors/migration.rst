@@ -58,7 +58,7 @@ We can cancel the knowledge model migration at any point before we publish the n
 Finishing a Knowledge Model Migration
 =====================================
 
-After we resolve all the changes, we are ready to publish the new version of the Child KM. To do that, we need to click on the :guilabel:`Publish →` button. This will open the Publish new version screen where we need to provide additional information for the new version of the Knowledge Model.
+After we resolve all the changes, we are ready to publish the new version of the Child KM. To do that, we need to click on the :guilabel:`Publish →` button. This will open the Publish new version screen where we need to provide additional information for the new version of the knowledge model.
 
 The publish screen shows us some information about the knowledge model, such as it's **Knowledge Model Name** and **Knowledge Model ID**. We need to choose the new **version number**.
 

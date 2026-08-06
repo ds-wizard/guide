@@ -156,14 +156,14 @@ Validation is used to define some rules for the answers in Value question type. 
 Reference
 ---------
 
-References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. resource page references are gathered in the resource collections.
+References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. Resource page references are gathered in the resource collections.
 
 .. _resource-collection:
 
 Resource Collection
 ^^^^^^^^^^^^^^^^^^^
 
-Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collection is created on a level of a Knowledge Model.
+Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collection is created on a level of a knowledge model.
 
 .. _resource-page:
 

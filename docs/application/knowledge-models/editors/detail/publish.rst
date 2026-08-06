@@ -12,8 +12,8 @@ If there are :ref:`locales<knowledge-model-locales>` available for the previous 
 .. figure:: publish/publish-modal.png
     :width: 528
     
-    Publish dialog where we can confirm or cancel publishing of the Knowledge Model.
+    Publish dialog where we can confirm or cancel publishing of the knowledge model.
 
-If we confirm the publishing of the Knowledge Model by clicking :guilabel:`Publish` in the modal window, the Knowledge Model becomes available to all users and is accessible in :ref:`Knowledge Model List<knowledge-model-list>`.
+If we confirm the publishing of the knowledge model by clicking :guilabel:`Publish` in the modal window, the knowledge model becomes available to all users and is accessible in :ref:`Knowledge Model List<knowledge-model-list>`.
 
 The Knowledge Model Editor will remain in the :ref:`Knowledge Model Editors<knowledge-model-editors>` list and will be available for any future changes.
