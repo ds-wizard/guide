@@ -9,7 +9,7 @@ While all the possibilities are defined in the knowledge model, when researchers
 
 Knowledge models are created by data stewards in the :ref:`knowledge model editor<knowledge-model-editor>`.
 
-Each knowledge model also has a source language. A published knowledge model version can have additional :ref:`translations<knowledge-model-translations>` so the same questionnaire structure can be shown in different languages. These translations cover texts that are part of the knowledge model, such as question titles, descriptions, answer labels, advice, and resource pages. They do not translate answers typed by users.
+Each knowledge model also has a source language. A published knowledge model version can have additional :ref:`locales<knowledge-model-locales>` so the same questionnaire structure can be shown in different languages. These locales cover texts that are part of the knowledge model, such as question titles, descriptions, answer labels, advice, and resource pages. They do not translate answers typed by users.
 
 Knowledge Model Structure
 =========================

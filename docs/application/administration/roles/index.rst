@@ -25,7 +25,6 @@ Custom roles are useful for cases such as:
 
 - a data support role that can view or comment on all projects
 - a user-management role that can manage users without managing settings
-- an analytics role that can access reporting without broader administration access
 - a content-management role that can work with knowledge models or document templates
 
 .. TODO::
@@ -35,7 +34,7 @@ Custom roles are useful for cases such as:
 Role Permissions
 ================
 
-Permissions are grouped by the type of work they enable. The available groups depend on the DSW edition and enabled features.
+Permissions are grouped by the type of work they enable.
 
 Project-related permissions can allow a role to:
 
@@ -47,21 +46,15 @@ Project-related permissions can allow a role to:
 
 Content-related permissions can allow a role to:
 
-- create and use knowledge model editors
-- manage knowledge models
-- manage knowledge model secrets
-- create and use document template editors
+- create and use knowledge model editors, including migration and publishing
+- manage knowledge models, including knowledge model secrets
+- create and use document template editors, including publishing
 - manage document templates
-- manage locales
 
 Administration permissions can allow a role to:
 
 - manage users
 - manage settings
-- manage automations
-- access audit log
-- access integration hub
-- access analytics
 
 .. TODO::
 

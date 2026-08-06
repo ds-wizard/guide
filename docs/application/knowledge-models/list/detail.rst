@@ -9,18 +9,18 @@ The main part of the detail is the README of the KM that should contain basic in
 
 In the top bar, we can :guilabel:`Export` the knowledge model as a KM file or :guilabel:`Delete` this version of the knowledge model (only if it is not already used for some projects or other KMs and editors).
 
-.. _knowledge-model-translations:
+.. _knowledge-model-locales:
 
-Translations
-============
+Locales
+========
 
-A knowledge model has a source language and a published version can have translations for additional languages. These translations are used in projects to show the questionnaire content in the selected language.
+A knowledge model has a source language and a published version can have locales for additional languages. These locales are used in projects to show the questionnaire content in the selected language.
 
-Translations are managed for a specific knowledge model version. From the knowledge model detail, users with permission to manage knowledge models can download a translation template, add a translated language, download an existing translation file, or delete a translation.
+Locales are managed for a specific knowledge model version. From the knowledge model detail, users with permission to manage knowledge models can export a POT file, import a locale, download an existing locale, or delete a locale.
 
-The translation template is a POT file generated from the published knowledge model. It contains translatable strings from the knowledge model content, such as names, descriptions, answer labels, advice, and resource pages. Translators use this template to prepare a PO file for the target language.
+The exported POT file contains translatable strings from the knowledge model content, such as names, descriptions, answer labels, advice, and resource pages. Translators use this file to prepare a PO file for the target language.
 
-When a new knowledge model version is published, translations from the previous version or parent knowledge model can be reused during publishing if they are still valid. If knowledge model texts changed, the translation should be reviewed and updated for the new version.
+When a new knowledge model version is published, locales from the previous version or parent knowledge model can be copied during publishing if they are still valid. If knowledge model texts changed, the locale should be reviewed and updated for the new version.
 
 In the top pane, we can see the options based on our permissions:
 
