@@ -7,8 +7,6 @@ Before the knowledge model can be used by researchers in their projects, we need
 
 If we click the button, we are prompted with the metadata details to check them before publishing. We cannot change anything here, so if we want to change it, we have to click the link to :guilabel:`Settings` or press :guilabel:`Cancel` and edit the details on the :guilabel:`Settings` tab of the :ref:`Knowledge Model Editor<knowledge-model-editor>`.
 
-If there are :ref:`translations<knowledge-model-translations>` available for the previous version or parent knowledge model, the publish dialog can offer to reuse them for the new version. We should reuse only translations that still match the updated knowledge model content. If the questionnaire text changed significantly, it is safer to update the translations after publishing.
-
 .. figure:: publish/publish-modal.png
     :width: 528
     

@@ -37,13 +37,6 @@ We can use the project as a :ref:`project template<project-templates>`. If we en
 
 :guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of DSW. Users should contact the person responsible for document templates or instance administration in this case.
 
-Questionnaire Language
-======================
-
-If the project's knowledge model has :ref:`translations<knowledge-model-translations>`, we can choose the questionnaire language in project settings. The available options are the source language of the knowledge model and any translations added for that knowledge model version.
-
-Changing the questionnaire language changes the knowledge model texts shown in the questionnaire, such as questions, answer labels, descriptions, advice, and resource pages. It does not translate answers that users have typed into the project.
-
 Knowledge Model
 ===============
 

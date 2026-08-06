@@ -38,8 +38,6 @@ If there are no project templates available or we don't want to use them, we can
 
 If the knowledge model has :ref:`question tags<question-tag>`, we can either choose to create questionnaire with all available questions or filter them by the question tags.
 
-If the knowledge model has :ref:`translations<knowledge-model-translations>`, we can choose the questionnaire language. The source language of the knowledge model is selected by default. The language selection is shown only when there is at least one translation available for the selected knowledge model.
-
 .. figure:: create/project-create-custom.png
     :width: 528
     
