@@ -3,12 +3,12 @@
 Roles
 *****
 
-Roles define what users can do across the |project_name| instance. Each user has one global role. The role contains a set of permissions, such as whether the user can manage users, configure settings, work with knowledge models, or access all projects.
+Roles define what users can do across the DSW instance. Each user has one global role. The role contains a set of permissions, such as whether the user can manage users, configure settings, work with knowledge models, or access all projects.
 
 Default Roles
 =============
 
-New |project_name| instances include default roles for the usual workflows:
+New DSW instances include default roles for the usual workflows:
 
 - **Researcher** for users who mainly create and work on their own projects.
 - **Data Steward** for users who prepare content such as knowledge models, document templates, and project templates.
@@ -35,7 +35,7 @@ Custom roles are useful for cases such as:
 Role Permissions
 ================
 
-Permissions are grouped by the type of work they enable. The available groups depend on the |project_name| edition and enabled features.
+Permissions are grouped by the type of work they enable. The available groups depend on the DSW edition and enabled features.
 
 Project-related permissions can allow a role to:
 

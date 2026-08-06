@@ -1,13 +1,13 @@
 Locales
 *******
 
-After navigating to :guilabel:`Locales` (under :guilabel:`Administration`), we can browse and manage a list of locales in the |project_name| instance. Similarly to knowledge models and document templates, each locale has its unique identifier and version. Moreover, each locale has a language code specified. In the list we see the latest version and can quickly navigate to :doc:`./detail` (which includes also older versions) by clicking the locale name or selecting :guilabel:`View detail` from the right item menu of the desired row.
+After navigating to :guilabel:`Locales` (under :guilabel:`Administration`), we can browse and manage a list of locales in the DSW instance. Similarly to knowledge models and document templates, each locale has its unique identifier and version. Moreover, each locale has a language code specified. In the list we see the latest version and can quickly navigate to :doc:`./detail` (which includes also older versions) by clicking the locale name or selecting :guilabel:`View detail` from the right item menu of the desired row.
 
-The |project_name| UI and emails can be localized to different languages. The preferred language is determined by the user's browser settings or by the user's profile settings.
+The DSW UI and emails can be localized to different languages. The preferred language is determined by the user's browser settings or by the user's profile settings.
 
 .. NOTE::
 
-    Locales can be used not only for translations but also for customizing the |project_name| to a specific domain.
+    Locales can be used not only for translations but also for customizing the DSW to a specific domain.
     
 
 There is always the **English** locale (``~:default:1.0.0``) which is embedded and cannot be deleted. For others, we can use :guilabel:`Export` and :guilabel:`Delete` options from the right item menu.
@@ -19,7 +19,7 @@ If there is a locale with newer version available in the `DSW Registry <https://
 
 .. NOTE ::
 
-    We support community of DSW translators by managing the repository `ds-wizard/wizard-client-locales <https://github.com/ds-wizard/wizard-client-locales>`__ and service for translating using web browser `localize.ds-wizard.org <https://localize.ds-wizard.org>`__.
+    We support community of DSW translators by managing the repository `ds-wizard/wizard-locales <https://github.com/ds-wizard/wizard-locales>`__ and service for translating using web browser `localize.ds-wizard.org <https://localize.ds-wizard.org>`__.
 
 .. figure:: index/list.png
     

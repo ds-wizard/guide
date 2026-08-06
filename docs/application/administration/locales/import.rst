@@ -11,7 +11,7 @@ We can import an existing locale by navigating to :menuselection:`Settings → L
 From DSW Registry
 =================
 
-If the |project_name| instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import locales from it by entering the **locale ID** of desired template (e.g. ``dsw:cs:0.2.0``) and pressing the :guilabel:`Import` button.
+If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import locales from it by entering the **locale ID** of desired template (e.g. ``dsw:cs:0.2.0``) and pressing the :guilabel:`Import` button.
 
 .. NOTE::
 
@@ -28,7 +28,7 @@ If the |project_name| instance is connected to the `DSW Registry <https://regist
 From file
 =========
 
-We can import a locale as a ZIP package. Such a package can be created as an export from |project_name|. We can also select multiple files at once.
+We can import a locale as a ZIP package. Such a package can be created as an export from DSW. We can also select multiple files at once.
 
 .. figure:: import/file.png
     :width: 500

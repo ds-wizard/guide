@@ -8,7 +8,7 @@ Plugins
     The plugins functionality is considered experimental.
 
 
-This page provides information on how to install plugins for |project_name|. Information on developing plugins can be found here: :ref:`plugins development<development-plugins>`.
+This page provides information on how to install plugins for DSW. Information on developing plugins can be found here: :ref:`plugins development<development-plugins>`.
 
 There are available plugins to extend the functionality of the base DSW.
 

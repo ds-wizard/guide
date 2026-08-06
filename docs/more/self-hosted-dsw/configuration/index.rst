@@ -1,7 +1,7 @@
 Configuration
 *************
 
-This section explains how to configure |project_name| instance on your own.
+This section explains how to configure DSW instance on your own.
 
 .. _config-settings:
 

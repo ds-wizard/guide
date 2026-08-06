@@ -1,7 +1,7 @@
 Integration Question - API
 **************************
 
-:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the |project_name| questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
+:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the DSW questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
 
 We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/stable/>`_ to construct everything in integrations. We also have this :ref:`cheatsheet<jinja-cheatsheet>` available.
 
@@ -13,7 +13,7 @@ We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/sta
 External Service Requirements
 =============================
 
-If we want to connect an external service using the API there are certain requirements for it to make the connection to |project_name| possible.
+If we want to connect an external service using the API there are certain requirements for it to make the connection to DSW possible.
 
 - **Allows search using free text**
   
@@ -21,7 +21,7 @@ If we want to connect an external service using the API there are certain requir
 
 - **Returns a JSON response with a list of results**
 
-  - The response must be JSON so |project_name| can parse it
+  - The response must be JSON so DSW can parse it
   - There needs to be a JSON list where all the items matching the search query are
 
 .. _integration-api-configuration:
@@ -97,7 +97,7 @@ In the **Response** section, we configure how to process the JSON response from 
 
 The integration will show suggestions for **Response List Field** and **Response Item Template** based on the response structure. We can click the suggestions to insert them in the fields in the Jinja2 notation.
 
-Advance Response Configuration
-------------------------------
+Advanced Response Configuration
+-------------------------------
 
-The Advance response configuration allows to set **Response Item Template for Selection** which can be used to define how the selection of items from the integration will be presented before selection.
+The advanced response configuration allows setting **Response Item Template for Selection** which can be used to define how the selection of items from the integration will be presented before selection.

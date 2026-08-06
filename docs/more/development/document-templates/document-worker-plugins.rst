@@ -3,7 +3,7 @@
 Document Worker Plugins
 =======================
 
-It is possible to extend functionality of |project_name| by implementing own plugins according to the instructions and thus add new features to the application. This requires technical knowledge and experience with the relevant technologies used in |project_name| (such as Python or Docker). You should not consider developing plugins unless you are familiar with programming and also will be committed to maintaining the plugin in the future.
+It is possible to extend functionality of DSW by implementing own plugins according to the instructions and thus add new features to the application. This requires technical knowledge and experience with the relevant technologies used in DSW (such as Python or Docker). You should not consider developing plugins unless you are familiar with programming and also will be committed to maintaining the plugin in the future.
 
 .. note::
 

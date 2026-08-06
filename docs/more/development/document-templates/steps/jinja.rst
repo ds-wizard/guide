@@ -26,7 +26,7 @@ Options
 
 Optional:
 
--  ``jinja-ext`` = comma-separated list of `Jinja2 extensions <https://jinja.palletsprojects.com/en/3.0.x/extensions/>`__ to be enabled (supported values: ``debug``)
+-  ``jinja-ext`` = comma-separated list of `Jinja2 extensions <https://jinja.palletsprojects.com/en/stable/extensions/>`__ to be enabled (supported values: ``debug``)
 -  ``i18n-dir`` = location (relative to template root) of translations
 -  ``i18n-domain`` = domain string of translations
 -  ``i18n-lang`` = language code used in the template
@@ -113,12 +113,12 @@ Every ``Asset`` object returned by ``assets()`` function has the following attri
 Filters
 -------
 
-Within Jinja templates, you can use so-called `filters <https://jinja.palletsprojects.com/en/3.0.x/templates/#filters>`__.Basically, those are functions applied to a first argument using pipe ``|`` symbol.
+Within Jinja templates, you can use so-called `filters <https://jinja.palletsprojects.com/en/stable/templates/#filters>`__. Basically, those are functions applied to a first argument using pipe ``|`` symbol.
 
 Builtin Filters
 ~~~~~~~~~~~~~~~
 
-There are several widely used `builtin filters <https://jinja.palletsprojects.com/en/3.0.x/templates/#builtin-filters>`__ directly in Jinja.
+There are several widely used `builtin filters <https://jinja.palletsprojects.com/en/stable/templates/#builtin-filters>`__ directly in Jinja.
 
 Value Conversion
 ~~~~~~~~~~~~~~~~
@@ -240,7 +240,7 @@ These filters are more complex and add various support to template development.
 Tests
 -----
 
-Within Jinja templates, you can use so-called `tests <https://jinja.palletsprojects.com/en/3.0.x/templates/#tests>`__. Basically, those are helpers usable in conditions after ``is`` keyword:
+Within Jinja templates, you can use so-called `tests <https://jinja.palletsprojects.com/en/stable/templates/#tests>`__. Basically, those are helpers usable in conditions after ``is`` keyword:
 
 .. code:: jinja
 
@@ -252,7 +252,7 @@ Within Jinja templates, you can use so-called `tests <https://jinja.palletsproje
 Builtin Tests
 ~~~~~~~~~~~~~
 
-There are several widely used `builtin tests <https://jinja.palletsprojects.com/en/3.0.x/templates/#builtin-tests>`__ directly in Jinja.
+There are several widely used `builtin tests <https://jinja.palletsprojects.com/en/stable/templates/#builtin-tests>`__ directly in Jinja.
 
 Custom Tests
 ~~~~~~~~~~~~
@@ -312,7 +312,7 @@ Notes
 =====
 
 -  All paths (e.g. for ``import`` or ``extends`` in Jinja2 templates are relative from the template root, i.e. directory with ``template.json``).
--  The ``do`` `Jinja2 extension <https://jinja.palletsprojects.com/en/3.0.x/extensions/#expression-statement>`__ is enabled.
+-  The ``do`` `Jinja2 extension <https://jinja.palletsprojects.com/en/stable/extensions/#expression-statement>`__ is enabled.
 -  Using file extension ``.j2`` or ``.jinja2`` for templates is just a convention.
 -  The :doc:`document context <../document-context>` is provided in ``ctx`` variable, other variables, filters, and tests are documented in other documents.
 

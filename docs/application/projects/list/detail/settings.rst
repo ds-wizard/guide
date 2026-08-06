@@ -5,11 +5,11 @@ Settings
 
 In the :guilabel:`Settings` tab, we can configure some details about the project. First we have a **name** and a **description** to identify the project.
 
-Next, we have **Project Tags**. These can be used for providing some metadata or categorization of the project. In the project list, we can filter the projects by these tags. We can write any text we want as a project tag and |project_name| will suggest us the tags that are there already in use so we can keep them consistent.
+Next, we have **Project Tags**. These can be used for providing some metadata or categorization of the project. In the project list, we can filter the projects by these tags. We can write any text we want as a project tag and DSW will suggest us the tags that are there already in use so we can keep them consistent.
 
 .. NOTE::
 
-    Project tags might be disabled in some |project_name| instances.
+    Project tags might be disabled in some DSW instances.
 
 
 .. figure:: settings/settings.png
@@ -35,7 +35,7 @@ We can use the project as a :ref:`project template<project-templates>`. If we en
     Project template options are visible only for users with permission to manage project templates.
 
 
-:guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of |project_name|. Users should contact the person responsible for document templates or instance administration in this case.
+:guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of DSW. Users should contact the person responsible for document templates or instance administration in this case.
 
 Knowledge Model
 ===============
