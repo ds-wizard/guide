@@ -3,7 +3,7 @@
 Sharing
 *******
 
-We can share project with other |project_name| users or even external collaborators. We can access all the sharing option by clicking the :guilabel:`Share` button in the top right.
+We can share a project with other |project_name| users or external collaborators. We can access all sharing options by clicking the :guilabel:`Share` button in the top right.
 
 .. figure:: sharing/share-modal.png
     :width: 540
@@ -13,7 +13,7 @@ We can share project with other |project_name| users or even external collaborat
 
 .. NOTE::
 
-    It is not possible to remove last project owner. To change the project owner, we need to add another user as an owner first.
+    It is not possible to remove the last project owner. To change the project owner, we need to add another user as an owner first.
 
 
 If we want to only see how Sharing is set up or copy the project link, we can use the arrow button which is a part of the :guilabel:`Share` button.
@@ -26,10 +26,14 @@ If we want to only see how Sharing is set up or copy the project link, we can us
 
 .. NOTE::
 
-    When the sharing settings is changed, the changes are saved automatically.
+    When sharing settings are changed, the changes are saved automatically.
 
 
-There are different roles how we can share the project that can access different project features:
+There are different project sharing roles that grant access to different project features:
+
+.. NOTE::
+
+    These are project sharing roles. They apply to this specific project and are separate from global :ref:`roles<roles>`. A global role can also grant access to all projects, depending on its permissions.
 
 
 .. raw:: html
@@ -150,7 +154,7 @@ The following video tutorial explains and showcases sharing options and tools th
 Users
 =====
 
-We can choose specific users from the |project_name| instance and their role on the project to grant them access to project features based on the table above. This is a good way to add other collaborators that work together with us on the project. Also, this is the only way to add other project owners.
+We can choose specific users from the |project_name| instance and their project sharing role to grant them access to project features based on the table above. This is a good way to add other collaborators that work together with us on the project. Also, this is the only way to add other project owners.
 
 
 Visible by all other logged-in users

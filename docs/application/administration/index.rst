@@ -3,7 +3,7 @@
 Administration
 **************
 
-Administration section serves as the name suggests to admins with managing the |project_name| instance. By navigating via :guilabel:`Administration` item from the main menu, we can manage the things listed below.
+Administration section serves as the name suggests to users with permission to manage the |project_name| instance. By navigating via :guilabel:`Administration` item from the main menu, we can manage the things listed below.
 
 ----
 
@@ -16,5 +16,6 @@ Administration section serves as the name suggests to admins with managing the |
     :maxdepth: 2
 
     settings/index
+    roles/index
     users/index
     locales/index

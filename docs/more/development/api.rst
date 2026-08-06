@@ -15,7 +15,7 @@ DSW utilizes JSON Web Tokens (JWT) for both authentication and authorization, en
 * **OpenID Identity Provider** (for our client only): This method involves a more complex OpenID/OAuth flow, utilizing redirects with the ``/auth/{id}/`` endpoints to authenticate.
 * **API Keys**:  You can generate an API key in your user profile, which remains valid until its specified expiration date.
 
-While several public endpoints are accessible without authentication, most endpoints require it. The system will check if you are authorized to perform specific operations based on your :ref:`roles<user-roles>` and their permissions. These roles are defined globally and can also be specific to projects. This ensures that only authorized users can access and manipulate with sensitive resources.
+While several public endpoints are accessible without authentication, most endpoints require it. The system will check if you are authorized to perform specific operations based on your global :ref:`role<roles>` and project sharing permissions. This ensures that only authorized users can access and manipulate with sensitive resources.
 
 Example
 =======

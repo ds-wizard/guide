@@ -3,7 +3,7 @@
 Knowledge Model Editors
 ***********************
 
-As admins and data stewards, we can see a list of all knowledge model editors.
+Users with permission to use knowledge model editors can see a list of all knowledge model editors.
 
 .. figure:: index/knowledge-model-editors-list.png
     
@@ -36,4 +36,3 @@ If there is an ongoing :ref:`knowledge model migration<knowledge-model-migration
     Create<create>
     Detail<detail/index>
     Migration<migration>
-    

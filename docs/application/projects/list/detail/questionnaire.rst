@@ -65,7 +65,7 @@ Some additional information can also be part of the question:
 - **List of references** - links to additional external resources related to the question
 - **List of experts** - whom to contact when help is needed with answering the question
 
-Based on our role in the project and specific instance settings there are some additional actions besides answering the question:
+Based on our project sharing role, global permissions, and specific instance settings there are some additional actions besides answering the question:
 
 - :ref:`Add TODO<todos>`
 - :ref:`Add comment<add-comment>`

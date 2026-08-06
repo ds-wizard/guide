@@ -3,9 +3,9 @@
 Users
 *****
 
-Users list allows admins to see and manage all users in a |project_name| instance. The list can be filtered using role, searched based using name or email fragment, and sorted via various properties of users. The list shows the role of a user next to its name and also indicates in case the user is inactive. Next to the email, we can quickly see what authentication services the user uses to log-in.
+Users list allows users with permission to manage users to see and manage all users in a |project_name| instance. The list can be filtered using :ref:`roles<roles>`, searched based using name or email fragment, and sorted via various properties of users. The list shows the role of a user next to its name and also indicates in case the user is inactive. Next to the email, we can quickly see what authentication services the user uses to log-in.
 
-A :ref:`user detail<user-detail>` can be opened by clicking the name of a user or by selecting :guilabel:`Edit` in the right dropdown menu for the desired row. There, a user can be also deleted via the :guilabel:`Delete` action. Finally, administrator can :ref:`create a new user<user-create>` by clicking :guilabel:`Create`.
+A :ref:`user detail<user-detail>` can be opened by clicking the name of a user or by selecting :guilabel:`Edit` in the right dropdown menu for the desired row. There, a user can be also deleted via the :guilabel:`Delete` action. Finally, a new user can be :ref:`created<user-create>` by clicking :guilabel:`Create`.
 
 .. figure:: index/list.png
     
@@ -24,4 +24,3 @@ A :ref:`user detail<user-detail>` can be opened by clicking the name of a user o
 
     Create<create>
     Detail<detail>
-

@@ -9,7 +9,7 @@ The main part of the detail is the README of the KM that should contain basic in
 
 In the top bar, we can :guilabel:`Export` the knowledge model as a KM file or :guilabel:`Delete` this version of the knowledge model (only if it is not already used for some projects or other KMs and editors).
 
-In the top pane, we can see the options based on our role:
+In the top pane, we can see the options based on our permissions:
 
 - :guilabel:`Preview` can be used to check the content of the KM via the :doc:`./preview` feature.
 - :guilabel:`Export` for exporting the latest version of the KM as a file.
@@ -17,7 +17,7 @@ In the top pane, we can see the options based on our role:
 - :guilabel:`Create KM editor` is a shortcut for :doc:`../editors/create` for creating a new version.
 - :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` for to create a fork (some more specific KM based on this one).
 - :guilabel:`Create project` is a shortcut to :doc:`../../projects/list/create` with this KM.
-- :guilabel:`Set deprecated` or :guilabel:`Restore` for setting a KM deprecated when we no longer want the **researchers** to use it.
+- :guilabel:`Set deprecated` or :guilabel:`Restore` for setting a KM deprecated when we no longer want users to use it for new projects.
 - :guilabel:`Set public` or :guilabel:`Set private` for changing the visibility of the KM. Public KM can be viewed by non-logged in users.
 - :guilabel:`Delete` the specific version of the KM (possible only if is not used in any projects or linked in other KMs and editors, cannot be undone).
 

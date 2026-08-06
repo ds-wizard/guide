@@ -69,7 +69,7 @@ To connect to the DSW Registry and import new templates from there, you can foll
 
 .. NOTE::
 
-    The Sign up to the DSW Registry must be done by an admin. Once the admin signs up, data stewards can import and update templates from the DSW Registry.
+    The Sign up to the DSW Registry must be done by a user with permission to manage settings. Once the registry is connected, users with the relevant content permissions can import and update templates from the DSW Registry.
 
 
 Templates imported this way will have the :guilabel:`Update Available` badge when a new version is available in the Registry.
