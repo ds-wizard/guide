@@ -14,7 +14,7 @@ New |project_name| instances include default roles for the usual workflows:
 - **Data Steward** for users who prepare content such as knowledge models, document templates, and project templates.
 - **Admin** for users who manage the instance.
 
-The **Admin** role is special. It has all permissions available in role management and cannot be changed or deleted. Other default roles can be adjusted or deleted if they are not assigned to users and are not configured as the default role for new users.
+The **Admin** role cannot be changed or deleted. Other default roles can be adjusted or deleted if they are not assigned to users and are not configured as the default role for new users.
 
 Custom Roles
 ============
