@@ -18,7 +18,7 @@ A knowledge model has a source language and a published version can have locales
 
 Locales are managed for a specific knowledge model version. From the knowledge model detail, users with permission to manage knowledge models can export a POT file, import a locale, download an existing locale, or delete a locale.
 
-The exported POT file contains translatable strings from the knowledge model content, such as names, descriptions, answer labels, advice, and resource pages. Translators use this file to prepare a PO file for the target language.
+The exported POT file contains translatable strings from the knowledge model content, such as names, descriptions, answer labels, advice, and resource pages. Translators use this file to prepare a PO file for the target language. The PO file should specify the target language using the standard gettext metadata.
 
 When a new knowledge model version is published, locales from the previous version or parent knowledge model can be copied during publishing if they are still valid. If knowledge model texts changed, the locale should be reviewed and updated for the new version.
 
