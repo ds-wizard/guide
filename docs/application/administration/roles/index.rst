@@ -36,27 +36,47 @@ Role Permissions
 
 Permissions are grouped by the type of work they enable.
 
-Project-related permissions can allow a role to:
+The role create/edit form includes these permissions:
 
-- manage project templates and create projects directly from knowledge models when project creation is restricted to templates
-- view all projects
-- comment on all projects
-- edit all projects
-- manage all projects
+.. list-table::
+   :header-rows: 1
 
-Content-related permissions can allow a role to:
-
-- create and use knowledge model editors, including migration and publishing
-- manage knowledge models, including knowledge model secrets
-- create and use document template editors, including publishing
-- manage document templates
-
-The editor permissions require the corresponding management permissions. When we enable **Use Knowledge Model Editor**, the role also needs **Manage Knowledge Models**. When we enable **Use Document Template Editor**, the role also needs **Manage Document Templates**.
-
-Administration permissions can allow a role to:
-
-- manage users
-- manage settings
+   * - Permission
+     - What it enables
+     - Implied permissions
+   * - **Manage Project Templates**
+     - Set projects as project templates. Users with this permission can also create new projects directly from knowledge models, even when project creation is restricted to templates.
+     - None.
+   * - **View ALL Projects**
+     - View all projects, regardless of project sharing and visibility settings.
+     - None.
+   * - **Comment on ALL Projects**
+     - Comment on all projects, regardless of project sharing and visibility settings.
+     - **View ALL Projects**
+   * - **Edit ALL Projects**
+     - Edit all projects, regardless of project sharing and visibility settings.
+     - **View ALL Projects**, **Comment on ALL Projects**
+   * - **Manage ALL Projects**
+     - Manage all projects as if the user were an owner, regardless of project sharing and visibility settings.
+     - **View ALL Projects**, **Comment on ALL Projects**, **Edit ALL Projects**
+   * - **Use Knowledge Model Editor**
+     - View, create, edit, and delete knowledge model editors, migrate them, and publish knowledge models from them.
+     - **Manage Knowledge Models**
+   * - **Manage Knowledge Models**
+     - Import, export, and delete knowledge models, set them as deprecated, restore them, or set them as public. This permission also allows users to manage knowledge model secrets.
+     - None.
+   * - **Use Document Template Editor**
+     - View, create, edit, and delete document template editors, and publish document templates from them.
+     - **Manage Document Templates**
+   * - **Manage Document Templates**
+     - Import, export, and delete document templates, and set them as deprecated or restore them.
+     - None.
+   * - **Manage Users**
+     - View, create, edit, and delete user accounts.
+     - None.
+   * - **Manage Settings**
+     - View and manage application settings.
+     - None.
 
 .. TODO::
 
