@@ -9,6 +9,8 @@ While all the possibilities are defined in the knowledge model, when researchers
 
 Knowledge models are created by data stewards in the :ref:`knowledge model editor<knowledge-model-editor>`.
 
+Each knowledge model also has a source language. A published knowledge model version can have additional :ref:`locales<knowledge-model-locales>` so the same questionnaire structure can be shown in different languages. These locales cover texts that are part of the knowledge model, such as question titles, descriptions, answer labels, advice, and resource pages. They do not translate answers typed by users.
+
 Knowledge Model Structure
 =========================
 
@@ -82,7 +84,7 @@ The value question asks for a single value that users type in. There are many di
 
 The input field differs based on the value type (simple input for string, date picker for date, etc.). Some of these have a check whether the entered value is valid (such as valid email or URL) and displays a warning if not.
 
-Value Question also can have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text based types (text, email, URL), we can set also use a regular expression to create validations.
+Value Question can also have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text-based types (text, email, URL), we can also use a regular expression to create validations.
 
 .. _integration-question:
 
@@ -154,14 +156,14 @@ Validation is used to define some rules for the answers in Value question type. 
 Reference
 ---------
 
-References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. resource page references are gathered in the resource collections.
+References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. Resource page references are gathered in the resource collections.
 
 .. _resource-collection:
 
 Resource Collection
 ^^^^^^^^^^^^^^^^^^^
 
-Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collection is created on a level of a Knowledge Model.
+Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collection is created on a level of a knowledge model.
 
 .. _resource-page:
 
@@ -241,7 +243,7 @@ Integrations define a connection to an external service or resource where we can
 API Integration
 ^^^^^^^^^^^^^^^
 
-API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so |project_name| can use the API.
+API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so DSW can use the API.
 
 
 .. _annotations:

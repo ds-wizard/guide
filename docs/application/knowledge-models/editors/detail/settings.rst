@@ -1,18 +1,19 @@
 Settings
 ********
 
-The :guilabel:`Settings` tab, allows us to adjust attributes of the the knowledge model:
+The :guilabel:`Settings` tab allows us to adjust attributes of the knowledge model:
 
-- **Name** - should be short name of the Knowledge Model.
+- **Name** - should be short name of the knowledge model.
 - **Description** - this should be really short and descriptive.
-- **Knowledge Model ID** - is an unique Knowledge Model identifier.
-- **Version** - this is a number indicating which is the latest version of the Knowledge Model, because it can change over time.
+- **Knowledge Model ID** - is a unique knowledge model identifier.
+- **Version** - this is a number indicating which is the latest version of the knowledge model, because it can change over time.
+- **Language** - is the source language of the knowledge model content. It is used as the default questionnaire language and as the source language for knowledge model locales.
 - **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX License List <https://spdx.org/licenses/>`_.
 - **Readme** - this is where we can describe everything we need about the knowledge model. We can, for example, include a changelog of what changed in which version, etc. We can use :ref:`Markdown<markdown-cheatsheet>` in this field to provide some nice formatting.
 
 .. NOTE::
 
-    **Name**, **Description** and **Version** are all visible to the researcher, when they select a Knowledge Model for their project. So the **Name** and **Description** should provide them with enough information to select a correct one.
+    **Name**, **Description** and **Version** are all visible to the researcher, when they select a knowledge model for their project. So the **Name** and **Description** should provide them with enough information to select a correct one.
 
     **Knowledge Model ID** together with the :ref:`organization ID<organization-settings>` and knowledge model version after it is published are used for the identification. So the identifier of the knowledge model is: 
 
@@ -29,4 +30,4 @@ In the **Danger Zone** we can delete the knowledge model. Once it is deleted it 
 
 .. figure:: settings/settings-form.png
     
-    Knowledge Model settings.
+    Knowledge model settings.

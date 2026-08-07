@@ -9,7 +9,7 @@ Template Development Kit
 
     * Your favorite text editor or IDE
     * Template Development Kit (see below)
-    * |project_name| instance (recommended to have local one) with your admin account
+    * DSW instance (recommended to have local one) with your admin account
     * Python 3.10+ (with pip) or Docker
 
 Our Template Development Kit (TDK) provides a simple way how to work with templates locally. It is a CLI tool written in Python.
@@ -49,11 +49,11 @@ Commands
 There are these basic commands:
 
 * ``config`` = manage shared user configuration (~/.dsw-tdk).
-* ``get`` = download a template project with specified template ID from |project_name|
-* ``list`` = list all templates (latest versions) from configured |project_name|
+* ``get`` = download a template project with specified template ID from DSW
+* ``list`` = list all templates (latest versions) from configured DSW
 * ``new`` = create a new template project, it launches a simple interactive wizard for template metadata
-* ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to |project_name| via its web interface)
-* ``put`` = upload the local template project to |project_name| (once or continually on-change when ``--watch`` flag is used)
+* ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to DSW via its web interface)
+* ``put`` = upload the local template project to DSW (once or continually on-change when ``--watch`` flag is used)
 * ``unpackage`` = extract a ZIP distribution package into the local template project directory
 * ``verify`` = check the metadata of the local template project
 
@@ -72,7 +72,7 @@ Environment variables and .env file
 
 You can use environment variables to authenticate:
 
-* ``DSW_API_URL`` = URL of |project_name| API with which you want to communicate. Hover mouse over your profile name to find the :ref:`About<about>` section where URL is specified.
+* ``DSW_API_URL`` = URL of DSW API with which you want to communicate. Hover mouse over your profile name to find the :ref:`About<about>` section where URL is specified.
 * ``DSW_API_KEY`` = your :ref:`API Key<api-keys>`. Hover mouse over your profile name, click on :guilabel:`User Settings` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
 
 To make this even easier, you can store those in ``.env`` file in the project root and it will be loaded automatically. Or you can specify the path to a ``.env`` file:

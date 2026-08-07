@@ -3,7 +3,7 @@
 Settings
 ********
 
-This section covers different settings available to admin users. The settings are categorized as listed below.
+This section covers different settings available to users with permission to manage settings. The settings are categorized as listed below.
 
 .. NOTE::
     

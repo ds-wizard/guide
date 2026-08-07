@@ -3,7 +3,7 @@
 Upgrade Guidelines
 ******************
 
-Upgrading |project_name|
+Upgrading DSW
 ========================
 
 .. Warning::
@@ -45,10 +45,15 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
-4.31.X to 4.32.X
+4.32.X to 4.33.X
 ----------------
 
 *(nothing)*
+
+4.31.X to 4.32.X
+----------------
+
+- Review migrated roles after the upgrade. Check which permissions each role has, confirm the default role for new users, and verify any organization-specific access expectations such as project support, user management, analytics, or content management.
 
 4.30.X to 4.31.X
 ----------------
@@ -435,7 +440,7 @@ Before updating check following, otherwise the migration will fail:
 2.5.X to 2.6.X
 --------------
 
-- The document templates including the default ``questionnaire-report`` must be updated from `https://registry.ds-wizard.org/templates <Registry>`_.
+- The document templates including the default ``questionnaire-report`` must be updated from the `DSW Registry <https://registry.ds-wizard.org/templates>`_.
 - Upgraded template metamodel version 2 requires manual migration of custom templates:
 
   - `questionnaireRepliesMap` (map path:Reply) is no longer present in the context
@@ -465,8 +470,8 @@ Before updating check following, otherwise the migration will fail:
 2.4.X to 2.5.X
 --------------
 
-- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via |project_name| API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD `` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
-- Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as |project_name| schedules synchronization internally.
+- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD `` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
+- Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as DSW schedules synchronization internally.
 
 2.3.X to 2.4.X
 --------------
@@ -482,7 +487,7 @@ Before updating check following, otherwise the migration will fail:
 2.1.X to 2.2.X
 --------------
 
-- Configuration of client and several features is now moved from ``application.yml`` file to in-app settings. therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start |project_name|, migrate options from ``application.yml`` in-app settings and then optionally clean up ``application.yml`` file.
+- Configuration of client and several features is now moved from ``application.yml`` file to in-app settings. therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start DSW, migrate options from ``application.yml`` in-app settings and then optionally clean up ``application.yml`` file.
 - User fields ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
 - Recommended version of MongoDB is updated to 4.2.3.
 
@@ -495,7 +500,7 @@ Before updating check following, otherwise the migration will fail:
 ---------------
 
 - Changing the major version actually does not mean any problem in migration, it has been made due to significant internal changes (restructuring, new repositories, etc.)
-- If we are using Docker for running |project_name|, we need to change it according to new documentation of :ref:`installation-docker` and :doc:`./configuration/configuration`.
+- If we are using Docker for running DSW, we need to change it according to new documentation of :ref:`installation-docker` and :doc:`./configuration/configuration`.
 - Crontab image is no longer needed.
 - A DMP template configuration file must contain list of ``allowedKMs`` (see the default *root* template).
 

@@ -3,14 +3,14 @@
 User Detail
 ***********
 
-As admins, we can edit existing users manually on the detail (selected user from  the :ref:`users list<users-list>`). It is possible to change all properties of the user, including possibility to change whether the user account is active or inactive. 
+Users with permission to manage users can edit existing users manually on the detail (selected user from the :ref:`users list<users-list>`). It is possible to change all properties of the user, including whether the user account is active or inactive.
 
 .. figure:: detail/profile.png
     
     Detail of a user profile.
 
 
-The password can be also changed (after selecting :guilabel:`Password` from the left navigation of user settings).
+The password can also be changed (after selecting :guilabel:`Password` from the left navigation of user settings).
 
 .. figure:: detail/password.png
     
@@ -21,64 +21,8 @@ The password can be also changed (after selecting :guilabel:`Password` from the 
 User Roles
 ==========
 
-There are three user roles available: researchers, data steward, and admin. Permissions are associated with the roles, basically they affect what the users can do in a |project_name| instance:
+Each user has one global :ref:`role<roles>`. The role determines which parts of the DSW instance the user can access and what actions they can perform.
 
-.. raw:: html
+Default roles cover the common researcher, data steward, and admin workflows. Users with permission to manage settings can also create custom roles when they need a different combination of permissions.
 
-    <div class="table-wrapper docutils container">
-        <table class="docutils align-default">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Researcher</th>
-                    <th>Data Steward</th>
-                    <th>Admin</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Projects</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔ (all)</td>
-                </tr>
-                <tr>
-                    <td>Knowledge Models</td>
-                    <td class="text-center">✔ (read-only)</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Knowledge Models Editors</td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Document Templates</td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Settings</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Locales</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Users</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
+Changing the role of a user updates the permissions assigned to that user.

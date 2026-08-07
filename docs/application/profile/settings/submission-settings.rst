@@ -9,5 +9,4 @@ If there is no submission service that requires additional properties, there is 
 
 .. NOTE::
 
-    The admin should notify users about the required properties for the submission service.
-
+    The person responsible for submission service settings should notify users about the required properties for the submission service.

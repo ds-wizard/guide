@@ -3,11 +3,11 @@
 Project List
 ************
 
-In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned to with any role or that are visible by all other logged-in users in the :ref:`project sharing settings<sharing>`. The projects are filtered to those we are explicitly assigned to by default.
+In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned a project sharing role, projects that are visible to all logged-in users in the :ref:`project sharing settings<sharing>`, or projects available through our global :ref:`role<roles>` permissions. The projects are filtered to those we are explicitly assigned to by default.
 
-We can see projects name, label :guilabel:`Template` if the project is a template, and icon indicating sharing settings:
+We can see project names, a :guilabel:`Template` label if the project is a template, and an icon indicating sharing settings:
 
-- **Lock icon** - the project can be only accessed by you
+- **Lock icon** - the project can only be accessed by you
 - **People icon** - the project is shared with other users, hovering on the icon provides additional information
 - **Globe icon** - anyone with a link can access the project
 
@@ -19,18 +19,18 @@ We can see projects name, label :guilabel:`Template` if the project is a templat
 We can search for specific projects using the search field or filter them using additional filters:
 
 - **Project Template** - if we want to see only :ref:`project templates<project-templates>` or regular projects
-- **Project Tags** - show only the projects that has specific tags assigned
+- **Project Tags** - show only the projects that have specific tags assigned
 - **Knowledge Models** - show only the projects created from a specific knowledge model
 - **Users** - filter only the projects with specific users assigned to them
 
 .. NOTE::
 
-    Note that some of the filters can be disabled based on the |project_name| instance settings or user role.
+    Note that some of the filters can be disabled based on the DSW instance settings or user permissions.
 
 
 We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Create` button.
 
-By clicking the triple dots on each of the item in the list we can access some actions:
+By clicking the triple dots on each item in the list, we can access some actions:
 
 - **Open project** - will simply open the project
 - **Create project from this template** - will create a new project from the selected project template (this is only available if the project is also a project template)

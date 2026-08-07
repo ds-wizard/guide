@@ -1,40 +1,40 @@
 Dashboard & Login Screen
 ************************
 
-The dashboard settings allows us to adjust what users will see after they log in, i.e. on the application initial page called the dashboard. 
+Dashboard settings allow us to adjust what users will see after they log in, i.e. on the application initial page called the dashboard.
 
 Dashboard Style
 ===============
 
-We can select the **Dashboard Style** whether the user should see a standard **welcome** screen which just greets the user in the application, or a **role-based** dashboard which contains widgets based on current user's role (see :ref:`user-roles`):
+We can select the **Dashboard Style** to decide whether the user should see a standard **welcome** screen, or a **role-based** dashboard with widgets based on the current user's :ref:`role<roles>` and permissions:
 
-* **Researcher**
+* **Project work**
 
   * **Recent Projects Widget** contains a list of recent projects of the user for a quick navigation.
 
   * **Create Project Widget** lets the user quickly start a new project.
 
-* **Data Steward**
+* **Content management**
 
-  * **Create KM / Project Template Widgets** let the user to quickly start a new knowledge model editor or project template.
+  * **Create KM / Project Template Widgets** let the user quickly start a new knowledge model editor or project template.
 
-  * **Outdated KM / Document Templates Widgets** allow to quickly see outdated packages and document templates in case the DSW Registry connection is configured.
+  * **Outdated KM / Document Templates Widgets** allow the user to quickly see outdated packages and document templates when the DSW Registry connection is configured.
 
-  * **Import KM / Document Template Widgets** allow to proceed easily to import of a knowledge model or a document template in case the DSW Registry connection is configured.
+  * **Import KM / Document Template Widgets** make it easier to import a knowledge model or document template when the DSW Registry connection is configured.
 
-* **Administrator**
+* **Instance administration**
 
-  * **Outdated KM / Document Templates Widgets** allow to quickly see outdated packages and document templates in case the DSW Registry connection is configured.
+  * **Outdated KM / Document Templates Widgets** allow the user to quickly see outdated packages and document templates when the DSW Registry connection is configured.
 
   * **Usage Widget** summarizes the usage just as is also possible to see in the :doc:`../info/usage`.
 
   * **Configure Organization Widget** quickly navigates to :doc:`../system/organization` if it is not yet done.
 
-  * **Configure Look and Feel Widget** quickly navigates to :doc:`../user-interface/look-and-feel` to adjust style of the |project_name| instance.
+  * **Configure Look and Feel Widget** quickly navigates to :doc:`../user-interface/look-and-feel` to adjust style of the DSW instance.
 
-  * **Connect DSW Registry Widget** quickly navigates to :doc:`../content/dsw-registry` to configure the connection (if not yet been done).
+  * **Connect DSW Registry Widget** quickly navigates to :doc:`../content/dsw-registry` to configure the connection if it has not been configured yet.
 
-  * **Add OpenID Widget** quickly navigates to :doc:`../system/authentication` to configure the identity provider services (if not yet been done).
+  * **Add OpenID Widget** quickly navigates to :doc:`../system/authentication` to configure identity provider services if they have not been configured yet.
 
 
 .. _login-info:
@@ -42,11 +42,11 @@ We can select the **Dashboard Style** whether the user should see a standard **w
 Login Info
 ==========
 
-It is possible to write a message that users will see before logging in the |project_name| instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our |project_name| instance, how they should log in (e.g. if we have more authentication services configured), or if there is any news regarding our |project_name| instance.
+It is possible to write a message that users will see before logging in the DSW instance, using HTML or Markdown. The Login info is placed in the center of the login screen. We can use it to explain users in what cases they can/should use our DSW instance, how they should log in (e.g. if we have more authentication services configured), or if there is any news regarding our DSW instance.
 
 .. WARNING::
 
-  Defining HTML classes in the login info can overwrite |project_name| application classes. It is recommended to use prefixes for classes, if they are used, to avoid conflicts.
+  Defining HTML classes in the login info can overwrite DSW application classes. It is recommended to use prefixes for classes, if they are used, to avoid conflicts.
 
   
 .. _sidebar-login-info:

@@ -74,7 +74,7 @@ Notes:
 
 -  ``active_sheet`` is an index of sheet to be active when document is opened.
 -  ``size`` sets the default `window size <https://xlsxwriter.readthedocs.io/workbook.html#set_size>`__.
--  ``tab_ratio`` sets `ratio <https://xlsxwriter.readthedocs.io/workbook.html#tab_ratio>`__ between the worksheet tabs and the horizontal slider.
+-  ``tab_ratio`` sets `ratio <https://xlsxwriter.readthedocs.io/workbook.html#workbook-tab-ratio>`__ between the worksheet tabs and the horizontal slider.
 
 Definitions
 -----------
@@ -170,17 +170,17 @@ The possible ``options`` are:
    `protect <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-protect>`__,
    `zoom <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-set-zoom>`__,
    `tab_color <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-set-tab-color>`__,
-   `page_view <https://xlsxwriter.readthedocs.io/page_setup.html#set-page-view>`__,
+   `page_view <https://xlsxwriter.readthedocs.io/page_setup.html#set_page_view>`__,
    `select <https://xlsxwriter.readthedocs.io/worksheet.html#select>`__,
    `hide <https://xlsxwriter.readthedocs.io/worksheet.html#hide>`__
 -  Print: ``orientation``
-   (`landspace <https://xlsxwriter.readthedocs.io/page_setup.html#set-landscape>`__
+   (`landscape <https://xlsxwriter.readthedocs.io/page_setup.html#set_landscape>`__
    or
-   `portrait <https://xlsxwriter.readthedocs.io/page_setup.html#set-portrait>`__),
-   `paper <https://xlsxwriter.readthedocs.io/page-setup.html#set-paper>`__,
-   `margins <https://xlsxwriter.readthedocs.io/page_setup.html#set-margins>`__,
-   `header <https://xlsxwriter.readthedocs.io/page_setup.html#set-header>`__,
-   `footer <https://xlsxwriter.readthedocs.io/page_setup.html#set-footer>`__,
+   `portrait <https://xlsxwriter.readthedocs.io/page_setup.html#set_portrait>`__),
+   `paper <https://xlsxwriter.readthedocs.io/page_setup.html#set_paper>`__,
+   `margins <https://xlsxwriter.readthedocs.io/page_setup.html#set_margins>`__,
+   `header <https://xlsxwriter.readthedocs.io/page_setup.html#set_header>`__,
+   `footer <https://xlsxwriter.readthedocs.io/page_setup.html#set_footer>`__,
    `center_horizontally <https://xlsxwriter.readthedocs.io/page_setup.html#worksheet-center-horizontally>`__,
    `center_vertically <https://xlsxwriter.readthedocs.io/page_setup.html#worksheet-center-vertically>`__
 
@@ -207,17 +207,17 @@ The possible ``options`` are:
    `protect <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-protect>`__,
    `zoom <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-set-zoom>`__,
    `tab_color <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-set-tab-color>`__,
-   `page_view <https://xlsxwriter.readthedocs.io/page_setup.html#set-page-view>`__,
+   `page_view <https://xlsxwriter.readthedocs.io/page_setup.html#set_page_view>`__,
    `select <https://xlsxwriter.readthedocs.io/worksheet.html#select>`__,
    `hide <https://xlsxwriter.readthedocs.io/worksheet.html#hide>`__
 -  Print (common): ``orientation``
-   (`landspace <https://xlsxwriter.readthedocs.io/page_setup.html#set-landscape>`__
+   (`landscape <https://xlsxwriter.readthedocs.io/page_setup.html#set_landscape>`__
    or
-   `portrait <https://xlsxwriter.readthedocs.io/page_setup.html#set-portrait>`__),
-   `paper <https://xlsxwriter.readthedocs.io/page-setup.html#set-paper>`__,
-   `margins <https://xlsxwriter.readthedocs.io/page_setup.html#set-margins>`__,
-   `header <https://xlsxwriter.readthedocs.io/page_setup.html#set-header>`__,
-   `footer <https://xlsxwriter.readthedocs.io/page_setup.html#set-footer>`__,
+   `portrait <https://xlsxwriter.readthedocs.io/page_setup.html#set_portrait>`__),
+   `paper <https://xlsxwriter.readthedocs.io/page_setup.html#set_paper>`__,
+   `margins <https://xlsxwriter.readthedocs.io/page_setup.html#set_margins>`__,
+   `header <https://xlsxwriter.readthedocs.io/page_setup.html#set_header>`__,
+   `footer <https://xlsxwriter.readthedocs.io/page_setup.html#set_footer>`__,
    `center_horizontally <https://xlsxwriter.readthedocs.io/page_setup.html#worksheet-center-horizontally>`__,
    `center_vertically <https://xlsxwriter.readthedocs.io/page_setup.html#worksheet-center-vertically>`__
 -  Basic:
@@ -433,4 +433,3 @@ Example
 
 .. |badge-status| image:: https://img.shields.io/badge/status-stable-green
 .. |badge-metamodel| image:: https://img.shields.io/badge/metamodel%20version-%E2%89%A5%2011-blue
-

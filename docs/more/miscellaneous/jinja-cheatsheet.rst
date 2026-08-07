@@ -3,7 +3,7 @@
 Jinja Cheatsheet
 ****************
 
-We can use Jinja templating language in :guilabel:`Response Item Template` and in :guilabel:`Response Item Template for Selection` (under :guilabel:`Advanced Response Configuration`) fields in |project_name|. Here you can get a basic overview of what can be achieved with Jinja.
+We can use Jinja templating language in :guilabel:`Response Item Template` and in :guilabel:`Response Item Template for Selection` (under :guilabel:`Advanced Response Configuration`) fields in DSW. Here you can get a basic overview of what can be achieved with Jinja.
 
 For more information about Jinja templating language, visit the `official Jinja documentation <https://jinja.palletsprojects.com/en/stable/templates/>`_.
 

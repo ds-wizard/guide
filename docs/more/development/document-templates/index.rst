@@ -3,7 +3,7 @@
 Document Template Development
 *****************************
 
-Document templates allows to specify how to export a questionnaire in form of a textual file. It is a highly flexible element of the tool; however, the development requires basic programming skills with Jinja2 templating language. We can develop the document templates either on our local computer (traditional development with text editor or IDE) with use of the :doc:`./tdk` (TDK) or directly in |project_name| using :doc:`../../../application/document-templates/editors/index`.
+Document templates allow us to specify how to export a questionnaire in the form of a textual file. It is a highly flexible element of the tool; however, the development requires basic programming skills with Jinja2 templating language. We can develop the document templates either on our local computer (traditional development with text editor or IDE) with use of the :doc:`./tdk` (TDK) or directly in DSW using :doc:`../../../application/document-templates/editors/index`.
 
 Every document template is based on the :doc:`template specification<specification>` and typically uses the :doc:`document context<document-context>` to query information from a project (questionnaire replies, knowledge model, metadata, etc.) to create a document.
 
