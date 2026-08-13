@@ -48,7 +48,10 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.32.X to 4.33.X
 ----------------
 
-*(nothing)*
+- If ``mailer`` or ``document-worker`` is configured to use S3, review any S3-related environment configuration. These
+  components use ``botocore`` / AWS SDK configuration for S3 access, not MinIO client configuration. For example, custom
+  certificate bundles should be configured using AWS SDK environment variables such as ``AWS_CA_BUNDLE``. See the
+  `Boto3 environment variable configuration documentation <https://docs.aws.amazon.com/boto3/latest/guide/configuration.html#using-environment-variables>`__.
 
 4.31.X to 4.32.X
 ----------------
