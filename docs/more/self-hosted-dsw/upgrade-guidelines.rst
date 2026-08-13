@@ -48,10 +48,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.32.X to 4.33.X
 ----------------
 
-- If ``mailer`` or ``document-worker`` is configured to use S3, review any S3-related environment configuration. These
-  components use ``botocore`` / AWS SDK configuration for S3 access, not MinIO client configuration. For example, custom
-  certificate bundles should be configured using AWS SDK environment variables such as ``AWS_CA_BUNDLE``. See the
-  `Boto3 environment variable configuration documentation <https://docs.aws.amazon.com/boto3/latest/guide/configuration.html#using-environment-variables>`__.
+- Tools interacting with S3 (``mailer`` and ``document-worker``) now use ``botocore`` library instead of ``MinIO``. Settings, such as custom certificates, need to be configure according to its documentation: https://docs.aws.amazon.com/boto3/latest/guide/configuration.html#using-environment-variables.
 
 4.31.X to 4.32.X
 ----------------
@@ -78,13 +75,13 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 
 - **Project Importers** were removed. They can be replaced by :ref:`configuration-plugins`.
 - API endpoints in sections related to **Document Templates** and **Knowledge Models** were updated. The primary identifier was changed from ``ID`` to ``UUID``. Please check the API documentation for the new endpoints.
-- Due to Document Template changes, it is necessary to migrate Document Templates in S3. You can use this script: https://github.com/ds-wizard/dsw-templates-migration-script
+- Due to Document Template changes, it is necessary to migrate Document Templates in S3. You can use this script: https://github.com/ds-wizard/dsw-templates-migration-script.
 
 4.26.X to 4.27.X
 ----------------
 
 - API endpoints in the sections related to **Locales** were updated. The primary identifier was changed from ``ID`` to ``UUID``. Please check the API documentation for the new endpoints.
-- Due to Locale changes, it is necessary to migrate Locales in S3. You can use this script: https://github.com/ds-wizard/dsw-locale-migration-script
+- Due to Locale changes, it is necessary to migrate Locales in S3. You can use this script: https://github.com/ds-wizard/dsw-locale-migration-script.
 
 4.25.X to 4.26.X
 ----------------
