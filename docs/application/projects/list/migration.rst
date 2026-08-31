@@ -5,49 +5,25 @@ Project Migration
 
 Every project is based on a specific :ref:`knowledge model<knowledge-model>`, its version, and selected tags. Sometimes, we might want to change the knowledge model to a different version (for example, when a new version is released), change the knowledge model (for example, when a new customization is created), or just change the tag selection. Project migration is a process where we can do this.
 
-The following video explains all aspects of Project Migration.
+Migrating a Project
+===================
 
-.. youtube:: E5bXIWvhNKw
-    :width: 100%
-    :align: center
-
-
-Creating a Project Migration
-============================
-
-We can start a project migration either from the :ref:`project list<project-list>`, or from the :ref:`project settings<project-settings>`. Sometimes, when there is a newer version of the knowledge model available, we can see a :guilabel:`update available` badge next to the project name. We can click on the badge to start the migration as well.
+We can start a project migration either from the :ref:`project list<project-list>`, or from the :ref:`project settings<project-settings>`. Sometimes, when there is a newer version of the knowledge model available, we can see a :guilabel:`Outdated KM` badge next to the project name. We can click on the badge to start the migration as well.
 
 .. figure:: migration/create.png
     
-    Choosing a new knowledge model for the project when creating a project migration.
+    Choosing a new knowledge model for the project.
 
 
 
-We can see the **original knowledge model**, its **version**, and selected **question tags** on the left side. On the right side we can choose new values for all of these. After we are satisfied with our selection we can click on :guilabel:`Create` button.
+We can see the **original knowledge model**, its **version**, and selected **question tags** on the left side. On the right side we can choose new values for all of these. We can use :guilabel:`Compare` to compare the original and selected knowledge model before applying the change.
 
-Note that the original project will remain unchanged until the migration is finished. So we can cancel it anytime before it is finished without affecting the project.
+After we are satisfied with our selection, we can click the :guilabel:`Migrate` button. This updates the project to use the selected knowledge model, version, and question tags.
 
-Project Migration
-=================
+.. Warning::
 
-The next screen is the project migration itself. We can go through all the changes between the original and the new knowledge model that affects our answers. During this process, we can also add :ref:`todos<todos>` if we want to come back to a specific question later, after the migration. 
+    Replies associated with questions that are not included in the selected knowledge model may not be carried over.
 
-.. figure:: migration/migration.png
-    
-    Reviewing changes during the project migration.
+If the current default document template or document format is not compatible with the selected knowledge model, it may need to be selected again in :ref:`project settings<project-settings>` after the migration.
 
-
-It is possible that there are no changes to review. This can happen when we don't have all the answers in the questionnaire yet and those we have are not affected by the changes, i.e., all of the questions that we answered are in the original and in the new knowledge model.
-
-We can leave the migration at any point now and come back to it later. We will see the project twice in the :ref:`project list<project-list>`, one of them tagged with :guilabel:`migrating` badge. If we open the migrating one (either by clicking the project name or the :guilabel:`migrating` badge), we can come back to the project migration. If we open the other one, we can access the original project, however, only in the read-only mode until the migration is finished or cancelled.
-
-
-Cancelling a Project Migration
-==============================
-
-At any point before we finalize the migration, we can decide that we actually don't want to do the migration. We can simply navigate to the :ref:`project list<project-list>` and choose the :guilabel:`Cancel migration` action on the project tagged with :guilabel:`migrating` badge. This will cancel the migration and the original project will remain unaffected.
-
-Finishing a Project Migration
-=============================
-
-After we resolve all the changes (or if there are no changes to review), we can click on :guilabel:`Finalize migration`. This will complete the project migration applying all the knowledge model changes, and unlocking the project from the read-only mode.
+The migration is applied directly to the project. There is no separate migration project to resume, cancel, or finalize later.

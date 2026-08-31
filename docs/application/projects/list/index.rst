@@ -5,11 +5,13 @@ Project List
 
 In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned a project sharing role, projects that are visible to all logged-in users in the :ref:`project sharing settings<sharing>`, or projects available through our global :ref:`role<roles>` permissions. The projects are filtered to those we are explicitly assigned to by default.
 
-We can see project names, a :guilabel:`Template` label if the project is a template, and an icon indicating sharing settings:
+We can see project names, a :guilabel:`Template` label if the project is a template, update badges when a newer knowledge model or document template is available, and an icon indicating sharing settings:
 
 - **Lock icon** - the project can only be accessed by you
 - **People icon** - the project is shared with other users, hovering on the icon provides additional information
 - **Globe icon** - anyone with a link can access the project
+- :guilabel:`Outdated KM` - a newer version of the project's knowledge model is available
+- :guilabel:`Outdated DT` - a newer version of the project's default document template is available
 
 .. figure:: index/project-list.png
     
@@ -35,13 +37,8 @@ By clicking the triple dots on each item in the list, we can access some actions
 - **Open project** - will simply open the project
 - **Create project from this template** - will create a new project from the selected project template (this is only available if the project is also a project template)
 - **Clone** - will create the exact copy of the project
-- **Create migration** - will start a :ref:`project migration<project-migration>`
+- **Migrate** - will start a :ref:`project migration<project-migration>`
 - **Delete** - will delete the project (this action cannot be undone)
-
-If there is an ongoing :ref:`project migration<project-migration>`, there are different actions:
-
-- **Continue migration** - to come back to the ongoing project migration
-- **Cancel migration** - to cancel the ongoing project migration
 
 
 .. raw:: html
