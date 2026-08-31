@@ -3,7 +3,7 @@
 Knowledge Model Detail
 **********************
 
-We can visit a knowledge model detail by clicking on a desired KM in the :doc:`./index` (or selecting :guilabel:`View detail` from the right item menu). The detail shows basic information about the knowledge model such as its name, ID, version, license, metamodel version, or (if applicable) what is the parent knowledge model).
+We can visit a knowledge model detail by clicking on a desired KM in the :doc:`./index` (or selecting :guilabel:`View detail` from the right item menu). The detail shows basic information about the knowledge model such as its name, ID, version, license, metamodel version, creation date, or (if applicable) what is the parent knowledge model).
 
 The main part of the detail is the README of the KM that should contain basic information and changelog. In the right panel under the basic information, we can navigate to other versions of the KM or navigate to the `DSW Registry <https://registry.ds-wizard.org>`__ (if the KM is present there).
 
