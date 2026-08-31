@@ -45,6 +45,11 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.33.X to 4.34.X
+----------------
+
+- Finish or cancel unfinished project migrations before upgrading. The upgrade removes unfinished project migration data created by older versions.
+
 4.32.X to 4.33.X
 ----------------
 
