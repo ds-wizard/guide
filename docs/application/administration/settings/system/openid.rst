@@ -7,6 +7,12 @@ Using these settings, we can add `OpenID <https://openid.net/>`__ configuration 
 
 DSW supports Microsoft Azure, ORCID, and other OpenID providers. The following sections describe the setup for these options.
 
+.. figure:: openid/form.png
+	:width: 800
+
+	Button for resetting tours.
+
+
 .. NOTE::
 
     After setting a new OpenID service, we should directly test it and verify that the configuration works well. For that, we can simply open our DSW in a new anonymous window of the web browser.
