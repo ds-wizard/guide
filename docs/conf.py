@@ -22,7 +22,7 @@ copyright = '2018 - 2026, DSW Team'
 author = 'DSW Team'
 
 # The full version, including alpha/beta/rc tags
-version = release = '4.33'
+version = release = '4.34'
 
 # -- General configuration ---------------------------------------------------
 

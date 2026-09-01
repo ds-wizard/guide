@@ -53,12 +53,6 @@ We can turn **Summary Report** on or off. It is a feature that allows users to g
 The **Summary Report** shows how many questions are answered and unanswered in each chapter. It can either count all questions in the knowledge model or only the questions required for the project’s current phase. Questions from later phases are ignored in the phase-based view. If a parent question is unanswered, its child questions are not counted separately. Chapter results are combined into the total **Summary Report**.
 
 
-Feedback
-========
-
-If enabled, users can submit feedback for questions to a configured GitHub repository. The configuration includes the **GitHub Repository Owner**, **GitHub Repository Name**, and **Access Token**.
-
-
 Project Tagging
 ===============
 

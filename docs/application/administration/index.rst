@@ -16,6 +16,5 @@ Administration section serves as the name suggests to users with permission to m
     :maxdepth: 2
 
     settings/index
-    roles/index
     users/index
     locales/index
