@@ -27,9 +27,10 @@ Custom roles are useful for cases such as:
 - a user-management role that can manage users without managing settings
 - a content-management role that can work with knowledge models or document templates
 
-.. TODO::
+.. FIGURE:: roles/list.png
+    
+  List of system generated roles. New roles can be created.
 
-    Add a screenshot of the roles list showing default roles, custom roles, and the number of users assigned to each role.
 
 Role Permissions
 ================
@@ -78,9 +79,10 @@ The role create/edit form includes these permissions:
      - View and manage application settings.
      - None.
 
-.. TODO::
+.. FIGURE:: roles/detail.png
+    
+  Detail of a role with its permissions.
 
-    Add a screenshot of the role create/edit form with permission groups and toggles visible.
 
 Global Roles and Project Sharing
 ================================
