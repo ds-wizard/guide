@@ -45,6 +45,19 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+4.34.X to 4.35.X
+----------------
+
+- Stop all running workers before the upgrade. Make sure no ``document-worker`` or ``mailer`` process/container keeps running while the database upgrade is performed. If a worker does not stop gracefully, kill it before running the script.
+- Run the 4.35 database upgrade script against the Wizard Server database before starting Wizard Server 4.35:
+
+  .. code-block:: shell
+
+     $ DATABASE_URL=postgresql://user:pass@host:5432/wizard ./vdi-upgrade-wizard-4.35.sh
+
+  The script checks that the database looks like a 4.34 Wizard Server database, renames Wizard-owned database objects to use the new ``w_`` prefix, recreates the database functions and triggers needed by 4.35, and replaces the old migration history with the 4.35 init migration record. It runs the database changes in a transaction, but the upgrade should still be done only after taking a database backup.
+- Start Wizard Server 4.35 first and start the workers only after the server starts successfully.
+
 4.33.X to 4.34.X
 ----------------
 
