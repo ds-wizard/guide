@@ -66,7 +66,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 4.32.X to 4.33.X
 ----------------
 
-- Tools interacting with S3 (``mailer`` and ``document-worker``) now use ``botocore`` library instead of ``MinIO``. Settings, such as custom certificates, need to be configure according to its documentation: https://docs.aws.amazon.com/boto3/latest/guide/configuration.html#using-environment-variables.
+- Tools interacting with S3 (``mailer`` and ``document-worker``) now use the ``botocore`` library. Settings, such as custom certificates, need to be configured according to its documentation: https://docs.aws.amazon.com/boto3/latest/guide/configuration.html#using-environment-variables.
 
 4.31.X to 4.32.X
 ----------------
