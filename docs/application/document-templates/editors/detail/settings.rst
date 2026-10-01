@@ -12,6 +12,7 @@ This part allows us to change the metadata about the document template:
 - **Description** should be short and descriptive (users will see it while selecting a document template).
 - **Template ID** is the document template ID (as explained for :doc:`../create`).
 - **Version** of the document template.
+- **Language** is the source language of the template's translatable text. Additional languages can be added as :ref:`document template locales<document-template-locales>` after publishing.
 - **License** should contain a name of used license (e.g. *Apache-2.0* or *unlicensed*).
 - **Readme** can contain a longer description, acknowledgements, notes how to use the template, links to resources, and a changelog.
 
