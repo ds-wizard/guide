@@ -26,6 +26,8 @@ We can set a **default document template** and a **default document format**. Th
 
 If a newer version of the selected document template is available, DSW shows a warning in this section. If the selected template or format is no longer compatible with the project's knowledge model, choose a compatible template and format before saving the settings.
 
+When the selected template has :ref:`locales<document-template-locales>`, we can choose a **default document language**. The template's source language is selected by default; other available languages come from imported document template locales. We can still choose a language when creating an individual document.
+
 
 Project Template
 ================
