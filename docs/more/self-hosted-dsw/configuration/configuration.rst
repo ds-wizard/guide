@@ -73,13 +73,15 @@ Information for connection to PostgreSQL database.
 S3
 --
 
-Information for connection to S3 storage (used for document and document template assets).
+Information for connection to S3-compatible object storage, such as `Garage <https://garagehq.deuxfleurs.fr/>`__ (used for documents, document template assets, files, and locales).
 
 .. confval:: s3.url
 
    :type: URI
 
-    Endpoint of S3 storage, e.g., ``http://minio:9000``
+    Endpoint of S3-compatible storage, e.g., ``http://host.docker.internal:9000`` in the local Garage deployment example.
+
+    The value must be reachable both by DSW services and by users' browsers. DSW uses this URL when creating links for document downloads, document previews, template exports, locale exports, and other stored files. For production, use a public HTTPS URL through your reverse proxy or equivalent infrastructure. For local Docker Compose testing, the Garage example publishes the S3 API on the host and uses ``host.docker.internal`` so containers and the browser can reach the same endpoint.
 
 .. confval:: s3.username
     
@@ -101,17 +103,21 @@ Information for connection to S3 storage (used for document and document templat
 
     Bucket name used by DSW
 
+.. confval:: s3.region
+
+   :type: String
+
+    S3 region used by the storage client. For the Garage deployment example, use ``garage``. For AWS S3, use the AWS region of the bucket.
+
 
 .. WARNING::
 
-    S3 service must be publicly accessible (so users can download documents and export templates or locales). Also, bucket must be created otherwise documents cannot be created and document templates / locales imported.
+    The value of ``s3.url`` must be accessible by users' browsers. If it points only to an internal Docker hostname, users may see timeouts, broken document previews, or failed downloads. The configured bucket must also exist; otherwise documents cannot be created and document templates or locales cannot be imported.
 
 
 .. NOTE::
 
-    If you have a problem with downloading documents while running the bucket locally, try to add the following line to the /etc/hosts file:
-    
-    ``127.0.0.1   host.docker.internal``
+    The `DSW Deployment Example <https://github.com/ds-wizard/dsw-deployment-example>`__ uses Garage and includes ``create-bucket.sh`` for the one-time local bootstrap. It assigns the single-node Garage layout, creates the ``engine-wizard`` bucket, imports the configured S3 key, and grants bucket permissions.
 
 
 Mail

@@ -29,10 +29,12 @@ There is some issue with the PostgreSQL database; what should I do?
 
 Please use the `PostgreSQL documentation <https://www.postgresql.org/docs/>`_ to check the cause, various things may have happened... especially if you tried to upgrade the database version.
 
-There is some issue with the MinIO S3 storage; what should I do?
-----------------------------------------------------------------
+There is some issue with S3-compatible storage; what should I do?
+-----------------------------------------------------------------
 
-Please use the `MinIO documentation <https://docs.min.io/aistor/installation/container/>`_ to check the cause, various things may have happened... especially if you tried to upgrade the storage version.
+If you use the DSW Deployment Example, check Garage with ``docker compose logs garage --tail=200`` and verify that ``create-bucket.sh`` was run successfully. The script creates the bucket, imports the configured key, and grants the required permissions. Also check that the configured :ref:`config-server` S3 URL is reachable by users' browsers, not only from inside the Docker network.
+
+For Garage-specific issues, use the `Garage documentation <https://garagehq.deuxfleurs.fr/documentation/>`_. If you use another S3-compatible service, use that service's documentation and verify the endpoint, region, bucket, access key, secret key, and bucket permissions.
 
 I upgraded DSW and now it does not work properly, what should I do?
 ------------------------------------------------------------------------------

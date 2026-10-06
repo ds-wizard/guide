@@ -19,7 +19,7 @@ While we can quickly see how the current state of the questionnaire looks like i
 New document
 ============
 
-We can click on :guilabel:`New document` when we want to create a new document. We need to give a name to our new document (project name is prefilled) and choose the **document template** and **format**. If there is a :ref:`default document template and format<default-document-template>` set for the project, they are prefilled in this form. However, we can change them to whatever we want before creating the document. Once we hit :guilabel:`Create`, we are taken back to the document list and we'll see the new document there (it might take while before it is generated though).
+We can click on :guilabel:`New document` when we want to create a new document. We need to give a name to our new document (project name is prefilled) and choose the **document template** and **format**. If there is a :ref:`default document template and format<default-document-template>` set for the project, they are prefilled in this form. However, we can change them before creating the document. When the selected template offers :ref:`additional locales<document-template-locales>`, we can also choose the document language; the project's default document language is prefilled when available. Once we hit :guilabel:`Create`, we are taken back to the document list and we'll see the new document there (it might take while before it is generated though).
 
 
 .. figure:: documents/new.png

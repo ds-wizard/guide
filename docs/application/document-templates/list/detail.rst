@@ -9,6 +9,15 @@ In the top bar, we can :guilabel:`Export` the template as a ZIP package or :guil
 
 If we are not seeing the latest version of the template, a warning message is shown in the top. Similarly, we will see a notification that update is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org>`__ (if configured).
 
+.. _document-template-locales:
+
+Document Template Locales
+=========================
+
+A document template has a source language and can have locales for additional languages. The :guilabel:`Locales` tab lists each imported locale by name and language code. When the template is prepared for translations, use :guilabel:`Export .pot file` from its actions menu to obtain the source strings, translate them into a PO file, and use :guilabel:`Import` on the :guilabel:`Locales` tab to provide the locale name and PO file. Available actions also allow downloading or deleting an imported locale, subject to permissions.
+
+The template's source language is shown in its detail panel. A locale becomes available when selecting a :ref:`default document language<default-document-template>` for a project or creating a document with that template.
+
 
 .. figure:: detail/detail.png
     
