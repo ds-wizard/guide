@@ -54,12 +54,12 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 
 .. Warning::
 
-   This upgrade is **not** automatic. Wizard Server 4.35 (and Registry Server 4.35) will not start on a 4.34 database until you run the upgrade script described below. If you just change the version and restart, the server stops with ``the init migration builds the schema from nothing and this database is not empty`` and leaves your database untouched.
+   This upgrade is **not** automatic. Wizard Server 4.35 will not start on a 4.34 database until you run the upgrade script described below. If you just change the version and restart, the server stops with ``the init migration builds the schema from nothing and this database is not empty`` and leaves your database untouched.
 
 What you need:
 
 - Your installation is on **4.34.X** and has been started at least once on it. Coming from an older version? Upgrade to 4.34 first, start it, then continue here.
-- Download :download:`upgrade-wizard-server-4.35.sh <migration-scripts/upgrade-wizard-server-4.35.sh>` for Wizard Server or :download:`upgrade-registry-server-4.35.sh <migration-scripts/upgrade-registry-server-4.35.sh>` for Registry Server. Save the script beside your Compose file before running the commands below.
+- Download :download:`upgrade-wizard-server-4.35.sh <migration-scripts/upgrade-wizard-server-4.35.sh>` and save it beside your Compose file before running the commands below.
 - ``bash`` and ``psql``. If you use Docker, the official ``postgres`` container already has both.
 
 Steps (Docker Compose, as in `dsw-deployment-example <https://github.com/ds-wizard/dsw-deployment-example>`__; adjust the service names, database name and credentials to yours):
@@ -102,11 +102,9 @@ Without Docker, run the script on any machine with ``bash`` and ``psql`` that ca
 
    $ DATABASE_URL=postgresql://user:pass@host:5432/wizard bash ./upgrade-wizard-server-4.35.sh
 
-**Registry Server**: follow the same steps with the downloaded :download:`upgrade-registry-server-4.35.sh <migration-scripts/upgrade-registry-server-4.35.sh>` against the registry database. Back up that database separately. The success line says ``Done. Start Registry Server 4.35 against this database.``
-
 If something goes wrong:
 
-- ``the migration history is at N, not 69`` (``not 20`` for Registry): the database is not on 4.34. Start 4.34 once, then run the script again.
+- ``the migration history is at N, not 69``: the database is not on 4.34. Start 4.34 once, then run the script again.
 - An error before the transaction commits rolls back the SQL changes. Fix the cause (such as connection details or permissions) and run the script again.
 - If the final verification fails after the transaction commits, the database has changed. Stop the upgrade, restore the backup, and investigate before trying again.
 - 4.35 misbehaves after the upgrade: stop it, restore ``backup-4.34.dump`` and go back to 4.34.
