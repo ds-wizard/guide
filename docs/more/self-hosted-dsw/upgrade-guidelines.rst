@@ -14,7 +14,9 @@ Upgrading DSW
 Using Docker
 ------------
 
-In case of using Docker, just use the tag in ``docker-compose.yml`` or pull the new Docker image and restart using down/up:
+For an upgrade from 4.34 to 4.35, follow the :ref:`4.35 database upgrade steps <upgrade-4-35>` before starting the new server image.
+
+For upgrades without special steps below, use the tag in ``docker-compose.yml`` or pull the new Docker image and restart using down/up:
 
 .. code-block:: shell
 
@@ -45,18 +47,73 @@ Usually, nothing special is required for the upgrade. Internal structure changes
    
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
+.. _upgrade-4-35:
+
 4.34.X to 4.35.X
 ----------------
 
-- Stop all running workers before the upgrade. Make sure no ``document-worker`` or ``mailer`` process/container keeps running while the database upgrade is performed. If a worker does not stop gracefully, kill it before running the script.
-- Run the 4.35 database upgrade script against the Wizard Server database before starting Wizard Server 4.35:
+.. Warning::
 
-  .. code-block:: shell
+   This upgrade is **not** automatic. Wizard Server 4.35 will not start on a 4.34 database until you run the upgrade script described below. If you just change the version and restart, the server stops with ``the init migration builds the schema from nothing and this database is not empty`` and leaves your database untouched.
 
-     $ DATABASE_URL=postgresql://user:pass@host:5432/wizard ./vdi-upgrade-wizard-4.35.sh
+What you need:
 
-  The script checks that the database looks like a 4.34 Wizard Server database, renames Wizard-owned database objects to use the new ``w_`` prefix, recreates the database functions and triggers needed by 4.35, and replaces the old migration history with the 4.35 init migration record. It runs the database changes in a transaction, but the upgrade should still be done only after taking a database backup.
-- Start Wizard Server 4.35 first and start the workers only after the server starts successfully.
+- Your installation is on **4.34.X** and has been started at least once on it. Coming from an older version? Upgrade to 4.34 first, start it, then continue here.
+- Download :download:`upgrade-wizard-server-4.35.sh <migration-scripts/upgrade-wizard-server-4.35.sh>` and save it beside your Compose file before running the commands below.
+- ``bash`` and ``psql``. If you use Docker, the official ``postgres`` container already has both.
+
+Steps (Docker Compose, as in `dsw-deployment-example <https://github.com/ds-wizard/dsw-deployment-example>`__; adjust the service names, database name and credentials to yours):
+
+1. **Back up the database.**
+
+   .. code-block:: shell
+
+      $ docker compose exec -T postgres pg_dump -U postgres -Fc engine-wizard > backup-4.34.dump
+
+2. **Stop the server and the workers**, but leave ``postgres`` running.
+
+   .. code-block:: shell
+
+      $ docker compose stop server docworker mailer
+
+3. **Run the upgrade script** inside the ``postgres`` container. It asks for confirmation; type ``yes``.
+
+   .. code-block:: shell
+
+      $ docker compose cp upgrade-wizard-server-4.35.sh postgres:/tmp/
+      $ docker compose exec -e DATABASE_URL=postgresql://postgres:postgres@localhost:5432/engine-wizard \
+          postgres bash /tmp/upgrade-wizard-server-4.35.sh
+
+   It is done when the last line says ``Done. Start Wizard Server 4.35 against this database.``
+
+4. **Switch to 4.35 and start the server first**, then everything else.
+
+   .. code-block:: shell
+
+      # in .env: DSW_VERSION=4.35
+      $ docker compose pull
+      $ docker compose up -d server
+      $ docker compose logs server | grep Migration    # should say "no new migration to apply"
+      $ docker compose up -d
+
+Without Docker, run the script on any machine with ``bash`` and ``psql`` that can reach the database:
+
+.. code-block:: shell
+
+   $ DATABASE_URL=postgresql://user:pass@host:5432/wizard bash ./upgrade-wizard-server-4.35.sh
+
+If something goes wrong:
+
+- ``the migration history is at N, not 69``: the database is not on 4.34. Start 4.34 once, then run the script again.
+- An error before the transaction commits rolls back the SQL changes. Fix the cause (such as connection details or permissions) and run the script again.
+- If the final verification fails after the transaction commits, the database has changed. Stop the upgrade, restore the backup, and investigate before trying again.
+- 4.35 misbehaves after the upgrade: stop it, restore ``backup-4.34.dump`` and go back to 4.34.
+
+Other changes:
+
+- The questionnaire feedback feature (reporting issues to GitHub) was removed together with its data. Delete the ``feedback:`` section from ``application.yml``; nothing else in the configuration has to change.
+- After the first start, the ``document-worker`` generates a translation file for every released document template, so it is busy for a while.
+
 
 4.33.X to 4.34.X
 ----------------

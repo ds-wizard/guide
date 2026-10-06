@@ -10,7 +10,7 @@ Template Development Kit
     * Your favorite text editor or IDE
     * Template Development Kit (see below)
     * DSW instance (recommended to have local one) with your admin account
-    * Python 3.10+ (with pip) or Docker
+    * Python 3.12+ (with pip) or Docker
 
 Our Template Development Kit (TDK) provides a simple way how to work with templates locally. It is a CLI tool written in Python.
 
@@ -54,10 +54,28 @@ There are these basic commands:
 * ``new`` = create a new template project, it launches a simple interactive wizard for template metadata
 * ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to DSW via its web interface)
 * ``put`` = upload the local template project to DSW (once or continually on-change when ``--watch`` flag is used)
+* ``render`` = render a document locally from the template project and a document context JSON file
 * ``unpackage`` = extract a ZIP distribution package into the local template project directory
 * ``verify`` = check the metadata of the local template project
 
 Default template directory is current one for ``put``, ``verify``, and ``package``. But ``new`` and ``get`` will create a new folder according to the template ID if not explicitly set in other way.
+
+Rendering a document locally
+============================
+
+The ``render`` command uses the same rendering engine as the document worker, without requiring a running DSW instance. From the template project directory, provide a document context JSON file and choose a format by name or UUID (the format can be omitted if the template has only one):
+
+.. code-block:: shell
+
+    dsw-tdk render --context context.json --format "HTML Document" --output document.html
+
+For a translated document, use ``--po`` with a translated PO file. Use ``--project-files`` when the context refers to files uploaded to a project:
+
+.. code-block:: shell
+
+    dsw-tdk render --context context.json --format "PDF Document" --po cs.po --project-files ./files
+
+Run ``dsw-tdk render --help`` for additional options and dependencies required by particular rendering steps.
 
 You can use ``--help`` to find out details:
 
