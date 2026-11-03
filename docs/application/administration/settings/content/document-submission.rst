@@ -5,11 +5,23 @@ Document Submission
 
 If we enable the **Document Submission** feature, users will be able to see :guilabel:`Submit` option for their documents. After selecting it, they will be prompted to select a service compatible with the document where they want to submit it.
 
-Each service must have its own **ID**. Then, we can set human-readable **Name** and **Description** (Markdown-enabled) to clarify for users what is this service and in what cases they should use it. We also need to specify the **Supported Formats**, for each we need to select a document template, its version, and the desired format. Finally, we configure how the document is sent to the external service, the request may contain some **User Properties** (users will be able to set values for them in their user profiles) and it is a HTTP request with a specific **Method**, sent to the **URL**, possibly with HTTP **Headers**. The very last option is to check whether the file should be sent as **Multipart** (with its own **File Name**) instead of plainly in the request body. Most of this configuration should be specified by the external submission service.
+For each service, configure:
 
-If the submission service require additional user properties, we can set those values under :ref:`submission-settings`. For example, if the submission service requires an API token, we can set it there.
+* **ID**, **Name** and **Description** to identify it to users. The description supports Markdown.
+* **Supported Formats**: the document template, version and format accepted by the service.
+* The HTTP **Method**, **URL** and any required **Headers**.
+* **User Properties** for values each user supplies, such as an API token.
+* **Multipart** and **File Name** if the service expects a multipart upload instead of a file in the request body.
+
+Use the request format specified by the external service.
+
+If the submission service requires additional user properties, we can set those values under :ref:`submission-settings`. For example, if the submission service requires an API token, we can set it there.
 
 .. NOTE::
 
     In case we will update the document template used in **Supported Formats**, we should verify that it is still suitable for the submission service and if yes, then add it as a new entry under **Supported Formats**.
 
+
+.. todo::
+
+   Screenshot: Document Submission settings in DSW 5.0.

@@ -3,20 +3,22 @@
 Project List
 ************
 
-In the project list, we can see a list of all projects we have access to. Those are the projects where we were assigned a project sharing role, projects that are visible to all logged-in users in the :ref:`project sharing settings<sharing>`, or projects available through our global :ref:`role<roles>` permissions. The projects are filtered to those we are explicitly assigned to by default.
+In the project list, we can see a list of all projects we have access to. Access can come from a project role, user-group membership, visibility settings or instance-wide project permissions. See :ref:`project sharing <sharing>`. The projects are filtered to those we are explicitly assigned to by default.
 
-We can see project names, a :guilabel:`Template` label if the project is a template, update badges when a newer knowledge model or document template is available, and an icon indicating sharing settings:
+We can see project names, label :guilabel:`Template` if the project is a template, update badges, and icons indicating sharing settings:
 
-- **Lock icon** - the project can only be accessed by you
+- **Outdated KM** - the project uses a knowledge model with a newer version available
+- **Outdated DT** - the project uses a document template with a newer version available
+
+- **Lock icon** - private project sharing
 - **People icon** - the project is shared with other users, hovering on the icon provides additional information
 - **Globe icon** - anyone with a link can access the project
-- :guilabel:`Outdated KM` - a newer version of the project's knowledge model is available
-- :guilabel:`Outdated DT` - a newer version of the project's default document template is available
 
-.. figure:: index/project-list.png
-    
-    Project list with filters.
+These icons describe project sharing. Instance-wide ALL Projects permissions can grant additional access.
 
+.. todo::
+
+   Screenshot: Project list and actions.
 
 We can search for specific projects using the search field or filter them using additional filters:
 
@@ -24,31 +26,23 @@ We can search for specific projects using the search field or filter them using 
 - **Project Tags** - show only the projects that have specific tags assigned
 - **Knowledge Models** - show only the projects created from a specific knowledge model
 - **Users** - filter only the projects with specific users assigned to them
+- **User Groups** - show only the projects shared with specific user groups
 
 .. NOTE::
 
-    Note that some of the filters can be disabled based on the DSW instance settings or user permissions.
+    Note that some of the filters can be disabled based on the DSW settings or user role.
 
 
 We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Create` button.
 
-By clicking the triple dots on each item in the list, we can access some actions:
+By clicking the triple dots on each item in the list we can access some actions:
 
 - **Open project** - will simply open the project
 - **Create project from this template** - will create a new project from the selected project template (this is only available if the project is also a project template)
-- **Clone** - will create the exact copy of the project
+- **Clone** - creates a project with the source questionnaire, files, comments and named versions. Other explicit collaborators and the source sharing settings are retained. Generated documents are not copied
 - **Migrate** - will start a :ref:`project migration<project-migration>`
 - **Delete** - will delete the project (this action cannot be undone)
 
+.. todo::
 
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
-
-.. toctree::
-    :maxdepth: 2
-
-    Create<create>
-    Detail<detail/index>
-    Migration<migration>
-    Templates<templates>
+   Screenshot: Clone a project in DSW 5.0.

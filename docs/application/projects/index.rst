@@ -1,26 +1,15 @@
-.. _projects:
-
 Projects
 ********
 
-This section is about :ref:`projects<project>` -- how to create them, how to work and collaborate on them, how to generate documents, how to upgrade projects, what are the project templates and more.
-
-----
-
-Projects are mainly used by the researchers. We have the introduction video about how to create project, fill the questionnaire and get the documents.
-
-.. youtube:: XrI8qYtWSBw
-    :width: 100%
-    :align: center
-
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
+A project contains a questionnaire, answers, version history, collaborators, uploaded files and generated documents. We can create a project from a knowledge model or an existing project template and then fill in the questionnaire.
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    List<list/index>
-    Files<files>
-    Documents<documents>
+   List <list/index>
+   Create <list/create>
+   Detail <list/detail/index>
+   Migration <list/migration>
+   Templates <list/templates>
+   files
+   documents

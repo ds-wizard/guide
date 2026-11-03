@@ -3,8 +3,48 @@
 Upgrade Guidelines
 ******************
 
+
+5.0
+===
+
+If the instance is older than 4.35, complete the :ref:`4.35 upgrade procedure <upgrade-4-35>` first, including its prerequisite version and database steps.
+
+Back up PostgreSQL, S3 storage and configuration before upgrading. Test the upgrade on a restored copy first. Use matching 5.0-compatible server, client, document worker, mailer and tools; do not combine an old client with the new API.
+
+API and client addresses
+------------------------
+
+The API uses ``/api``. Configure the frontend's ``API_URL`` and proxy that path to the server, including WebSocket upgrades. The current DSW client is served at the web root. Update ``general.clientUrl``, proxy rules and links to match the actual deployment address.
+
+Bootstrap is ``/api/bootstrap``; the old ``/configs/bootstrap`` endpoint is not available. Review API scripts against the new Swagger reference, including request fields and content identifiers.
+
+For OpenID, register the callback and logout URLs shown by the saved provider configuration. These depend on the deployed addresses; check both when an instance URL changes. Do not assume that an API base change alone updates the identity provider.
+
+Content and templates
+---------------------
+
+Content identifiers combine the former organization and local ID using a dot. For example, ``example:research-model:1.0.0`` becomes identifier ``example.research-model`` and version ``1.0.0``. Imports and tools use identifier and version separately, or ``id:version`` where a reference is required.
+
+Review custom document templates for :doc:`context 19.0 </more/development/document-templates/document-context>` and use compatible worker and TDK versions. Changing only a metamodel number does not update template code. Check allowed-model patterns and document-submission formats after migration.
+
+Translations and configuration
+------------------------------
+
+The application and email translations use separate PO files. Export any custom wording before the upgrade, obtain the new POT files and prepare compatible translations. Review and enable the required languages in :doc:`/application/administration/settings/translations/index`.
+
+Registry connections use personal Registry API keys. Review the configured key and test content and translation imports. Configure custom privacy and terms links through ``general.privacyUrl`` and ``general.termsOfServiceUrl`` on the server.
+
+The server uses ``multiTenancy`` for multi-tenant hosting configuration. This is separate from the application's user-facing functionality. A normal single-instance deployment keeps ``multiTenancy.enabled: false``. Worker configuration still has its own ``cloud.enabled`` setting; use each component's matching configuration reference.
+
+Verification
+------------
+
+After the upgrade, check internal and OpenID sign-in, role permissions, project sharing and user groups, integrations, file downloads, document generation, translations, Registry imports and any configured submission service. Verify an existing project as well as a newly created one.
+
+Update local training materials containing screenshots or UI-specific instructions for the new interface.
+
 Upgrading DSW
-========================
+=============
 
 .. Warning::
 
@@ -16,16 +56,12 @@ Using Docker
 
 For an upgrade from 4.34 to 4.35, follow the :ref:`4.35 database upgrade steps <upgrade-4-35>` before starting the new server image.
 
-For upgrades without special steps below, use the tag in ``docker-compose.yml`` or pull the new Docker image and restart using down/up:
+Set compatible target-version image tags for the server, client, document worker and mailer in the Compose file. Complete any version-specific steps below, then pull and apply that configuration:
 
 .. code-block:: shell
 
-   $ docker pull datastewardshipwizard/wizard-server
-   $ docker pull datastewardshipwizard/wizard-client
-   $ docker pull datastewardshipwizard/document-worker
-   $ docker pull datastewardshipwizard/mailer
-   $ docker-compose down
-   $ docker-compose up -d
+   docker compose pull
+   docker compose up -d
 
 
 Other setup (using Git)
@@ -44,7 +80,7 @@ Usually, nothing special is required for the upgrade. Internal structure changes
 
 
 .. Warning::
-   
+
    Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
 
 .. _upgrade-4-35:
@@ -128,7 +164,7 @@ Other changes:
 4.31.X to 4.32.X
 ----------------
 
-- Review migrated roles after the upgrade. Check which permissions each role has, confirm the default role for new users, and verify any organization-specific access expectations such as project support, user management, analytics, or content management.
+- Review migrated roles after the upgrade. Check which permissions each role has, confirm the default role for new users, and verify any organization-specific access expectations such as project support, user management or content management.
 
 4.30.X to 4.31.X
 ----------------
@@ -255,42 +291,42 @@ Before updating check following, otherwise the migration will fail:
 
 
 4.8.X to 4.9.X
-----------------
+--------------
 
 *(nothing)*
 
 4.7.X to 4.8.X
-----------------
+--------------
 
 *(nothing)*
 
 4.6.X to 4.7.X
-----------------
+--------------
 
 *(nothing)*
 
 4.5.X to 4.6.X
-----------------
+--------------
 
 *(nothing)*
 
 4.4.X to 4.5.X
-----------------
+--------------
 
 *(nothing)*
 
 4.3.X to 4.4.X
-----------------
+--------------
 
 *(nothing)*
 
 4.2.X to 4.3.X
-----------------
+--------------
 
 - The document template metamodel version is raised to 13.
 
 4.1.X to 4.2.X
-----------------
+--------------
 
 *(nothing)*
 
@@ -308,7 +344,7 @@ Before updating check following, otherwise the migration will fail:
 - **(breaking)** :ref:`client-configuration` for a custom logo and theme no longer uses SASS and needs to be updated accordingly.
 - **(breaking)** :ref:`api-keys` created in previous versions will no longer work.
 - **(breaking)** The callback URL for OpenID Auth Services (such as Google or Life Science Login) has changed due to the nested route, so it has to be set up, for example:
-  
+
   - Before: ``https://researchers.ds-wizard.org/auth/google/callback``
   - After: ``https://researchers.ds-wizard.org/wizard/auth/google/callback``
 
@@ -416,43 +452,43 @@ Before updating check following, otherwise the migration will fail:
 - (optional) We can now use integration.yaml configuration in Settings instead of the file store on FS and mounted to the Docker container.
 
 3.9.X to 3.10.X
-----------------
+---------------
 
 - Standalone mailer component has been introduced. We need to adjust our deployment (e.g., `docker-compose.yml`) accordingly (see `deployment-example <https://github.com/ds-wizard/dsw-deployment-example>`__).
 
 3.8.X to 3.9.X
-----------------
+--------------
 
 *(nothing)*
 
 3.7.X to 3.8.X
-----------------
+--------------
 
 - All KM migrations must be finished (completed or deleted); otherwise, the upgrade of the backend (database) will fail with the corresponding message in the logs.
 
 3.6.X to 3.7.X
-----------------
+--------------
 
 *(nothing)*
 
 3.5.X to 3.6.X
-----------------
+--------------
 
 *(nothing)*
 
 3.4.X to 3.5.X
-----------------
+--------------
 
 - The template metamodel version has been updated (to v5). Updating all document templates is needed (annotations were added, so we can safely change version 4 to version 5 without breaking anything).
 - All KM migrations must be finished (completed or deleted); otherwise, the upgrade of the backend (database) will fail with the corresponding message in the logs.
 
 3.3.X to 3.4.X
-----------------
+--------------
 
 *(nothing)*
 
 3.2.X to 3.3.X
-----------------
+--------------
 
 *(nothing)*
 
@@ -468,7 +504,7 @@ Before updating check following, otherwise the migration will fail:
 - As an administrator, we should either disable the "Project Templates" feature (Settings - Projects - Project Creation, select "Custom only") or prepare some project templates for our users to avoid confusion.
 
 2.14.X to 3.0.X
-----------------
+---------------
 
 - All data must be migrated as we switched from MongoDB and RabbitMQ to PostgreSQL and S3. To support data migration, we provide `dsw2to3 tool <https://github.com/ds-wizard/dsw2to3>`_ with step-by-step instructions.
 

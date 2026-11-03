@@ -1,21 +1,14 @@
-Miscellaneous
-*************
+Reference
+*********
 
-Additional information related to DSW that might be useful.
+Reference pages for using DSW and preparing content.
 
-----
-
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    dsw-registry
-    jinja-cheatsheet
-    markdown-cheatsheet
-    keyboard-shortcuts
-    help
-    
+   keyboard-shortcuts
+   markdown-cheatsheet
+   jinja-cheatsheet
+   dsw-registry
+   help

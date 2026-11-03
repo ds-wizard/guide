@@ -1,22 +1,17 @@
 .. _create-knowledge-model-editor:
 
-Create Knowledge Model Editor
-*****************************
+Create a knowledge model editor
+*******************************
 
-We can create a new knowledge model editor by navigating to :menuselection:`Knowledge Models → Editors` in the main menu and then clicking the :guilabel:`Create` button.
+Open :guilabel:`Knowledge Models` → :guilabel:`Editors` and choose :guilabel:`Create`. This requires :guilabel:`Use Knowledge Model Editor`.
+We need to enter a name, knowledge model ID, new version and source language.
+The identifier and version are separate values; the identifier uses alphanumeric characters, hyphens, underscores and dots.
 
-.. figure:: create/create-km.png
-    :width: 528
-    
-    Form for creating a new knowledge model.
+Start from scratch or choose a released model in :guilabel:`Based on`. Creating from an existing model provides its content as a starting point; review whether you are preparing a new version or a fork with its own identifier.
+The content detail also provides the corresponding create-editor or fork shortcut.
 
+Continue with :doc:`/application/knowledge-models/editors/detail/knowledge-model` to edit the model's structure and guidance.
 
-Every knowledge model needs to have a **name**, a **knowledge model ID**, **version**, and **language**. The name should be something descriptive to help users understand what the knowledge model is about. The language is the source language of the knowledge model content. The knowledge model ID is used for the identification together with the :ref:`organization ID<organization-settings>` and knowledge model version after it is published. So the identifier of the knowledge model is:
+.. todo::
 
-.. code::
-
-    <organizationId>:<knowledgeModelId>:<version>
-
-We can create a new knowledge model editor either from scratch, i.e. the new knowledge model will be empty and we will build it all ourselves, or based on an existing knowledge model, which means that everything from the chosen knowledge model will be copied to ours. We can start from there and add, delete, or modify the existing entities in there. We just need to choose the original knowledge model in the **Based on** field. Alternatively, we can open the :ref:`knowledge model detail<km-detail>` and click on :guilabel:`Fork KM` there. When the editor is based on an existing knowledge model, its language is used by default.
-
-We can only have one knowledge model editor with the same knowledge model ID. If we deleted the editor but want to continue working on that knowledge model, we can create a new editor with the same knowledge model ID. Or we can open the :ref:`knowledge model detail<km-detail>` and click on :guilabel:`Create KM editor` there to have the editor create form prefilled.
+   Screenshot: Create a Knowledge Model Editor in DSW 5.0.

@@ -3,104 +3,58 @@
 Template Development Kit
 ************************
 
-.. NOTE::
+Use a 5.0-compatible Template Development Kit (TDK) for context 19.0. It can maintain template metadata, fetch server content, package templates and render locally with the shared templating engine.
+Use Python 3.12 or later (below Python 4), or the compatible TDK container, and keep its rendering dependencies aligned with the instance's worker.
 
-    **Requirements for Local Template Development**
+Configuration
+=============
 
-    * Your favorite text editor or IDE
-    * Template Development Kit (see below)
-    * DSW instance (recommended to have local one) with your admin account
-    * Python 3.12+ (with pip) or Docker
+Set ``DSW_API_URL`` to the API base shown by your instance, normally ``https://<instance>/api``, and ``DSW_API_KEY`` to a permitted API key.
+A local untracked ``.env`` or the TDK shared configuration can provide these values. Do not commit credentials.
+Run ``dsw-tdk --help`` and a command's ``--help`` for options in your installed compatible version.
 
-Our Template Development Kit (TDK) provides a simple way how to work with templates locally. It is a CLI tool written in Python.
+Template workflow
+=================
 
-
-Video Tutorial
-==============
-
-This is a comprehensive video tutorial on how to use the Template Development Kit.
-
-.. youtube:: FFElv-e24NE
-    :width: 100%
-    :align: center
-
-
-Installation
-============
-
-You can install it easily using `pip <https://pip.pypa.io/en/stable/installation/>`__ from `Python Package Index (PyPI) <https://pypi.org/project/dsw-tdk/>`__. Optionally, you can use virtual environment or other installation option described in the `TDK repository <https://github.com/ds-wizard/engine-tools/tree/develop/packages/dsw-tdk>`__.
-
-.. code-block::
-
-    pip install dsw-tdk
-    dsw-tdk --help
-
-It is also possible to use `datastewardshipwizard/dsw-tdk <https://hub.docker.com/r/datastewardshipwizard/dsw-tdk>`__ Docker image when you don’t have Python locally:
+* ``new`` starts a local template project.
+* ``get`` downloads a template; ``list`` lists available templates.
+* ``verify`` validates local template metadata.
+* ``put`` uploads the template, optionally watching local changes.
+* ``package`` creates an importable ZIP; ``unpackage`` extracts one.
+* ``pot`` extracts translatable messages.
 
 
-.. code-block::
 
-    docker run datastewardshipwizard/dsw-tdk --help
-
-
-Commands
-========
-
-There are these basic commands:
-
-* ``config`` = manage shared user configuration (~/.dsw-tdk).
-* ``get`` = download a template project with specified template ID from DSW
-* ``list`` = list all templates (latest versions) from configured DSW
-* ``new`` = create a new template project, it launches a simple interactive wizard for template metadata
-* ``package`` = create a ZIP distribution package from the local template project (ZIP is importable to DSW via its web interface)
-* ``put`` = upload the local template project to DSW (once or continually on-change when ``--watch`` flag is used)
-* ``render`` = render a document locally from the template project and a document context JSON file
-* ``unpackage`` = extract a ZIP distribution package into the local template project directory
-* ``verify`` = check the metadata of the local template project
-
-Default template directory is current one for ``put``, ``verify``, and ``package``. But ``new`` and ``get`` will create a new folder according to the template ID if not explicitly set in other way.
-
-Rendering a document locally
-============================
-
-The ``render`` command uses the same rendering engine as the document worker, without requiring a running DSW instance. From the template project directory, provide a document context JSON file and choose a format by name or UUID (the format can be omitted if the template has only one):
+Get a real context
+==================
 
 .. code-block:: shell
 
-    dsw-tdk render --context context.json --format "HTML Document" --output document.html
+   dsw-tdk get-context --project PROJECT_UUID --output context.json
+   dsw-tdk get-context --km-editor EDITOR_UUID --output editor-context.json
+   dsw-tdk validate-context context.json editor-context.json
 
-For a translated document, use ``--po`` with a translated PO file. Use ``--project-files`` when the context refers to files uploaded to a project:
+Use exactly one source per get-context command. ``--event`` can select a project event when used with ``--project``.
+
+Generate test contexts
+======================
 
 .. code-block:: shell
 
-    dsw-tdk render --context context.json --format "PDF Document" --po cs.po --project-files ./files
+   dsw-tdk generate-context --km-bundle model.km --profile typical --count 3 --seed 42 --output contexts
+   dsw-tdk validate-context contexts/*.json
 
-Run ``dsw-tdk render --help`` for additional options and dependencies required by particular rendering steps.
+Profiles include empty, minimal, typical, full and edge. A seed makes generated data reproducible. Generated data supplements real cases; it does not establish that all questionnaire behavior or template semantics are correct.
 
-You can use ``--help`` to find out details:
+Render and compare
+==================
 
+.. code-block:: shell
 
-.. code-block::
+   dsw-tdk render --context context.json --format "HTML Document" --output document.html
+   dsw-tdk render --context contexts --all-formats --output output
 
-    dsw-tdk new --help
+A batch renders the context/format combinations and writes a summary. Use the result to identify failures and inspect representative outputs for each customer format.
+Use supported translation and project-file options when the document depends on them.
 
-
-Environment variables and .env file
-===================================
-
-You can use environment variables to authenticate:
-
-* ``DSW_API_URL`` = URL of DSW API with which you want to communicate. Hover mouse over your profile name to find the :ref:`About<about>` section where URL is specified.
-* ``DSW_API_KEY`` = your :ref:`API Key<api-keys>`. Hover mouse over your profile name, click on :guilabel:`User Settings` and then navigate to :guilabel:`API Keys` From there, you can generate a new API Key for the authentication.
-
-To make this even easier, you can store those in ``.env`` file in the project root and it will be loaded automatically. Or you can specify the path to a ``.env`` file:
-
-.. code-block::
-
-    dsw-tdk --dot-env /path/to/.env list
-
-
-Shared Configuration
-====================
-
-Using the ``config`` command, you can manage shared user configuration stored in the `~/.dsw-tdk` directory. This shared configuration is then applied across all DSW projects, so you don’t need to set it up for each project individually.
+For field changes, see :doc:`/more/development/document-templates/document-context`. Local/server parity also depends on the deployed conversion tools, fonts and custom rendering extensions.

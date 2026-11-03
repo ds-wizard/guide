@@ -1,45 +1,18 @@
-***************
-Vulnerabilities
-***************
+Security Reports
+****************
 
-All known vulnerabilities are listed here so user's can be aware of them and possibly avoid them.
+Report a security problem privately to support@ds-wizard.org. Include the affected component and version, the steps needed to reproduce it and its possible impact. Avoid putting passwords, API keys or private project data in a public issue.
 
-----
+Check the release notes and the affected component's repository for published security fixes. This guide does not maintain a complete vulnerability register.
 
-Reporting
-=========
-
-Vulnerabilities should be reported using `issues <https://github.com/ds-wizard/ds-wizard/issues/new/choose>`__. To submit a private report, please send it to us via email: support@ds-wizard.org. Vulnerability issues are the top priority and resolved in the shortest time possible:
-
-1. Accept vulnerability issue report (GitHub or email)
-2. Verify and reproduce the issue, classify severity
-3. Publish as known vulnerability
-4. Design solution
-5. Implement the change and release a hotfix
-6. Move to solved vulnerabilities
-
-----
-
-Known Vulnerabilities
-=====================
-
-*No vulnerabilities has yet been found or reported.*
-
-----
-
-Solved Vulnerabilities
+Deployment precautions
 ======================
 
-*No vulnerabilities has yet been found or reported.*
+* Change or remove demonstration accounts before making an instance public.
+* Review the default role assigned during registration.
+* Use HTTPS for the public client and API.
+* Back up the database, object storage and configuration regularly.
+* Configure the mail provider's supported SSL or STARTTLS transport.
+* Use strong passwords, especially for administrators.
 
-----
-
-Basic Hints for Security
-========================
-
-* Change or remove default users
-* Adjust default role after registrations based on your needs
-* Provide DSW through proxy with HTTPS (both client and server application)
-* Backup data regularly (e.g. daily)
-* Use secured SMTP (SSL)
-* Use strong passwords, esp. for administrator accounts
+For deployment and upgrade instructions, see :doc:`/more/self-hosted-dsw/index`.

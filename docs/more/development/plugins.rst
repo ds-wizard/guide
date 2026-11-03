@@ -4,7 +4,7 @@ Plugins
 *******
 
 .. WARNING::
-    
+
     The plugins functionality is considered experimental.
 
 

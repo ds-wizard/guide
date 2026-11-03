@@ -1,45 +1,35 @@
-Settings
-********
+Document template settings
+**************************
 
-The :guilabel:`Settings` tab of :doc:`./index` allows us to adjust the configuration and metadata of the document template. It is split to the following three parts:
+Edit the template's name, description, identifier, version, source language, license and README in the settings.
+The source language describes the template's translatable content; output translations are managed for the released template.
 
-General
-=======
+.. todo::
 
-This part allows us to change the metadata about the document template:
+   Screenshot: Document Template settings in DSW 5.0.
 
-- **Name** should be short name of the template.
-- **Description** should be short and descriptive (users will see it while selecting a document template).
-- **Template ID** is the document template ID (as explained for :doc:`../create`).
-- **Version** of the document template.
-- **Language** is the source language of the template's translatable text. Additional languages can be added as :ref:`document template locales<document-template-locales>` after publishing.
-- **License** should contain a name of used license (e.g. *Apache-2.0* or *unlicensed*).
-- **Readme** can contain a longer description, acknowledgements, notes how to use the template, links to resources, and a changelog.
+Knowledge model compatibility
+=============================
 
+Compatibility patterns use a knowledge model identifier and optional minimum/maximum versions. A null or empty identifier matches any model; a missing bound leaves that side of the version range unrestricted.
+The organization ID is no longer a separate filter. Review migrated organization-only patterns, because removing that constraint can broaden the accepted models.
 
-Knowledge Models
-================
+.. todo::
 
-We can specify here what knowledge models are compatible with our document template. This is useful to capture if our template is usable only with a certain knowledge model(s) which will guarantee us some content (specific chapters, questions, answers, etc.). For each entry, we are prompted to specify the **Organization ID**, **Knowledge Model ID**, **Min Version**, and **Max Version**. Any of these value can be left empty which means *any value*.
-
-For example, if we set **Organization ID** to *dsw*, **Knowledge Model ID** to *root*, **Min Version** to *2.4.0* and leave **Max Version** empty, it will mean knowledge model *dsw:root:2.4.0* and any higher version. So that example would work for *dsw:root:2.4.4* or *dsw:root:2.5.0* but not for *dsw:root:2.3.0* nor *acme:base-km:2.6.0*
-
-
-.. figure:: template/allowed-kms.png
-    :width: 628
-    
-    Allowed knowledge models specification for a document template.
-
+   Screenshot: Allowed Knowledge Models in DSW 5.0.
 
 Formats
-=======
+========
 
-Each document template can support multiple file formats and users will be able to select which one they want to use to generate (or preview a document). We can add a new format by clicking :guilabel:`Add` button. Then, each format must have a **Name** and **Icon** (by using `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_). 
+Each output format has a name, icon and ordered generation steps. A step has its implementation name and its options.
+Choose the steps required to generate or convert that format, then test it with actual answers, translations and uploaded files where relevant.
 
-Each format has some steps which capture how a file for that format is produced. There are different steps defined such as ``json``, ``jinja2``, ``pandoc``, or ``wkhtmltopdf`` which is used as its **Name**. Then, the step may have certain configuration **Options**. For example, ``jinja2`` must have ``content-type``, ``extension``, and ``template`` specified. All the possible steps and their options are further described in the :ref:`Document Template Development<document-worker-steps>`.
+The metadata uses document-template metamodel 19.0. Port custom code as described in :doc:`/more/development/document-templates/document-context`; changing only the metamodel number does not update an old template's field accesses.
 
+.. todo::
 
-.. figure:: template/formats.png
-    :width: 628
-    
-    Markdown format specification with ``jinja`` step.
+   Screenshot: Document Template formats in DSW 5.0.
+
+.. todo::
+
+   Screenshot: Jinja rendering step with its template and file output options.

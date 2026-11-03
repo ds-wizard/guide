@@ -1,16 +1,13 @@
-.. _user-create:
+.. _create-user:
 
-Create User
-***********
+Create a User
+*************
 
-Users with permission to manage users can create new users manually by clicking :guilabel:`Create` on the :ref:`users list<users-list>` and submitting the form. Each user must have a unique email address, first name and last name, assigned :ref:`role<roles>`, and a password. Optionally, a user can have affiliation specified.
+With :guilabel:`Manage Users`, open :guilabel:`Users` and choose :guilabel:`Create`. Enter the user's email, first name, last name, optional affiliation and password. Select a role, then click :guilabel:`Create`.
 
-.. figure:: create/create.png
-    :width: 500
-    
-    User creation form.
+The default role is selected initially when available. Check that the selected role is suitable before creating the account. Users can change their password in their own settings.
 
 
-.. NOTE::
+.. todo::
 
-    If the user is created manually by a user manager, the user is activated by default and no email is sent to the user.
+   Screenshot: Create User form with role selection.

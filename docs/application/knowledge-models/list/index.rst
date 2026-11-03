@@ -1,58 +1,30 @@
 .. _knowledge-model-list:
 
-Knowledge Model List
-********************
+Knowledge Model Library
+***********************
 
-Users with permission to manage knowledge models can manage the knowledge models that are in our DSW. We can access the list of knowledge models from the main menu via :guilabel:`Knowledge Models`. The list can be filtered and sorted by name or creation date. We can also search for a specific knowledge model by its id, name or version. The list shows the name, version, id, author, description and last update.
+Open :guilabel:`Knowledge Models` → :guilabel:`List` to browse published knowledge models. Search by name or ID and open a model to review its versions, README and metadata.
 
-For each knowledge model (KM), we can see the latest version in the list. If we want to read more about a specific KM or see the older versions, we need to access the :doc:`./detail` by clicking the name of KM or clicking :guilabel:`Open` from the right item menu (three dots). There are also other options for each item:
+**Manage Knowledge Models** controls library management. The actions shown depend on your permissions.
 
-- :guilabel:`Open` for opening the KM detail (same as clicking the name of the KM).
-- :guilabel:`Preview` to see how :doc:`../../projects/index` generated using this KM would look like.
-- :guilabel:`Export` for exporting the listed version of the KM as a file.
-- :guilabel:`Export .pot file` for exporting the translation template for the listed version of the KM.
-- :guilabel:`Compare` for comparing the current version of the KM with another version (see :doc:`./compare`).
-- :guilabel:`Create KM editor` is a shortcut for :doc:`../editors/create` for creating a new version.
-- :guilabel:`Fork KM` is again a shortcut for :doc:`../editors/create` to create a fork (some more specific KM based on this one).
-- :guilabel:`Create project` is a shortcut to :doc:`../../projects/list/create` with this KM.
-- :guilabel:`Set deprecated` or :guilabel:`Restore` for setting a KM deprecated when we no longer want users to use it for new projects.
-- :guilabel:`Set public` or :guilabel:`Set private` for changing the visibility of the KM. Public KM can be viewed by non-logged in users.
-- :guilabel:`Delete` for all versions of the KM. (Single version can be deleted from the KM's :doc:`./detail` page).
+* Preview a questionnaire before using the model in a project.
+* Export a KM bundle or a POT translation template.
+* Compare versions, create an editor for a new version or fork the model.
+* Create a project from the model.
+* Deprecate or restore the selected version. Other versions are separate.
+* Set public visibility when the model should be accessible without signing in.
+* Delete a model or version after reviewing its dependencies. Deletion can remove dependent content; see :doc:`/application/knowledge-models/list/detail`.
 
-.. WARNING::
+Use :doc:`/application/knowledge-models/list/import` to add bundles or registry versions. An update badge signals that a newer registry version is available; it does not migrate existing projects. Use :doc:`/application/projects/list/migration` for that.
 
-    It is possible to force delete a KM. Doing so will delete all KM versions, all KM editors based on this KM and all projects based on this KM, as well as all documents and files related to these projects.
-    
-    This action is irreversible, so be careful when using it.
+.. todo::
 
-
-If a newer version of the knowledge model is available in the `DSW Registry <https://registry.ds-wizard.org/>`__, a yellow :guilabel:`update available` badge, which we can use for a quick update to the latest version, will appear.
-
-Finally, there is an option to :doc:`./import` by clicking the :guilabel:`Import` button in the top right part of the screen.
-
-.. NOTE::
-
-    You can import multiple knowledge models from file at once.
-
-
-.. figure:: index/list.png
-    
-    List of all knowledge models with actions.
-
-
-.. NOTE::
-
-    Set deprecated option will apply only for the latest version of the knowledge model. If there is an older version, that will still be available.
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
-
+   Screenshot: Knowledge Model library in DSW 5.0.
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    Import<import>
-    Detail<detail>
-    Preview<preview>
-    Compare<compare>
+   Compare <compare>
+   Detail <detail>
+   Import <import>
+   Preview <preview>

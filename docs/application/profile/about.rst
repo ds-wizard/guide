@@ -1,15 +1,10 @@
-.. _about:
-
 About
 *****
 
-By selecting the :guilabel:`About` option from the :doc:`./index` menu, users are directed to the About page. This page offers detailed information about the current versions and build timestamps of the tool's components. It also includes information about metamodels and plugins. This level of transparency helps ensure that both users and developers are fully informed about the specific versions and build statuses of the components they are working with.
+Open :guilabel:`About` from the profile menu to see component versions, build timestamps and supported metamodel versions.
 
-The :guilabel:`API URL` link provides access to the server's API endpoints, which can be used for integrating the Data Stewardship Wizard with other systems and automating tasks.
+The :guilabel:`API URL` shows the server's API address. Where enabled, :guilabel:`API Docs` opens the API reference. See :doc:`/more/development/api` for integration details.
 
-The :guilabel:`API Docs` link directs to the API documentation presented in Swagger UI that provides detailed descriptions of available operations and parameters.
+.. todo::
 
-.. figure:: about/modal.png
-    :width: 500
-    
-    Modal window with versions of the tool's components.
+   Screenshot: About DSW in DSW 5.0.

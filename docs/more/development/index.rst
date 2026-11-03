@@ -5,12 +5,6 @@ DSW can be extended in many ways and new components and ways of integrations can
 
 This section provides information on how to develop custom content for DSW to fully tailor the tool to our specific requirements.
 
-----
-
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
 
 
 .. toctree::

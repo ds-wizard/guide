@@ -1,86 +1,55 @@
-..  _faq-notes:
+.. _faq-notes:
 
 FAQ and Deployment Notes
 ************************
 
+DSW does not start
+==================
 
-Frequently Asked Questions
-==========================
+Check the affected service with ``docker compose ps`` and ``docker compose logs SERVICE``. Review the reported error before changing configuration. Confirm that the component versions and configuration match, and that PostgreSQL and object storage are reachable.
 
-This section tries to cover the common deployment and other issues related to instance management people have and suggest what next steps should be done.
+The client reports a missing bootstrap endpoint
+===============================================
 
-Why something is not running; what should I do?
------------------------------------------------
+The 5.0 client calls ``/api/bootstrap``. If requests contain ``/wizard-api`` or ``/configs/bootstrap``, check both the client's ``API_URL`` and the actual frontend image running on the instance. An old client can keep requesting an old endpoint even after its API base URL is corrected.
 
-Check what is not running using `docker-compose ps` and then use also `docker-compose logs <service>` to check what the issue is.
+Use matching 5.0 client and server versions, and configure the reverse proxy for ``/api``. See :doc:`configuration/configuration`.
 
-Why I cannot upload locales/templates and document generation fails?
---------------------------------------------------------------------
+Uploads or document generation fail
+===================================
 
-You probably have some issue with S3 configuration or its deployment. Also, check whether you have S3 bucket present with correct name.
+Check the server and worker logs, configured S3 endpoint, bucket, credentials and permissions. The bucket must exist. When using the deployment example, complete its storage initialization before importing content.
 
-Why I cannot download files from DSW or generate document preview?
------------------------------------------------------------------------------
+Documents cannot be downloaded or previewed
+===========================================
 
-Your S3 is probably not accessible by users. The S3 URL configured in :ref:`config-server` should be reachable so users can download something from the storage.
-
-There is some issue with the PostgreSQL database; what should I do?
--------------------------------------------------------------------
-
-Please use the `PostgreSQL documentation <https://www.postgresql.org/docs/>`_ to check the cause, various things may have happened... especially if you tried to upgrade the database version.
-
-There is some issue with S3-compatible storage; what should I do?
------------------------------------------------------------------
-
-If you use the DSW Deployment Example, check Garage with ``docker compose logs garage --tail=200`` and verify that ``create-bucket.sh`` was run successfully. The script creates the bucket, imports the configured key, and grants the required permissions. Also check that the configured :ref:`config-server` S3 URL is reachable by users' browsers, not only from inside the Docker network.
-
-For Garage-specific issues, use the `Garage documentation <https://garagehq.deuxfleurs.fr/documentation/>`_. If you use another S3-compatible service, use that service's documentation and verify the endpoint, region, bucket, access key, secret key, and bucket permissions.
-
-I upgraded DSW and now it does not work properly, what should I do?
-------------------------------------------------------------------------------
-
-You should always check :doc:`upgrade-guidelines` before upgrading, be sure that you followed all steps. In case you forgot and it is not possible to fix it now, you will have to rollback from you backup and do it again by following the guidelines this time. In case you encounter an issue even though you followed the guidelines, that might a bug and please `report it <https://github.com/ds-wizard/ds-wizard/issues>`_.
+Check whether the object-storage URL is reachable from the user's browser as well as from the application containers. An internal-only hostname can work for generation but fail for a browser download. See :ref:`config-server`.
 
 .. _faq-unsupported-metamodel:
+.. _document-templates-show-unsupported-metamodel-what-should-i-do:
 
-Document templates show :guilabel:`unsupported metamodel`
----------------------------------------------------------
+Document templates show unsupported metamodel
+=============================================
 
-There are two cases:
+Import a template compatible with the running DSW version. For a Registry template, check the available versions and import a suitable one; do not assume every catalogue entry supports the current release.
 
-- You are using a document template from DSW Registry.
-- You are using your own document template.
+For a custom template, update its code and metadata for :doc:`context 19.0 </more/development/document-templates/document-context>`. Increasing only the declared metamodel version does not port the template.
 
-For the first case, you need to import a newer version from DSW Registry. Templates in Registry are managed by the DSW Team which ensures that they are always up to date. If those are your own document templates, you need to update them according to :ref:`document-template-metamodel-versions`.
+To import a compatible Registry version:
 
-To update from DSW Registry, you need to have it connected with your DSW instance. If you can see the :guilabel:`Update Available` badge, you can update the template. If you cannot see the badge, you should check if you are connected to the DSW Registry.
+#. Configure the :doc:`Registry connection </application/administration/settings/content/dsw-registry>` with a Registry API key.
+#. Open :guilabel:`Document Templates` → :guilabel:`List` and choose :guilabel:`Import`.
+#. Choose the Registry source, enter the template reference in ``id:version`` form and import it.
+#. Select the compatible version in the project's default template settings, then test generation.
 
-To connect to the DSW Registry and import new templates from there, you can follow this guide:
+An upgrade did not complete
+===========================
 
-1. Go to Administration -> Settings -> Content Settings -> DSW Registry
-2. Click on Enabled
-3. Click on Sign Up
-4. Fill out your email
-5. With a token you will get to login to https://registry.ds-wizard.org
-6. Open desired template
-7. Copy the Document Template ID
-8. Go back to DSW -> Document Templates -> List
-9. Click on Import
-10. Paste the Document Template ID
-11. Click on Import
+Check :doc:`upgrade-guidelines`, the server logs and the component versions. Keep the database and storage backups from before the upgrade. Restore matching database, object-storage and configuration backups when rolling back; changing the image tag alone does not undo database migrations.
 
-.. NOTE::
+If the problem persists, follow :doc:`/more/miscellaneous/help`. Include the version and relevant error, but remove passwords, keys and private project data from logs before sharing them.
 
-    The Sign up to the DSW Registry must be done by a user with permission to manage settings. Once the registry is connected, users with the relevant content permissions can import and update templates from the DSW Registry.
-
-
-Templates imported this way will have the :guilabel:`Update Available` badge when a new version is available in the Registry.
-
-Deployment Notes
+Deployment notes
 ================
 
-- You should be knowledgeable with at least basics of server management, service operations, work with Docker, and debugging issues (e.g. accessing Docker logs).
-- The deployment can vary significantly based on needs and available infrastructure, we cannot help with different kinds of deployments and technologies that we are not experts with.
-- The deployment example serves for local testing purposes and should not be used as is for production. An expert should deploy DSW for production while considering local needs and capabilities.
-- Never update production instance without backups and preferably try the update procedure first on a testing environment.
-- Running DSW locally is not "free", you need people, time, and infrastructure. With that in mind, consider what `option <https://ds-wizard.org/get-started>`_ is the most suitable for you.
+The deployment example is for local evaluation. A production deployment needs its own HTTPS, backups, storage access, monitoring and operational procedures. Test upgrades on a restored copy before updating production.

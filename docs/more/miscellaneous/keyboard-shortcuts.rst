@@ -1,39 +1,13 @@
 Keyboard Shortcuts
 ******************
 
-Some parts of the application can be controlled using keyboard shortcuts. This page lists all available shortcuts.
+Use :kbd:`Ctrl+K` (:kbd:`Cmd+K` on macOS) to open the command palette and find available pages and account actions.
 
-Project
-=======
+Use :kbd:`Tab` and :kbd:`Shift+Tab` to move between controls. The available action depends on the focused control.
 
-We can use `Ctrl` or `Cmd` + `F` to open the project search dialog.
+* In a questionnaire, :kbd:`Ctrl+F` (:kbd:`Cmd+F` on macOS) opens questionnaire search.
+* :kbd:`Esc` closes a modal dialog.
+* :kbd:`Ctrl+Enter` (:kbd:`Cmd+Enter` on macOS) submits supported forms and form dialogs.
+* In a confirmation dialog without input fields, :kbd:`Enter` activates the focused button; it can confirm the primary action when focus is on the dialog itself.
 
-+--------------------------------+--------------------------------+
-| Shortcut                       | Description                    |
-+================================+================================+
-| `Ctrl/Cmd` + `F`               | Open the project search dialog |
-+--------------------------------+--------------------------------+
-
-Modal Dialogs
-=============
-
-Modal Dialogs are used for various purposes. Example might be a confirmation dialog before deleting an entity. We can control them using keyboard shortcuts. The following table lists all available shortcuts:
-
-+--------------------------------+--------------------------------+
-| Shortcut                       | Description                    |
-+================================+================================+
-| `ESC`.                         | Close the dialog               |
-+--------------------------------+--------------------------------+
-| `Enter`                        | Confirm the action             |
-+--------------------------------+--------------------------------+
-
-Form Fields
-===========
-
-Form fields can be controlled using keyboard shortcuts. Depending on the operating system we can use either `Ctrl` or `Cmd` key. Together with Enter key we can submit any form.
-
-+--------------------------------+--------------------------------+
-| Shortcut                       | Description                    |
-+================================+================================+
-| `Ctrl/Cmd` + `Enter`           | Submit form                    |
-+--------------------------------+--------------------------------+
+In a dialog with fields, plain :kbd:`Enter` belongs to the field or picker rather than submitting the whole form. Review the selected action before confirming a destructive operation.

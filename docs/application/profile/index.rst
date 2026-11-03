@@ -3,29 +3,26 @@
 Profile
 *******
 
-As every logged-in user, we can manage our own profile. We can see the options by hovering over the box with our name and avatar in the lower part of the left sidebar with main menu (only avatar is shown in case of collapsed sidebar). From there, we can navigate to :doc:`./settings/index`. If locales are configured, we can also :doc:`./language`. We can view our :doc:`./assigned-comments` through the profile menu.
+Open our name or avatar in the main navigation to access :guilabel:`User settings`, assigned comments, news, appearance options, help and :guilabel:`About`.
 
-Moreover, there are also options to :guilabel:`Log out`, see basic information about the DSW instance using :guilabel:`About`, or in case of problems we can use :guilabel:`Report issue` to know how to proceed.
-
-
-.. figure:: index/menu.png
-    :width: 500
-    
-    Profile menu.
+In User settings, we can manage our profile and sign-in details, language, API keys and sessions. Personal plugin and document-submission settings are shown when the instance provides them.
 
 
-----
+Appearance and navigation
+=========================
 
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
+Choose :guilabel:`Appearance` in the profile menu to select :guilabel:`Light`, :guilabel:`Dark` or :guilabel:`System`. System follows the device's preferred appearance.
 
+Open the command palette with :kbd:`Ctrl+K` (:kbd:`Cmd+K` on macOS) to search available pages and account actions. The results follow our permissions.
+
+.. todo::
+
+   Screenshot: Profile menu with appearance choices.
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    User Settings<settings/index>
-    Assigned Comments<assigned-comments>
-    Change Language<language>
-    About<about>
-    
+   settings/index
+   assigned-comments
+   news
+   about

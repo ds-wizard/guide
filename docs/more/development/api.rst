@@ -1,38 +1,31 @@
-*******************
 Integration via API
 *******************
 
-An Application Programming Interface (API) allows machines, such as other systems and tools, to perform actions and transfer data based on agreed-upon methods. 
+The API lets other systems read and update DSW data. Open :guilabel:`About` from the profile menu for the instance's :guilabel:`API URL` and :guilabel:`API Docs`. The API reference describes the available operations and request bodies.
 
-By selecting the :guilabel:`About` option from the :ref:`Profile<profile>` menu, users are directed to the :ref:`About<about>` page where the :guilabel:`API URL` and :guilabel:`API Docs` are provided. Each instance includes SwaggerUI API Documentation, which allows you to explore all operations and data transfer and also you to directly try out the API calls, with example responses provided for guidance.
+Authentication and permissions
+==============================
 
-Authentication and Authorization
-================================
+Create an API key in :doc:`/application/profile/settings/api-keys`. Send it in the ``Authorization: Bearer`` header. An API key acts with its user's permissions; project sharing also controls access.
 
-DSW utilizes JSON Web Tokens (JWT) for both authentication and authorization, ensuring secure access and control over API interactions. To obtain a token, you must have a user account, and there are multiple methods to acquire one:
-
-* **Credentials** (Email + Password): Send a POST request to /tokens with your email and password. If your credentials are correct and your account is active, you will receive a token along with its expiration time in the response.
-* **OpenID Identity Provider** (for our client only): This method involves a more complex OpenID/OAuth flow, utilizing redirects with the ``/auth/{id}/`` endpoints to authenticate.
-* **API Keys**:  You can generate an API key in your user profile, which remains valid until its specified expiration date.
-
-While several public endpoints are accessible without authentication, most endpoints require it. The system will check if you are authorized to perform specific operations based on your global :ref:`role<roles>` and project sharing permissions. This ensures that only authorized users can access and manipulate with sensitive resources.
+The API base for 5.0 is normally ``https://<instance>/api``. Review existing integrations against the 5.0 API reference: a changed base URL alone does not update renamed endpoints or request fields.
 
 Example
-=======
+========
 
-After obtaining your authentication token and reviewing the API documentation, you can start making API calls to execute actions and transfer data, easily integrating them into your projects. Here's a simple example using the `Requests library in Python <https://requests.readthedocs.io/en/latest/>`__:
+.. code-block:: python
 
-.. code-block::
+   import os
+   import requests
 
-    import requests
+   response = requests.get(
+       os.environ['DSW_API_URL'].rstrip('/') + '/users/current',
+       headers={'Authorization': 'Bearer ' + os.environ['DSW_API_KEY']},
+       timeout=30,
+   )
+   response.raise_for_status()
+   print(response.json()['email'])
 
-    API_URL = '...'
-    API_KEY = '...'
+Keep API keys outside source control. Revoke keys that are no longer needed.
 
-    response = requests.get(
-        url=f'{API_URL}/users/current',
-        headers={'Authorization': f'Bearer {API_KEY}'},
-    )
-    response.raise_for_status()
-    user = response.json()
-    print(f'This API Key belongs to {user["email"]}')
+For upgrade changes affecting integrations, see :doc:`/more/self-hosted-dsw/upgrade-guidelines`.

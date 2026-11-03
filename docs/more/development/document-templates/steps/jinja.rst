@@ -1,334 +1,43 @@
-.. _document-template-step-jinja:
-
-Step: ``jinja``
+Jinja templates
 ***************
 
-|badge-status| |badge-metamodel|
+The Jinja rendering step turns a template file and document context into an output such as HTML or Markdown.
+Its options include the template path, output content type and file extension. Configure the step in the output format and use the compatible renderer's supported options.
 
-Renders requested Jinja2 template with document context and optionally other data.
-
-Input
-=====
-
-If not used as a first step, then the previous document is available from ``document`` variable.
-
-Output
-======
-
-Results to a file of specified type (via ``content-type`` option) and file extension (via ``extension`` option).
-
-Options
-=======
-
--  ``template`` = path to template file to be rendered
--  ``content-type`` = MIME type of resulting file
--  ``extension`` = file extension for the produced file (without leading dot)
-
-Optional:
-
--  ``jinja-ext`` = comma-separated list of `Jinja2 extensions <https://jinja.palletsprojects.com/en/stable/extensions/>`__ to be enabled (supported values: ``debug``)
--  ``i18n-dir`` = location (relative to template root) of translations
--  ``i18n-domain`` = domain string of translations
--  ``i18n-lang`` = language code used in the template
--  ``extras`` = comma-separated list of related entities to query in addition to :doc:`../document-context` (possible values: ``submissions``, ``questionnaire``); values will be added to ``extras`` attribute of the document context
-
-Template (Jinja2)
-=================
-
-Variables
----------
-
-The following variables are set:
-
--  ``ctx`` = contains JSON-like plain :doc:`../document-context` (possibly with ``extras`` attribute, if configured)
--  ``secrets`` = dictionary of secret values, only if enabled by configuration file
--  ``requests`` = wrapper of `requests <https://requests.readthedocs.io/en/latest/>`__ module only if enabled by configuration file
-
-Functions
----------
-
-There are the following functions available on the global.
-
-``assets``
-~~~~~~~~~~
-
-The ``assets(file)`` function serves to retrieve Asset object from either a static file in a document template or a questionnaire file. Therefore, the `file` argument can be one the three following:
-
-- ``string`` value with path to asset file within the template (relative from its root), e.g. ``"assets/logo.png"``;
-- :ref:`odc-project-file` object from :ref:`document-context-obj`, e.g. from reply to a File Question passing file from it simply as ``reply.file``;
-- ``dict`` representing a questionnaire file retrieved from regular :ref:`document-context`, e.g. ``ctx['questionnaire']['files'][fileUuid]``.
-
-As a result you get either ``Asset`` object as described below or ``None`` in case no such asset is found.
-
-.. code-block:: jinja
-  :caption: Example of using ``assets`` function with static template file
-
-  {%- set asset = assets("assets/logo.png") -%}
-  {%- if asset and asset.is_image -%}
-    <img src="{{ asset.data_url }}" alt="Our logo" />
-  {%- endif -%}
-
-
-.. code-block:: jinja
-  :caption: Example of using ``assets`` function with :ref:`document-context-obj`
-
-  {%- set dc = ctx|to_context_obj -%}
-  {# Get the file from the questionnaire files using the reply.file UUID #}
-  {%- set file = dc.questionnaire.files[reply.file.uuid] -%}
-  {%- set asset = assets(file) -%}
-  {%- if file and asset and asset.is_image -%}
-    <img src="{{ asset.data_url }}" alt="{{ asset.name }}" />
-  {%- elif file -%}
-    <p>Questionnaire file {{ file.name }} ({{ file.uuid }}) is not an image.</p>
-  {%- else -%}
-    <p>Questionnaire file does not exist.</p>
-  {%- endif -%}
-
-
-.. code-block:: jinja
-  :caption: Example of using ``assets`` function with :ref:`document-context`
-
-  {%- for ctxFile in ctx.questionnaire.files -%}
-    {%- set asset = assets(ctxFile) -%}
-    {%- if asset and asset.is_image -%}
-      <img src="{{ asset.data_url }}" alt="{{ asset.name }}" />
-    {%- elif asset -%}
-      <p>Questionnaire file {{ asset.name }} ({{ asset.uuid }}) is not an image.</p>
-    {%- else -%}
-      <p>Questionnaire file not found.</p>
-    {%- endif -%}
-  {%- endfor -%}
-
-
-Every ``Asset`` object returned by ``assets()`` function has the following attributes:
-
-- ``name`` - original name (file name)
-- ``content_type`` - MIME type
-- ``data`` - data stored as bytes
-- ``data_base64`` - base64-encoded data
-- ``data_url`` - data URL (convenient for use in `<img>` tags)
-- ``is_image`` - boolean flag indicating if the asset is an image
-
-
-Filters
--------
-
-Within Jinja templates, you can use so-called `filters <https://jinja.palletsprojects.com/en/stable/templates/#filters>`__. Basically, those are functions applied to a first argument using pipe ``|`` symbol.
-
-Builtin Filters
-~~~~~~~~~~~~~~~
-
-There are several widely used `builtin filters <https://jinja.palletsprojects.com/en/stable/templates/#builtin-filters>`__ directly in Jinja.
-
-Value Conversion
-~~~~~~~~~~~~~~~~
-
-We provide several filters that can be used for conversion of values:
-
-- ``datetime_format`` = *Formats timestamp*
-  
-  - Example: ``x.created_at|datetime_format("%d/%m/%y")``
-  - Arguments:
-
-    -  ``iso_timestamp`` - ``datetime`` or ISO 8601 ``str``
-    -  ``fmt`` - datetime format passed to `strftime <https://docs.python.org/3/library/datetime.html#datetime.date.strftime>`__
-    -  ``tz`` (optional) - timezone name (e.g. ``"UTC"``, ``"Europe/Prague"``) for formatting the timestamp; if not provided, UTC is used
-
-- ``of_alphabet`` = *Converts integer to characters*
-
-  - Example: ``x|of_alphabet``
-  - It prints ``a`` (for 0) to ``z`` and then continues with ``aa``, ``ab``, etc.
-  - Arguments:
-
-    -  ``n`` - integer >= 0, usually some index
-
-- ``roman`` = *Converts integer to Roman numeral*
-
-  - Example: ``x|roman``
-  - Arguments:
-
-    -  ``n`` - integer >= 0, usually some index
-
-- ``markdown`` = *Converts markdown to HTML*
-
-  - Example: ``x|markdown``
-  - Arguments:
-
-    -  ``md_text`` - string containing Markdown syntax
-
-- ``dot`` = *Ends sentence if not already ended*
-  
-  - Example: ``"This sentence has no end"|dot``
-  - Arguments:
-
-    -  ``text``
-
-
-- ``extract`` = *Extracts values from object by having keys*
-
-  - Example: ``entities.questions|extract([uuid1, uuid2, uuid3])``
-  - Arguments:
-    
-    -  ``obj`` - object for getting values (typically ``dict``)
-    -  ``keys`` - list of keys to retrieve
-
-
-Reply Helpers
-~~~~~~~~~~~~~
-
-These filters are handy when you need to work with ``repliesMap`` from the plain JSON-like context.
-
-- ``reply_path`` = *Joins list of UUIDs into a path*
- 
-  - Example: ``[uuid1, uuid2, uuid3]|reply_path``
-  - Arguments:
-
-    -  ``uuids`` - list of UUIDs
-
-- ``find_reply`` = *Tries to find a reply value using a path*
-
-  - Example: ``replies|find_reply(path, "list")``
-  - Arguments:
-    -  ``replies`` - dict with replies
-    -  ``path`` - list of UUIDs or path-string
-    -  ``xtype`` (optional) - desired type of return value (``"string"``, ``"int"``, ``"float"``, ``"list"``)
-
-- ``reply_str_value`` = *Extracts string value from a reply if possible*
-
-  - Returns an empty string if not possible to extract it from the reply. Suitable for ``AnswerReply``, ``StringReply`` and ``IntegrationReply``.
-  - Example: ``reply|reply_str_value``
-  - Arguments:
-    -  ``reply`` - object that might be a reply
-
-- ``reply_int_value`` = *Extracts integer value from a reply if possible*
-
-  - Returns zero if not possible to extract it from the reply. Suitable for ``StringReply`` with numeric value type.
-  - Example: ``reply|reply_int_value``
-  - Arguments:
-
-    -  ``reply`` - object that might be a reply
-
-- ``reply_float_value`` = *Extracts float value from a reply if possible*
-
-  - Returns zero if not possible to extract it from the reply. Suitable for ``StringReply`` with numeric value type.
-  - Example: ``reply|reply_float_value``
-  - Arguments:
-    
-    -  ``reply`` - object that might be a reply
-
-- ``reply_items`` = *Extracts list of strings from a reply if possible*
-
-  - Returns empty list if not possible to extract it from the reply. Suitable for ``MultiChoiceReply`` and ``ItemListReply``.
-  - Example: ``reply|reply_items``
-  - Arguments:
-
-    -  ``reply`` - object that might be a reply
-
-Special
-~~~~~~~
-
-These filters are more complex and add various support to template development.
-
-- ``to_context_obj`` = *Converts plain context to well-defined objects*
-
-  - This filter is used for easier transition and might be removed in the future.
-  - Arguments:
-
-    -  ``ctx`` - plain JSON-like document context
-
-
-Tests
------
-
-Within Jinja templates, you can use so-called `tests <https://jinja.palletsprojects.com/en/stable/templates/#tests>`__. Basically, those are helpers usable in conditions after ``is`` keyword:
-
-.. code:: jinja
-
-   {% if loop.index is divisibleby 3 %}
-       {# ... #}
-   {% endif %}
-
-
-Builtin Tests
-~~~~~~~~~~~~~
-
-There are several widely used `builtin tests <https://jinja.palletsprojects.com/en/stable/templates/#builtin-tests>`__ directly in Jinja.
-
-Custom Tests
-~~~~~~~~~~~~
-
-- ``not_empty`` = *Checks if size of a collection is higher than 0*
-
-  - Example: ``items is not_empty``
-
-- ``of_type`` = *Checks if an object is instance of a certain type / class*
-
-  - The name must be a string; however, it is case-insensitive. It also checks all superclasses.
-  - Example: ``parent is of_type "ListQuestion"``
-
-
-Replies Extraction
-------------------
-
-.. warning::
-  
-    This is experimental feature introduced in 4.20 release and might change in the future.
-
-You can use the following Jinja filter to extract replies easily while using KM annotations.
-
-With default configuration, you should use ``json.key`` and ``json.value`` annotations on questions and answers/choices to easily extract replies from the document context:
-
-.. code:: jinja
-
-    {%- set dc = ctx|to_context_obj -%}
-    {%- set object = dc|extract_replies -%}
-    {{ object|tojson(indent=2) }}
-
-Alternatively, you can adjust configuration and pass it as argument to the ``extract_replies`` filter:
-
-.. code:: jinja
-
-    {%- set dc = ctx|to_context_obj -%}
-    {%- set config = {
-        'variant': 'simple',
-        'version': '1',
-        'annotations': {
-            'key': 'json.key',
-            'value': 'json.value',
-        },
-        'options': {
-            'include_reply_objects': True,
-        },
-    } -%}
-    {%- set object = dc|extract_replies(config) -%}
-    {{ object|tojson(indent=2) }}
-
-Currently, only the ``simple`` variant is supported, which extracts replies from the document context and returns a dictionary with keys as question UUIDs and values as replies. The ``version`` is used for future compatibility, but currently only version ``1`` is supported.
-
-The extract object contains all annotated replies in nested objects. It uses underscored-name attributes for internal use to avoid conflicts with the original annotations. There are fields like ``_value``, ``_uuid``, ``_label``, or ``_path`` based on the type of questions and reply.
-
-
-Notes
-=====
-
--  All paths (e.g. for ``import`` or ``extends`` in Jinja2 templates are relative from the template root, i.e. directory with ``template.json``).
--  The ``do`` `Jinja2 extension <https://jinja.palletsprojects.com/en/stable/extensions/#expression-statement>`__ is enabled.
--  Using file extension ``.j2`` or ``.jinja2`` for templates is just a convention.
--  The :doc:`document context <../document-context>` is provided in ``ctx`` variable, other variables, filters, and tests are documented in other documents.
-
-Example
-=======
-
-.. code:: json
+.. code-block:: json
 
    {
-     "name" : "jinja",
-     "options" : {
-       "template" : "src/default.html.j2",
-       "content-type" : "text/html",
-       "extension" : "html"
+     "name": "jinja",
+     "options": {
+       "template": "template.html.j2",
+       "content-type": "text/html",
+       "extension": "html"
      }
    }
 
-.. |badge-status| image:: https://img.shields.io/badge/status-stable-green
-.. |badge-metamodel| image:: https://img.shields.io/badge/metamodel%20version-%E2%89%A5%201-blue
+Use the linked object model when following the examples:
+
+.. code-block:: jinja
+
+   {%- set x = ctx|to_context_obj -%}
+   <h1>{{ (x.project.name if x.project else x.km_editor.name) }}</h1>
+
+Context 19.0 moves answers and other questionnaire data under ``questionnaire`` and distinguishes projects from editor previews. See :doc:`/more/development/document-templates/document-context` before porting an older template.
+
+Translations and helpers
+========================
+
+Use the template's locales for translations. The earlier ``i18n-dir``, ``i18n-domain`` and ``i18n-lang`` step options are no longer the configuration mechanism.
+Translation blocks are trimmed by default; use ``notrimmed`` where the intended output depends on preserved whitespace.
+
+The shared templating engine supplies the current filters, tests, asset helpers and reply extraction. The `filter reference <https://github.com/ds-wizard/engine-tools/blob/6c159fa862b381890c6a1464be846df4f57fd387/packages/dsw-templating/support/JinjaFilters.md>`__ describes their options, including extract_replies configuration and versioned behavior.
+Custom rendering extensions use the ``dsw_templating_plugins`` entry point. Check them against the compatible shared renderer rather than the removed worker-specific extension API.
+
+Check translated output, escaped user content, long answers, images and files in every supported format.
+
+Optional rendering features
+===========================
+
+``jinja-ext`` can enable the ``debug`` extension. The ``do``, ``loopcontrols`` and ``i18n`` extensions are already enabled. Supported ``policy.*`` options control truncation, URL rendering and JSON serialization; see the `step reference <https://github.com/ds-wizard/engine-tools/blob/6c159fa862b381890c6a1464be846df4f57fd387/packages/dsw-templating/support/steps/jinja.md>`__.
+
+HTTP requests from templates require explicit enablement for that template in the worker configuration. Requests remain subject to its URL security policy; private-network resources, redirect credentials and request options can be restricted. Do not assume an older template's network requests remain permitted.

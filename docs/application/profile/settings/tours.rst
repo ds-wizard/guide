@@ -1,13 +1,10 @@
-.. _tours:
-
 Tours
 *****
 
-Tours are a way to guide users through the basic application workflow. They provide a step-by-step introduction to the project creation, its filling and sharing.
+Tours showcase features and workflows. Every tour is displayed to the user once, when they open a page with tour implemented.
 
-Tours can be reset here.
+We can reset the tours here, so we can see them again.
 
-.. figure:: tours/reset.png
-    :width: 800
-    
-    Button for resetting tours.
+.. todo::
+
+   Screenshot: Guided tours in DSW 5.0.

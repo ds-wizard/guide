@@ -3,163 +3,124 @@
 Sharing
 *******
 
-We can share a project with other DSW users or external collaborators. We can access all sharing options by clicking the :guilabel:`Share` button in the top right.
+Project owners can share a project with other DSW users or external collaborators. Open the :guilabel:`Share` button in the project header to change access.
 
-.. figure:: sharing/share-modal.png
-    :width: 540
-    
-    Project sharing settings.
+.. todo::
 
+   Screenshot: Project sharing.
 
 .. NOTE::
 
-    It is not possible to remove the last project owner. To change the project owner, we need to add another user as an owner first.
+    Keep at least one owner with access to the project. Before removing yourself as an owner, give another collaborator Owner access.
 
 
-If we want to only see how Sharing is set up or copy the project link, we can use the arrow button which is a part of the :guilabel:`Share` button.
-
-.. figure:: sharing/share-dropdown.png
-    :width: 300
-    
-    Fast project sharing.
-
+The arrow beside :guilabel:`Share` opens sharing information and :guilabel:`Copy link`.
 
 Changes made in the sharing modal are saved after clicking :guilabel:`Save`. We can close the modal without saving by clicking :guilabel:`Cancel`.
 
+Project Roles
+=============
+
+Project sharing roles apply to this project. They are separate from instance-wide :ref:`roles <roles>`, which can also grant access to all projects.
 
 
-There are different project sharing roles that grant access to different project features:
+.. list-table::
+   :header-rows: 1
 
-.. NOTE::
-
-    These are project sharing roles. They apply to this specific project and are separate from global :ref:`roles<roles>`. A global role can also grant access to all projects, depending on its permissions.
-
-
-.. raw:: html
-
-    <div class="table-wrapper docutils container">
-        <table class="docutils align-default">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Viewer</th>
-                    <th>Commenter</th>
-                    <th>Editor</th>
-                    <th>Owner</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>View project</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Metrics</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Preview</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>View documents</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Comment on project</td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Change answers</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>TODOs</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Version history</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Create documents</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Editor notes</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Sharing settings</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                </tr>
-                <tr>
-                    <td>Project settings</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">✔</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+   * - —
+     - Viewer
+     - Commenter
+     - Editor
+     - Owner
+   * - View project
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - Metrics
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - Preview
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - View documents
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - Comment on project
+     - —
+     - ✔
+     - ✔
+     - ✔
+   * - Change answers
+     - —
+     - —
+     - ✔
+     - ✔
+   * - TODOs
+     - —
+     - —
+     - ✔
+     - ✔
+   * - Version history
+     - —
+     - —
+     - ✔
+     - ✔
+   * - Create documents
+     - —
+     - —
+     - ✔
+     - ✔
+   * - Editor notes
+     - —
+     - —
+     - ✔
+     - ✔
+   * - Name, rename or delete a named version
+     - —
+     - —
+     - —
+     - ✔
+   * - Revert to an earlier version
+     - —
+     - —
+     - —
+     - ✔
+   * - Sharing settings
+     - —
+     - —
+     - —
+     - ✔
+   * - Project settings
+     - —
+     - —
+     - —
+     - ✔
 
 
 .. NOTE::
 
-    Some of the following options might be globally disabled in the application settings for the whole DSW instance, therefore not visible on the project level.
+    Some of the following options might be globally disabled in the application settings for the whole DSW, therefore not visible on the project level.
 
 
-The following video tutorial explains and showcases sharing options and tools that can be used while collaborating with others. Some features mentioned in the video are also explained in the :ref:`project questionnaire<project-questionnaire>`.
-
-.. youtube:: ZN0VTbpLrHk
-    :width: 100%
-    :align: center
-
+Document creation requires a signed-in editor or owner. The Metrics tab is available only when the instance enables the summary report.
 
 Users
 =====
 
-We can choose specific users from the DSW instance and their project sharing role to grant them access to project features based on the table above. This is a good way to add other collaborators that work together with us on the project. Also, this is the only way to add other project owners.
+Search for a user, add them and choose their project role. The selector shows affiliation where available, which can help distinguish people with similar names. Save the sharing settings to apply changes.
 
 
 Visible by all other logged-in users
 ====================================
 
-We can enable the :guilabel:`Visible by other logged-in users` toggle to grant access to the project for all other users without the need to explicitly list them. Then, we can also choose what the users can do -- **view**, **comment**, or **edit** the project. We cannot grant **owner** access this way though.
+We can enable the :guilabel:`Visible by other logged-in users` toggle to grant access without listing each user. This applies to other signed-in users. Then, we can also choose what the users can do -- **view**, **comment**, or **edit** the project. We cannot grant **owner** access this way though.
 
 This can be useful, when we want to have an example project accessible by everybody. We can simply enable this and choose that other users can **view** the project. We also want to set this up when we create a :ref:`project template<project-templates>`.
 
@@ -168,3 +129,8 @@ Public link
 ===========
 
 We can enable the :guilabel:`Public link` toggle to grant access to the project to anyone who has the link. We can again choose what they can do -- **view**, **comment**, or **edit** the project. Also, the public link is visible there, so we can simply copy it and send to whoever we want to collaborate with. Then, they don't need a DSW account and still be able to access our project.
+
+User groups
+===========
+
+Add a user group to share the project with its members and choose the group's project role. Group ownership and the role on this project are separate. See :doc:`/application/user-groups/index`.

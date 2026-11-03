@@ -16,12 +16,9 @@ Knowledge Model Structure
 
 Knowledge model consists of several entities connected together. You can see how they are connected in the following diagram and read more details about them below.
 
-.. figure:: knowledge-model/knowledge-model-schema.png
-   :alt: The diagram showing the knowledge model schema
-   :align: center
+.. todo::
 
-   Knowledge model schema
-
+   Screenshot: The diagram showing the knowledge model schema.
 
 Knowledge Model
 ---------------
@@ -65,8 +62,6 @@ The list of items question is used when there are multiple answers and we want t
 For each item, the answer to the first question in the list of items question is used as a label for the item. It can be any type of question.
 
 
-.. _value-question:
-
 Value Question
 ^^^^^^^^^^^^^^
 
@@ -84,7 +79,7 @@ The value question asks for a single value that users type in. There are many di
 
 The input field differs based on the value type (simple input for string, date picker for date, etc.). Some of these have a check whether the entered value is valid (such as valid email or URL) and displays a warning if not.
 
-Value Question can also have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text-based types (text, email, URL), we can also use a regular expression to create validations.
+Value Question also can have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text based types (text, email, URL), we can set also use a regular expression to create validations.
 
 .. _integration-question:
 
@@ -93,9 +88,9 @@ Integration Question
 
 The integration question is connected to an external resource where the users can pick the answer from. We need to select an :ref:`integration<integration>` that the question uses and sometimes additional properties, based on the integration configuration.
 
-Users can then search the external resource through the questionnaire and choose the answer. The advantage is that the answer is not only the text but also a link or PID of the selected item making it more FAIR.
+Users search the external resource through the questionnaire and choose a result. The integration defines how that result is displayed, including any link or persistent identifier.
 
-If the desired answer is not present in the external resource, users can still fill in a text answer themselves.
+A user can enter a text answer instead only when the integration allows custom replies.
 
 
 .. _multi-choice-question:
@@ -106,19 +101,14 @@ Multi-Choice Question
 The multi-choice question has a list of :ref:`choices<choice>`. Users can then pick as many of those choices as they wish. There are, however, no follow-up questions available for this question type.
 
 
-.. _item-select-question:
-
 Item Select Question
 ^^^^^^^^^^^^^^^^^^^^
 
-The item selection question works in conjunction with the :ref:`list of items question<list-of-items-question>`. It is used to select one of the previously created items within a series of interconnected list of items question.
+The item selection question works in conjunction with the :ref:`list of items question<list-of-items-question>`. It is used to select one of the previously created items within a questionnaire with repeated list items.
 
-
-.. _file-question:
 
 File Question
 ^^^^^^^^^^^^^
-
 The file question is used to upload files. We can configure the **file types** that are allowed to be uploaded and the **maximum file size**.
 
 
@@ -151,19 +141,17 @@ Validation
 
 Validation is used to define some rules for the answers in Value question type. It can be used to check if the answer is in the correct format, or if it is in the correct range. If the answer doesn't pass the validation, a warning is displayed to the user, however this does not prevent them from creating a document.
 
-.. _reference:
-
 Reference
 ---------
 
-References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. Resource page references are gathered in the resource collections.
+References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. resource page references are gathered in the resource collections.
 
 .. _resource-collection:
 
 Resource Collection
 ^^^^^^^^^^^^^^^^^^^
 
-Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collection is created on a level of a knowledge model.
+Resource collections are used to group together :ref:`resource pages<resource-page>` that are related to each other. Each resource collection has a **title** and has a list of resource pages. Resource collections are created on the level of a knowledge model.
 
 .. _resource-page:
 
@@ -201,7 +189,7 @@ Metric
 
 We can define metrics for each knowledge model based on our needs. Each metric has a **title**, an **abbreviation**, and a **description**. Once the metric is defined, we can configure which :ref:`answers<answer>` affect it and how.
 
-This can be use, for example, to define the FAIR metrics:
+This can be used, for example, to define the FAIR metrics:
 
 - **F** - Findability
 - **A** - Accessibility
@@ -209,8 +197,6 @@ This can be use, for example, to define the FAIR metrics:
 - **R** - Reusability
 
 And then define which answers affect which FAIR metrics to provide more feedback to the researchers.
-
-How answer affect certain metric is then set up in the :ref:`answer<answer>`.
 
 
 .. _phase:
@@ -220,7 +206,7 @@ Phase
 
 We can create phases to reflect the workflow. Such as: *Before submitting the proposal*, *Before submitting the DMP*, etc. Each phase has a **title** and a **description**.
 
-Once we have phases defined, we can assign them to :ref:`questions<question>` to indicate where each question become desirable. The phases implicitly follow the order in which they are in the knowledge model and the question is considered desirable from the defined phase and on. So for example, if a question is desirable in *Phase 2*, it is implicitly desirable in *Phase 3*, *Phase 4*, etc.
+Once we have phases defined, we can assign them to :ref:`questions<question>` to indicate where each question becomes desirable. The phases implicitly follow the order in which they are in the knowledge model and the question is considered desirable from the defined phase and on. So for example, if a question is desirable in *Phase 2*, it is implicitly desirable in *Phase 3*, *Phase 4*, etc.
 
 
 .. _question-tag:
@@ -245,8 +231,10 @@ API Integration
 
 API integration connects to an external service API to search for the answers. We need to provide some **request** and **response** configuration, so DSW can use the API.
 
+Plugin Integration
+^^^^^^^^^^^^^^^^^^
 
-.. _annotations:
+An installed plugin can provide an integration with its own configuration and selection interface. The available plugin integrations depend on the instance.
 
 Annotations
 -----------

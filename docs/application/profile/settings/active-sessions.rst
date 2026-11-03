@@ -1,11 +1,10 @@
-.. _active-sessions:
-
 Active Sessions
 ***************
 
-Here we can see list of active sessions that are logged into our account. In case we don't longer want any of them to have access to our instance, we can revoke the session.
+In :guilabel:`User settings` → :guilabel:`Active sessions`, we can see the sessions logged in to our account. We can revoke a session if we no longer want it to have access.
 
-.. figure:: active-sessions/form.png
-    :width: 800
-    
-    List of active sessions.
+Review :doc:`/application/profile/settings/api-keys` separately when removing access for a script or integration.
+
+.. todo::
+
+   Screenshot: Active sessions in DSW 5.0.

@@ -1,16 +1,20 @@
 .. _api-keys:
 
-API Keys
+API keys
 ********
 
-When we want to access the DSW through DSW API we have to set up an API Key. The API Key has an :guilabel:`API Key Name` so we can remember for what purpose this Key is used and :guilabel:`Expiration` which is a date from when the API Key will no longer be valid.
+API keys allow scripts and integrations to use DSW with our account's permissions. We can create or revoke keys in :guilabel:`User Settings` → :guilabel:`API Keys`.
+When creating a key, we enter a name and choose when it expires. We need to save the generated key securely. Integrations use it as a Bearer token.
 
-.. figure:: api-keys/form.png
-    :width: 800
-    
-    Form for creating an API Key.
+A key does not bypass role permissions or project sharing.
+Revoke a key when its integration is retired or its value may have been exposed.
 
+Use :doc:`/more/development/api` for API addresses and authentication. For changes to existing integrations, see :doc:`/more/self-hosted-dsw/upgrade-guidelines`.
 
-After filling out the :guilabel:`API Key Name` and :guilabel:`Expiration`, an **API Key** is generated. In this step we have to copy the API Key, because after seeing it once, it is no longer possible to access it again.
+.. todo::
 
-After we click on Done button, the new API Key is hidden and the information about this key is added to the table below, that contains all Active API Keys.
+   Screenshot: Create an API key in DSW 5.0.
+
+.. todo::
+
+   Screenshot: API keys in DSW 5.0.

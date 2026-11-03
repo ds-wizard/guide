@@ -1,14 +1,10 @@
-.. _km-editor-phases:
-
 Phases
 ******
 
 If there are any :ref:`project phases<phase>` set up in the knowledge model, we can use the :guilabel:`Phases` tab to see an overview of which questions were assigned to be completed in each phase and to change the phase assignments.
 
-We can simply click to the checkbox in the corresponding phase - question table cell to assign/unassign the phase to that particular question.
+We can simply click the checkbox in the corresponding phase - question table cell to assign/unassign the phase to that particular question. We can also click on the question name to open the question editor and change the question details.
 
-We can also click on specific question which will open the question in the knowledge model editor tab.
+.. todo::
 
-.. figure:: phases/phases-editor.png
-    
-    Phases editor where we can assign questions to phases.
+   Screenshot: Knowledge Model phases in DSW 5.0.

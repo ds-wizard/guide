@@ -1,7 +1,7 @@
 Configuration
 *************
 
-This section explains how to configure DSW instance on your own.
+This section explains how to configure a self-hosted DSW instance.
 
 .. _config-settings:
 
@@ -9,9 +9,6 @@ Most of the configuration is done through :ref:`Settings<settings>` (accessible 
 
 
 
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
 
 
 .. toctree::
@@ -21,4 +18,3 @@ Most of the configuration is done through :ref:`Settings<settings>` (accessible 
     document-templates
     email-templates
     plugins
-

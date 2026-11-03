@@ -3,11 +3,11 @@
 Step: ``weasyprint``
 ********************
 
-|badge-status| |badge-metamodel|
+
 
 Transformation step that converts HTML file from previous step to PDF using `WeasyPrint <https://weasyprint.org/>`_.
 
-Currently, we use version **66.0**. For more information, please refer to the `official documentation <https://doc.courtbouillon.org/weasyprint/v66.0/>`_.
+Use the WeasyPrint version supplied by the compatible worker or local environment. Check the `WeasyPrint documentation <https://doc.courtbouillon.org/weasyprint/stable/>`_ for that version.
 
 Input
 =====
@@ -20,7 +20,7 @@ Output
 Always results in a PDF file (``application/pdf``) with file extension ``.pdf``.
 
 Options
-=======
+========
 
 -  (optional) ``render.presentational_hints`` = whether HTML presentational hints are followed (default: ``False``)
 -  (optional) ``render.optimize_size`` = specify what should be optimized (``''``, ``'fonts'``, ``'images'``, ``'fonts,images'``, default: ``'fonts'``)
@@ -36,7 +36,7 @@ Notes
 -  Check the official `WeasyPrint <https://weasyprint.org/>`__ documentation and examples for more information.
 
 Example
-=======
+========
 
 .. code:: json
 
@@ -49,5 +49,10 @@ Example
      }
    }
 
-.. |badge-status| image:: https://img.shields.io/badge/status-stable-green
-.. |badge-metamodel| image:: https://img.shields.io/badge/metamodel%20version-%E2%89%A5%2012-blue
+
+External resources
+==================
+
+Images, stylesheets and fonts are subject to the renderer's security policy. Local files must be inside the template directory or an explicitly allowed path. External HTTP resources must be enabled; private-network addresses are blocked unless allowed by the deployment configuration. Data URLs are supported. A blocked resource can be omitted with a warning while a PDF is still produced. Check the rendered file and worker warnings when an asset is missing.
+
+Additional supported options include ``pdf.identifier``, ``pdf.uncompressed``, ``render.jpeg_quality`` and ``render.dpi``. Consult the compatible renderer when choosing values; test resulting quality and size in the actual output format.

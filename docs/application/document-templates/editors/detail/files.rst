@@ -1,17 +1,29 @@
 Files
 *****
 
-The :guilabel:`Files` tab in :doc:`./index` allows us to manage the files and directories (or folders) of the document template. There is a file tree on the left side whereas the main part is containing the built-in text editor. We can create a new folder or text file by clicking :guilabel:`Add` on the of top the file tree and then :guilabel:`File` or :guilabel:`Folder`. Once we enter a desired name, the folder or file is created in the active directory. Alternatively, we can upload a file by clicking :guilabel:`Add` and then :guilabel:`Upload`.
+The :guilabel:`Files` tab contains the template's file tree and text editor. Select a folder to choose where new content will be added.
 
-If we select a text file in the file tree, it is opened in the built-in text editor. We can also open multiple files (the editor supports tabs). Moreover, if we have more files opened, we can see a *split view* icon on the top of the file tree. When we click it, it will split the view and move the opened file to the other group. If there are already two groups, it switches the file between the two groups. We can close the file by clicking cross icon in its tab.
+Add and open files
+==================
 
-We can easily delete a file or a folder; when it is selected in the file tree, we can simply click the red trash icon above the file tree. The deletion must be confirmed in the prompt so we will not delete something by accident as it is not reversible operation. If a folder becomes empty, it will be deleted automatically.
+Choose :guilabel:`Add` → :guilabel:`File` or :guilabel:`Folder` and enter a name. Use :guilabel:`Add` → :guilabel:`Upload` for an existing file. Empty folders are temporary; they need a file to remain in the saved template.
 
-With files and folders we can also use move and rename functionalities, both by clicking their respective icons above the file tree. The move functionality is useful when we want to move a file to another folder. The rename functionality is useful when we want to change the name of a file or folder.
+Select a text file to open it in the editor. Several files can stay open in tabs. Close a tab with its close button; closing it does not delete the file.
 
-If we make some changes in a file, the asterisk (or star) symbol will appear by the name in the tree view as well as in the tab (if opened). The changes must be then saved using :guilabel:`Save` button or discarded using :guilabel:`Discard` button in the top right corner. Those buttons will appear instead of :guilabel:`Publish` as it is not possible to publish a document template with unsaved changes. After saving the changes and switching to :doc:`./preview` (or refreshing it), the document will be re-generated using the newly changed document template.
+Use :guilabel:`Move to the other side` in the editor's tab strip to open a second editor pane or move the current file between panes. :guilabel:`Wrap long lines` changes how the text is displayed.
 
+Rename, move and delete
+=======================
 
-.. figure:: files/files.png
-    
-    Files editor with tabs and split view.
+Select a file or folder in the tree, then use :guilabel:`Rename`, :guilabel:`Move` or :guilabel:`Delete` above the tree. Review the confirmation before deleting content. A folder disappears when it no longer contains any files.
+
+Save changes
+============
+
+A changed file has an unsaved-change indicator in the tree and its tab. Use :guilabel:`Save` to keep changes or :guilabel:`Discard` to abandon them. Save or discard pending changes before publishing.
+
+Open :doc:`preview` to check the saved template with a project or knowledge model editor.
+
+.. todo::
+
+   Screenshot: Document Template file tree, unsaved-change indicator and split editor panes.

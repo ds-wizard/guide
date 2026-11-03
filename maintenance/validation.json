@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-03",
+  "strict_html": "passed (-E -a -n -W --keep-going)",
+  "source_pages": 130,
+  "reachable_pages": 130,
+  "local_references_checked": 27059,
+  "frontend_help_links": [
+    {
+      "key": "documentTemplates",
+      "target": "more/development/document-templates/index.html",
+      "valid": true
+    },
+    {
+      "key": "documentTemplatesCreate",
+      "target": "application/document-templates/editors/create.html",
+      "valid": true
+    },
+    {
+      "key": "documentTemplatesImport",
+      "target": "application/document-templates/list/import.html",
+      "valid": true
+    },
+    {
+      "key": "documentTemplatesPublish",
+      "target": "application/document-templates/editors/detail/publish.html",
+      "valid": true
+    },
+    {
+      "key": "documentTemplatesSettings",
+      "target": "application/document-templates/editors/detail/settings.html",
+      "valid": true
+    },
+    {
+      "key": "documentTemplatesUnsupportedMetamodel",
+      "target": "more/self-hosted-dsw/faq-notes.html#document-templates-show-unsupported-metamodel-what-should-i-do",
+      "valid": true
+    },
+    {
+      "key": "jinjaCheatsheet",
+      "target": "more/miscellaneous/jinja-cheatsheet.html",
+      "valid": true
+    },
+    {
+      "key": "kmEditorCreate",
+      "target": "application/knowledge-models/editors/create.html",
+      "valid": true
+    },
+    {
+      "key": "kmEditorIntegrationQuestion",
+      "target": "more/development/integration-questions/index.html",
+      "valid": true
+    },
+    {
+      "key": "kmEditorMigration",
+      "target": "application/knowledge-models/editors/migration.html",
+      "valid": true
+    },
+    {
+      "key": "kmEditorPublish",
+      "target": "application/knowledge-models/editors/detail/publish.html",
+      "valid": true
+    },
+    {
+      "key": "kmEditorSettings",
+      "target": "application/knowledge-models/editors/detail/settings.html",
+      "valid": true
+    },
+    {
+      "key": "kmImport",
+      "target": "application/knowledge-models/list/import.html",
+      "valid": true
+    },
+    {
+      "key": "markdownCheatsheet",
+      "target": "more/miscellaneous/markdown-cheatsheet.html",
+      "valid": true
+    },
+    {
+      "key": "profileActiveSessions",
+      "target": "application/profile/settings/active-sessions.html",
+      "valid": true
+    },
+    {
+      "key": "profileApiKeys",
+      "target": "application/profile/settings/api-keys.html",
+      "valid": true
+    },
+    {
+      "key": "profileLanguage",
+      "target": "application/profile/settings/language.html",
+      "valid": true
+    },
+    {
+      "key": "projectsCreate",
+      "target": "application/projects/list/create.html",
+      "valid": true
+    },
+    {
+      "key": "projectsDocumentSubmission",
+      "target": "application/projects/list/detail/documents.html#document-submission",
+      "valid": true
+    },
+    {
+      "key": "projectsDocuments",
+      "target": "application/projects/documents.html",
+      "valid": true
+    },
+    {
+      "key": "projectsFiles",
+      "target": "application/projects/files.html",
+      "valid": true
+    },
+    {
+      "key": "projectsMigration",
+      "target": "application/projects/list/migration.html",
+      "valid": true
+    },
+    {
+      "key": "projectsNewDocument",
+      "target": "application/projects/list/detail/documents.html#new-document",
+      "valid": true
+    },
+    {
+      "key": "projectsSettings",
+      "target": "application/projects/list/detail/settings.html",
+      "valid": true
+    },
+    {
+      "key": "projectsSharing",
+      "target": "application/projects/list/detail/sharing.html",
+      "valid": true
+    },
+    {
+      "key": "settingsAuthentication",
+      "target": "application/administration/settings/system/authentication.html",
+      "valid": true
+    },
+    {
+      "key": "settingsDashboardAndLoginScreen",
+      "target": "application/administration/settings/user-interface/dashboard-and-login-screen.html",
+      "valid": true
+    },
+    {
+      "key": "settingsDocumentSubmission",
+      "target": "application/administration/settings/content/document-submission.html",
+      "valid": true
+    },
+    {
+      "key": "settingsFeatures",
+      "target": "application/administration/settings/system/features.html",
+      "valid": true
+    },
+    {
+      "key": "settingsLookAndFeel",
+      "target": "application/administration/settings/user-interface/look-and-feel.html",
+      "valid": true
+    },
+    {
+      "key": "settingsOpenId",
+      "target": "application/administration/settings/system/openid.html",
+      "valid": true
+    },
+    {
+      "key": "settingsPlugins",
+      "target": "application/administration/settings/system/plugins.html",
+      "valid": true
+    },
+    {
+      "key": "settingsPrivacyAndSupport",
+      "target": "application/administration/settings/system/privacy-and-support.html",
+      "valid": true
+    },
+    {
+      "key": "settingsProjects",
+      "target": "application/administration/settings/content/projects.html",
+      "valid": true
+    },
+    {
+      "key": "settingsRegistry",
+      "target": "application/administration/settings/content/dsw-registry.html",
+      "valid": true
+    },
+    {
+      "key": "userGroupsCreate",
+      "target": "application/user-groups/create.html",
+      "valid": true
+    },
+    {
+      "key": "userGroupsDetail",
+      "target": "application/user-groups/detail.html",
+      "valid": true
+    },
+    {
+      "key": "usersCreate",
+      "target": "application/administration/users/create.html",
+      "valid": true
+    }
+  ],
+  "screenshot_todos": 129,
+  "orphan_pages": [],
+  "duplicate_parents": {},
+  "cycles": [],
+  "errors": [],
+  "scope": "Generated local HTML and current frontend help targets; external destinations not live-tested; no DSW application environment run"
+}

@@ -3,146 +3,95 @@
 OpenID
 ******
 
-Using these settings, we can add `OpenID <https://openid.net/>`__ configuration to allow logging into DSW via an external identity provider.
+OpenID Connect lets users sign in with an external identity provider. Configure providers in the :guilabel:`Settings` → :guilabel:`OpenID` with :guilabel:`Manage Settings`.
 
-DSW supports Microsoft Azure, ORCID, and other OpenID providers. The following sections describe the setup for these options.
+.. todo::
 
-.. figure:: openid/form.png
-	:width: 800
+   Screenshot: OpenID providers in DSW 5.0.
 
-	Button for resetting tours.
+Prepare the provider
+====================
 
+Register DSW as a client with the identity provider, or obtain an existing client registration from the identity administrator. We need its client identifier, client secret and the provider information described below.
 
-.. NOTE::
+Keep a working administrative sign-in method while configuring or changing a provider. Separate instances need their own registered callback and logout URLs.
 
-    After setting a new OpenID service, we should directly test it and verify that the configuration works well. For that, we can simply open our DSW in a new anonymous window of the web browser.
+Create the configuration
+========================
 
+#. Choose :guilabel:`Create` and enter a **Name** that users will recognize on the sign-in screen.
+#. Select :guilabel:`Microsoft` or :guilabel:`Custom` and complete the fields below.
+#. Review :guilabel:`Advanced configuration` and the sign-in button's appearance.
+#. Click :guilabel:`Create`, then register the addresses shown in the saved configuration with the identity provider.
 
-Microsoft Azure Setup
-=====================
+Microsoft
+---------
 
-1. Go to https://portal.azure.com/.
-2. Go to ``App registrations``.
-3. Click on ``New registration``.
-4. Fill in a name.
-5. Select ``Single tenant only - ...``.
-6. Keep ``Redirect URI`` empty.
-7. Click on ``Register``.
-8. Copy and store ``Directory (tenant) ID`` and ``Application (client) ID``.
-9. Click on ``Manage`` in the left menu → ``Certificates & Secrets``.
-10. Click on ``New client secret``.
-11. Fill description, set ``Expires`` and note it somewhere, then click on ``Add``.
-12. Copy ``Value`` and store it somewhere. You will not be able to view it again.
+Copy these values from the Microsoft application registration:
 
-13. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
+* **Application (client) ID**: the application's identifier.
+* **Client Secret Value**: the secret value used by DSW to authenticate the client.
+* **Directory (tenant) ID**: the UUID of the Microsoft directory.
 
-14. Fill in a ``Name`` of the service. This name will be used to identify the service in the list of login options, so it should be something descriptive.
+DSW builds the Microsoft provider address from the directory ID. In the saved configuration, the callback is labeled :guilabel:`Redirect URI` and the logout address is :guilabel:`Front-channel logout URL`.
 
-15. Open the ``Microsoft`` tab and fill in:
-	- ``Application (client) ID``
-	- ``Directory (tenant) ID``
-	- ``Client Secret`` → ``<stored secret value>``
+Custom provider
+---------------
 
-16. (optional) Fill in Icon (``fab fa-microsoft``, or another icon from `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), ``Background Color`` and ``Text Color``.
+Enter the **Client ID**, **Client Secret** and the provider's OpenID Connect issuer **URL**. DSW uses that URL to discover the provider's OpenID configuration.
 
-17. Click on ``Save``.
+Use **Parameters** for additional name/value pairs required by the provider in the authorization request. Obtain the issuer URL and any required parameters from the identity administrator or the provider's OpenID Connect documentation.
 
-18. Go back to Microsoft Azure.
-19. Click on ``Manage`` in the left menu → ``Authentication (Preview)``.
-20. Click on ``Add Redirect URI``.
-21. Click on ``Web``.
-22. Copy ``Redirect URI`` and ``Front-channel logout URL`` from DSW.
-23. **Do not** check any checkbox.
-24. Click on ``Configure``.
-25. Click on ``Manage`` in the left menu → ``API permissions``.
-26. Click on ``Add a permission``.
-27. Click on ``Microsoft Graph`` → ``Delegated permissions``.
-28. Under ``OpenId permissions`` check ``email``, ``openid`` and ``profile``. Under ``User`` keep checked ``User.Read``.
-29. Click on ``Add permissions``.
+In the saved configuration, the addresses are labeled :guilabel:`Callback URL` and :guilabel:`Logout URL`.
 
-30. Click on ``Manage`` in the left menu → ``Token configuration``.
-31. Click on ``Add optional claim``.
-32. Select ``ID`` and check ``email``, ``family_name`` and ``given_name``.
-33. Click on ``Add``.
+Registration and scopes
+-----------------------
 
-34. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
+Under :guilabel:`Advanced configuration`:
 
+* **Registration enabled** allows new users to register through this provider. Turn it off when the provider should only be used with existing accounts.
+* **Email** requests the user's email information.
+* **Profile** requests profile information such as the user's name.
 
-ORCID Setup
-===========
+DSW always requests the OpenID scope. If the provider does not supply the information needed to create an account, the user may be asked to complete registration.
 
-ORCID requires a redirect URI before it allows us to save the application and obtain credentials. Because DSW generates the callback URL only after the OpenID configuration is saved, we first create the DSW configuration with temporary credentials and then return to ORCID.
+Set the button's **Icon**, **Background Color** and **Text Color**. Use **Button Preview** to check its appearance and readability.
 
-1. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
-2. Fill in a ``Name`` of the service, for example ``ORCID``.
-3. Open the ``Custom`` tab.
-4. Fill in temporary values:
-	- ``Client ID`` → ``placeholder``
-	- ``Client Secret`` → ``placeholder``
-	- ``URL`` → ``https://orcid.org``
-5. Leave ``Parameters`` empty.
-6. (optional) Fill in Icon (``fab fa-orcid``), ``Background Color`` (``#A6CE39``), and ``Text Color``.
-7. Click on ``Save``.
-8. Copy ``Callback URL`` from DSW. It will look similar to ``https://<your-domain>/wizard/open-id/<uuid>/callback``.
+.. todo::
 
-9. Go to https://orcid.org/signin and sign in to ORCID.
-10. Open ``Developer Tools`` from the account menu.
-11. If this is the first application, register for ORCID Public API credentials.
-12. Fill in the application details:
-	- ``Name`` → name of the DSW instance or organization.
-	- ``Application URL`` → public URL of the DSW instance.
-	- ``Application Description`` → short description of the DSW instance.
-	- ``Redirect URI`` → paste the ``Callback URL`` copied from DSW.
-13. Save the application and generate credentials.
-14. Copy ``Client ID`` and ``Client Secret``.
+   Screenshot: Create OpenID configuration in DSW 5.0.
 
-15. Go back to the ORCID OpenID configuration in DSW.
-16. Replace temporary credentials:
-	- ``Client ID`` → ORCID ``Client ID``
-	- ``Client Secret`` → ORCID ``Client Secret``
-	- ``URL`` → keep ``https://orcid.org``
-17. Click on ``Save``.
-18. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
+Register the callback and logout addresses
+==========================================
 
-.. NOTE::
+Open the saved configuration and copy its callback or Redirect URI into the provider's allowed redirect URIs. Use the exact value shown by the instance:
 
-    ORCID uses the term ``Redirect URI`` for the DSW ``Callback URL``. The DSW ``Logout URL`` does not need to be entered in ORCID Public API credentials.
+.. code-block:: text
 
-.. NOTE::
+   https://<instance>/open-id/<provider-uuid>/callback
 
-    For ORCID sandbox testing, use https://sandbox.orcid.org/ for ORCID registration and use ``https://sandbox.orcid.org`` as the DSW ``URL``.
+Copy the displayed logout address into the corresponding provider setting where required. The callback and logout addresses serve different purposes; each belongs in its corresponding field at the identity provider.
 
+Test the connection
+===================
 
-Custom Setup
-============
+#. Open the instance in a separate browser session and select the provider's sign-in button.
+#. Complete authentication at the identity provider and return to DSW.
+#. Check that the intended account is opened and that its profile details are correct. Test registration separately if it is enabled.
+#. Test signing out and signing in again.
 
-1. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
-2. Fill in a ``Name`` of the service. This name will be used to identify the service in the list of login options, so it should be something descriptive.
-3. Open the ``Custom`` tab.
-4. Prepare the OpenID endpoint ``URL``. This is usually the issuer URL of the provider. If the provider gives us a URL ending with ``/.well-known/openid-configuration``, use only the part before this suffix.
-5. Prepare the client application on the side of the OpenID provider:
-	- If the provider allows creating the client without redirect URLs, create it and obtain ``Client ID`` and ``Client Secret``.
-	- If the provider requires redirect URLs before it creates credentials, use temporary values in DSW first, for example ``placeholder`` for ``Client ID`` and ``Client Secret``. Fill in the real OpenID endpoint ``URL`` and click on ``Save``. Then copy the generated ``Callback URL`` from DSW and use it in the provider.
-6. In the OpenID provider, configure redirect URLs:
-	- Use DSW ``Callback URL`` as the provider redirect URI, callback URL, reply URL, or sign-in redirect URI.
-	- If the provider supports logout URLs, use DSW ``Logout URL`` as the provider logout URL.
-7. Configure the client in the OpenID provider:
-	- Allow the ``authorization_code`` flow, if this is configurable.
-	- Configure the client to have the following scopes or claims: ``openid``, ``profile``, ``email``.
-	- Configure the client to provide the following details in ID tokens: ``email``, ``given_name``, ``family_name``.
-8. Go back to DSW and fill in the real ``Client ID``, ``Client Secret``, and ``URL`` from the OpenID provider.
-9. Leave ``Parameters`` empty unless the provider documentation requires an additional parameter.
-10. (optional) Fill in Icon (an icon from `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), ``Background Color`` and ``Text Color``.
-11. Click on ``Save``.
-12. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
+Existing users can link an identity through :doc:`/application/profile/settings/connected-accounts` while signed in to their DSW account.
 
+If sign-in fails
+================
 
-Advanced Configuration
-======================
+Check the exact registered callback address, client identifier and secret, and whether the provider allows the test account to use the client. For a Custom provider, also check the issuer URL and required parameters.
 
-In the ``Advanced`` dropdown of the OpenID configuration, we can set up additional options.
+If authentication succeeds but DSW refuses access, check registration settings and account status. Retry an expired sign-in attempt from the sign-in page. Use :doc:`/more/miscellaneous/help` when reporting the error.
 
-- **Registration enabled** - if enabled, users will be able to register a new DSW account using this OpenID service. If disabled, only existing DSW OpenID accounts can log in.
-- **Scopes** - scopes requested from the OpenID provider.
-	- **Email** - some services (such as ORCID) do not provide an email address. By disabling this option, we can enable email completion upon the user's first login. This means that if the OpenID provider does not return an email address, the user will be prompted to enter it manually after the first login. DSW requires an email address to send password reset instructions and other notifications, so it is required for the user account.
-	- **Profile** - if the provider does not return profile information, the user will be prompted to enter their first and last name manually after the first login.
+Updating an existing provider
+=============================
+
+Open the provider's name in the list, update the fields and save. When changing a client secret, update the corresponding value in DSW and test the connection.
+
+If the upgrade changes the deployed addresses, update the identity provider's callback and logout registrations to the addresses shown by the upgraded instance. See :doc:`/more/self-hosted-dsw/upgrade-guidelines` for the related migration steps.

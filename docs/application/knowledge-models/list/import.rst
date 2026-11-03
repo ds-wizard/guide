@@ -1,36 +1,25 @@
-.. _km-import:
+Import a Knowledge Model
+************************
 
-Knowledge Model Import
-**********************
+Open the knowledge model library and choose :guilabel:`Import`. You need the management permission for the target library.
 
-We can import an existing knowledge model by navigating to :doc:`./index` (:menuselection:`Knowledge Models`) in the main menu and then clicking on :guilabel:`Import` button.
-
-
-.. _km-import-from-registry:
-
-From DSW Registry
+From the Registry
 =================
 
-We can import a knowledge model from the `DSW Registry <https://registry.ds-wizard.org>`__. This is a repository of knowledge models. To import a knowledge model from the registry, we need to enter the **knowledge model ID** of the desired template (e.g. ``dsw:lifesciences:2.6.7``) and press the :guilabel:`Import` button.
+Where a Registry connection is available, select :guilabel:`From registry` and enter the desired reference in ``id:version`` form, for example ``example.research-model:1.0.0``. This is an illustrative identifier, not a bundled item.
+Use the Registry to find an available item and version, then import it.
 
-.. NOTE::
+.. todo::
 
-    In case of knowledge model present in the `DSW Registry <https://registry.ds-wizard.org>`__, we will be notified about the available upgrade by yellow :guilabel:`update available` badge.
+   Screenshot: Import a Knowledge Model from registry in DSW 5.0.
 
+From a file
+===========
 
-.. figure:: import/registry.png
-    :width: 500
-    
-    Input for importing a knowledge model from DSW Registry.
+Select :guilabel:`From file` and choose a KM bundle exported from DSW or produced by compatible tools. Multiple files can be selected. Review any validation errors before using the imported content.
 
+.. todo::
 
-From file
-=========
+   Screenshot: Import a Knowledge Model from file in DSW 5.0.
 
-We can import a knowledge model as a KM file. Such a file can be created as an export from DSW (from :doc:`./index` or :doc:`./detail`). We can also select multiple files at once.
-
-.. figure:: import/file.png
-    :width: 500
-    
-    Input for importing a knowledge model using a KM package.
-
+Importing a new version does not update the model or template selected in existing projects. Review project settings and use :doc:`/application/projects/list/migration` when changing a project's knowledge model.

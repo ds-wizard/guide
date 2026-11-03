@@ -22,7 +22,10 @@ copyright = '2018 - 2026, DSW Team'
 author = 'DSW Team'
 
 # The full version, including alpha/beta/rc tags
-version = release = '4.35'
+version = release = '5.0'
+
+# Keep the mobile header readable at narrow widths.
+html_title = f'DSW {release} Guide'
 
 # -- General configuration ---------------------------------------------------
 
@@ -40,7 +43,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = []
+templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -63,14 +66,17 @@ html_favicon = '_static/favicon.ico'
 html_theme_options = {
     'light_logo': 'logo/logo-light-mode.svg',
     'dark_logo': 'logo/logo-dark-mode.svg',
+
     'light_css_variables': {
-        'color-brand-primary': '#f15a24',
-        'color-brand-content': '#f15a24',
+        'font-stack': 'ui-sans-serif, -apple-system, "system-ui", "Segoe UI Variable Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+        'font-stack--headings': 'Nunito, ui-sans-serif, sans-serif',
+        'color-brand-primary': '#c33d00',
+        'color-brand-content': '#ba3a00',
         'sidebar-item-spacing-horizontal': '.75rem',
     },
     'dark_css_variables': {
-        'color-brand-primary': '#f15a24',
-        'color-brand-content': '#f15a24',
+        'color-brand-primary': '#fc6430',
+        'color-brand-content': '#ffa082',
         'sidebar-item-spacing-horizontal': '.75rem',
     },
     'sidebar_hide_name': True,
@@ -95,4 +101,12 @@ linkcheck_ignore = [
 redirects = {
     'more/roadmap/index': 'https://changelog.ds-wizard.org',
     'more/changelog': 'https://changelog.ds-wizard.org'
+}
+
+# Visible placeholders until the DSW screenshot environment is available.
+todo_include_todos = True
+
+notfound_context = {
+    'title': 'Page not found',
+    'body': '<h1>Page not found</h1><p>The page may have moved. Use the menu or search to find it, or return to the <a href="/en/develop/">DSW guide home</a>.</p>',
 }
