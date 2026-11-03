@@ -59,3 +59,9 @@
 - Included the 5.0 guide content, native navigation groups and sidebar stability fix, DSW branding/fonts/templates, screenshot TODO inventory, README and review evidence
 - Re-ran clean strict HTML and LaTeX-source builds successfully. Validated 130 reachable source pages, 27,059 local references and all 38 application help targets; no orphan pages, duplicate parents or cycles. git diff --check passes
 - Remaining work: replace the 129 screenshot TODOs when the DSW environment is ready, then inspect the rendered downloadable PDF and run application-flow acceptance checks. This PR does not claim those checks are finished
+
+## Restore original OpenID setup instructions — 3 November 2026
+
+- Restored the original numbered Microsoft Azure (34 steps), ORCID (18 steps) and Custom provider (12 steps) instructions and advanced scope explanations from the pre-5.0 guide, following the user's wording and sequence
+- Limited 5.0 edits to the current Settings navigation, root callback URL, Client Secret Value and Advanced configuration labels, and Create versus Save. Retained current FW captures / DSW screenshot TODOs; restored the existing FW automation section with its current internal guide link
+- Strict HTML and LaTeX-source builds pass in both guides. Provider instructions were restored from the original guide, not independently revalidated against live provider portals. No identity-provider or application configuration changed
