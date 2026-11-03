@@ -71,3 +71,9 @@
 - Left out TDK workspace options because workspaces are outside the DSW guide's scope
 - Restored the MS Word image compression note and the TDK Docker usage. Worker configuration details are intentionally not documented
 - Strict HTML build passes. Not verified: the TDK and Docker commands were checked against source only and not run; rendered pages and the PDF were not reviewed
+
+## TDK 5.0.0 page — 3 November 2026
+
+- Reviewed the TDK page against engine-tools main a780164, which is planned for release as 5.0.0. Pinned the install and Docker examples to 5.0.0, which is not published yet; PyPI has 4.35.0 and Docker Hub has 5.0.0-rc.1
+- Added named environments, default directories and files, and upgrade notes from TDK 4.x
+- Strict HTML build passes. The commands were checked against source only and not run
