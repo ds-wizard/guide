@@ -1,3 +1,5 @@
+.. _document-template-step-rdflib-convert:
+
 Step: ``rdflib-convert``
 ************************
 

@@ -26,9 +26,19 @@ Application files use the DSW client message set; email files use the DSW mail-t
 Keep custom PO files and update them when the application's messages change. The old ZIP locale bundles are replaced by this PO workflow in 5.0.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-locales.png
+    :figclass: guide-screenshot
+    :alt: Interface translations in DSW 5.0
+    :width: 760
 
-   Screenshot: Application translation list and email translation list.
+    Interface translations.
+
+.. figure:: /_static/screenshots/5.0/settings-mail-template-locales.png
+    :figclass: guide-screenshot
+    :alt: Email translations in DSW 5.0
+    :width: 760
+
+    Email translations.
 
 
 .. toctree::

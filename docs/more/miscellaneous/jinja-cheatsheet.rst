@@ -19,15 +19,15 @@ These are the basic Jinja elements:
    * - Formatting
      - Jinja Syntax
    * - Variable
-     - {{ variable }}
+     - ``{{ variable }}``
    * - If Statement
-     - {% if condition %} ... {% endif %}
+     - ``{% if condition %} ... {% endif %}``
    * - If-Else Statement
-     - {% if condition %} ... {% else %} ... {% endif %}
+     - ``{% if condition %} ... {% else %} ... {% endif %}``
    * - For Loop
-     - {% for item in items %} ... {% endfor %}
+     - ``{% for item in items %} ... {% endfor %}``
    * - Comment
-     - {# This is a comment #}
+     - ``{# This is a comment #}``
 
 .. NOTE::
 
@@ -45,16 +45,35 @@ By default, Jinja keeps whitespace (spaces, tabs, newlines) around tags. You can
    * - Formatting
      - Jinja Syntax
    * - Default Behavior
-     - {% if condition %} ... {% endif %}
+     - ``{% if condition %} ... {% endif %}``
    * - Trim Leading Whitespace
-     - {%- if condition %} ... {%- endif %}
+     - ``{%- if condition %} ... {%- endif %}``
    * - Trim Trailing Whitespace
-     - {% if condition -%} ... {% endif -%}
+     - ``{% if condition -%} ... {% endif -%}``
    * - Trim Both Sides
-     - {%- if condition -%} ... {%- endif -%}
+     - ``{%- if condition -%} ... {%- endif -%}``
    * - Loop Example
-     - {% for item in items -%} {{ item }} {%- endfor %}
+     - ``{% for item in items -%} {{ item }} {%- endfor %}``
 
 .. NOTE::
 
     Use the ``-`` (dash) inside tag delimiters to remove whitespace. This is particularly helpful when generating compact text or code (e.g., JSON, YAML, Markdown).
+
+Multiline whitespace examples
+=============================
+
+Without trimming, the line breaks around a block are kept:
+
+.. code-block:: jinja
+
+   {% if condition %}
+     ...
+   {% endif %}
+
+A loop can trim the surrounding whitespace while keeping the value expression:
+
+.. code-block:: jinja
+
+   {% for item in items -%}
+   {{ item }}
+   {%- endfor %}

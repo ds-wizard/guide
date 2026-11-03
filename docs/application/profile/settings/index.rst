@@ -5,9 +5,12 @@ We can open :guilabel:`User settings` from the profile menu. Here we can change 
 
 The settings menu also provides password, connected accounts, language, API keys, active sessions, submission settings and tours. Some options depend on the instance configuration.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/account-profile.png
+    :figclass: guide-screenshot
+    :alt: User profile in DSW 5.0
+    :width: 760
 
-   Screenshot: User profile in DSW 5.0.
+    User profile.
 
 
 

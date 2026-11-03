@@ -12,9 +12,12 @@ The navigation tree on the left shows the model's structure. Use the arrows to e
 
 Select an entity to edit it. The active entity is highlighted in the tree so we can find its parent and child entities.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-editor.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model Editor in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model Editor in DSW 5.0.
+    Knowledge Model Editor.
 
 .. TIP::
 
@@ -47,37 +50,46 @@ There are different entities we can edit in the knowledge model, the editor show
 - :ref:`Integration<integration>`
 - :ref:`Resource Collection<resource-collection>`
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-question.png
+    :figclass: guide-screenshot
+    :alt: Value question configuration in DSW 5.0
+    :width: 760
 
-   Screenshot: Value question configuration in DSW 5.0.
+    Value question configuration.
 
 Besides their own fields, each entity has so-called **Annotations**. They are arbitrary key value pairs that can be assigned to the entity and used later, when :ref:`developing a document template<document-template-development>`.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-integration.png
+    :figclass: guide-screenshot
+    :alt: API integration configuration in DSW 5.0
+    :width: 760
 
-   Screenshot: API integration configuration in DSW 5.0.
+    API integration configuration.
 
-.. todo::
-
-   Screenshot: Knowledge Model Editor showing the acronym validation rule.
 
 URL Checker
 ===========
 
 If we have at least one :ref:`URL Reference<url-reference>` in the knowledge model, a new tab :guilabel:`URL Checker` appears in the knowledge model editor. Here we can check whether each used URL is reachable or not. This allows us to quickly find broken links in the knowledge model and fix them.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-url-checker.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model URL checker in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model URL checker in DSW 5.0.
+    Knowledge Model URL checker.
 
 Warnings
 ========
 
 The editor checks for some possible problems, such as empty title for a chapter or no answers for an options question. If there are any, the :guilabel:`Warnings` tab appears and we can quickly navigate to those problems and fix them.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-warnings.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model warnings in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model warnings in DSW 5.0.
+    Knowledge Model warnings.
 
 Development with Document Template Editor
 =========================================

@@ -7,7 +7,7 @@ The main part of the detail is the README of the template that should contain ba
 
 In the top bar, we can :guilabel:`Export` the template as a ZIP package or :guilabel:`Delete` this version of the template. We can also quickly navigate to :doc:`/application/document-templates/editors/create` by clicking :guilabel:`Create editor`; it will prepare editor creation for a new version of this document template.
 
-We can also choose :guilabel:`Set deprecated`, which makes this version unavailable for new selections. This only applies to the latest version of the document template. If there is an older version, that will still be available.
+We can also choose :guilabel:`Set deprecated`, which makes this version unavailable for new selections. Deprecation affects the selected version. Other versions retain their own status.
 
 If we are not seeing the latest version of the template, a warning message is shown in the top. Similarly, we will see a notification that update is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org/>`__ (if configured).
 
@@ -23,9 +23,12 @@ When the template is prepared for translations, use :guilabel:`Export .pot file`
 The template's source language is shown in its detail panel. A locale becomes available when selecting a :ref:`default document language<default-document-template>` for a project or creating a document with that template.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-detail.png
+    :figclass: guide-screenshot
+    :alt: Document Template details in DSW 5.0
+    :width: 760
 
-   Screenshot: Document Template details in DSW 5.0.
+    Document Template details.
 
 Deleting a template in use
 ==========================
@@ -33,6 +36,9 @@ Deleting a template in use
 A template can be deleted even when it has generated documents. Deletion removes those documents and clears the selected template in affected projects; the projects remain.
 Review all affected content before confirming. Deletion is refused if the acting user cannot view every dependency.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-delete.png
+    :figclass: guide-screenshot
+    :alt: Delete Document Template with dependent projects in DSW 5.0
+    :width: 480
 
-   Screenshot: Delete Document Template with dependent projects in DSW 5.0.
+    Delete Document Template with dependent projects.

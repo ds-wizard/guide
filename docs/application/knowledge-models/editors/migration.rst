@@ -8,9 +8,11 @@ Knowledge model can be created either from scratch or based on existing one and 
 That is what the knowledge model migration is for. Once a new version of the parent KM is published, we can start the KM migration where we go through these changes. We can choose whether we want to apply or reject these modifications to our child KM during migration. At the end, we publish a new version of the child KM with all the selected changes.
 
 
-.. todo::
+.. figure:: /_static/diagrams/km-migration.png
+   :alt: Parent Knowledge Model changes selectively applied or rejected in a child model
+   :width: 760
 
-   Screenshot: Schematic representation of KM migration.
+   Parent and child Knowledge Model migration.
 
 Creating a Knowledge Model Migration
 ====================================
@@ -21,16 +23,22 @@ We can start the knowledge model migration from the :ref:`list of knowledge mode
 
     If there are some unpublished changes in the Child KM, we cannot start the migration (there will be no :guilabel:`update available` badge). We need to publish the changes first.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-migration-list.png
+    :figclass: guide-screenshot
+    :alt: Chemistry Knowledge Model editor showing the update available badge and Update menu action
+    :width: 760
 
-   Screenshot: Knowledge Model Editors in DSW 5.0.
+    Knowledge Model Editor with a parent update available.
 
-We can either click on the badge directly, or choose :guilabel:`Upgrade` option from the dropdown menu. It will open a modal window where we can choose a new version of the Parent KM that we want to migrate our Child KM to. Usually, we want to pick the latest.
+We can either click on the badge directly, or choose the :guilabel:`Update` option from the dropdown menu. It will open a modal window where we can choose a new version of the Parent KM that we want to migrate our Child KM to. Usually, we want to pick the latest.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-migration-update.png
+    :figclass: guide-screenshot
+    :alt: Create migration dialog with Common DSW Knowledge Model version 2.8.3 selected
+    :width: 480
 
-   Screenshot: Update a Knowledge Model Editor in DSW 5.0.
+    Select the new parent Knowledge Model version.
 
 Knowledge Model Migration
 =========================
@@ -38,9 +46,12 @@ Knowledge Model Migration
 During the migration, we can see all the changes one by one and can choose whether we want to :guilabel:`Apply` or :guilabel:`Reject` the change. We can also choose to :guilabel:`Apply all` if we simply want everything.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-migration-review.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model migration change review showing Reject, Apply and Apply all controls
+    :width: 663
 
-   Screenshot: Knowledge Model migration in DSW 5.0.
+    Review a change from the parent Knowledge Model.
 
 Cancelling a Knowledge Model Migration
 ======================================
@@ -51,16 +62,16 @@ We can cancel the knowledge model migration at any point before we publish the n
 Finishing a Knowledge Model Migration
 =====================================
 
-After we resolve all the changes, we are ready to publish the new version of the child KM. To do that, we need to click on the :guilabel:`Publish →` button. This will open the Publish new version screen where we need to provide additional information for the new version of the knowledge model.
+After we resolve all the changes, we are ready to publish the new version of the child KM. To do that, we need to click on the :guilabel:`Publish` button. This will open the Publish new version screen where we need to provide additional information for the new version of the knowledge model.
 
 The publish screen shows us some information about the knowledge model, such as its **Knowledge Model Name** and **Knowledge Model ID**. We need to choose the new **version number**.
 
 .. NOTE::
 
-    We recommend using a similar approach as in `semantic versioning <https://semver.org>`_. So when we have a version ``<major>.<minor>.<patch>``, change in the major version number indicates some breaking changes (deleting questions, significant changes in the questionnaire structure, etc.), change in minor version number indicates some new changes that are backwards compatible (i.e., adding a new question), and change in the patch version number indicate some fixes (such as fixing some typos).
+    We recommend using a similar approach as in `semantic versioning <https://semver.org>`_. So when we have a version ``<major>.<minor>.<patch>``, change in the major version number indicates some breaking changes (deleting questions, significant changes in the questionnaire structure, etc.), change in minor version number indicates some new changes that are backwards compatible (i.e., adding a new question), and change in the patch version number indicates fixes (such as fixing some typos).
 
 
-Then we need to add some additional metadata (these fields are pre-filled if there was a previous version published):
+The publishing form also contains the following metadata, pre-filled from the editor:
 
 - **License** - this is used when we want to share the knowledge model with other people so they know how they can do that. We recommend using a license identifier from `SPDX Licenses List <https://spdx.org/licenses/>`_.
 - **Description** - this should be really short and descriptive. It is used, for example, in select boxes when creating a new project to help researchers choose the best knowledge model for their use case.

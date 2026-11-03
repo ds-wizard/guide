@@ -12,11 +12,6 @@ Installed plugins can also provide integrations. Choose the plugin integration i
 Integration credentials should use :doc:`knowledge model secrets </application/knowledge-models/secrets>` instead of being embedded in the model. Test the integration with the service before publishing the model.
 
 
-.. todo::
-
-   Screenshot: API integration configuration and test results.
-
-
 .. toctree::
    :maxdepth: 1
 

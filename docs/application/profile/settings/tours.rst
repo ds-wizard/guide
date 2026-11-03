@@ -5,6 +5,9 @@ Tours showcase features and workflows. Every tour is displayed to the user once,
 
 We can reset the tours here, so we can see them again.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/account-tours.png
+    :figclass: guide-screenshot
+    :alt: Guided tours in DSW 5.0
+    :width: 676
 
-   Screenshot: Guided tours in DSW 5.0.
+    Guided tours.

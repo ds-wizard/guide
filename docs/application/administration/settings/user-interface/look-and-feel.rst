@@ -7,6 +7,9 @@ The application title is also used where earlier versions had a separate short t
 Knowledge-model and document-template identifiers are managed on the content itself; there is no organization ID setting used to build three-part content identifiers in 5.0.
 For navigation links and dashboard content, use :doc:`/application/administration/settings/user-interface/dashboard-and-login-screen`.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-look-and-feel.png
+    :figclass: guide-screenshot
+    :alt: Look and Feel settings in DSW 5.0
+    :width: 760
 
-   Screenshot: Look and Feel settings in DSW 5.0.
+    Look and Feel settings.

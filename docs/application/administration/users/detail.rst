@@ -10,6 +10,9 @@ The available personal settings depend on whether we are editing our own account
 Use the delete action only after checking its confirmation. Deleting an account is permanent.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/user-profile.png
+    :figclass: guide-screenshot
+    :alt: Administrator view of a user in DSW 5.0
+    :width: 760
 
-   Screenshot: User detail, assigned role and active status.
+    Administrator view of a user.

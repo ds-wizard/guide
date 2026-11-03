@@ -5,6 +5,9 @@ If there are any :ref:`question tags<question-tag>` set up in the knowledge mode
 
 We can simply click the checkbox in the corresponding question tag - question table cell to assign/unassign the question tag to that particular question. We can also click on the question name to open the question editor and change the question details.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-tags.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model question tags in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model question tags in DSW 5.0.
+    Knowledge Model question tags.

@@ -12,9 +12,12 @@ Next, we have **Project Tags**. These can be used for providing some metadata or
     Project tags might be disabled in some DSW instances.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-settings.png
+    :figclass: guide-screenshot
+    :alt: Project settings in DSW 5.0
+    :width: 520
 
-   Screenshot: Project settings.
+    Project settings.
 
 .. _default-document-template:
 
@@ -29,9 +32,12 @@ When the selected template has :ref:`locales<document-template-locales>`, we can
 
 :guilabel:`Unsupported metamodel` badge can appear when the document template is not compatible with the version of DSW. Users should contact the person responsible for document templates or instance administration in this case.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-settings-template.png
+    :figclass: guide-screenshot
+    :alt: Project settings template in DSW 5.0
+    :width: 724
 
-   Screenshot: Project settings showing the selected Questionnaire Report template and document format choices.
+    Project settings template.
 
 Project Template
 ================

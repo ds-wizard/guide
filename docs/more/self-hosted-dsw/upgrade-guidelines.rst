@@ -25,6 +25,8 @@ Content and templates
 
 Content identifiers combine the former organization and local ID using a dot. For example, ``example:research-model:1.0.0`` becomes identifier ``example.research-model`` and version ``1.0.0``. Imports and tools use identifier and version separately, or ``id:version`` where a reference is required.
 
+Resolve any duplicate knowledge model or document template IDs before upgrading. The migration checks the combined ID and version within each instance and stops if they are not unique.
+
 Review custom document templates for context 19.0 as described in :ref:`document-template-metamodel-versions` and use compatible worker and TDK versions. Changing only a metamodel number does not update template code. Check allowed-model patterns and document-submission formats after migration.
 
 Review the document worker configuration for these template-related changes:
@@ -68,8 +70,18 @@ Set compatible target-version image tags for the server, client, document worker
 
 .. code-block:: shell
 
+   docker compose stop server docworker mailer
    docker compose pull
+   docker compose up -d server
+   docker compose logs -f server
+
+Wait for the server migrations to complete successfully, then start the other services:
+
+.. code-block:: shell
+
    docker compose up -d
+
+The service names above follow the deployment example; use the names from your Compose file. Do not start workers against a database whose upgrade has failed.
 
 
 Other setup (using Git)

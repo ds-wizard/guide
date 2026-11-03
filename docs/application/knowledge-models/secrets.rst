@@ -14,6 +14,16 @@ DSW does not return existing secret values to the browser. To change a value, su
 
 Refer to :doc:`/more/development/integration-questions/integration-api` when configuring how an integration uses a secret.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-secrets.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model secrets in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model secrets in DSW 5.0.
+    Knowledge Model secrets.
+
+Use a secret in an integration
+==============================
+
+We can also open the secrets list through :guilabel:`Configure secrets` in the integration editor. Give the secret a name, for example ``apiUrl``, enter its value and save it.
+
+Back in the integration configuration, use the copy button next to a secret's name. It copies a Jinja reference such as ``{{ secrets.apiUrl }}`` for use in a request URL or headers. Variables have their own copy buttons and use ``{{ variables.name }}``. This keeps the stored value out of the knowledge model itself.

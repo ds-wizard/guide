@@ -10,6 +10,9 @@ Plugins can extend questionnaire questions, integrations, project actions, docum
 Plugin installation is configured by the deployment administrator; see :doc:`/more/self-hosted-dsw/configuration/plugins`.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-plugins.png
+    :figclass: guide-screenshot
+    :alt: Settings plugins in DSW 5.0
+    :width: 760
 
-   Screenshot: Installed plugins and a plugin configuration page.
+    Settings plugins.

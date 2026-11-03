@@ -24,6 +24,9 @@ A changed file has an unsaved-change indicator in the tree and its tab. Use :gui
 
 Open :doc:`preview` to check the saved template with a project or knowledge model editor.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-files.png
+    :figclass: guide-screenshot
+    :alt: Document Template files in DSW 5.0
+    :width: 760
 
-   Screenshot: Document Template file tree, unsaved-change indicator and split editor panes.
+    Document Template files.

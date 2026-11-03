@@ -14,6 +14,6 @@ Some submission services are already implemented and can be used to check the im
 
 - `Dummy Submission Service <https://github.com/ds-wizard/dummy-submission-service>`_ which just based on the headers returns example result or error.
 - `Email Submission Service <https://github.com/ds-wizard/email-submission-service>`_ sends an email through SMTP connection with the submitted document attached (or processed in case of JSON).
-- `Nanopub Submission Service <https://github.com/ds-wizard/nanopub-submission-service>`_ allows to store a `nanopublication <https://github.com/Nanopublication>`_ (in RDF TRiG format) in the distributed network of nanopublication servers.
+- `Nanopub Submission Service <https://github.com/ds-wizard/nanopub-submission-service>`_ can store a `nanopublication <https://github.com/Nanopublication>`_ (in RDF TRiG format) in the distributed network of nanopublication servers.
 
 Test the configured service with a compatible template and format, required user properties and representative error responses before making it available to users.

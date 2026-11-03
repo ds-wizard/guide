@@ -14,9 +14,12 @@ Configure the contact links
 
 Unset values use the instance defaults shown as placeholders in the form. The support website opens in a new tab; the email link opens the user's email application.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-support.png
+    :figclass: guide-screenshot
+    :alt: Support settings in DSW 5.0
+    :width: 760
 
-   Screenshot: Support settings in DSW 5.0.
+    Support settings.
 
 For the user-facing procedure, see :doc:`/more/miscellaneous/help`.
 

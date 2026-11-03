@@ -5,9 +5,12 @@ Sharing
 
 Project owners can share a project with other DSW users or external collaborators. Open the :guilabel:`Share` button in the project header to change access.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-sharing.png
+    :figclass: guide-screenshot
+    :alt: Project sharing in DSW 5.0
+    :width: 480
 
-   Screenshot: Project sharing.
+    Project sharing.
 
 .. NOTE::
 
@@ -15,6 +18,13 @@ Project owners can share a project with other DSW users or external collaborator
 
 
 The arrow beside :guilabel:`Share` opens sharing information and :guilabel:`Copy link`.
+
+.. figure:: /_static/screenshots/5.0/project-sharing-members.png
+    :figclass: guide-screenshot
+    :alt: Sharing example with Isaac Newton and Marie Curie (researchers), Nikola Tesla (data steward) and Research Team
+    :width: 480
+
+    Sharing with researchers, a data steward and a user group.
 
 Changes made in the sharing modal are saved after clicking :guilabel:`Save`. We can close the modal without saving by clicking :guilabel:`Cancel`.
 

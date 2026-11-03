@@ -6,6 +6,9 @@ We can compare two versions of a knowledge model by clicking :guilabel:`Compare`
 The comparison can be started in project migration and in KM list and detail. When we select an item in the comparison, the side panel shows its details, including the UUID. We can use the copy button next to the UUID to copy it.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-compare.png
+    :figclass: guide-screenshot
+    :alt: Compare Knowledge Models in DSW 5.0
+    :width: 760
 
-   Screenshot: Compare Knowledge Models in DSW 5.0.
+    Compare Knowledge Models.

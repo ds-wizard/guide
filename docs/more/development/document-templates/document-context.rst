@@ -1011,3 +1011,44 @@ Aliases:
 
 -  ``is_plain`` (``bool``) - entered by user ignoring the integration
 -  ``is_integration`` (``bool``) - selected by user using the integration
+
+Examples
+========
+
+Read replies to top-level questions:
+
+.. code-block:: jinja
+
+   {%- set x = ctx|to_context_obj -%}
+   {% for chapter in x.km.chapters %}
+     <h2>{{ chapter.title }}</h2>
+     {% for question in chapter.questions %}
+       {% set path = chapter.uuid ~ '.' ~ question.uuid %}
+       {% set reply = x.questionnaire.replies.get(path) %}
+       {% if reply %}<p>{{ question.title }}: {{ reply.value }}</p>{% endif %}
+     {% endfor %}
+   {% endfor %}
+
+A reply path contains the UUIDs leading to that question, separated by dots. Nested list items and follow-up questions add their UUIDs to the path. Use ``RepliesContainer`` helpers to select related replies and :doc:`steps/jinja` for reply filters and extraction by annotations.
+
+List uploaded files:
+
+.. code-block:: jinja
+
+   {% for file in x.questionnaire.files.values() %}
+     <p>{{ file.name }} ({{ file.size }} bytes)</p>
+   {% endfor %}
+
+Use ``assets(file)`` when embedding a file's content in the output. A download link and embedded content serve different purposes; the former still requires access to the instance.
+
+Worker-supplied extras
+======================
+
+A rendering step can request ``extras`` as a comma-separated option, for example ``submissions,project``. The document worker adds the requested data to ``ctx['extras']``:
+
+* ``submissions``: submission records for the source project.
+* ``project``: the worker's additional project record.
+
+For a knowledge model editor preview, ``extras.project`` is ``None`` and ``extras.submissions`` is empty. The deprecated ``extras.questionnaire`` alias is removed in 19.0; use ``extras.project`` for that data. Replies and questionnaire content are already in the main ``questionnaire`` object.
+
+These extras are worker enrichment. The backend's fetched raw context does not include them, so validate the backend payload before enrichment.

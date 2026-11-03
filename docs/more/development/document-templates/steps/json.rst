@@ -1,3 +1,5 @@
+.. _document-template-step-json:
+
 Step: ``json``
 **************
 

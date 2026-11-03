@@ -8,10 +8,9 @@ Upload a translation
 
 An upload that replaces an official language turns it into a custom translation. Keep your PO file so it can be maintained for later message changes.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/upload-locales.png
+    :figclass: guide-screenshot
+    :alt: Upload interface translation in DSW 5.0
+    :width: 760
 
-   Screenshot: Upload email translation in DSW 5.0.
-
-.. todo::
-
-   Screenshot: Upload interface translation in DSW 5.0.
+    Upload interface translation.

@@ -17,7 +17,3 @@ Disconnect an account
 =====================
 
 Choose :guilabel:`Disconnect` beside the connection and confirm. We can no longer use that connection to sign in to this account. Before disconnecting it, make sure we have another working sign-in method.
-
-.. todo::
-
-   Screenshot: Connected Accounts in DSW 5.0.

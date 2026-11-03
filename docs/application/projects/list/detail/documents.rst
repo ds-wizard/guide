@@ -8,9 +8,12 @@ In the :guilabel:`Documents` tab in the project detail we can manage the documen
 While we can quickly see how the current state of the questionnaire looks like in the document in the :ref:`preview<preview>` tab, the documents created here are persistent. Once generated, a stored document does not change when we edit the questionnaire. We can download the same file later while it remains stored.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-documents.png
+    :figclass: guide-screenshot
+    :alt: Project documents in DSW 5.0
+    :width: 760
 
-   Screenshot: Generated documents.
+    Project documents.
 
 .. _new-document:
 
@@ -24,18 +27,24 @@ When the selected template offers :ref:`additional locales<document-template-loc
 Once we click :guilabel:`Create`, we are taken back to the document list and we'll see the new document there (it might take a while before it is generated though).
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-new-document.png
+    :figclass: guide-screenshot
+    :alt: Project new document in DSW 5.0
+    :width: 520
 
-   Screenshot: Create a document.
+    Project new document.
 
 Document Submission
 ===================
 
 :ref:`Submission services<submission-service>` can be used to quickly submit the document directly from DSW to some external service.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/document-submit.png
+    :figclass: guide-screenshot
+    :alt: Document submission in DSW 5.0
+    :width: 480
 
-   Screenshot: Document submission dialog explaining that no compatible service is configured for this document type.
+    Document submission.
 
 If there are any document submission services configured for our DSW, we should be able to see :guilabel:`Submit` option when we open document menu in the document list by clicking on the triple dots. Then we choose the desired service from the list and click on :guilabel:`Submit`.
 

@@ -8,9 +8,12 @@ Start with :doc:`overview` to see how these parts fit together. Researchers can 
 The menu and available actions depend on our permissions and the instance settings. Open our name or avatar in the main navigation for personal settings, appearance, help and version information.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dashboard.png
+    :figclass: guide-screenshot
+    :alt: Dashboard and application navigation in DSW 5.0
+    :width: 760
 
-   Screenshot: DSW dashboard and main navigation.
+    Dashboard and application navigation.
 
 
 .. toctree::

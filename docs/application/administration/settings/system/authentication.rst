@@ -14,6 +14,18 @@ Open :guilabel:`Settings` → :guilabel:`Authentication` with :guilabel:`Manage 
 Keep a working administrator sign-in method when changing authentication. External identity providers are configured under :doc:`openid`.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-authentication.png
+    :figclass: guide-screenshot
+    :alt: Authentication settings in DSW 5.0
+    :width: 760
 
-   Screenshot: Authentication settings and two-factor options.
+    Authentication settings.
+
+Expiration and default role
+===========================
+
+Session expiration and user email-link expiration are specified in hours. The emailed two-factor code has its own **Code Length** and **Expiration**, with the latter specified in seconds.
+
+Choose the default role for new users under :guilabel:`Settings` → :guilabel:`Roles`. Give new users only the permissions they need: a broad default role can expose other users' content or application settings. A role selected as the default cannot be deleted.
+
+Disable internal registration when accounts should be created by administrators or through configured external providers. External providers have separate registration controls; review both when deciding how new accounts may be created.

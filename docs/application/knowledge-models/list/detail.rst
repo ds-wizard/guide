@@ -36,15 +36,21 @@ In the top pane, we can see the options based on our permissions:
 If we are not seeing the latest version of the KM, a warning message is shown in the top. Similarly, we will see a notification that update is available if there is a newer version in the `DSW Registry <https://registry.ds-wizard.org/>`__ (if configured).
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-detail.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model details in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model details in DSW 5.0.
+    Knowledge Model details.
 
 Deleting a knowledge model
 ==========================
 
 Review the dependent content shown by the deletion dialog. Deleting a model can remove dependent editors, projects, files and generated documents. The action cannot proceed if the acting user cannot view every affected dependency.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-delete.png
+    :figclass: guide-screenshot
+    :alt: Delete Knowledge Model with dependent projects in DSW 5.0
+    :width: 480
 
-   Screenshot: Delete Knowledge Model with dependent projects in DSW 5.0.
+    Delete Knowledge Model with dependent projects.

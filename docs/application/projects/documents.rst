@@ -7,6 +7,9 @@ Each document has a name, format, specific size (if the generation is completed)
 
 If there is a document that was not generated due to an error, we can check the error message. If a document remains :guilabel:`Queued` or :guilabel:`In Progress`, contact the instance administrator or DSW support with the project and document details.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/projects-documents.png
+    :figclass: guide-screenshot
+    :alt: Documents across projects in DSW 5.0
+    :width: 760
 
-   Screenshot: Documents across projects in DSW 5.0.
+    Documents across projects.

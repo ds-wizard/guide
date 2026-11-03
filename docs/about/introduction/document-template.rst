@@ -7,9 +7,12 @@ A document template defines how questionnaire answers become a document. For exa
 
 The same template can offer several output formats, such as HTML, PDF and MS Word. We choose a template and format when :doc:`creating a document </application/projects/list/detail/documents>`, or set defaults in the :doc:`project settings </application/projects/list/detail/settings>`.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-detail.png
+    :figclass: guide-screenshot
+    :alt: Document Template details in DSW 5.0
+    :width: 760
 
-   Screenshot: Document template details showing its description, version and available formats.
+    Document Template details.
 
 Document Template Structure
 ===========================

@@ -12,6 +12,9 @@ A Registry API key is separate from an instance API key. Create and revoke Regis
 For content imports, see :doc:`/application/knowledge-models/list/import` and :doc:`/application/document-templates/list/import`. Application and email languages are managed under :doc:`/application/administration/settings/translations/index`.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-registry.png
+    :figclass: guide-screenshot
+    :alt: Settings registry in DSW 5.0
+    :width: 760
 
-   Screenshot: Registry connection enabled with its API key masked.
+    Settings registry.

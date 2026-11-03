@@ -11,15 +11,21 @@ Current Phase
 
 If the :ref:`knowledge model<knowledge-model>` we use for the :ref:`project<project>` has :ref:`phases<phase>` defined, we can see a phase selection in the questionnaire detail. Different questions become desirable based on the selected phase. For example, some should be answered before submitting the proposal, while others can be filled later. The phase progress is also visible.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-detail.png
+    :figclass: guide-screenshot
+    :alt: Project detail in DSW 5.0
+    :width: 760
 
-   Screenshot: Project questionnaire.
+    Project detail.
 
 By clicking the phase selection we open the modal window where we can choose the current phase.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-phases.png
+    :figclass: guide-screenshot
+    :alt: Project phases in DSW 5.0
+    :width: 480
 
-   Screenshot: Select a project phase.
+    Project phases.
 
 We can see the desirability of questions based on the phase we are currently in. We can also see the number of questions that still need to be answered in this phase for each chapter in the chapter list.
 
@@ -37,9 +43,16 @@ There are three desirability states the question can be in:
 Chapters
 ========
 
-Below the current phase selection, we have a list of :ref:`chapters<chapter>`. We can see the number of questions that are yet to be answered in current phase (or overall if there are no phases defined in the knowledge model). We can use this list to navigate freely between chapters.
+Below the current phase selection, we have a list of :ref:`chapters<chapter>`. We can see the number of questions that are yet to be answered in the current phase (or overall if there are no phases defined in the knowledge model). We can use this list to navigate freely between chapters.
 
 For the opened chapter, we can see a navigation tree for the chapter structure, showing the questions, follow-up questions, items, etc. We can use this tree to quickly navigate to a specific question in the chapter.
+
+.. figure:: /_static/screenshots/5.0/chapter-navigation.png
+    :figclass: guide-screenshot
+    :alt: Questionnaire chapters in DSW 5.0
+    :width: 259
+
+    Questionnaire chapters.
 
 Questionnaire Area
 ==================
@@ -73,9 +86,12 @@ Options question has a list of pre-set answers and we can choose one from those.
 
 If there are some metrics set for the answers, we can see labels with the metrics by the answer as well. The color of the label indicates how good or bad the answer is (red means bad, green good, yellow something in between).
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-options.png
+    :figclass: guide-screenshot
+    :alt: Options question in DSW 5.0
+    :width: 698
 
-   Screenshot: Options question.
+    Options question.
 
 List of Items Question
 ----------------------
@@ -89,9 +105,12 @@ There is a trash bin icon in the item's top right corner that we can use to **de
 The first question in the list of items question is used as a label for the item. It can be any type of question.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-list.png
+    :figclass: guide-screenshot
+    :alt: List question in DSW 5.0
+    :width: 724
 
-   Screenshot: List of datasets.
+    List question.
 
 Value Question
 --------------
@@ -100,9 +119,12 @@ Value question contains an input field for our answer. This can be a simple text
 
 Value questions can have validation rules, such as a required text pattern or a permitted number range. If an answer does not meet a rule, the question shows a validation message. Review the message and correct the answer where appropriate.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-value.png
+    :figclass: guide-screenshot
+    :alt: Value question in DSW 5.0
+    :width: 698
 
-   Screenshot: Text value question.
+    Value question.
 
 Integration Question
 --------------------
@@ -113,35 +135,47 @@ Choose a result from the list to save the selected answer. Its displayed text an
 
 If the integration allows custom replies, we can also enter our own text when the desired result is missing. DSW marks it as a custom answer rather than a selected integration result.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-integration.png
+    :figclass: guide-screenshot
+    :alt: Integration question in DSW 5.0
+    :width: 698
 
-   Screenshot: API integration question with search results and a selected answer.
+    Integration question.
 
 Multi-Choice Question
 ---------------------
 
 Multi-choice question is similar to the options question, however we can choose more than one answer and there are no follow-up questions.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-multi-choice.png
+    :figclass: guide-screenshot
+    :alt: Multi-choice question in DSW 5.0
+    :width: 698
 
-   Screenshot: Multiple-choice question.
+    Multi-choice question.
 
 Item Select Question
 --------------------
 
 The item selection question is used together with the list of items question. When creating an item selection question, you must choose one of the existing list of items questions. The answers provided to that list of items question are then offered as possible answers in the item selection question.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-item-select.png
+    :figclass: guide-screenshot
+    :alt: Item-select question in DSW 5.0
+    :width: 698
 
-   Screenshot: Select an item from a dataset list.
+    Item-select question.
 
 File Question
 -------------
 File question is used when we need to upload a file as an answer. We can simply click on the :guilabel:`Upload File` button and select the file from our computer. We can also drag and drop the file into the input field.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/question-file.png
+    :figclass: guide-screenshot
+    :alt: File question in DSW 5.0
+    :width: 698
 
-   Screenshot: File question with an uploaded protocol.
+    File question.
 
 View settings
 =============
@@ -151,12 +185,15 @@ In the questionnaire tab, there is a menu bar with various options. The first on
 - :guilabel:`Answered by` - show/hide who and when answered questions
 - :guilabel:`Phases` - show/hide what phase the questions are desirable in
 - :guilabel:`Question tags` - show/hide the question tags
-- :guilabel:`Non-desirable questions` - show/hide questions that are not desired to be filled in current phase
+- :guilabel:`Non-desirable questions` - show/hide questions that are not desirable in the current phase
 - :guilabel:`Metric values` - show/hide value of metrics for accessibility purpose
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/questionnaire-view.png
+    :figclass: guide-screenshot
+    :alt: Questionnaire view options in DSW 5.0
+    :width: 760
 
-   Screenshot: Questionnaire view options in DSW 5.0.
+    Questionnaire view options.
 
 .. NOTE::
 
@@ -171,15 +208,20 @@ Questionnaire answers can be imported from various sources using :ref:`plugins<p
 If there are some project importer plugins available for the project, there is the :guilabel:`Import answers` button in the questionnaire menu bar. We can choose one of the available importer plugins there and then follow the instructions in the importer plugin window.
 
 
+.. _unanswered-questions:
+
 Unanswered questions
 ====================
 
 The :guilabel:`Unanswered` button in the questionnaire menu bar shows how many visible questions that are desirable in the current phase still need an answer. Open it to see those questions grouped by chapter. Click a question to jump to it in the questionnaire. Questions that are hidden by earlier answers or belong to a later phase are not listed.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/questionnaire-unanswered.png
+    :figclass: guide-screenshot
+    :alt: Unanswered questions in DSW 5.0
+    :width: 384
 
-   Screenshot: Unanswered questions panel grouped by chapter.
+    Unanswered questions.
 
 .. _warnings:
 
@@ -188,13 +230,19 @@ Warnings
 
 Invalid values and failed question validation rules appear as warnings. Open :guilabel:`Warnings` in the questionnaire toolbar to see the affected questions, then click a question to review its answer. The badge shows the number of warnings.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/validation-error.png
+    :figclass: guide-screenshot
+    :alt: Email value validation warning in DSW 5.0
+    :width: 498
 
-   Screenshot: Question validation error in DSW 5.0.
+    Email value validation warning.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/questionnaire-warnings.png
+    :figclass: guide-screenshot
+    :alt: Questionnaire warnings in DSW 5.0
+    :width: 760
 
-   Screenshot: Warnings referring to questions with invalid values.
+    Questionnaire warnings.
 
 .. _todos:
 
@@ -205,9 +253,12 @@ When we are filling in the questionnaire, we can stumble upon a question that we
 
 We can then open the :guilabel:`TODOs` tab from the questionnaire menu to see the list of all questions with assigned TODO in the questionnaire. By clicking on a question there, we can quickly jump back to that question and fill it.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/questionnaire-todos.png
+    :figclass: guide-screenshot
+    :alt: Questionnaire TODOs in DSW 5.0
+    :width: 760
 
-   Screenshot: Questionnaire TODOs in DSW 5.0.
+    Questionnaire TODOs.
 
 Comments
 ========
@@ -218,9 +269,12 @@ Total number of comments in the questionnaire is visible in the :guilabel:`Comme
 
 The number of comments per question is indicated by the comments icon next to the question.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-comments.png
+    :figclass: guide-screenshot
+    :alt: Project comments in DSW 5.0
+    :width: 384
 
-   Screenshot: Questionnaire comments.
+    Project comments.
 
 .. _add-comment:
 
@@ -275,9 +329,12 @@ Version History
 
 When we open the :guilabel:`Version history` tab from the questionnaire menu bar we can see the list of all the changes that happened in that questionnaire. We can see who and when made what changes grouped by months and days.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-history.png
+    :figclass: guide-screenshot
+    :alt: Project history in DSW 5.0
+    :width: 384
 
-   Screenshot: Questionnaire version history.
+    Project history.
 
 Name a Version
 --------------
@@ -320,6 +377,9 @@ Search is accessible from the questionnaire menu bar by clicking on the :guilabe
 
 We can click on any of the search results to quickly navigate to that question in the questionnaire.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/questionnaire-search.png
+    :figclass: guide-screenshot
+    :alt: Search within a questionnaire in DSW 5.0
+    :width: 760
 
-   Screenshot: Search within a questionnaire in DSW 5.0.
+    Search within a questionnaire.

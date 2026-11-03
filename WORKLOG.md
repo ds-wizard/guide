@@ -60,7 +60,63 @@
 - Re-ran clean strict HTML and LaTeX-source builds successfully. Validated 130 reachable source pages, 27,059 local references and all 38 application help targets; no orphan pages, duplicate parents or cycles. git diff --check passes
 - Remaining work: replace the 129 screenshot TODOs when the DSW environment is ready, then inspect the rendered downloadable PDF and run application-flow acceptance checks. This PR does not claim those checks are finished
 
+## Restore original OpenID setup instructions — 3 November 2026
 
+- Restored the original numbered Microsoft Azure (34 steps), ORCID (18 steps) and Custom provider (12 steps) instructions and advanced scope explanations from the pre-5.0 guide, following the user's wording and sequence
+- Limited 5.0 edits to the current Settings navigation, root callback URL, Client Secret Value and Advanced configuration labels, and Create versus Save. Retained current FW captures / DSW screenshot TODOs; restored the existing FW automation section with its current internal guide link
+- Strict HTML and LaTeX-source builds pass in both guides. Provider instructions were restored from the original guide, not independently revalidated against live provider portals. No identity-provider or application configuration changed
+
+## Full content-retention audit — 3 November 2026
+
+- Compared all 126 original pages against mapped 5.0 pages; restored/corrected 39 pages. Retained useful reference detail, examples, warnings and metamodel history rather than replacing them with short summaries or external links
+- Re-read restored pages and compared against the pre-audit 5.0 text to retain newer migration/security/source/workspace cautions too
+- Corrected outdated examples and publishing metadata against current code. Kept exact OpenID steps, current navigation, supported 5.0 flows and authorized legacy migration-page removal
+- Detailed decisions, evidence, limitations and verification: maintenance/content-retention-audit.md, content-retention-audit.json and content-retention-validation.json
+- No screenshot capture/regeneration, application-data change, deployment, Notion edit, commit or push in this audit
+
+Final verification: strict HTML and LaTeX-source builds passed; 27415 local references checked; no link/image errors, missing toctree targets, or rendered alias errors. All 21 earlier template-metamodel entries and 62 schema-history rows retained. OpenID pages match the preceding fix exactly. `git diff --check` passed. Browser review covered restored technical-reference layout. The existing previews were rebuilt.
+
+## DSW mediakit 5.0 screenshots — 3 November 2026
+
+- Added 117 unique Cypress screenshots in 118 placements from the upgraded DSW mediakit instance. Replaced matching placeholders only; retained 13 visible TODOs for unavailable or separately staged examples
+- Native RST figures include alt text and constrained display widths (480px dialogs, 520px cropped forms, 760px full views, without upscaling). Modals preserve the actual grey backdrop; detail views collapse the app sidebar where useful
+- Updated maintenance/screenshot-todos.json and screenshot-integration.json with the current environment and remaining examples. Retained the semantic KM migration diagram
+- Common upgraded to 2.8.3 and My Experiment migrated with user approval. Exactly two original projects remain; LS/H2020 still show update examples. Czech screenshot locales enabled, English remains default
+- Verification: 116/118 captures passed together and the two document previews passed in a focused follow-up; exact temporary settings restoration verified. Strict HTML/LaTeX-source builds, local links/images, toctree labels and 38 application help links pass. Local review: http://127.0.0.1:8772/
+- Remaining environment/template issues: ../dsw-screenshots/ISSUES.md. No commit, push or guide publication
+
+## Screenshot/content refinement — 3 November 2026
+
+- Removed the News article and profile navigation reference following the confirmed DSW scope. The shared client contains News code; this is a product-scope exclusion, not a claim that no implementation exists
+- Removed the personal Submission Settings screenshot and redundant email-upload image; retained the useful explanatory text
+- Sidebar restores its position but uses only the new page's active ancestors, so visited branches no longer accumulate open
+- Rechecked upgrade guidance against the OS 5.0 migration and deployment experience: added the verified duplicate-ID prerequisite and corrected Docker instructions to start the server before workers. Historical upgrade notes retained; Document Context 19.0 deferred to the separate contributor PR
+- FAQ source requires Claude authentication; requested readable contents rather than inventing its questions
+
+### Final review of the refinement batch
+
+- Integrated 118 distinct images in 120 placements; 12 remaining screenshot TODOs. Added sharing with multiple collaborators/group, populated files/documents/user groups, cropped preferences, last-row menus, saved settings and their visible dashboard/login result, and demo OpenID configuration
+- Added five DSW FAQ questions: concepts, automatic saving, unanswered questions, PDF/Word generation and separate interface/questionnaire languages. Source: the supplied AI Assistant Questions — FAQ Input.txt; unverified AI answers and commercial-only topics excluded
+- Browser navigation Knowledge Models → Projects confirmed the old section closes while the new section opens. Strict HTML build, 27,800 local references, all 38 app help links and sidebar labels pass. Screenshot dimension review also corrected two clipped images
+- Upgrade guidance now explicitly orders server migration before worker startup and notes duplicate content IDs. Exact provider setup instructions and historical upgrade material retained. Document Context 19.0 reserved for the separate contributor PR
+- Review at http://127.0.0.1:8772/; remaining environment/template findings remain in ../dsw-screenshots/ISSUES.md. No commit or publication
+
+## Final proofreading and outstanding inventory — 3 November 2026
+
+- Ran whole-source checks for unfinished markers, long paragraphs, spelling/grammar patterns, commercial-only terminology and obsolete route references. Historical upgrade examples and exact provider steps retained
+- Corrected wording on eight pages without removing reference material. Source comparison also corrected the KM editor migration action from Upgrade to the actual 5.0 label Update; Apply/Reject/Apply all/Publish verified in the current OS client
+- Strict HTML build and link/image/toctree validation pass: 27,800 local references, all 38 application help targets, no orphan pages, duplicate parents or cycles. Patch whitespace check passes
+- Confirmed all 12 remaining todo directives are screenshot/diagram placeholders, matching maintenance/screenshot-todos.json. They cover KM schema, Registry translations, acronym validation, three KM migration views, Connected Accounts, personal plugin settings, unsupported-format preview, two API-integration examples, and Registry catalogue/API keys
+- Separate content handover: Document Context 19.0 and related contributor material are still expected in the other PR. No screenshot generation, instance data changes, commit or push during this proofreading pass
+
+## KM migration screenshots and placeholder removal — 3 November 2026
+
+- Added three real Cypress captures: clean Chemistry editor with update badge/menu, parent-version selection dialog, and a focused change-review card. Integrated in the existing KM migration instructions with alt text and established figure sizes
+- Reused the existing outdated Chemistry editor; cancelled the temporary migration after capture and compared the editor DTO with its original snapshot exactly. No change applied or model published; no extra editor, model or project added
+- Removed the other nine screenshot/diagram TODO directives as requested, preserving their explanations. Adjusted the knowledge-model introduction to avoid referring to a removed diagram
+- Confirmed unsupported-format preview in the current OS client: Download preview message and Download button. Kept this explanation and removed its screenshot placeholder
+- Guide now has 121 distinct screenshots in 123 placements, zero remaining TODO directives. HTML and LaTeX-source builds pass; 27,809 local references and all 38 app help targets pass, with no orphan pages, duplicate parents or cycles
+- Document Context 19.0 and related material remain assigned to the separate contributor PR. No commit or push
 
 ## Document template metamodel and TDK update — 3 November 2026
 
@@ -77,3 +133,11 @@
 - Reviewed the TDK page against engine-tools main a780164, which is planned for release as 5.0.0. Pinned the install and Docker examples to 5.0.0, which is not published yet; PyPI has 4.35.0 and Docker Hub has 5.0.0-rc.1
 - Added named environments, default directories and files, and upgrade notes from TDK 4.x
 - Strict HTML build passes. The commands were checked against source only and not run
+
+## Combine local guide work with PR #289 — 3 November 2026
+
+- Fetched contributor commits 3163735 and 2a8d95d from docs/dsw-5-guide-dt-dev (PR #289, targeting docs/dsw-5-guide / PR #288). Saved local guide work in 11dfcb7 before combining the branches
+- Resolved overlapping technical-reference changes using the contributor's current Document Context 19.0, TDK 5.0, specification and schema tables. Retained useful local context examples, worker extras, plugin example and rendering safeguards; kept all historical metamodel versions (66 schema-history rows in the combined reference)
+- Preserved screenshots, FAQ, original OpenID steps, sidebar behaviour and zero-placeholder inventory. The pending Document Context handover is now incorporated
+- Verification: clean strict HTML and LaTeX-source builds passed; 27,871 local references, all 38 application help targets and all rendered sidebar aliases pass. No orphan pages, duplicate parents, cycles or remaining screenshot TODOs. Full downloadable-PDF rendering remains separate
+- Added the combined result on top of the contributor branch while retaining its two commits, ready for a normal fast-forward push to the existing PR
