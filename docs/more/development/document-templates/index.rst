@@ -1,5 +1,3 @@
-.. _document-template-metamodel-versions:
-
 .. _document-template-development:
 
 Document Template Development

@@ -1,0 +1,121 @@
+classDiagram
+    direction LR
+    class KnowledgeModel {
+        uuid: str
+        annotations: dict[str, str]
+    }
+    class KnowledgeModelEntities {
+        chapters: dict[str, Chapter]
+        questions: dict[str, Question]
+        answers: dict[str, Answer]
+        choices: dict[str, Choice]
+        resource_collections: dict[str, ResourceCollection]
+        resource_pages: dict[str, ResourcePage]
+        references: dict[str, Reference]
+        experts: dict[str, Expert]
+        tags: dict[str, Tag]
+        metrics: dict[str, Metric]
+        phases: dict[str, Phase]
+        integrations: dict[str, Integration]
+    }
+    class Chapter {
+        uuid: str
+        title: str
+        text: Optional[str]
+        annotations: dict[str, str]
+    }
+    class Expert {
+        uuid: str
+        name: str
+        email: str
+        annotations: dict[str, str]
+    }
+    class Reference {
+        uuid: str
+        type: str
+        annotations: dict[str, str]
+    }
+    class CrossReference {
+        target_uuid: str
+        description: str
+    }
+    class URLReference {
+        label: str
+        url: str
+    }
+    class ResourcePageReference {
+    }
+    class ResourceCollection {
+        uuid: str
+        title: str
+        annotations: dict[str, str]
+    }
+    class ResourcePage {
+        uuid: str
+        title: str
+        content: str
+        annotations: dict[str, str]
+    }
+    class Metric {
+        uuid: str
+        title: str
+        description: Optional[str]
+        abbreviation: str
+        annotations: dict[str, str]
+    }
+    class Phase {
+        uuid: str
+        title: str
+        description: Optional[str]
+        order: int
+        annotations: dict[str, str]
+    }
+    class Integration {
+        uuid: str
+        name: str
+        type: str
+        annotations: dict[str, str]
+    }
+    class ApiIntegration {
+        variables: list[str]
+        allow_custom_reply: bool
+        request_method: str
+        request_url: str
+        request_headers: dict[str, str]
+        request_body: Optional[str]
+        request_allow_empty_search: bool
+        response_list_field: Optional[str]
+        response_item_template: str
+        response_item_template_for_selection: Optional[str]
+    }
+    class PluginIntegration {
+        plugin_uuid: str
+        integration_id: str
+        settings: dict
+    }
+    class Tag {
+        uuid: str
+        name: str
+        description: Optional[str]
+        color: str
+        annotations: dict[str, str]
+    }
+    class Question
+    class ReportItem
+    KnowledgeModel --> "1" KnowledgeModelEntities : entities
+    KnowledgeModel --> "*" Chapter : chapters
+    KnowledgeModel --> "*" Tag : tags
+    KnowledgeModel --> "*" Metric : metrics
+    KnowledgeModel --> "*" Phase : phases
+    KnowledgeModel --> "*" ResourceCollection : resource_collections
+    KnowledgeModel --> "*" Integration : integrations
+    Chapter --> "*" Question : questions
+    Chapter --> "*" ReportItem : reports
+    Reference <|-- CrossReference
+    Reference <|-- URLReference
+    ResourcePageReference --> "0..1" ResourcePage : resource_page
+    Reference <|-- ResourcePageReference
+    ResourceCollection --> "*" ResourcePage : pages
+    ResourcePage --> "0..1" ResourceCollection : collection
+    Integration <|-- ApiIntegration
+    Integration <|-- PluginIntegration

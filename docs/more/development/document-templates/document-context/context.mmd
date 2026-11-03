@@ -1,0 +1,218 @@
+classDiagram
+    direction LR
+    class DocumentContext {
+        hash: str
+    }
+    class ContextConfig {
+        app_title: str
+        client_url: str
+        logo_url: str
+        service_name: str
+        service_name_short: str
+        service_url: str
+        service_domain_name: str
+    }
+    class Color {
+        hex
+        luminance
+        is_dark
+        is_light
+        red
+        green
+        blue
+    }
+    class Workspace {
+        uuid: str
+        name: str
+        description: Optional[str]
+    }
+    class Document {
+        uuid: str
+        name: str
+        created_at: datetime
+        language: Optional[str]
+        preview: bool
+        event_uuid: Optional[str]
+    }
+    class DocumentDocumentTemplate {
+        uuid: str
+        id: str
+        version: str
+        workspace_uuid: Optional[str]
+    }
+    class DocumentFormat {
+        uuid: str
+        name: str
+    }
+    class DocumentTemplateLocale {
+        uuid: str
+        name: str
+        code: str
+        created_at: datetime
+        updated_at: datetime
+    }
+    class KnowledgeModelPackage {
+        uuid: str
+        id: str
+        version: str
+        name: str
+        description: str
+        language: str
+        created_at: datetime
+        workspace_uuid: Optional[str]
+    }
+    class Project {
+        uuid: str
+        name: str
+        description: str
+        created_at: datetime
+        updated_at: datetime
+        visibility: str
+        sharing: str
+        is_template: bool
+        knowledge_model_package_uuid: str
+        selected_question_tag_uuids: list[str]
+        project_tags: list[str]
+        document_template_uuid: Optional[str]
+        format_uuid: Optional[str]
+    }
+    class KnowledgeModelEditor {
+        uuid: str
+        name: str
+        description: str
+        created_at: datetime
+        updated_at: datetime
+        id: str
+        version: str
+        license: str
+        readme: str
+        previous_package_uuid: Optional[str]
+        previous_package_id: Optional[str]
+        previous_package_version: Optional[str]
+        knowledge_model_metamodel_version: int
+    }
+    class Questionnaire {
+        language: Optional[str]
+        labels: dict[str, list[str]]
+        todos: list[str]
+    }
+    class ProjectVersion {
+        uuid: str
+        event_uuid: str
+        name: str
+        description: str
+        created_at: datetime
+        updated_at: datetime
+    }
+    class ProjectFile {
+        uuid: str
+        name: str
+        size: int
+        content_type: str
+        download_url: str
+        project_uuid: Optional[str]
+    }
+    class User {
+        uuid: str
+        first_name: str
+        last_name: str
+        email: str
+        image_url: Optional[str]
+        affiliation: Optional[str]
+        created_at: datetime
+        updated_at: datetime
+    }
+    class UserGroup {
+        uuid: str
+        name: str
+        description: Optional[str]
+        private: bool
+        created_at: datetime
+        updated_at: datetime
+    }
+    class UserGroupMember {
+        uuid: str
+        first_name: str
+        last_name: str
+        gravatar_hash: str
+        image_url: Optional[str]
+        membership_type: str
+    }
+    class UserPermission {
+        is_viewer
+        is_commenter
+        is_editor
+        is_owner
+        permissions: list[str]
+    }
+    class UserGroupPermission {
+        is_viewer
+        is_commenter
+        is_editor
+        is_owner
+        permissions: list[str]
+    }
+    class SimpleAuthor {
+        uuid: str
+        first_name: str
+        last_name: str
+        image_url: Optional[str]
+        gravatar_hash: Optional[str]
+    }
+    class Report {
+    }
+    class ReportItem {
+    }
+    class ReportIndication {
+        total: int
+        percentage: float
+        is_for_phase
+        is_overall
+        indication_type: str
+        answered: int
+        unanswered: int
+    }
+    class ReportMetric {
+        measure: Optional[float]
+    }
+    class KnowledgeModel
+    class Phase
+    class RepliesContainer
+    class FileReply
+    class Chapter
+    class Metric
+    DocumentContext --> "1" ContextConfig : config
+    DocumentContext --> "1" Workspace : workspace
+    DocumentContext --> "0..1" Project : project
+    DocumentContext --> "0..1" KnowledgeModelEditor : km_editor
+    DocumentContext --> "1" Questionnaire : questionnaire
+    DocumentContext --> "1" KnowledgeModel : km
+    DocumentContext --> "0..1" KnowledgeModelPackage : km_package
+    DocumentContext --> "0..1" Document : document
+    ContextConfig --> "1" Color : primary_color
+    Color --> "1" Color : contrast_color
+    Document --> "1" DocumentDocumentTemplate : document_template
+    Document --> "1" DocumentFormat : format
+    Document --> "0..1" User : created_by
+    Document --> "0..1" DocumentTemplateLocale : locale
+    Project --> "0..1" User : created_by
+    Project --> "*" UserPermission : users
+    Project --> "*" UserGroupPermission : groups
+    KnowledgeModelEditor --> "0..1" User : created_by
+    Questionnaire --> "1" Report : report
+    Questionnaire --> "1" Phase : phase
+    Questionnaire --> "0..1" ProjectVersion : version
+    Questionnaire --> "*" ProjectVersion : versions
+    Questionnaire --> "*" ProjectFile : files
+    Questionnaire --> "1" RepliesContainer : replies
+    ProjectVersion --> "0..1" SimpleAuthor : created_by
+    ProjectFile --> "0..1" FileReply : reply
+    UserGroup --> "*" UserGroupMember : members
+    UserPermission --> "0..1" User : user
+    UserGroupPermission --> "0..1" UserGroup : group
+    Report --> "1" ReportItem : total_report
+    Report --> "*" ReportItem : chapter_reports
+    ReportItem --> "*" ReportIndication : indications
+    ReportItem --> "*" ReportMetric : metrics
+    ReportItem --> "0..1" Chapter : chapter
+    ReportMetric --> "0..1" Metric : metric

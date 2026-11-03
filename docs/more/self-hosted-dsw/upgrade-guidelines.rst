@@ -25,7 +25,15 @@ Content and templates
 
 Content identifiers combine the former organization and local ID using a dot. For example, ``example:research-model:1.0.0`` becomes identifier ``example.research-model`` and version ``1.0.0``. Imports and tools use identifier and version separately, or ``id:version`` where a reference is required.
 
-Review custom document templates for :doc:`context 19.0 </more/development/document-templates/document-context>` and use compatible worker and TDK versions. Changing only a metamodel number does not update template code. Check allowed-model patterns and document-submission formats after migration.
+Review custom document templates for context 19.0 as described in :ref:`document-template-metamodel-versions` and use compatible worker and TDK versions. Changing only a metamodel number does not update template code. Check allowed-model patterns and document-submission formats after migration.
+
+Review the document worker configuration for these template-related changes:
+
+* ``templates[].ids`` prefixes match the ``<id>:<version>`` reference, so a prefix such as ``dsw:`` becomes ``dsw.``. Otherwise, a template loses its configured ``requests`` and ``secrets``.
+* ``documents.maxSize`` (``DOCUMENTS_MAX_SIZE``) replaces ``experimental.maxDocumentSize``. Generated documents are now limited to 5 MB by default; set the value to ``null`` for no limit.
+* ``documentContext.defaultAppTitleShort`` and ``documentContext.defaultIllustrationsColor`` are removed, including their ``DOCUMENT_CONTEXT_*`` variables.
+
+Documents queued before the upgrade fail with an unsupported-version message and have to be regenerated.
 
 Translations and configuration
 ------------------------------

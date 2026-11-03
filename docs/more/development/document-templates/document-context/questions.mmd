@@ -1,0 +1,91 @@
+classDiagram
+    direction LR
+    class Question {
+        uuid: str
+        type: str
+        title: str
+        text: Optional[str]
+        annotations: dict[str, str]
+        is_required: Optional[bool]
+    }
+    class ValueQuestion {
+        is_string
+        is_text
+        is_number
+        is_email
+        is_url
+        is_color
+        is_time
+        is_datetime
+        is_date
+        value_type: str
+    }
+    class ValueQuestionValidation {
+        type: str
+        full_type: str
+        value: Optional[str | float]
+    }
+    class OptionsQuestion {
+    }
+    class MultiChoiceQuestion {
+    }
+    class ListQuestion {
+    }
+    class IntegrationQuestion {
+        variables: dict[str, str]
+    }
+    class ItemSelectQuestion {
+    }
+    class FileQuestion {
+        max_size: Optional[int]
+        file_types: Optional[str]
+    }
+    class Answer {
+        uuid: str
+        label: str
+        advice: Optional[str]
+        annotations: dict[str, str]
+    }
+    class MetricMeasure {
+        measure: float
+        weight: float
+    }
+    class Choice {
+        uuid: str
+        label: str
+        annotations: dict[str, str]
+    }
+    class Chapter
+    class Reply
+    class Tag
+    class Reference
+    class Expert
+    class Phase
+    class Integration
+    class Metric
+    Question --> "0..1" Chapter : parent
+    Question --> "0..1" ListQuestion : parent
+    Question --> "0..1" Answer : parent
+    Question --> "*" Reply : replies
+    Question --> "*" Tag : tags
+    Question --> "*" Reference : references
+    Question --> "*" Expert : experts
+    Question --> "1" Phase : required_phase
+    ValueQuestion --> "*" ValueQuestionValidation : validations
+    Question <|-- ValueQuestion
+    OptionsQuestion --> "*" Answer : answers
+    Question <|-- OptionsQuestion
+    MultiChoiceQuestion --> "*" Choice : choices
+    Question <|-- MultiChoiceQuestion
+    ListQuestion --> "*" Question : followups
+    Question <|-- ListQuestion
+    IntegrationQuestion --> "0..1" Integration : integration
+    Question <|-- IntegrationQuestion
+    ItemSelectQuestion --> "0..1" ListQuestion : list_question
+    Question <|-- ItemSelectQuestion
+    Question <|-- FileQuestion
+    Answer --> "*" MetricMeasure : metric_measures
+    Answer --> "*" Question : followups
+    Answer --> "0..1" OptionsQuestion : parent
+    MetricMeasure --> "0..1" Metric : metric
+    Choice --> "0..1" MultiChoiceQuestion : parent

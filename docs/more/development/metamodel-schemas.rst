@@ -1,25 +1,166 @@
-Metamodels and schemas
-**********************
+*****************
+Metamodel Schemas
+*****************
 
-DSW 5.0 uses knowledge-model metamodel 20 and document-template/document-context metamodel 19.0.
-A stable knowledge-model metamodel number does not mean that every surrounding API or content-identifier field remains unchanged.
+As Data Stewardship Wizard evolves, the internal structures may change during the time. To support migration under the hood, we use metamodel versioning for KM and templates.
 
-Current model reference
-=======================
+----
 
-The compatible ``dsw-models`` package defines the wire models and can generate JSON Schema 2020-12 for knowledge-model bundles, compiled knowledge models, template metadata and document contexts.
-Use the schema/model version matching the deployed application and tools.
+KM Package (.km file)
+=====================
 
-.. code-block:: python
+File for import and export of knowledge models is a JSON file that contains all KM packages (lists of change events with additional metadata). The structure of events is versioned using the KM metamodel version number and migrations in DSW automatically update the KMs when needed. Since DSW 5.0, a package is identified by a single ``id`` and a separate ``version``, while the metamodel version stays 20 and older files can still be imported. As said, files according to this schema can be exported from :doc:`../../application/knowledge-models/list/index` or :doc:`../../application/knowledge-models/list/detail` and then used for :doc:`../../application/knowledge-models/list/import`.
 
-   import json
-   from dsw.models import schemas
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| Metamodel Version | Schema file                                                                                                   | Changes (brief)                                      | Since     |
++===================+===============================================================================================================+======================================================+===========+
+| 20                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v20.json>`__ | New PluginIntegration replacing ApiLegacy and Widget | 4.29.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 19                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v19.json>`__ | Changed event structure internally                   | 4.25.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 18                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v18.json>`__ | New API integration, props to variables rename       | 4.22.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 17                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v17.json>`__ | Value question validations                           | 4.13.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 16                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v16.json>`__ | File question                                        | 4.12.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 15                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v15.json>`__ | Item select question, resource collections and pages | 4.10.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v14.json>`__ | Optional Integration fields                          | 4.1.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 13                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v13.json>`__ | New question value types                             | 3.12.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 12                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v12.json>`__ | Enhanced integration (e.g. widget type)              | 3.10.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 11                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v11.json>`__ | Annotations and timestamps for events                | 3.8.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 10                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v10.json>`__ | Integrations with item template                      | 3.6.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 9                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v9.json>`__  | Annotations                                          | 3.5.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 8                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v8.json>`__  | Metrics and phases are part of KM                    | 3.2.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 7                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v7.json>`__  | KM name attribute removed                            | 2.13.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 6                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v6.json>`__  | Multi-choice question type added                     | 2.11.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 5                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v5.json>`__  | Move event                                           | 2.0.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 4                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v4.json>`__  | Refactored KM, optional chapter text                 | 1.10.0    |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 3                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v3.json>`__  | Changed integration question fields                  | 1.8.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 2                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v2.json>`__  | Changed phases representation                        | 1.7.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
+| 1                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/km-package/kmp_schema_v1.json>`__  | Initial versioned metamodel                          | 1.6.0     |
++-------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+
 
-   schema = schemas.document_context_schema()
-   print(json.dumps(schema, indent=2))
+Document Context
+================
 
-The schema module also provides ``knowledge_model_bundle_schema``, ``knowledge_model_schema`` and ``template_json_schema``.
-For template metadata, distinguish the local descriptor from a packaged bundle when choosing the schema.
+Document Context is provided to the document templates by document worker. It contains all relevant data about project/questionnaire with replies, related knowledge model, author, and more. As KM evolves, the context may evolve as well. It is versioned using the Template metamodel version number. A document template must support the metamodel that is in the current DSW instance, see :ref:`document-template-metamodel-versions`. It is needed to know how the document context looks like especially for :doc:`./document-templates/index`.
 
-See the `model/schema source <https://github.com/ds-wizard/engine-tools/blob/6c159fa862b381890c6a1464be846df4f57fd387/packages/dsw-models/dsw/models/schemas.py>`__ and :doc:`/more/development/document-templates/document-context` for current field names.
-Validation catches structural errors; it is not a substitute for rendering and checking the intended document output.
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| Metamodel Version | Schema file                                                                                                              | Changes (brief)                                         | Since  |
++===================+==========================================================================================================================+=========================================================+========+
+| 19.0              | *(not published in dsw-schemas)*                                                                                         | Restructured context, projects and KM editors           | 5.0.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 18.3              | *(not published in dsw-schemas)*                                                                                         | Document language and locale                            | 4.35.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 18.2              | *(not published in dsw-schemas)*                                                                                         | Language field added                                    | 4.33.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 18.1              | *(not published in dsw-schemas)*                                                                                         | Python datetime and zoneinfo support                    | 4.31.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 18.0              | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v18-0.json>`__ | Renaming project and KM package, PluginIntegration      | 4.29.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 17.1              | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v17-1.json>`__ | Configurable instance properties for Document Templates | 4.26.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 17.0              | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v17-0.json>`__ | Semver, new API integration, props to variables         | 4.22.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 16                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v16.json>`__   | Value question validations                              | 4.13.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 15                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v15.json>`__   | File question                                           | 4.12.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v14.json>`__   | New KM entities, project details, and restructure       | 4.10.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 13                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v13.json>`__   | Removed states from templates                           | 4.3.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 12                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v12.json>`__   | Optional Integration fields                             | 4.1.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 11                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v11.json>`__   | Change template metadata                                | 3.20.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 10                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v10.json>`__   | New question value types                                | 3.12.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 9                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v9.json>`__    | Enhanced integration (e.g. widget type)                 | 3.10.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 8                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v8.json>`__    | Annotations change                                      | 3.8.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 7                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v7.json>`__    | Project tags and description                            | 3.7.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 6                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v6.json>`__    | Integrations with item template                         | 3.6.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 5                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v5.json>`__    | Annotations                                             | 3.5.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 4                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v4.json>`__    | Metrics and phases                                      | 3.2.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 3                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v3.json>`__    | Project versions                                        | 2.12.0 |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 2                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v2.json>`__    | Reply provenance                                        | 2.6.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+| 1                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/doc-context/doc_context_schema_v1.json>`__    | Initial versioned metamodel                             | 2.5.0  |
++-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
+
+Template (.json file)
+=====================
+
+Each template has its descriptor file ``template.json`` which contains all the information about the template, its format(s) and steps how to produce the document(s). It is also versioned by the Template metamodel version number. This file also contains the actual number of the supported version... With local :doc:`./document-templates/index`, we will need to manage the file according to the :doc:`./document-templates/specification`; however, when :doc:`../../application/document-templates/editors/index` are used, we will define it using forms directly in DSW.
+
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| Metamodel Version | Schema file                                                                                                                  | Changes (brief)                                             | Since  |
++===================+==============================================================================================================================+=============================================================+========+
+| 19.0              | *(not published in dsw-schemas)*                                                                                             | Single template ID, document context restructured           | 5.0.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 18.3              | *(not published in dsw-schemas)*                                                                                             | Language of the template                                    | 4.35.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 18.2              | *(not published in dsw-schemas)*                                                                                             | Language field added                                        | 4.33.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 18.1              | *(not published in dsw-schemas)*                                                                                             | Python datetime and zoneinfo support                        | 4.31.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 18.0              | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v18-0.json>`__ | Renaming project and KM package, PluginIntegration          | 4.29.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 17.1              | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v17-1.json>`__ | Configurable instance properties for Document Templates     | 4.26.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 17.0              | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v17-0.json>`__ | Value question validations                                  | 4.22.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 16                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v16.json>`__   | Value question validations                                  | 4.13.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 15                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v15.json>`__   | File question                                               | 4.12.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 14                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v14.json>`__   | New KM entities, project details, and restructure           | 4.10.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 13                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v13.json>`__   | Removed states from templates                               | 4.3.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 12                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v12.json>`__   | Optional Integration fields                                 | 4.1.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 11                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v11.json>`__   | Change template metadata                                    | 3.20.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 10                | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v10.json>`__   | New question value types                                    | 3.12.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 9                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v9.json>`__    | Enhanced integration (e.g. widget type)                     | 3.10.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 8                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v8.json>`__    | Annotations change                                          | 3.8.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 7                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v7.json>`__    | Project tags and description                                | 3.7.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 6                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v6.json>`__    | Integrations with item template                             | 3.6.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 5                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v5.json>`__    | Annotations                                                 | 3.5.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 4                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v4.json>`__    | Metrics and phases                                          | 3.2.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 3                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v3.json>`__    | Project versions                                            | 2.12.0 |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 2                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v2.json>`__    | Reply provenance                                            | 2.6.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+
+| 1                 | `JSON Schema <https://github.com/ds-wizard/dsw-schemas/blob/master/schemas/template-json/template_json_schema_v1.json>`__    | Initial versioned metamodel                                 | 2.5.0  |
++-------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------+

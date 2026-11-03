@@ -45,3 +45,5 @@ Example
 
 
 The shared renderer bundles ``docx-landscape.lua``, ``docx-pagebreak.lua`` and ``docx-toc.lua``. For additional filters, check that the same files are installed in local testing and on the worker.
+
+The ``pandoc-docx-pagebreakpy`` filter will be removed with the next template metamodel version. Move templates that pass it via ``args`` to the ``filters`` option with ``docx-pagebreak.lua``.

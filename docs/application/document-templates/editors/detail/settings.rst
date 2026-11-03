@@ -24,7 +24,7 @@ Formats
 Each output format has a name, icon and ordered generation steps. A step has its implementation name and its options.
 Choose the steps required to generate or convert that format, then test it with actual answers, translations and uploaded files where relevant.
 
-The metadata uses document-template metamodel 19.0. Port custom code as described in :doc:`/more/development/document-templates/document-context`; changing only the metamodel number does not update an old template's field accesses.
+The metadata uses document-template metamodel 19.0. Port custom code as described in :ref:`document-template-metamodel-versions`; changing only the metamodel number does not update an old template's field accesses.
 
 .. todo::
 

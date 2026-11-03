@@ -41,7 +41,7 @@ Custom steps
 
 A custom step implements ``execute_first(context)`` when it starts a format pipeline, or ``execute_follow(document, context)`` when it transforms an existing result. Return a ``DocumentFile`` appropriate to the output.
 
-If overriding ``before_render(render_ctx)``, call the base implementation to preserve translation support. See the `current Step interface <https://github.com/ds-wizard/engine-tools/blob/main/packages/dsw-templating/dsw/templating/steps/base.py>`_.
+If overriding ``before_render(render_ctx)``, call the base implementation to preserve translation support. A step can translate its own output using ``self.gettext``, ``self.ngettext``, and ``self.pgettext``, and read ``self.translations`` and ``self.language``. Use ``self.options`` to read the step options, and ``self.raise_exc(message)`` to fail with an error message.
 
 Install and test
 ================
