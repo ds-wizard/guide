@@ -3,7 +3,7 @@
 Template Development Kit
 ************************
 
-Use a 5.0-compatible Template Development Kit (TDK) for context 19.0. It can maintain template metadata, fetch server content, generate test contexts, package templates and render locally with the same ``dsw-templating`` engine as the document worker.
+Use Template Development Kit (TDK) 5.0.0 for DSW 5.0 and document context 19.0. It can maintain template metadata, fetch server content, generate test contexts, package templates and render locally with the same ``dsw-templating`` engine as the document worker.
 
 Installation
 ============
@@ -12,8 +12,8 @@ Use Python 3.12 or later (below Python 4), or the compatible TDK container, and 
 
 .. code-block:: shell
 
-   pip install dsw-tdk
-   pip install 'dsw-tdk[all]'
+   pip install dsw-tdk==5.0.0
+   pip install 'dsw-tdk[all]==5.0.0'
 
 The ``all`` extra adds the optional dependencies of the ``weasyprint``, ``excel`` and ``rdflib-convert`` steps, the ``requests`` template global and the ``pandoc-docx-pagebreakpy`` filter. WeasyPrint also needs Pango, and the ``pandoc`` step needs Pandoc installed on the system.
 
@@ -21,8 +21,8 @@ If you do not have Python locally, use the `datastewardshipwizard/dsw-tdk <https
 
 .. code-block:: shell
 
-   docker run --rm datastewardshipwizard/dsw-tdk --help
-   docker run --rm -v "$PWD:/home/user/my-template" datastewardshipwizard/dsw-tdk verify my-template
+   docker run --rm datastewardshipwizard/dsw-tdk:5.0.0 --help
+   docker run --rm -v "$PWD:/home/user/my-template" datastewardshipwizard/dsw-tdk:5.0.0 verify my-template
 
 Configuration
 =============
@@ -30,23 +30,26 @@ Configuration
 Set ``DSW_API_URL`` to the API base of your instance, normally ``https://<instance>/api``, which you can find in the :doc:`About </application/profile/about>` dialog, and ``DSW_API_KEY`` to a permitted :ref:`API key <api-keys>`.
 A local untracked ``.env`` or the shared ``~/.dsw-tdk`` configuration can provide these values. Do not commit credentials.
 
-* ``dsw-tdk config init`` creates the shared configuration and ``config edit`` opens it.
+* ``dsw-tdk config init`` creates the shared configuration with one or more named environments, and ``config edit`` opens it.
+* ``dsw-tdk -e NAME`` selects a named environment for a command, for example ``dsw-tdk -e production list``.
 * ``dsw-tdk config dot-env`` creates a ``.env`` file for a template project.
 * ``dsw-tdk config check`` shows the configuration that can be loaded.
 * ``--dot-env``, ``--no-dot-env`` and ``--no-config`` change which sources are loaded.
 
-Run ``dsw-tdk --help`` and a command's ``--help`` for options in your installed compatible version.
+Run ``dsw-tdk --help`` and a command's ``--help`` for all options.
 
 Template workflow
 =================
 
-* ``new`` starts a local template project.
+* ``new`` starts a local template project using an interactive wizard.
 * ``list`` lists available templates; ``--released-only`` and ``--drafts-only`` narrow the list.
-* ``get`` downloads a template by its ``<id>:<version>`` reference.
+* ``get`` downloads a released template or a draft by its ``<id>:<version>`` reference.
 * ``verify`` validates local template metadata.
-* ``put`` uploads the template; ``--watch`` keeps uploading local changes.
-* ``package`` creates an importable ZIP; ``unpackage`` extracts one.
-* ``pot`` extracts translatable messages.
+* ``put`` uploads the template as a draft; ``--watch`` keeps uploading local changes.
+* ``package`` creates an importable ZIP (``template.zip`` by default); ``unpackage`` extracts one.
+* ``pot`` extracts translatable messages (to ``template.pot`` by default).
+
+``verify``, ``put``, ``package`` and ``pot`` use the current directory unless you specify a template directory. ``new`` and ``get`` create a new directory named after the template unless you specify one.
 
 .. code-block:: shell
 
@@ -125,3 +128,14 @@ The context must be a complete 19.0 context; otherwise, ``render`` reports the f
      - Directories with additional Pandoc filters and templates.
 
 For field changes, see :ref:`document-template-metamodel-versions`. Local/server parity also depends on the deployed conversion tools, fonts and custom rendering extensions.
+
+Upgrading from TDK 4.x
+======================
+
+* ``DSW_API_URL`` is the address of the instance followed by ``/api``, not the address of the client.
+* Commands take ``<id>:<version>`` references, for example ``dsw.questionnaire-report:2.17.0`` instead of ``dsw:questionnaire-report:2.17.0``.
+* A pre-5.0 ``template.json`` is still read and is written back with the single ``id``. Update ``metamodelVersion`` yourself after porting the template code, see :ref:`document-template-metamodel-versions`.
+* ``new`` no longer asks for an organization ID, and ``put`` no longer reads it from the instance.
+* In ``list --output-format``, ``{template.id}`` is the ID alone. Use ``{template.coordinates}`` for the ``<id>:<version>`` reference.
+* ``render`` requires a complete 19.0 context, so regenerate saved contexts using ``get-context`` or ``generate-context``. ``--language`` now sets ``document.language``.
+* ``render`` no longer provides ``extras.questionnaire``, and the ``-D defaultAppTitleShort`` and ``-D defaultIllustrationsColor`` options are removed.
