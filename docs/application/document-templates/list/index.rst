@@ -15,9 +15,12 @@ A template marked :guilabel:`unsupported metamodel` needs a compatible version. 
 
 An :guilabel:`update available` badge shows that a newer version is available in the Registry. We can import that version to update the installed template.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-list.png
+    :figclass: guide-screenshot
+    :alt: Document Template library in DSW 5.0
+    :width: 760
 
-   Screenshot: Document Template library in DSW 5.0.
+    Document Template library.
 
 .. toctree::
    :maxdepth: 1

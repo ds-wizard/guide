@@ -10,9 +10,12 @@ Migrating a Project
 
 We can start a project migration either from the :ref:`project list<project-list>` or from the :ref:`project settings<project-settings>`. When a newer version of the knowledge model is available, we can see an :guilabel:`Outdated KM` badge next to the project name in the project list.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-migration.png
+    :figclass: guide-screenshot
+    :alt: Project migration in DSW 5.0
+    :width: 562
 
-   Screenshot: Migrate a project to a newer Knowledge Model in DSW 5.0.
+    Project migration.
 
 We can see the **original knowledge model**, its **version**, and selected **question tags** on the left side. On the right side, we can choose new values for all of these. We can use :guilabel:`Compare` to check the changes between the original and selected knowledge model.
 

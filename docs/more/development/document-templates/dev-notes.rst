@@ -1,3 +1,5 @@
+.. _document-template-dev-notes:
+
 Document Template Development Notes
 ***********************************
 

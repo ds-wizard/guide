@@ -5,9 +5,12 @@ Knowledge Model Editors
 
 Users with the :ref:`Use Knowledge Model Editor<roles>` role permission can see the knowledge model editors across the instance.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-editor-list.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model Editors in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model Editors in DSW 5.0.
+    Knowledge Model Editors.
 
 We can use the search field to search for a specific KM editor. The editors are sorted by when they were last updated but we can change that. We can order the list by name, creation date, or last update date. The list shows the name, version, id, if editor contains unpublished changes, if it is a fork of different KM and last update.
 

@@ -3,7 +3,7 @@
 Knowledge Model
 ***************
 
-The knowledge model is a tree-like structure of chapters, questions, answers, and other entities that servers as a template for the questionnaire. All the different questions, their possible answers and follow-up questions, metrics and more is defined there.
+The knowledge model is a tree-like structure of chapters, questions, answers, and other entities that serves as a template for the questionnaire. All the different questions, their possible answers and follow-up questions, metrics and more are defined there.
 
 While all the possibilities are defined in the knowledge model, when researchers use it to create their project, they don't see everything, but only the top-level questions and more detailed questions are only asked if relevant to their use case.
 
@@ -14,11 +14,8 @@ Each knowledge model also has a source language. A published knowledge model ver
 Knowledge Model Structure
 =========================
 
-Knowledge model consists of several entities connected together. You can see how they are connected in the following diagram and read more details about them below.
+A knowledge model consists of several connected entities. The following sections describe them and how they relate to each other.
 
-.. todo::
-
-   Screenshot: The diagram showing the knowledge model schema.
 
 Knowledge Model
 ---------------
@@ -216,7 +213,7 @@ Question Tag
 
 We can define question tags on the knowledge model and then assign them to different :ref:`questions<question>`. This can be used to group together questions on the same topic or for the same purpose.
 
-When researchers create a new project from the knowledge model, they can only choose the question groups they are interested in for their research. Selection of question tags is done in :ref:`custom project creation<create-project-custom>` So we can use this to create a very rich knowledge model but researchers will be able to use only the parts relevant to them.
+When researchers create a new project from the knowledge model, they can only choose the question groups they are interested in for their research. Question tags are selected during :ref:`custom project creation<create-project-custom>`. This lets researchers use the parts of a knowledge model relevant to their project.
 
 
 .. _integration:

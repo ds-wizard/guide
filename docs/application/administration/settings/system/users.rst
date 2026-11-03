@@ -6,6 +6,9 @@ Enter suggested affiliations, one per line. These suggestions appear during regi
 The default role is selected in :doc:`roles`, using :guilabel:`Set as default`.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-users.png
+    :figclass: guide-screenshot
+    :alt: User settings in DSW 5.0
+    :width: 760
 
-   Screenshot: Affiliation suggestions in User settings.
+    User settings.

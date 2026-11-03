@@ -1,3 +1,5 @@
+.. _document-template-step-excel:
+
 Step: ``excel``
 ***************
 
@@ -13,7 +15,7 @@ JSON file containing instructions how to construct the desired Excel spreadsheet
 Properties
 ----------
 
-It allows to set both `basic <https://xlsxwriter.readthedocs.io/workbook.html#set_properties>`__ and `custom <https://xlsxwriter.readthedocs.io/workbook.html#set_custom_property>`__ properties of the workbook / spreadsheet.
+We can set both `basic <https://xlsxwriter.readthedocs.io/workbook.html#set_properties>`__ and `custom <https://xlsxwriter.readthedocs.io/workbook.html#set_custom_property>`__ properties of the workbook / spreadsheet.
 
 .. code:: json
 
@@ -83,7 +85,7 @@ Notes:
 Definitions
 -----------
 
-It allows to define a name to be then used as a variable (see `define_name <https://xlsxwriter.readthedocs.io/workbook.html#define_name>`__).
+We can define a name to use as a variable (see `define_name <https://xlsxwriter.readthedocs.io/workbook.html#define_name>`__).
 
 .. code:: json
 

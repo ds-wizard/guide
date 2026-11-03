@@ -16,9 +16,12 @@ We can see project names, label :guilabel:`Template` if the project is a templat
 
 These icons describe project sharing. Instance-wide ALL Projects permissions can grant additional access.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-list.png
+    :figclass: guide-screenshot
+    :alt: Project list in DSW 5.0
+    :width: 760
 
-   Screenshot: Project list and actions.
+    Project list.
 
 We can search for specific projects using the search field or filter them using additional filters:
 
@@ -43,6 +46,9 @@ By clicking the triple dots on each item in the list we can access some actions:
 - **Migrate** - will start a :ref:`project migration<project-migration>`
 - **Delete** - will delete the project (this action cannot be undone)
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-clone.png
+    :figclass: guide-screenshot
+    :alt: Clone a project in DSW 5.0
+    :width: 480
 
-   Screenshot: Clone a project in DSW 5.0.
+    Clone a project.

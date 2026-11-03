@@ -1,3 +1,5 @@
+.. _document-template-step-enrich-docx:
+
 Step: ``enrich-docx``
 *********************
 

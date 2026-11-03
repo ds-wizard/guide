@@ -7,6 +7,9 @@ After publishing, the template is available in the library where it belongs and 
 
 Before publishing, we should test each format with example projects and translations to check the generated documents. See :doc:`/more/development/document-templates/tdk` for local checks.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-publish.png
+    :figclass: guide-screenshot
+    :alt: Publish a Document Template in DSW 5.0
+    :width: 480
 
-   Screenshot: Publish a Document Template in DSW 5.0.
+    Publish a Document Template.

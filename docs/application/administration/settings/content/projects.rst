@@ -1,9 +1,12 @@
 Projects
 ********
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-projects.png
+    :figclass: guide-screenshot
+    :alt: Project defaults in DSW 5.0
+    :width: 760
 
-   Screenshot: Project defaults in DSW 5.0.
+    Project defaults.
 
 Project Visibility
 ==================
@@ -11,9 +14,9 @@ Project Visibility
 If we want to let users select visibility of their projects within the DSW instance, we can enable **Project Visibility** feature. If it is disabled, the new projects will have the **Default Project Visibility** which is used when creating a new project:
 
 * **Private** = the project is visible only to the users with explicit access to the project.
-* **Visible - View** = the project is visible in view-only mode to all signed-in users within the project's scope, i.e. those users will be able to see the project in their :ref:`projects list<project-list>` and access it (but not edit or comment anything unless they are invited with different permissions).
-* **Visible - Comment** = the project is visible in comment mode to all signed-in users within the project's scope, i.e. those users will be able to see the project in their :ref:`projects list<project-list>`, access it and comment it (but not edit anything unless they are invited with different permissions).
-* **Visible - Edit** = the project is visible in edit mode to all signed-in users within the project's scope, i.e. those users will be able to see the project in their :ref:`projects list<project-list>`, access it, comment it, and also edit it (e.g. answer questions or editor notes).
+* **Visible - View** = the project is visible in view-only mode to all signed-in users in the DSW instance, i.e. those users will be able to see the project in their :ref:`projects list<project-list>` and access it (but not edit or comment anything unless they are invited with different permissions).
+* **Visible - Comment** = the project is visible in comment mode to all signed-in users in the DSW instance, i.e. those users will be able to see the project in their :ref:`projects list<project-list>`, access it and comment it (but not edit anything unless they are invited with different permissions).
+* **Visible - Edit** = the project is visible in edit mode to all signed-in users in the DSW instance, i.e. those users will be able to see the project in their :ref:`projects list<project-list>`, access it, comment it, and also edit it (e.g. answer questions or editor notes).
 
 .. NOTE::
 
@@ -49,9 +52,12 @@ Project Creation
 * **Templates Only** = users can create projects only from project templates.
 * **Custom Only** = users can create only custom projects, they have to select a knowledge model and everything else by themselves.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-default-creation.png
+    :figclass: guide-screenshot
+    :alt: Project creation defaults in DSW 5.0
+    :width: 676
 
-   Screenshot: Project creation defaults in DSW 5.0.
+    Project creation defaults.
 
 Summary Report
 ==============
@@ -66,6 +72,9 @@ Project Tagging
 
 If enabled, users will be able to tag their projects (using so-called **Project Tags**) and then use those tags to filter the :ref:`projects list<project-list>`. The users will always be able to write their own tags, but we can provide a list of pre-defined **Default Project Tags** (one per line).
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-default-tags.png
+    :figclass: guide-screenshot
+    :alt: Default project tags in DSW 5.0
+    :width: 641
 
-   Screenshot: Default project tags in DSW 5.0.
+    Default project tags.

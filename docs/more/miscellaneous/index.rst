@@ -7,6 +7,7 @@ Reference pages for using DSW and preparing content.
 .. toctree::
    :maxdepth: 1
 
+   faq
    keyboard-shortcuts
    markdown-cheatsheet
    jinja-cheatsheet

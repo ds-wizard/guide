@@ -8,9 +8,12 @@ Creating a group requires :guilabel:`Create User Groups`. :guilabel:`Manage User
 
 See :doc:`/application/projects/list/detail/sharing` to grant a group access to a project.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/group-list.png
+    :figclass: guide-screenshot
+    :alt: User Groups in DSW 5.0
+    :width: 760
 
-   Screenshot: User Groups in DSW 5.0.
+    User Groups.
 
 .. toctree::
    :maxdepth: 1

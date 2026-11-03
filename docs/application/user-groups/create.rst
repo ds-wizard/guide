@@ -8,6 +8,9 @@ Other signed-in users can see a public group. A private group is visible to its 
 
 Continue with :doc:`/application/user-groups/detail` to add members and owners.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/group-create.png
+    :figclass: guide-screenshot
+    :alt: Create a User Group in DSW 5.0
+    :width: 520
 
-   Screenshot: Create a User Group in DSW 5.0.
+    Create a User Group.

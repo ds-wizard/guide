@@ -18,9 +18,12 @@ Unlike :doc:`cloning a project </application/projects/list/index>`, creating fro
 When we want to turn a project into a project template, we need to go to the :ref:`project settings<project-settings>` and check the :guilabel:`Project Template` checkbox.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-template.png
+    :figclass: guide-screenshot
+    :alt: Project template in DSW 5.0
+    :width: 724
 
-   Screenshot: Use a project as a template in DSW 5.0.
+    Project template.
 
 Sharing the Project Templates
 =============================

@@ -424,3 +424,24 @@ Example
        "extension" : "html"
      }
    }
+
+Rendering permissions and resources
+===================================
+
+HTTP requests require explicit enablement for the template in the worker configuration. Only HTTP and HTTPS URLs are allowed. The worker's resource policy controls access to private, loopback and link-local addresses and checks redirect destinations. Templates cannot override TLS verification or the configured timeout, proxies and hooks; credentials are removed on cross-host redirects.
+
+The ``markdown`` filter sanitizes generated HTML by default. Its optional ``sanitize=false`` argument is only suitable for content controlled by the template author; keep sanitization enabled for project answers.
+
+Validate output with long answers, escaped user content, translations and uploaded files in every supported format.
+
+Source-aware templates
+=======================
+
+A template offered for both projects and editor previews must handle either source:
+
+.. code-block:: jinja
+
+   {% set x = ctx|to_context_obj %}
+   <h1>{{ x.project.name if x.project else x.km_editor.name }}</h1>
+
+Custom rendering extensions use the ``dsw_templating_plugins`` entry point. Extensions using the earlier ``dsw.document_worker`` imports or ``dsw_document_worker_plugins`` entry point need updating for the shared renderer.

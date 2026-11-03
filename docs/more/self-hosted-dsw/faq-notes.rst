@@ -53,3 +53,20 @@ Deployment notes
 ================
 
 The deployment example is for local evaluation. A production deployment needs its own HTTPS, backups, storage access, monitoring and operational procedures. Test upgrades on a restored copy before updating production.
+
+PostgreSQL issues
+=================
+
+Check database connectivity and PostgreSQL logs as well as the application error. Database engine upgrades have their own compatibility and backup requirements; use the `PostgreSQL documentation <https://www.postgresql.org/docs/>`_ for the installed version before changing or restoring a database.
+
+S3-compatible storage issues
+============================
+
+With the deployment example's Garage service, check ``docker compose logs garage --tail=200`` and confirm that ``create-bucket.sh`` completed successfully. That initialization creates the bucket, imports the configured key and grants permissions. Check the endpoint, region, bucket, access key, secret key and bucket permissions with other storage providers too.
+
+The endpoint must work from the containers; the configured public storage address must also work from users' browsers. The `Garage documentation <https://garagehq.deuxfleurs.fr/documentation/>`_ covers Garage-specific diagnosis.
+
+Operating an instance
+=====================
+
+Self-hosting requires server-management, Docker, database, storage and backup skills as well as infrastructure and ongoing maintenance. Resource needs depend on concurrent users, total data and document-template complexity. Use a restored test copy to check both capacity and upgrade procedures before a production change.

@@ -10,8 +10,3 @@ Browse the available content and choose a released version. Use the import actio
 The Registry uses individual accounts and API keys. Create a key in your Registry account to configure an instance connection. An instance API key does not authenticate to the Registry.
 
 See :doc:`/application/administration/settings/content/dsw-registry` to configure the connection and :doc:`/application/knowledge-models/list/import` to import content.
-
-
-.. todo::
-
-   Screenshot: DSW Registry content catalogue and API key management.

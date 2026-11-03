@@ -6,9 +6,12 @@ A document template editor allows us to edit both configuration and all files of
 There is also option to :doc:`/application/document-templates/editors/detail/publish` the document template via :guilabel:`Publish` button in the top right corner.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-editor.png
+    :figclass: guide-screenshot
+    :alt: Document Template Editor in DSW 5.0
+    :width: 760
 
-   Screenshot: Document Template Editor in DSW 5.0.
+    Document Template Editor.
 
 .. toctree::
    :maxdepth: 1

@@ -17,6 +17,9 @@ When :guilabel:`Create project` is available, we can use it to start a project f
 
 A project created this way keeps any answers generated for the preview. Review its answers and :doc:`sharing settings </application/projects/list/detail/sharing>` before using it for real work.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-preview.png
+    :figclass: guide-screenshot
+    :alt: Published Knowledge Model preview in DSW 5.0
+    :width: 760
 
-   Screenshot: Published Knowledge Model preview and Create project action.
+    Published Knowledge Model preview.

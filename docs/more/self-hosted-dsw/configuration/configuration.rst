@@ -56,6 +56,16 @@ Keep ``general.secret`` stable and include it in protected configuration backups
 
 Before rotating it, arrange secure recovery of OpenID client secrets, the Registry API key, knowledge model secrets and encrypted document-submission properties. Plan how those values will be restored with the administrator. Recreating an OpenID provider creates new callback and logout addresses that must be registered with the identity provider.
 
+If rotation is necessary:
+
+#. Back up the database and configuration. Securely retain the old secret and recover the original values of encrypted settings while it still works. A masked value in a form is not a recoverable copy.
+#. Arrange administrative access that does not depend on the OpenID settings being changed. Remove affected configured secrets before changing the encryption key, or use a separately verified re-encryption procedure.
+#. Change ``general.secret`` and restart the server (re-create its container when using Docker).
+#. Re-enter the recovered settings with the new secret and test each affected integration. If a provider was recreated, register its new callback and logout addresses.
+#. Ask users of encrypted document-submission properties to enter their values again in their profile settings, then test submission.
+
+Do not rotate the key until the recovery values and a working administrative sign-in method are available.
+
 Public links and hosting
 ------------------------
 

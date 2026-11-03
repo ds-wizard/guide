@@ -3,9 +3,12 @@ Metrics
 
 In the :guilabel:`Metrics` tab in the project detail we can see a **Summary Report** for the whole questionnaire and then the same details for each individual chapter.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-metrics.png
+    :figclass: guide-screenshot
+    :alt: Project metrics in DSW 5.0
+    :width: 760
 
-   Screenshot: Project summary report.
+    Project metrics.
 
 The **Summary Report** shows how many questions are answered and unanswered in each chapter. It can either count all questions in the knowledge model or only the questions required for the project's current phase. Questions from later phases are ignored in the phase-based view. If a parent question is unanswered, its child questions are not counted separately. Chapter results are combined into the total **Summary Report**.
 

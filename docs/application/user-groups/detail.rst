@@ -5,14 +5,23 @@ Open a group to review its details and members. Group owners can change its name
 
 Choose a member's group role to make them an owner or an ordinary member. Save your changes. Group ownership controls the group itself; access to a project depends on the role assigned when the group is added to :doc:`project sharing </application/projects/list/detail/sharing>`.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/group-member-add.png
+    :figclass: guide-screenshot
+    :alt: Add a User Group member in DSW 5.0
+    :width: 480
 
-   Screenshot: Add a User Group member in DSW 5.0.
+    Add a User Group member.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/group-info.png
+    :figclass: guide-screenshot
+    :alt: User Group information in DSW 5.0
+    :width: 760
 
-   Screenshot: User Group information in DSW 5.0.
+    User Group information.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/group-members.png
+    :figclass: guide-screenshot
+    :alt: User Group members in DSW 5.0
+    :width: 760
 
-   Screenshot: User Group members in DSW 5.0.
+    User Group members.

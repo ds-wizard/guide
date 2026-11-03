@@ -71,6 +71,23 @@ Permissions
 A project shared with a person or group can grant access even when their role does not grant access to all projects. Conversely, ALL Projects permissions grant access without an explicit project invitation. See :doc:`/application/projects/list/detail/sharing`.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-roles.png
+    :figclass: guide-screenshot
+    :alt: Roles and default role in DSW 5.0
+    :width: 760
 
-   Screenshot: Role list, default-role action and permission form.
+    Roles and default role.
+
+.. figure:: /_static/screenshots/5.0/role-create.png
+    :figclass: guide-screenshot
+    :alt: Custom role editor showing project creation and organization-wide project permissions
+    :width: 676
+
+    Project permissions in a custom role.
+
+Examples of custom roles
+========================
+
+A support role can receive view or comment access to projects, a content role can prepare knowledge models and document templates, and a user-management role can manage accounts. Choose the actual permissions and their prerequisites from the matrix above rather than relying on a role's name.
+
+Before changing a role, review the people assigned to it. The changed permissions apply to those accounts. Use project sharing for access to a particular project, alongside the wider permissions granted by roles.

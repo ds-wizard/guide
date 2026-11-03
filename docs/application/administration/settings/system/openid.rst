@@ -7,9 +7,19 @@ Using these settings, we can add `OpenID <https://openid.net/>`__ configuration 
 
 DSW supports Microsoft Azure, ORCID, and other OpenID providers. The following sections describe the setup for these options.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/openid-example.png
+    :figclass: guide-screenshot
+    :alt: OpenID provider configuration for Example University, using a reserved example host and dummy credentials
+    :width: 760
 
-   Screenshot: OpenID providers in DSW 5.0.
+    Example OpenID configuration using dummy values.
+
+.. figure:: /_static/screenshots/5.0/settings-open-id.png
+    :figclass: guide-screenshot
+    :alt: OpenID providers in DSW 5.0
+    :width: 760
+
+    OpenID providers.
 
 
 .. NOTE::
@@ -67,9 +77,12 @@ Microsoft Azure Setup
 34. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/create-open-id.png
+    :figclass: guide-screenshot
+    :alt: Create OpenID configuration in DSW 5.0
+    :width: 760
 
-   Screenshot: Create OpenID configuration in DSW 5.0.
+    Create OpenID configuration.
 
 
 ORCID Setup

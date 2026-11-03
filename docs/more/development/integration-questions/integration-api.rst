@@ -5,9 +5,6 @@ Integration Question - API
 
 We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/stable/>`_ to construct everything in integrations. We also have this :ref:`cheatsheet<jinja-cheatsheet>` available.
 
-.. todo::
-
-   Screenshot: How integration question connected to, for example, FAIRsharing API works.
 
 External Service Requirements
 =============================
@@ -43,7 +40,7 @@ Additional integration configuration can be used when we want to force the integ
 Request Configuration
 ---------------------
 
-Clicking on field before the URL we can switch between ``GET`` and ``POST`` request methods.
+In the field before the URL, we can switch between ``GET`` and ``POST`` request methods.
 
 In the full API endpoint used for search we can use ``{{ q }}`` to insert the user's search term, and ``{{ variables.name }}`` for referencing variables and ``{{ secrets.name }}`` for secrets.
 
@@ -88,11 +85,11 @@ In the **Response** section, we configure how to process the JSON response from 
 
 .. NOTE::
 
-    We can also set the **Response Item Template** and/or **Response Item Template for Selection** to setup logo for the integration if we can access it.
+    We can also set the **Response Item Template** and/or **Response Item Template for Selection** to set up a logo for the integration if we can access it.
 
 The integration will show suggestions for **Response List Field** and **Response Item Template** based on the response structure. We can click the suggestions to insert them in the fields in the Jinja2 notation.
 
-Advance Response Configuration
-------------------------------
+Advanced Response Configuration
+-------------------------------
 
-The Advance response configuration allows to set **Response Item Template for Selection** which can be used to define how the selection of items from the integration will be presented before selection.
+In the advanced response configuration, we can set **Response Item Template for Selection** to define how results appear before the user selects one.

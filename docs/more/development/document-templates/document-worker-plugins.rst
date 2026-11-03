@@ -41,7 +41,25 @@ Custom steps
 
 A custom step implements ``execute_first(context)`` when it starts a format pipeline, or ``execute_follow(document, context)`` when it transforms an existing result. Return a ``DocumentFile`` appropriate to the output.
 
-If overriding ``before_render(render_ctx)``, call the base implementation to preserve translation support. A step can translate its own output using ``self.gettext``, ``self.ngettext``, and ``self.pgettext``, and read ``self.translations`` and ``self.language``. Use ``self.options`` to read the step options, and ``self.raise_exc(message)`` to fail with an error message.
+For example, this step creates a UTF-8 Markdown document as the first step in a format:
+
+.. code-block:: python
+
+   from dsw.templating import DocumentFile, FileFormats, Step, hookimpl
+
+   class ExampleStep(Step):
+       NAME = 'example'
+
+       def execute_first(self, context: dict) -> DocumentFile:
+           return DocumentFile(FileFormats.Markdown, b'# Example document', 'utf-8')
+
+   @hookimpl
+   def provide_steps():
+       return {'example': ExampleStep}
+
+Register the module using the entry point above, then use ``example`` as a step name in the template format. A conversion step can follow it when it accepts Markdown input.
+
+If overriding ``before_render(render_ctx)``, call the base implementation to preserve translation support. A step can translate its own output using ``self.gettext``, ``self.ngettext``, and ``self.pgettext``, and read ``self.translations`` and ``self.language``. Use ``self.options`` to read the step options, and ``self.raise_exc(message)`` to fail with an error message. See the `current Step interface <https://github.com/ds-wizard/engine-tools/blob/main/packages/dsw-templating/dsw/templating/steps/base.py>`_.
 
 Install and test
 ================
@@ -49,3 +67,10 @@ Install and test
 Install the plugin package in the document worker image. Install the same compatible version in the local TDK environment when using it to test the template.
 
 Test every format that depends on the plugin, including translations and representative project data. Record the dependency in the template README so other deployments know what they need to install.
+
+Templates that can also work without a plugin should check optional additions before using them:
+
+.. code-block:: jinja
+
+   {% if custom_note is defined %}{{ custom_note }}{% endif %}
+   {% if 'project_code' is filter %}{{ 'abc'|project_code }}{% endif %}

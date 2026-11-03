@@ -6,6 +6,9 @@ Use :guilabel:`Settings` → :guilabel:`Features` to enable optional features, s
 The AI Assistant provides help with using the application. Enabling a feature does not change users' role permissions.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/settings-features.png
+    :figclass: guide-screenshot
+    :alt: Guided tour settings in DSW 5.0
+    :width: 760
 
-   Screenshot: Tours and AI Assistant feature settings.
+    Feature settings.

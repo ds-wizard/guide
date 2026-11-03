@@ -12,6 +12,9 @@ If we cannot sign in, contact the instance administrator using the support detai
 For community questions, join the `DSW community on Discord <https://discord.com/invite/MW3H9tdMcT>`_.
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/report-issue.png
+    :figclass: guide-screenshot
+    :alt: Report issue in DSW 5.0
+    :width: 480
 
-   Screenshot: Report issue dialog showing the instance support contacts.
+    Report issue.

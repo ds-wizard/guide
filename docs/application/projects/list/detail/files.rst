@@ -3,9 +3,12 @@ Files
 
 We can see the list of files uploaded to the project in the :guilabel:`Files` tab.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/project-files.png
+    :figclass: guide-screenshot
+    :alt: Project files in DSW 5.0
+    :width: 760
 
-   Screenshot: Project files.
+    Project files.
 
 Files can be downloaded or deleted.
 

@@ -15,9 +15,12 @@ By clicking the triple dots on each item in the list we can access some actions:
 - **Delete** - to delete the document template editor (cannot be undone)
 
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-editor-list.png
+    :figclass: guide-screenshot
+    :alt: Document Template Editors in DSW 5.0
+    :width: 760
 
-   Screenshot: Document Template Editors in DSW 5.0.
+    Document Template Editors.
 
 .. toctree::
    :maxdepth: 1

@@ -5,6 +5,9 @@ If there are any :ref:`project phases<phase>` set up in the knowledge model, we 
 
 We can simply click the checkbox in the corresponding phase - question table cell to assign/unassign the phase to that particular question. We can also click on the question name to open the question editor and change the question details.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/km-phases.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model phases in DSW 5.0
+    :width: 760
 
-   Screenshot: Knowledge Model phases in DSW 5.0.
+    Knowledge Model phases.

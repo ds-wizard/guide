@@ -7,9 +7,12 @@ We can select any **project** or **knowledge model editor** that we are allowed 
 
 Any change in the template configuration and its files will trigger re-generation of the preview (we can simply click the :guilabel:`Preview` tab again). We can also open corresponding project or knowledge model editor in a new tab by clicking the button next to the selected project or knowledge model editor.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/dt-editor-preview.png
+    :figclass: guide-screenshot
+    :alt: Document Template Editor preview in DSW 5.0
+    :width: 760
 
-   Screenshot: Preview in a document template editor using project.
+    Document Template Editor preview.
 
 .. note::
 

@@ -3,6 +3,13 @@ Keyboard Shortcuts
 
 Use :kbd:`Ctrl+K` (:kbd:`Cmd+K` on macOS) to open the command palette and find available pages and account actions.
 
+.. figure:: /_static/screenshots/5.0/command-palette.png
+    :figclass: guide-screenshot
+    :alt: Command palette in DSW 5.0
+    :width: 480
+
+    Command palette.
+
 Use :kbd:`Tab` and :kbd:`Shift+Tab` to move between controls. The available action depends on the focused control.
 
 * In a questionnaire, :kbd:`Ctrl+F` (:kbd:`Cmd+F` on macOS) opens questionnaire search.

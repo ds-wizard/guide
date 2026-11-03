@@ -11,10 +11,16 @@ Revoke a key when its integration is retired or its value may have been exposed.
 
 Use :doc:`/more/development/api` for API addresses and authentication. For changes to existing integrations, see :doc:`/more/self-hosted-dsw/upgrade-guidelines`.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/api-key-create.png
+    :figclass: guide-screenshot
+    :alt: Create an API key in DSW 5.0
+    :width: 480
 
-   Screenshot: Create an API key in DSW 5.0.
+    Create an API key.
 
-.. todo::
+.. figure:: /_static/screenshots/5.0/account-api-keys.png
+    :figclass: guide-screenshot
+    :alt: API keys in DSW 5.0
+    :width: 760
 
-   Screenshot: API keys in DSW 5.0.
+    API keys.
