@@ -1,0 +1,60 @@
+classDiagram
+    direction LR
+    class RepliesContainer {
+    }
+    class Reply {
+        path: str
+        created_at: datetime
+        type: str
+        fragments: list[str]
+    }
+    class AnswerReply {
+        value: Optional[str]
+    }
+    class StringReply {
+        markdown_html: str
+        markdown_plain: str
+        as_number: Optional[float]
+        as_datetime: Optional[datetime]
+        value: str
+    }
+    class ItemListReply {
+        value: list[str]
+        items: list[str]
+    }
+    class MultiChoiceReply {
+        value: list[str]
+    }
+    class IntegrationReply {
+        is_plain: bool
+        is_integration: bool
+        value_type: str
+        raw: Optional[Any]
+        value: str
+    }
+    class ItemSelectReply {
+        value: str
+        item_title: str
+        item_uuid: str
+    }
+    class FileReply {
+        value: str
+    }
+    class SimpleAuthor
+    class Question
+    class Answer
+    class Choice
+    class ProjectFile
+    RepliesContainer --> "*" Reply : replies
+    Reply --> "0..1" SimpleAuthor : created_by
+    Reply --> "0..1" Question : question
+    AnswerReply --> "0..1" Answer : answer
+    Reply <|-- AnswerReply
+    Reply <|-- StringReply
+    Reply <|-- ItemListReply
+    MultiChoiceReply --> "*" Choice : choices
+    Reply <|-- MultiChoiceReply
+    Reply <|-- IntegrationReply
+    Reply <|-- ItemSelectReply
+    FileReply --> "0..1" ProjectFile : file
+    Reply <|-- FileReply

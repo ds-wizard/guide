@@ -33,7 +33,7 @@ Document templates show unsupported metamodel
 
 Import a template compatible with the running DSW version. For a Registry template, check the available versions and import a suitable one; do not assume every catalogue entry supports the current release.
 
-For a custom template, update its code and metadata for :doc:`context 19.0 </more/development/document-templates/document-context>`. Increasing only the declared metamodel version does not port the template.
+For a custom template, update its code and metadata for context 19.0 as described in :ref:`document-template-metamodel-versions`. Increasing only the declared metamodel version does not port the template.
 
 To import a compatible Registry version:
 

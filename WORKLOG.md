@@ -60,8 +60,14 @@
 - Re-ran clean strict HTML and LaTeX-source builds successfully. Validated 130 reachable source pages, 27,059 local references and all 38 application help targets; no orphan pages, duplicate parents or cycles. git diff --check passes
 - Remaining work: replace the 129 screenshot TODOs when the DSW environment is ready, then inspect the rendered downloadable PDF and run application-flow acceptance checks. This PR does not claim those checks are finished
 
-## Restore original OpenID setup instructions — 3 November 2026
 
-- Restored the original numbered Microsoft Azure (34 steps), ORCID (18 steps) and Custom provider (12 steps) instructions and advanced scope explanations from the pre-5.0 guide, following the user's wording and sequence
-- Limited 5.0 edits to the current Settings navigation, root callback URL, Client Secret Value and Advanced configuration labels, and Create versus Save. Retained current FW captures / DSW screenshot TODOs; restored the existing FW automation section with its current internal guide link
-- Strict HTML and LaTeX-source builds pass in both guides. Provider instructions were restored from the original guide, not independently revalidated against live provider portals. No identity-provider or application configuration changed
+
+## Document template metamodel and TDK update — 3 November 2026
+
+- Reviewed engine-tools main a780164. Restored the pre-5.0 structure and full descriptions of Document Context, Metamodel Schemas, Template Specification and the Jinja step, and updated them to metamodel 19.0. These pages no longer defer to descriptions in engine-tools
+- Entities come from the dsw-models graph module, because the upstream DocumentContext.md is out of date for knowledge-model entities. Replaced the old class diagram with four Mermaid diagrams generated from that module and committed as light and dark SVGs plus a PDF for the LaTeX build, see README
+- Added metamodel 18.3 and 19.0 history with the migration tables, TDK installation, configuration, context generation and render options, extract_replies version 2, translations, Excel and Pandoc step corrections and worker upgrade notes
+- Replaced the template_json_schema_v18-2.json link because dsw-schemas does not contain that file. Schemas for 18.1 to 19.0 are marked as not published
+- Left out TDK workspace options because workspaces are outside the DSW guide's scope
+- Restored the MS Word image compression note and the TDK Docker usage. Worker configuration details are intentionally not documented
+- Strict HTML build passes. Not verified: the TDK and Docker commands were checked against source only and not run; rendered pages and the PDF were not reviewed
