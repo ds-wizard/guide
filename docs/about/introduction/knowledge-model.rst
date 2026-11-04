@@ -76,7 +76,7 @@ The value question asks for a single value that users type in. There are many di
 
 The input field differs based on the value type (simple input for string, date picker for date, etc.). Some of these have a check whether the entered value is valid (such as valid email or URL) and displays a warning if not.
 
-Value Question also can have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text based types (text, email, URL), we can set also use a regular expression to create validations.
+Value Question also can have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text based types (text, email, URL), we can also use a regular expression to create validations.
 
 .. _integration-question:
 

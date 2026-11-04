@@ -342,7 +342,7 @@ Content of the project, or of the preview questionnaire of a KM editor.
 -  ``phase_uuid`` (``Optional[str]``)
 -  ``version`` (``Optional[``\ :ref:`odc-project-version`\ ``]``)
 -  ``versions`` (``list[``\ :ref:`odc-project-version`\ ``]``)
--  ``files`` (``dict[str, ``\ :ref:`odc-project-file`\ ``]``)
+-  ``files`` (``dict[str, ProjectFile]``) - see :ref:`odc-project-file`
 -  ``labels`` (``dict[str, list[str]]``) - label UUIDs by reply path
 -  ``todos`` (``list[str]``) - reply paths marked as TODO
 -  ``report`` (:ref:`odc-report`)

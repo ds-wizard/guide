@@ -161,3 +161,15 @@ Verification: no workspace mentions remain in published-source text, Mermaid sou
 Compared Marek Suchánek's DSW Document Context 19.0 and TDK updates (1b2aa0c, 2c209b5) with the FW reference pages. The substantive context, Jinja, Excel/Pandoc, specification, worker plugin and TDK material was already present; retained FW workspace additions and adapted links. Applied the remaining editor-settings link correction in FW. Checked dsw-schemas master through GitHub: the newer context/template schema files remain absent. Restored JSON Schema links for versions 18.1, 18.2, 18.3 and 19.0 in both schema tables as explicitly requested, despite expected 404 responses.
 
 Verification: strict HTML and LaTeX-source builds passed for both guides. The schema 19.0 absence was confirmed by GitHub API HTTP 404; the repository tree lists no context/template schemas for 18.1–18.3 or 19.0. No full PDF render or external linkcheck was run; these missing links are intentional per request.
+
+## Final guide review — 2026-11-04
+
+- Read through shared and product-specific prose, preserving technical reference material, historical upgrade notes and the original OpenID procedure
+- Corrected wording, cross-reference markup, screenshot captions and small factual inconsistencies; changes are limited to documentation and screenshot presentation
+- Verified strict HTML and LaTeX-source builds with warnings treated as errors; checked local links, anchors, image mappings and TOC reachability
+- Visually reviewed all raster-image contact sheets and selected full-size images; inspected representative rendered pages. This review did not rerun every application flow, render a fresh PDF or recrawl all external URLs
+- Intentionally retained links to not-yet-published metamodel schemas as requested
+- DSW: 131 source pages, 27,873 local references and 130 HTML image mappings pass; no TOC or image-reference errors
+- Recreated the list-question screenshot including its items and Add control (targeted Cypress capture passes), aligned figure spacing and added a version-independent native 404 page
+- Corrected integration-secret configuration against backend source: file-level secrets, Jinja references and stored-secret precedence; aligned private security reporting with the dedicated security page
+- Reviewed on the existing hotfix branch so its earlier workspace-removal and screenshot fixes remain included. Continue the same PRs to main and develop; do not merge

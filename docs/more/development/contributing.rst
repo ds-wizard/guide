@@ -22,7 +22,7 @@ In case you find some bug, please `create an issue <https://github.com/ds-wizard
 Vulnerabilities
 ---------------
 
-If you find an security issue within DSW, please `create appropriate issue <https://github.com/ds-wizard/ds-wizard/issues/new/choose>`__. However, never include sensitive information in the issue as it is publicly available. Such information (e.g. logs) send to us via e-mail `support@ds-wizard.org <support@ds-wizard.org>`__.
+Report security issues privately as described in :doc:`vulnerabilities`. Include the affected component and version, reproduction steps and possible impact. Do not publish sensitive details or logs in a public issue.
 
 Development
 ===========

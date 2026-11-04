@@ -15,7 +15,7 @@ Gets a ``docx`` document as input.
 Output
 ======
 
-Results in a ``docx`` document as input.
+Produces a ``docx`` document as output.
 
 Options
 ========

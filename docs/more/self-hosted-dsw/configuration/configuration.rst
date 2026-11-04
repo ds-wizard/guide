@@ -315,20 +315,20 @@ Generated documents use context 19.0, supplied by the server. Configure the appl
 Integrations Configuration
 ==========================
 
-Integrations in the DSW use external APIs. Sometimes, we might need some configured variables, such as API keys or endpoints. For example, integration with ID ``dbase`` might use the following configuration.
+API integrations can use secrets for credentials and endpoints. We can manage them under :doc:`Knowledge Model Secrets </application/knowledge-models/secrets>` or provide server-wide fallback values in the integration configuration file.
 
-.. CODE-BLOCK:: yaml
+The server reads the file configured by ``general.integrationConfig``, or ``INTEGRATION_CONFIG_PATH`` when set. Put fallback values in its top-level ``secrets`` map:
 
-    dbase:
-        apiKey: topSecretDBaseApiKey
-        apiUrl: https://api.dbase.example:10666
-        someConfig: someValue4Integration
+.. code-block:: yaml
 
-There can be multiple integrations configured in a single file. These can be used then when setting up the integration in the Editor as ``${apiKey}``, ``${apiUrl}``, etc. More about integrations can be found in separate :ref:`integration questions documentation<integration-questions>`.
+    secrets:
+        dbaseApiKey: example-only-not-a-real-key
+        dbaseApiUrl: https://api.example.invalid
 
-.. NOTE::
+Reference these values in the integration's request configuration using ``{{ secrets.dbaseApiKey }}`` and ``{{ secrets.dbaseApiUrl }}``. Values saved in Knowledge Model Secrets take precedence over file values with the same name.
 
-     Different knowledge models may use different variable naming. Please read the information in README to find out what is required. We recommend authors to stick with ``apiKey`` and ``apiUrl`` variables as our convention.
+Question-specific parameters use ``{{ variables.name }}``; see :ref:`integration-questions`. The older per-integration YAML sections and ``${name}`` placeholders do not configure the current API integration requests. Update older integration configurations to the current secret references.
+
 
 .. _client-configuration:
 

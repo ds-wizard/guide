@@ -434,7 +434,7 @@ Before updating check following, otherwise the migration will fail:
 3.16.X to 3.17.X
 ----------------
 
-- If we are upgrading from the older version then 3.16.X we need to first upgrade to version 3.16.X.
+- If we are upgrading from the older version than 3.16.X we need to first upgrade to version 3.16.X.
 
 3.15.X to 3.16.X
 ----------------
@@ -601,7 +601,7 @@ Before updating check following, otherwise the migration will fail:
 2.4.X to 2.5.X
 --------------
 
-- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD `` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
+- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD`` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
 - Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as DSW schedules synchronization internally.
 
 2.3.X to 2.4.X
