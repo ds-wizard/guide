@@ -12,22 +12,32 @@ Next, we have **Project Tags**. These can be used for providing some metadata or
     Project tags might be disabled in some DSW instances.
 
 
-.. figure:: settings/settings.png
-    
-    Project settings.
+.. figure:: /_static/screenshots/5.0/project-settings.png
+    :figclass: guide-screenshot
+    :alt: Project settings in DSW 5.0
+    :width: 520
 
+    Project settings.
 
 .. _default-document-template:
 
 Default Document Template
 =========================
 
-We can set a **default document template** and a **default document format**. These are then used in the :ref:`preview<preview>` tab and also pre-selected when creating a :ref:`new document<new-document>`.
+We can set a **default document template** and a **default document format**. These are then used in the :ref:`preview<preview>` tab and also pre-selected when creating a :ref:`new document<new-document>`. The document template selector shows the full document template ID to help distinguish similarly named templates.
 
 If a newer version of the selected document template is available, DSW shows a warning in this section. If the selected template or format is no longer compatible with the project's knowledge model, choose a compatible template and format before saving the settings.
 
 When the selected template has :ref:`locales<document-template-locales>`, we can choose a **default document language**. The template's source language is selected by default; other available languages come from imported document template locales. We can still choose a language when creating an individual document.
 
+:guilabel:`Unsupported metamodel` badge can appear when the document template is not compatible with the version of DSW. Users should contact the person responsible for document templates or instance administration in this case.
+
+.. figure:: /_static/screenshots/5.0/project-settings-template.png
+    :figclass: guide-screenshot
+    :alt: Project settings template in DSW 5.0
+    :width: 724
+
+    Project settings template.
 
 Project Template
 ================
@@ -36,10 +46,8 @@ We can use the project as a :ref:`project template<project-templates>`. If we en
 
 .. NOTE::
 
-    Project template options are visible only for users with permission to manage project templates.
+    Project template options are visible only for users with the :ref:`Manage Project Templates<roles>` role permission.
 
-
-:guilabel:`Unsupported metamodel` badge can appear, when the document template is not compatible with the version of DSW. Users should contact the person responsible for document templates or instance administration in this case.
 
 Questionnaire Language
 ======================
@@ -51,9 +59,7 @@ Changing the questionnaire language changes the knowledge model texts shown in t
 Knowledge Model
 ===============
 
-We can see the :ref:`knowledge model<knowledge-model>` and its tags used for creating the project. If a newer version of the knowledge model is available, DSW shows a warning in this section.
-
-If we want to change the knowledge model, its version, or selected question tags, we can create a :ref:`project migration<project-migration>`.
+We can see the :ref:`knowledge model<knowledge-model>` and its tags used for creating the project. If a newer version of the knowledge model is available, DSW shows a warning in this section. If we want to change the knowledge model, its version, or the selected tags, we can use :ref:`project migration<project-migration>`.
 
 
 Danger Zone

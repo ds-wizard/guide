@@ -3,17 +3,13 @@
 Document Templates
 ******************
 
-This section is about managing the document templates and document template editors. Similarly to knowledge models, we can manage :doc:`./list/index` or work on new or customize existing templates using :doc:`./editors/index`.
+Document templates turn questionnaire answers into documents. The :doc:`list/index` contains published versions and their output formats. The :doc:`editors/index` is where we create and change templates.
 
-----
+Once a compatible template is installed, select it in :doc:`project settings </application/projects/list/detail/settings>` or when :doc:`creating a document </application/projects/list/detail/documents>`.
 
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    List<list/index>
-    Editors<editors/index>
+   List <list/index>
+   Editors <editors/index>

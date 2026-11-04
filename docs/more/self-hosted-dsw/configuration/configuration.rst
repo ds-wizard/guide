@@ -3,7 +3,7 @@
 Configuration Files
 *******************
 
-Configuration files are used for setting the server-side configuration. Since the 3.0 release, the configuration for server and document worker components has overlapped. Therefore, we can have a single configuration file for both.
+Configuration files are used for setting the server-side configuration. Several components can read the same YAML file, but each component has its own configuration schema. Use the configuration shipped with the matching 5.0 component versions.
 
 
 .. _config-server:
@@ -20,28 +20,28 @@ This configuration section is used only by **Server** and covers basic configura
 
 .. NOTE::
 
-    Do not forget to add `/wizard` to your clientUrl
+    The 5.0 client is served at the web root. Set ``general.clientUrl`` to its public address; do not append the old ``/wizard`` path unless your deployment explicitly supports that path.
 
-.. confval:: serverPort
+.. confval:: general.serverPort
 
    :type: Int
    :default: ``3000``
 
     Port that will be the web server listening on.
 
-.. confval:: clientUrl
+.. confval:: general.clientUrl
 
    :type: URI
 
-    Address of client application (e.g. `https://localhost:8080/wizard <https://localhost:8080/wizard>`__).
+    Public address of the client application, for example ``https://dsw.example.org``.
 
-.. confval:: secret
+.. confval:: general.secret
 
    :type: String
 
     Secret string of 32 characters for encrypting configuration in the database.
 
-.. confval:: rsaPrivateKey
+.. confval:: general.rsaPrivateKey
 
     :type: String
 
@@ -50,14 +50,43 @@ This configuration section is used only by **Server** and covers basic configura
 
 .. WARNING::
 
-    We should keep our ``secret`` and ``rsaPrivateKey`` secured! Changing ``secret`` will require re-configuration of secrets stored in the database, e.g., token for Registry.
+    We should keep our ``secret`` and ``rsaPrivateKey`` secured! Changing ``secret`` will require re-configuration of secrets stored in the database, e.g., Registry API key.
 
-If we need to change our ``secret``, we need also replace all values encrypted by the secret that is stored in the database as follows:
+Keep ``general.secret`` stable and include it in protected configuration backups. Changing it makes existing encrypted values unreadable unless they are re-encrypted or entered again.
 
-1. Note somewhere values from Settings: Client ID and Client Secret of OpenID configurations, Registry token, etc. Adjust the settings that the values are not there (recommended; e.g., remove OpenID configuration), and save it.
-2. Change the ``secret`` in the configuration file and restart the DSW server (re-create the container if using Docker).
-3. Adjust the settings back to our previous values.
-4. If we also use some “user properties” (for the Document Submission feature), let our users know to change the values in their profiles.
+Before rotating it, arrange secure recovery of OpenID client secrets, the Registry API key, knowledge model secrets and encrypted document-submission properties. Plan how those values will be restored with the administrator. Recreating an OpenID provider creates new callback and logout addresses that must be registered with the identity provider.
+
+If rotation is necessary:
+
+#. Back up the database and configuration. Securely retain the old secret and recover the original values of encrypted settings while it still works. A masked value in a form is not a recoverable copy.
+#. Arrange administrative access that does not depend on the OpenID settings being changed. Remove affected configured secrets before changing the encryption key, or use a separately verified re-encryption procedure.
+#. Change ``general.secret`` and restart the server (re-create its container when using Docker).
+#. Re-enter the recovered settings with the new secret and test each affected integration. If a provider was recreated, register its new callback and logout addresses.
+#. Ask users of encrypted document-submission properties to enter their values again in their profile settings, then test submission.
+
+Do not rotate the key until the recovery values and a working administrative sign-in method are available.
+
+Public links and hosting
+------------------------
+
+.. confval:: general.privacyUrl
+
+   :type: URI
+
+   Optional public privacy-policy destination.
+
+.. confval:: general.termsOfServiceUrl
+
+   :type: URI
+
+   Optional public terms-of-service destination.
+
+.. confval:: multiTenancy.enabled
+
+   :type: Boolean
+   :default: ``false``
+
+   Enables multi-tenant hosting in the server. Keep it disabled for a normal single-instance deployment. The document worker and mailer read their separate ``cloud.enabled`` option; keep that disabled for the same deployment.
 
 Database
 --------
@@ -84,7 +113,7 @@ Information for connection to S3-compatible object storage, such as `Garage <htt
     The value must be reachable both by DSW services and by users' browsers. DSW uses this URL when creating links for document downloads, document previews, template exports, locale exports, and other stored files. For production, use a public HTTPS URL through your reverse proxy or equivalent infrastructure. For local Docker Compose testing, the Garage example publishes the S3 API on the host and uses ``host.docker.internal`` so containers and the browser can reach the same endpoint.
 
 .. confval:: s3.username
-    
+
     :noindex:
     :type: String
 
@@ -127,7 +156,7 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 
 .. confval:: mail.enabled
 
-   :type: String
+   :type: Boolean
 
     It should be set to ``true`` unless used for local testing only.
 
@@ -166,7 +195,7 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 
     :type: String
     :default: ``plain``
-    
+
      Security of the SMTP connection. Possible values are: ``plain``, ``ssl``, and ``tls``.
 
 .. confval:: mail.smtp.username
@@ -178,7 +207,7 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 .. confval:: mail.smtp.password
 
     :type: String
-    
+
      Password for the SMTP connection. (If no username/password is given, it is assumed that no authentication is needed.)
 
 .. confval:: mail.smtp.timeout
@@ -197,13 +226,13 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 .. confval:: mail.amazonSes.accessKeyId
 
     :type: String
-    
+
      Access Key ID for AWS.
 
 .. confval:: mail.amazonSes.secretAccessKey
 
     :type: String
-    
+
      Secret Access Key for AWS.
 
 
@@ -276,82 +305,10 @@ This configuration section is used only by **Document Worker**. We can affect st
 
     Optional for limiting time given to run the tool.
 
-Document Context
-^^^^^^^^^^^^^^^^
+Document rendering
+^^^^^^^^^^^^^^^^^^
 
-This configuration section is used only by **Document Worker**. It allows us to affect some variables that can be used inside document templates.
-
-.. confval:: documentContext.serviceName
-
-   :type: String
-   :default: ``Data Stewardship Wizard``
-
-   Name of the service operating the DSW instance.
-
-
-.. confval:: documentContext.serviceNameShort
-
-   :type: String
-   :default: ``DSW``
-
-    Short name of the service operating the DSW instance.
-
-
-.. confval:: documentContext.serviceUrl
-
-   :type: String
-   :default: ``https://ds-wizard.org``
-
-    URL of the service operating the DSW instance.
-
-
-.. confval:: documentContext.serviceDomainName
-    
-   :type: String
-   :default: ``ds-wizard.org``
-
-    Domain name of the service operating the DSW instance.
-
-
-.. confval:: documentContext.defaultPrimaryColor
-
-   :type: String
-   :default: ``#0033aa``
-
-    Default primary color used in generated documents (if not overridden).
-
-
-.. confval:: documentContext.defaultIllustrationsColor
-
-   :type: String
-   :default: ``#0033aa``
-
-    Default secondary color used in generated documents (if not overridden).
-
-
-.. confval:: documentContext.defaultLogoUrl
-
-   :type: String
-   :default: ``{{clientUrl}}/assets/logo.svg``
-
-    Default logo URL used in generated documents (if not overridden).
-
-
-.. confval:: documentContext.appTitle
-    
-   :type: String
-   :default: ``DS Wizard``
-
-    Title of the application used in generated documents (if not overridden).
-
-
-.. confval:: documentContext.appTitleShort
-
-   :type: String
-   :default: ``DSW``
-
-    Short title of the application used in generated documents (if not overridden).
-
+Generated documents use context 19.0, supplied by the server. Configure the application's branding through :doc:`/application/administration/settings/user-interface/look-and-feel`. Custom templates should read the current :doc:`document context </more/development/document-templates/document-context>` rather than relying on old worker ``documentContext`` fields.
 
 .. _integration-yml-file:
 
@@ -378,89 +335,34 @@ There can be multiple integrations configured in a single file. These can be use
 Client Configuration
 ====================
 
-If we are running the client app using “With Docker”, all we need is to specify the ``API_URL`` environment variable inside ``docker-compose.yml``. In case we want to run the client locally, we need to create a ``config.js`` file in the project root:
+For the Docker client, set ``API_URL`` to the backend's API base, normally ``https://dsw.example.org/api``. The client writes this value into ``config.js`` on startup.
 
-.. CODE-BLOCK:: javascript
+For frontend development, create ``apps/dsw/static/config.js`` in the frontend repository:
 
-    window.dsw = {
-        apiUrl: 'http://localhost:3000/wizard-api'
-    }
+.. code-block:: javascript
 
-Custom Logo
------------
+   window.app = {
+       apiUrl: 'http://localhost:3000/api'
+   }
 
-We can use our own custom logo by mounting it to the client container. The logo must be square and in SVG format.
+The production client is served at the web root. Proxy ``/api`` to the backend and preserve WebSocket upgrades. Set ``general.clientUrl`` on the server to the matching public client address.
 
-.. CODE-BLOCK:: yaml
-
-    dsw-client:
-        volumes:
-        - /path/to/logo.svg:/usr/share/nginx/html/wizard/img/logo.svg
-
-Favicon
--------
-
-If we changed the logo, we might also want to change the favicon. First, we need to generate the necessary files using, for example, this `Favicon Generator <https://realfavicongenerator.net/>`__. The wizard uses the following files:
-
-- android-chrome-192x192.png
-- android-chrome-512x512.png
-- apple-touch-icon.png
-- browserconfig.xml
-- favicon-16x16.png
-- favicon-32x32.png
-- favicon.ico
-- mstile-144x144.png
-- mstile-150x150.png
-- mstile-310x150.png
-- mstile-310x310.png
-- mstile-70x70.png
-- safari-pinned-tab.svg
-- site.webmanifest
-
-They are all in the ``/usr/share/nginx/html/wizard/img/favicon`` folder, so we can mount our generated favicon files from the generator there, or we can mount the whole folder:
-
-.. CODE-BLOCK:: yaml
-
-    dsw-client:
-        volumes:
-        - /path/to/favicon:/usr/share/nginx/html/wizard/img/favicon
-
-Style Customizations
+Branding and favicon
 --------------------
 
-We can mount a file called `head-extra.html` to the wizard client image to attach extra code to the ``<head>`` tag. This can be used to override some styles or CSS variables. For example, to change a color theme, we only need to override a few Bootstrap variables:
+Use :doc:`Look & Feel </application/administration/settings/user-interface/look-and-feel>` for the title, logo and primary color.
 
-.. CODE-BLOCK:: html
+The client image serves its static files from ``/usr/share/nginx/html``. The favicon files are under ``assets/favicon``. If replacing them through a volume, mount the files into that directory rather than the old ``/wizard/img/favicon`` path.
 
-    <style>
-        :root {
-            --bs-bg-primary-color: rgb(255, 255, 255);
-            --bs-btn-primary-active-bg: rgb(18, 128, 106);
-            --bs-btn-primary-color: rgb(255, 255, 255);
-            --bs-btn-primary-active-color: rgb(255, 255, 255);
-            --bs-btn-primary-disabled-color: rgb(255, 255, 255);
-            --bs-btn-primary-hover-bg: rgb(19, 136, 113);
-            --bs-btn-primary-hover-color: rgb(255, 255, 255);
-            --bs-focus-ring-color: 57, 174, 151;
-            --bs-input-focus-border-color: rgb(139, 208, 194);
-            --bs-link-color: rgb(22, 160, 133);
-            --bs-link-color-rgb: 22, 160, 133;
-            --bs-link-hover-color: rgb(18, 128, 106);
-            --bs-link-hover-color-rgb: 18, 128, 106;
-            --bs-primary: rgb(22, 160, 133);
-            --bs-primary-bg: rgb(232, 246, 243);
-            --bs-primary-bg2: rgb(208, 236, 231);
-            --bs-primary-rgb: 22, 160, 133;
-            --illustrations-color: rgb(241, 196, 15);
-        }
-    </style>
+Custom head content
+-------------------
 
-For more information about what variables can be overridden, see the `CSS variables in Bootstrap documentation <https://getbootstrap.com/docs/5.3/customize/css-variables/>`__.
+A file mounted at ``/src/head-extra.html`` is inserted before ``</head>`` when the client starts. Use this for deployment-specific head content. For example:
 
-Once we have the file ready, we need to mount it into the container:
+.. code-block:: yaml
 
-.. CODE-BLOCK:: yaml
+   client:
+     volumes:
+       - ./head-extra.html:/src/head-extra.html:ro
 
-    dsw-client:
-        volumes:
-        - /path/to/head-extra.html:/src/head-extra.html
+The 5.0 interface uses its own design-system variables; old Bootstrap ``--bs-*`` overrides do not describe the current theme. Prefer the application's branding settings for standard changes. Check custom CSS in both light and dark appearance after each interface update.

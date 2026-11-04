@@ -1,37 +1,27 @@
-User settings
+User Settings
 *************
 
-After navigating to :guilabel:`User settings` from the :doc:`../index` menu, we can change the information of our profile: **Email** address, **First name**, **Last name**, and **Affiliation**. We need to submit the changes by clicking :guilabel:`Save` button.
+We can open :guilabel:`User settings` from the profile menu. Here we can change our **Email**, **First name**, **Last name** and **Affiliation**. Click :guilabel:`Save` to save the changes.
 
-In case of configured submission services, there might be additional inputs under **Submission Settings** such as API tokens or other information used for the document submission.
+The settings menu also provides password, connected accounts, language, API keys, active sessions, submission settings and tours. Some options depend on the instance configuration.
 
-.. figure:: index/form.png
-    
-    Form for editing profile with example submission settings.
+.. figure:: /_static/screenshots/5.0/account-profile.png
+    :figclass: guide-screenshot
+    :alt: User profile in DSW 5.0
+    :width: 760
 
+    User profile.
 
-.. NOTE::
-
-    The values of **Submission Settings** are treated as potentially sensitive information; thus are stored encrypted.
-
-
-If we want to :doc:`./password`, we need to switch to :guilabel:`Password` from the left menu titled **User settings**.
-
-----
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
 
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    Password<password>
-    Connected Accounts<connected-accounts>
-    Language<language>
-    Tours<tours>
-    API Keys<api-keys>
-    Active Sessions<active-sessions>
-    Submission Settings<submission-settings>
-    
+   password
+   connected-accounts
+   language
+   api-keys
+   active-sessions
+   submission-settings
+   tours
+   plugins

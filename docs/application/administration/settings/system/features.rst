@@ -1,16 +1,14 @@
 Features
 ********
 
-Settings of various miscellaneous features.
+Use :guilabel:`Settings` → :guilabel:`Features` to enable optional features, such as tours and the AI Assistant where its service is configured.
 
-Tours
-=====
+The AI Assistant provides help with using the application. Enabling a feature does not change users' role permissions.
 
-Tours provide a way to guide users through the features of DSW. Tours are defined on the code level so they are not configurable. However, you can enable or disable them in the settings. If tours are enabled, users can reset tours they have already completed in their user settings.
 
-Tours are not displayed to anonymous users.
+.. figure:: /_static/screenshots/5.0/settings-features.png
+    :figclass: guide-screenshot
+    :alt: Guided tour settings in DSW 5.0
+    :width: 760
 
-.. figure:: features/tours.png
-
-    Switch tours.
-
+    Feature settings.

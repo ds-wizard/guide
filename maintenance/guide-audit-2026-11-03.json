@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-03",
+  "changed_rst_pages": [
+    "about/introduction/knowledge-model.rst",
+    "application/administration/settings/index.rst",
+    "application/administration/settings/system/roles.rst",
+    "application/document-templates/editors/detail/files.rst",
+    "application/document-templates/editors/detail/index.rst",
+    "application/document-templates/editors/detail/publish.rst",
+    "application/knowledge-models/editors/detail/index.rst",
+    "application/knowledge-models/editors/detail/knowledge-model.rst",
+    "application/knowledge-models/editors/detail/question-tags.rst",
+    "application/knowledge-models/editors/index.rst",
+    "application/knowledge-models/list/preview.rst",
+    "application/projects/documents.rst",
+    "application/projects/files.rst",
+    "application/projects/list/detail/index.rst",
+    "application/projects/list/detail/questionnaire.rst",
+    "application/projects/list/detail/sharing.rst",
+    "application/projects/list/index.rst",
+    "application/projects/list/templates.rst",
+    "more/development/contributing.rst",
+    "more/development/document-templates/dev-notes.rst",
+    "more/development/document-templates/document-worker-plugins.rst",
+    "more/development/document-templates/steps/excel.rst",
+    "more/development/document-templates/steps/weasyprint.rst",
+    "more/development/integration-questions/integration-api.rst",
+    "more/development/vulnerabilities.rst",
+    "more/self-hosted-dsw/configuration/configuration.rst",
+    "more/self-hosted-dsw/configuration/index.rst",
+    "more/self-hosted-dsw/deployment.rst",
+    "more/self-hosted-dsw/index.rst",
+    "more/self-hosted-dsw/upgrade-guidelines.rst"
+  ],
+  "additional_files": [
+    "docs/conf.py",
+    "maintenance/screenshot-todos.json",
+    "maintenance/validation.json",
+    "maintenance/guide-audit-2026-11-03.md",
+    "WORKLOG.md"
+  ],
+  "long_prose_paragraphs": [],
+  "local_references_checked": 25103,
+  "frontend_help_links_checked": 38,
+  "external_link_results": {
+    "ignored": 1,
+    "working": 158,
+    "redirected": 1
+  },
+  "broken_external_links": [],
+  "screenshot_todos": 129
+}

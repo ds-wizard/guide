@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-03",
+  "scope": "Documentation retention and static-source audit; application flows not runtime-tested",
+  "original_pages_reviewed": 126,
+  "pages_restored_or_corrected": 39,
+  "builds": {
+    "html": "passed (strict warnings)",
+    "latex": "passed (strict warnings)"
+  },
+  "links_and_images": {
+    "date": "2026-11-03",
+    "strict_html": "see build-html.log",
+    "source_pages": 130,
+    "reachable_pages": 130,
+    "local_references_checked": 27415,
+    "screenshot_todos": 129,
+    "orphan_pages": [],
+    "duplicate_parents": {},
+    "cycles": [],
+    "errors": []
+  },
+  "toc_labels": {
+    "date": "2026-11-03",
+    "pages_with_sidebars": 133,
+    "explicit_toc_aliases": 36,
+    "rendered_label_checks": 4788,
+    "errors": [],
+    "method": "Clean full HTML build; compare every rendered sidebar alias with its source toctree. Descriptive article titles remain unchanged."
+  },
+  "retention_checks": {
+    "historical_template_versions_retained": [
+      "18.2",
+      "18.1",
+      "18.0",
+      "17.1",
+      "17.0",
+      "16",
+      "15",
+      "14",
+      "13",
+      "12",
+      "11",
+      "10",
+      "9",
+      "8",
+      "7",
+      "6",
+      "5",
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "historical_schema_rows_retained": 62,
+    "openid_unchanged_from_previous_fix": true
+  },
+  "diff_check": "passed",
+  "visual_review": [
+    "FW context 19.0 field reference and code examples at desktop width",
+    "DSW current-reference/history page at narrow and desktop widths",
+    "Historical table structures: three tables, four columns each; no page-wide overflow in checked view"
+  ],
+  "limitations": [
+    "No application-flow or destructive-procedure runtime tests",
+    "LaTeX source built; a new PDF was not compiled or visually inspected in this audit",
+    "No full revalidation of each historical release; original history retained and distinguished from current instructions",
+    "FW existing deferred redirect targets excluded from the link validator",
+    "No screenshot regeneration, deployment, Notion edits, commits or pushes"
+  ]
+}

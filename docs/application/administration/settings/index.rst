@@ -3,23 +3,18 @@
 Settings
 ********
 
-This section covers different settings available to users with permission to manage settings. The settings are categorized as listed below.
+Open :guilabel:`Administration` → :guilabel:`Settings` to configure DSW. :guilabel:`Manage Settings` permits changing the application settings; :guilabel:`Manage Roles` permits managing roles and the default role for new users.
 
-.. NOTE::
-    
-    Do not forget press :guilabel:`Save` button to save the changes.
-
-----
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
+Choose a section from the settings menu. Save changes before leaving the page.
 
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 2
+   :titlesonly:
 
-    System<system/index>
-    User Interface<user-interface/index>
-    Content<content/index>
-    Info<info/index>
+   sections/users-and-access
+   sections/projects
+   sections/appearance
+   sections/features-and-integrations
+   Translations <translations/index>
+   sections/plan-and-usage

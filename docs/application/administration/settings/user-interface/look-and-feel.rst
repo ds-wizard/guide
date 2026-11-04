@@ -1,21 +1,15 @@
 Look & Feel
 ***********
 
-This part of settings allows us to adjust how the DSW instance looks like.
+Use the :guilabel:`Look & Feel` settings to configure the application title, logo and primary color.
+The application title is also used where earlier versions had a separate short title.
 
+Knowledge-model and document-template identifiers are managed on the content itself; there is no organization ID setting used to build three-part content identifiers in 5.0.
+For navigation links and dashboard content, use :doc:`/application/administration/settings/user-interface/dashboard-and-login-screen`.
 
-Application Titles
-==================
+.. figure:: /_static/screenshots/5.0/settings-look-and-feel.png
+    :figclass: guide-screenshot
+    :alt: Look and Feel settings in DSW 5.0
+    :width: 760
 
-There are two titles that we can set. First, **Application Title** is the full title that should identify the DSW instance, for example, in browser's tab. Second is **Short Application Title** which is visible, for example, at the top of the main (left) menu next to the icon. We should keep **Short Application Title** really short (about 10 characters at maximum) so it fits well.
-
-
-Custom Menu Links
-=================
-
-We can easily add custom links to the main (left) menu by clicking :guilabel:`Add` under **Custom Menu Links**. For each link, we can set **Icon** (from `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), **Title** and the target **URL**. We can also set whether the link should open in **New Window** (if not, it will navigate user directly in the same window/tab from DSW instance). Once the links are there, we can manage them or delete them at this place.
-
-
-.. figure:: look-and-feel/custom-links.png
-
-    Example configuration of a custom menu link.
+    Look and Feel settings.

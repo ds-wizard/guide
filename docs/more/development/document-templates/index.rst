@@ -15,12 +15,6 @@ Examples
 - `ds-wizard/horizon-europe-dmp-template <https://github.com/ds-wizard/horizon-europe-dmp-template>`__
 
 
-----
-
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
 
 
 .. toctree::

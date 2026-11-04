@@ -1,0 +1,4 @@
+{% extends "!sidebar/brand.html" %}
+{% block brand_content %}
+{{ super() | replace('<img ', '<img width="684" height="249" ') | replace('alt="Logo"', 'alt="Data Stewardship Wizard"') | replace('alt="Light Logo"', 'alt="Data Stewardship Wizard"') | replace('alt="Dark Logo"', 'alt="Data Stewardship Wizard"') }}
+{% endblock %}

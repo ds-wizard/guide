@@ -6,22 +6,19 @@ Knowledge Model Editor
 Knowledge model editor is where we build knowledge models. In this section, we will see what entities we can add there, how they are connected, how to work with the editor and how to publish the knowledge model.
 
 
-.. figure:: index/knowledge-model-editor.png
-    
-    Knowledge model editor.
+.. figure:: /_static/screenshots/5.0/km-editor.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model Editor in DSW 5.0
+    :width: 760
 
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
-
+    Knowledge Model Editor.
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    knowledge-model
-    phases
-    question-tags
-    preview
-    settings
-    publish
+   knowledge-model
+   phases
+   question-tags
+   preview
+   Settings <settings>
+   publish

@@ -1,28 +1,18 @@
-.. _user-detail:
-
-User Detail
+Edit a User
 ***********
 
-Users with permission to manage users can edit existing users manually on the detail (selected user from the :ref:`users list<users-list>`). It is possible to change all properties of the user, including whether the user account is active or inactive.
+Open an account from :guilabel:`Administration` → :guilabel:`Users`. With :guilabel:`Manage Users`, we can update its profile, change its role and active status, and manage its password where offered.
 
-.. figure:: detail/profile.png
-    
-    Detail of a user profile.
+Role changes affect the account's instance-wide permissions. Project sharing and group membership also affect access; changing a role does not replace those settings.
+
+The available personal settings depend on whether we are editing our own account. API keys, sessions, connected accounts and other personal settings are described under :doc:`/application/profile/index`.
+
+Use the delete action only after checking its confirmation. Deleting an account is permanent.
 
 
-The password can also be changed (after selecting :guilabel:`Password` from the left navigation of user settings).
+.. figure:: /_static/screenshots/5.0/user-profile.png
+    :figclass: guide-screenshot
+    :alt: Administrator view of a user in DSW 5.0
+    :width: 760
 
-.. figure:: detail/password.png
-    
-    Form for changing password of a user.
-
-.. _user-roles:
-
-User Roles
-==========
-
-Each user has one global :ref:`role<roles>`. The role determines which parts of the DSW instance the user can access and what actions they can perform.
-
-Default roles cover the common researcher, data steward, and admin workflows. Users with permission to manage settings can also create custom roles when they need a different combination of permissions.
-
-Changing the role of a user updates the permissions assigned to that user.
+    Administrator view of a user.

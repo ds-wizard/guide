@@ -1,21 +1,10 @@
-..  _configuration-email-templates:
+.. _configuration-email-templates:
 
 Email Templates
 ***************
 
-Similarly to document templates, we can customize templates for emails sent by the Wizard located in ``templates`` folder. It also uses `Jinja templating language <https://jinja.palletsprojects.com/en/stable/>`__. And we can create HTML template, Plain Text template, add attachments, and add inline images (which can be used inside the HTML using `Content-ID <https://en.wikipedia.org/wiki/MIME#Multipart_messages>`__ equal to the filename). We can learn more about the template structure and contents directly from `the mailer GitHub repository <https://github.com/ds-wizard/engine-tools/tree/develop/packages/dsw-mailer/templates>`__.
+For translated or customized email text, use :doc:`application and email translations </application/administration/settings/translations/index>`. Download the email POT file, prepare a PO file, upload it and enable the language. Preserve placeholders and markup used by the message.
 
-Including our own email templates while using dockerized Wizard is practically the same as for DMP templates. We can also bind whole ``templates`` folders. (or even ``templates`` if we want to change both):
+Changing the underlying email layout is a mailer deployment customization. The mailer uses Jinja templates and can produce HTML and plain-text messages, attachments and inline images. Consult the template files in the matching `engine-tools mailer version <https://github.com/ds-wizard/engine-tools/tree/main/packages/dsw-mailer>`_ before overriding them.
 
-.. CODE-BLOCK:: yaml
-
-    mailer:
-        image: datastewardshipwizard/mailer
-        restart: always
-        depends_on:
-        - postgres
-        - dsw-server
-        volumes:
-        - ./config/application.yml:/app/config/application.yml:ro
-        - ./templates:/home/user/templates:ro
-    # ... (continued)
+Keep custom layouts and test registration, password recovery and project invitation messages after upgrading. A custom layout can affect all languages; it is separate from an individual PO translation.

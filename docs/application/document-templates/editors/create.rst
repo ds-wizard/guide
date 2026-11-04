@@ -1,21 +1,24 @@
-Create Document Template Editor
-*******************************
+Create a document template editor
+*********************************
 
-We can create a new document template editor by navigating to :menuselection:`Document Templates → Editors` in the main menu and then clicking the :guilabel:`Create` button.
+We can create an editor by opening :guilabel:`Document Templates` → :guilabel:`Editors` and clicking :guilabel:`Create`. This requires :guilabel:`Use Document Template Editor`.
+Start from an existing template where appropriate, or prepare a new template with its name, identifier, version and source language.
 
-
-.. figure:: create/create-document-template.png
-    :width: 528
-    
-    Form for creating a new document template editor.
+The identifier and version are separate values.
 
 
-Every document template needs to have a **Name**, a **Document Template ID** and **version**. The name should be something descriptive to help users understand what the document template is about. The Document Template ID is used for the identification together with the :ref:`organization ID<organization-settings>` and document template version that we have to fill as a **New Version**. So the identifier of the document template is: 
+The editor contains files and metadata. See :doc:`/application/document-templates/editors/detail/settings` for formats and compatibility, or use the :doc:`/more/development/document-templates/tdk` for local development.
 
-.. code::
+.. figure:: /_static/screenshots/5.0/dt-editor-create.png
+    :figclass: guide-screenshot
+    :alt: Create a Document Template Editor in DSW 5.0
+    :width: 596
 
-    <organizationId>:<documentTemplateId>:<version>
+    Create a Document Template Editor.
 
-We can create a new editor either from scratch, i.e. the new document template will be empty and we will build it all ourselves, or based on an existing document template, which means that everything from the chosen document template (files as well as configuration) will be copied to ours. We just need to choose the original document template in the **Based on** field. Alternatively, we can click on :guilabel:`Create editor` from :doc:`../list/detail`.
+Starting from an existing template
+==================================
 
-We can only have one document template editor with the same document template ID. If we deleted the editor but want to continue working on that document template, we can create a new editor with the same document template ID. Alternatively, we would have to use a different document template ID.
+Choose a template in :guilabel:`Based on` to copy its files and configuration into the new editor. We can then change those files, formats and metadata. The released template's :guilabel:`Create editor` action opens the corresponding creation form.
+
+Deleting an editor does not prevent creating another from the released template. Choose a new version for the next release; an existing template identifier and version cannot be reused in the same DSW instance.
