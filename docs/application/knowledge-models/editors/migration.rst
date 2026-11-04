@@ -24,7 +24,6 @@ We can start the knowledge model migration from the :ref:`list of knowledge mode
     If there are some unpublished changes in the Child KM, we cannot start the migration (there will be no :guilabel:`update available` badge). We need to publish the changes first.
 
 .. figure:: /_static/screenshots/5.0/km-migration-list.png
-    :figclass: guide-screenshot
     :alt: Chemistry Knowledge Model editor showing the update available badge and Update menu action
     :width: 760
 
@@ -34,7 +33,6 @@ We can either click on the badge directly, or choose the :guilabel:`Update` opti
 
 
 .. figure:: /_static/screenshots/5.0/km-migration-update.png
-    :figclass: guide-screenshot
     :alt: Create migration dialog with Common DSW Knowledge Model version 2.8.3 selected
     :width: 480
 
@@ -47,7 +45,6 @@ During the migration, we can see all the changes one by one and can choose wheth
 
 
 .. figure:: /_static/screenshots/5.0/km-migration-review.png
-    :figclass: guide-screenshot
     :alt: Knowledge Model migration change review showing Reject, Apply and Apply all controls
     :width: 663
 

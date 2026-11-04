@@ -97,7 +97,7 @@ Version 19.0 (since 5.0.0)
 --------------------------
 
 * Replaced ``organizationId`` and ``templateId`` of a template with a single ``id`` (``<organizationId>.<templateId>``) and a separate ``version``. In the same way, ``orgId`` and ``kmId`` in package filters are replaced with ``id``; a filter naming only an organization becomes a wildcard, so review it. TDK and import still read the older form and only upgrade the metadata. Jinja templates and step options have to be ported manually.
-* A document context now comes from a project or from a knowledge model editor, and contains new ``hash``, ``workspace``, ``knowledgeModelEditor``, and ``questionnaire``. The document worker accepts only major version 19, so documents queued before an upgrade have to be regenerated.
+* A document context now comes from a project or from a knowledge model editor, and contains new ``hash``, ``knowledgeModelEditor``, and ``questionnaire``. The document worker accepts only major version 19, so documents queued before an upgrade have to be regenerated.
 * In the JSON-like document context:
 
   * replies, labels, phase, versions, files, report, and language moved from ``project`` to ``questionnaire``;

@@ -141,3 +141,35 @@ Final verification: strict HTML and LaTeX-source builds passed; 27415 local refe
 - Preserved screenshots, FAQ, original OpenID steps, sidebar behaviour and zero-placeholder inventory. The pending Document Context handover is now incorporated
 - Verification: clean strict HTML and LaTeX-source builds passed; 27,871 local references, all 38 application help targets and all rendered sidebar aliases pass. No orphan pages, duplicate parents, cycles or remaining screenshot TODOs. Full downloadable-PDF rendering remains separate
 - Added the combined result on top of the contributor branch while retaining its two commits, ready for a normal fast-forward push to the existing PR
+
+## 4 November 2026 — Screenshot hotfix
+
+- Refreshed Document Template Editor preview using the author's fixed Questionnaire Report files, removing the obsolete Workspace row and collapsing the global sidebar
+- Populated the API-key list with a temporary synthetic example for capture. The generated token was neither stored nor shown; the key was revoked after capture. Expired keys are hidden by the UI, so the initial expired-only example could not populate this view
+- Verified both captures with Cypress and inspected the report cover. Existing guide text and screenshot widths retained
+- Checked FW's old-UI/merger wording findings against DSW; no matching DSW wording or outdated UI screenshots were found. Its conceptual KM migration diagram remains valid
+- Hotfix branch starts from main and will target both main and develop. Further fixes will use the same branch/PRs; no merge authorized
+
+## 4 November 2026 — DSW workspace-reference audit
+
+Removed internal workspace metadata from the Document Context explanations, metamodel 19 change summary and context class diagrams at the user's request. The underlying shared API/model still contains these technical fields; no schema or application behaviour was changed. Updated the diagram generator so regeneration keeps the DSW documentation free of these fields. No workspace references were found in the application walkthrough pages.
+
+Verification: no workspace mentions remain in published-source text, Mermaid sources or rendered SVG diagrams. Strict HTML and LaTeX-source builds passed; generated search data has no pages linked to the removed terms.
+
+## 4 November 2026 — Marek reference parity and schema links
+
+Compared Marek Suchánek's DSW Document Context 19.0 and TDK updates (1b2aa0c, 2c209b5) with the FW reference pages. The substantive context, Jinja, Excel/Pandoc, specification, worker plugin and TDK material was already present; retained FW workspace additions and adapted links. Applied the remaining editor-settings link correction in FW. Checked dsw-schemas master through GitHub: the newer context/template schema files remain absent. Restored JSON Schema links for versions 18.1, 18.2, 18.3 and 19.0 in both schema tables as explicitly requested, despite expected 404 responses.
+
+Verification: strict HTML and LaTeX-source builds passed for both guides. The schema 19.0 absence was confirmed by GitHub API HTTP 404; the repository tree lists no context/template schemas for 18.1–18.3 or 19.0. No full PDF render or external linkcheck was run; these missing links are intentional per request.
+
+## Final guide review — 2026-11-04
+
+- Read through shared and product-specific prose, preserving technical reference material, historical upgrade notes and the original OpenID procedure
+- Corrected wording, cross-reference markup, screenshot captions and small factual inconsistencies; changes are limited to documentation and screenshot presentation
+- Verified strict HTML and LaTeX-source builds with warnings treated as errors; checked local links, anchors, image mappings and TOC reachability
+- Visually reviewed all raster-image contact sheets and selected full-size images; inspected representative rendered pages. This review did not rerun every application flow, render a fresh PDF or recrawl all external URLs
+- Intentionally retained links to not-yet-published metamodel schemas as requested
+- DSW: 131 source pages, 27,873 local references and 130 HTML image mappings pass; no TOC or image-reference errors
+- Recreated the list-question screenshot including its items and Add control (targeted Cypress capture passes), aligned figure spacing and added a version-independent native 404 page
+- Corrected integration-secret configuration against backend source: file-level secrets, Jinja references and stored-secret precedence; aligned private security reporting with the dedicated security page
+- Reviewed on the existing hotfix branch so its earlier workspace-removal and screenshot fixes remain included. Continue the same PRs to main and develop; do not merge
