@@ -1,0 +1,17 @@
+{
+  "before": {
+    "scroll": 124,
+    "y": 461.6953125
+  },
+  "after": {
+    "scroll": 124,
+    "y": 461.6953125
+  },
+  "date": "2026-11-03",
+  "test": "Cypress/Electron local guide, Authentication to OpenID",
+  "result": "passed",
+  "sampled_frames": 91,
+  "minimum_scroll": 124,
+  "maximum_scroll": 124,
+  "change": "Match FW: disable smooth scroll on .sidebar-scroll; existing inline position restoration unchanged"
+}

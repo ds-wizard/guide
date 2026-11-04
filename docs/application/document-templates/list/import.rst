@@ -1,35 +1,31 @@
-.. _doc-template-import:
+Import a Document Template
+**************************
 
-Document Template Import
-************************
+Open the document template library and choose :guilabel:`Import`. You need the management permission for the target library.
 
-We can import an existing document template by navigating to :doc:`./index` (:menuselection:`Document Templates`) in the main menu and then clicking on :guilabel:`Import` button on the list of document templates.
-
-.. _doc-template-import-from-registry:
-
-From DSW Registry
+From the Registry
 =================
 
-If the DSW instance is connected to the `DSW Registry <https://registry.ds-wizard.org>`__, it is possible to import document templates from it by entering the **document template ID** of desired template (e.g. ``dsw:questionnaire-report:2.7.1``) and pressing the :guilabel:`Import` button.
+Where a Registry connection is available, select :guilabel:`From registry` and enter the desired reference in ``id:version`` form, for example ``example.research-plan:1.0.0``. This is an illustrative identifier, not a bundled item.
+Use the Registry to find an available item and version, then import it.
 
-.. NOTE::
+.. figure:: /_static/screenshots/5.0/dt-import-registry.png
+    :figclass: guide-screenshot
+    :alt: Import a Document Template from registry in DSW 5.0
+    :width: 520
 
-    In case of document templates present in the `DSW Registry <https://registry.ds-wizard.org>`__, we will be notified about the available upgrades.
+    Import a Document Template from registry.
 
+From a file
+===========
 
-.. figure:: import/registry.png
-    :width: 500
-    
-    Input for importing a document template from DSW Registry.
+Select :guilabel:`From file` and choose a ZIP bundle exported from DSW or produced by compatible tools. Multiple files can be selected. Review any validation errors before using the imported content.
 
+.. figure:: /_static/screenshots/5.0/dt-import-file.png
+    :figclass: guide-screenshot
+    :alt: Import a Document Template from file in DSW 5.0
+    :width: 520
 
-From file
-=========
+    Import a Document Template from file.
 
-We can import a document template as a ZIP package. Such a package can be created as an export from DSW or using the Template Development Kit (see :ref:`document-template-development`). We can also select multiple files at once.
-
-
-.. figure:: import/file.png
-    :width: 500
-    
-    Input for importing a document template using a ZIP package.
+Importing a new version does not update the model or template selected in existing projects. Review project settings and use :doc:`/application/projects/list/migration` when changing a project's knowledge model.

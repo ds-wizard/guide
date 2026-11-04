@@ -3,21 +3,16 @@
 Integration Questions
 *********************
 
-DSW can be integrated with other services using so called :ref:`integration question<integration-question>`. The answer to that type of question does not contain only the answer itself but also a link to that external resource (which can be done, for example, using a persistent identifier). Therefore, these answers help clearly understand what the researchers use and promotes interoperability.
+An integration question searches an external service and stores the selected result in the questionnaire. API integrations can connect DSW to services such as FAIRsharing or ROR.
 
-Examples of such integrations that are used within `Common DSW Knowledge Model <https://registry.ds-wizard.org/knowledge-models/dsw:root:latest>`_ is `FAIRsharing <https://fairsharing.org>`_ or `ROR <https://ror.org>`_.
+Configure the integration in the knowledge model, then select it for the integration question. Define the request, response extraction and answer template. The :doc:`API integration configuration <integration-api>` describes these fields.
 
-There are two ways of how we can connect DSW to these services:
+Installed plugins can also provide integrations. Choose the plugin integration in the knowledge model editor and follow the fields supplied by that plugin. Available integrations depend on the plugins enabled for the instance.
 
-- **API** - using an API provided by the external service to search for the results
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
+Integration credentials should use :doc:`knowledge model secrets </application/knowledge-models/secrets>` instead of being embedded in the model. Test the integration with the service before publishing the model.
 
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    API<integration-api>
-    Migration<migration>
+   integration-api

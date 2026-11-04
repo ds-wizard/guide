@@ -1,45 +1,68 @@
-Settings
-********
+Document template settings
+**************************
 
-The :guilabel:`Settings` tab of :doc:`./index` allows us to adjust the configuration and metadata of the document template. It is split to the following three parts:
-
-General
-=======
-
-This part allows us to change the metadata about the document template:
-
-- **Name** should be short name of the template.
-- **Description** should be short and descriptive (users will see it while selecting a document template).
-- **Template ID** is the document template ID (as explained for :doc:`../create`).
-- **Version** of the document template.
-- **Language** is the source language of the template's translatable text. Additional languages can be added as :ref:`document template locales<document-template-locales>` after publishing.
-- **License** should contain a name of used license (e.g. *Apache-2.0* or *unlicensed*).
-- **Readme** can contain a longer description, acknowledgements, notes how to use the template, links to resources, and a changelog.
+Edit the template's name, description, identifier, version, source language, license and README in the settings.
+The source language describes the template's translatable content; output translations are managed for the released template.
 
 
-Knowledge Models
+General metadata
 ================
 
-We can specify here what knowledge models are compatible with our document template. This is useful to capture if our template is usable only with a certain knowledge model(s) which will guarantee us some content (specific chapters, questions, answers, etc.). For each entry, we are prompted to specify the **Organization ID**, **Knowledge Model ID**, **Min Version**, and **Max Version**. Any of these value can be left empty which means *any value*.
+* **Name**: a descriptive name for the document template.
+* **Description**: a short explanation shown when users select a template.
+* **Template ID** and **Version**: identify this template release; keep the identifier and version separate.
+* **Language**: source language of translatable template text. Add output translations to the published template.
+* **License**: the license under which the template may be used and shared.
+* **Readme**: usage instructions, acknowledgements, references and a changelog.
 
-For example, if we set **Organization ID** to *dsw*, **Knowledge Model ID** to *root*, **Min Version** to *2.4.0* and leave **Max Version** empty, it will mean knowledge model *dsw:root:2.4.0* and any higher version. So that example would work for *dsw:root:2.4.4* or *dsw:root:2.5.0* but not for *dsw:root:2.3.0* nor *acme:base-km:2.6.0*
 
+.. figure:: /_static/screenshots/5.0/dt-settings.png
+    :figclass: guide-screenshot
+    :alt: Document Template settings in DSW 5.0
+    :width: 760
 
-.. figure:: template/allowed-kms.png
-    :width: 628
-    
-    Allowed knowledge models specification for a document template.
+    Document Template settings.
 
+Knowledge model compatibility
+=============================
+
+Compatibility patterns use a knowledge model identifier and optional minimum/maximum versions. A null or empty identifier matches any model; a missing bound leaves that side of the version range unrestricted.
+The organization ID is no longer a separate filter. Review migrated organization-only patterns, because removing that constraint can broaden the accepted models.
+
+.. figure:: /_static/screenshots/5.0/dt-allowed.png
+    :figclass: guide-screenshot
+    :alt: Allowed Knowledge Models in DSW 5.0
+    :width: 664
+
+    Allowed Knowledge Models.
+
+For example, the identifier ``dsw.root``, minimum version ``2.4.0`` and an empty maximum version match ``dsw.root`` versions ``2.4.0``, ``2.4.4`` and ``2.5.0``. They do not match ``dsw.root`` version ``2.3.0`` or a different model such as ``acme.base-km``. Bounds are inclusive. Leaving a field empty removes that constraint.
 
 Formats
-=======
+========
 
-Each document template can support multiple file formats and users will be able to select which one they want to use to generate (or preview a document). We can add a new format by clicking :guilabel:`Add` button. Then, each format must have a **Name** and **Icon** (by using `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_). 
+Each output format has a name, icon and ordered generation steps. A step has its implementation name and its options.
+Choose the steps required to generate or convert that format, then test it with actual answers, translations and uploaded files where relevant.
 
-Each format has some steps which capture how a file for that format is produced. There are different steps defined such as ``json``, ``jinja2``, ``pandoc``, or ``wkhtmltopdf`` which is used as its **Name**. Then, the step may have certain configuration **Options**. For example, ``jinja2`` must have ``content-type``, ``extension``, and ``template`` specified. All the possible steps and their options are further described in the :ref:`Document Template Development<document-worker-steps>`.
+The metadata uses document-template metamodel 19.0. Port custom code as described in :ref:`document-template-metamodel-versions`; changing only the metamodel number does not update an old template's field accesses.
 
+.. figure:: /_static/screenshots/5.0/dt-formats.png
+    :figclass: guide-screenshot
+    :alt: Document Template formats in DSW 5.0
+    :width: 664
 
-.. figure:: template/formats.png
-    :width: 628
-    
-    Markdown format specification with ``jinja`` step.
+    Document Template formats.
+
+.. figure:: /_static/screenshots/5.0/dt-format-steps.png
+    :figclass: guide-screenshot
+    :alt: Jinja rendering step with its template and file output options
+    :width: 604
+
+    Document format steps and options.
+
+Configure a format
+==================
+
+Use :guilabel:`Add` to create a format, then enter its **Name** and **Icon**. Users select the format when generating or previewing a document. A template can offer several formats.
+
+Each format contains ordered steps. For a Jinja step, use the name ``jinja`` and set ``template``, ``content-type`` and ``extension`` in its options. Conversion steps such as ``pandoc`` or ``weasyprint`` can follow it. The steps and their options are described in :doc:`/more/development/document-templates/specification`.

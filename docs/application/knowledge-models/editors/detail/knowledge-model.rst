@@ -8,34 +8,31 @@ Navigation
 
 In the top row, we can see the breadcrumbs that show us where we are within the knowledge model. This allows us to quickly jump back up in the hierarchy.
 
-On the left side of the editor, there is a navigation tree reflecting the structure of the knowledge model. We can click on the arrows to expand or collapse individual entities, or click on :guilabel:`Expand all` or :guilabel:`Collapse all`. The navigation always scrolls to the opened entity. By clicking on the entity name, we open its editor. When some detail is opened either from editor section or from some other place, the tree is always centered on the entity we are currently editing. This allows us to quickly navigate to the parent or child entities.
+The navigation tree on the left shows the model's structure. Use the arrows to expand individual branches, or choose :guilabel:`Expand all` or :guilabel:`Collapse all`.
 
-.. figure:: knowledge-model/navigation.png
-    :width: 278
-    
-    Knowledge model editor navigation.
+Select an entity to edit it. The active entity is highlighted in the tree so we can find its parent and child entities.
 
+.. figure:: /_static/screenshots/5.0/km-editor.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model Editor in DSW 5.0
+    :width: 760
+
+    Knowledge Model Editor.
 
 .. TIP::
 
-    There is no search, however, if we want to quickly find an entity by name we can click on :guilabel:`Expand all` in the navigation tree and use search functionality of our web browser.
+    To find an entity by name using the browser search, click on :guilabel:`Expand all` in the navigation tree and use search functionality of our web browser.
 
 
 Editors
-=======
+========
 
 The main area of the :guilabel:`Knowledge Model` tab is the actual editor. The form fields change based on the entity we edit, but there are some shared actions:
 
-.. figure:: knowledge-model/editor-action-buttons.png
-    :width: 296
-    
-    Editor action buttons.
-
-
 - **Copy UUID** - every entity has a generated UUID, we can use this button to copy it. We usually need it for :ref:`document template development<document-template-development>`.
 
-- **Move** - we can move entities around the knowledge model. However, not every entity can be put under everything. We can open the move modal window and see where the current entity could be move to.
-  
+- **Move** - we can move entities around the knowledge model. However, not every entity can be put under everything. We can open the move modal window and see where the current entity can be moved to.
+
 - **Delete** - delete is simply used for deleting the entities. This action cannot be undone, so we need to be careful what we delete.
 
 There are different entities we can edit in the knowledge model, the editor shows different fields based on what we edit:
@@ -53,26 +50,47 @@ There are different entities we can edit in the knowledge model, the editor show
 - :ref:`Integration<integration>`
 - :ref:`Resource Collection<resource-collection>`
 
-.. figure:: knowledge-model/editor-form.png
-    
-    Example of question editor form.
+.. figure:: /_static/screenshots/5.0/km-question.png
+    :figclass: guide-screenshot
+    :alt: Value question configuration in DSW 5.0
+    :width: 760
+
+    Value question configuration.
+
+Besides their own fields, each entity has so-called **Annotations**. They are arbitrary key value pairs that can be assigned to the entity and used later, when :ref:`developing a document template<document-template-development>`.
+
+.. figure:: /_static/screenshots/5.0/km-integration.png
+    :figclass: guide-screenshot
+    :alt: API integration configuration in DSW 5.0
+    :width: 760
+
+    API integration configuration.
 
 
-Besides their own fields, each entity has so called **Annotations**. They are arbitrary key value pairs that can be assigned to the entity and used later, when :ref:`developing a document template<document-template-development>`.
+URL Checker
+===========
 
+If we have at least one :ref:`URL Reference<url-reference>` in the knowledge model, a new tab :guilabel:`URL Checker` appears in the knowledge model editor. Here we can check whether each used URL is reachable or not. This allows us to quickly find broken links in the knowledge model and fix them.
+
+.. figure:: /_static/screenshots/5.0/km-url-checker.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model URL checker in DSW 5.0
+    :width: 760
+
+    Knowledge Model URL checker.
 
 Warnings
 ========
 
-The editor checks for some possible problems, such as empty title for a chapter or no answers for an options question. If there are any, the :guilabel:`Warnings` tab appear and we can quickly navigate to those problems and fix them.
+The editor checks for some possible problems, such as empty title for a chapter or no answers for an options question. If there are any, the :guilabel:`Warnings` tab appears and we can quickly navigate to those problems and fix them.
 
-.. figure:: knowledge-model/warnings.png
-    :width: 317
-    
-    Warnings in the knowledge model editor.
+.. figure:: /_static/screenshots/5.0/km-warnings.png
+    :figclass: guide-screenshot
+    :alt: Knowledge Model warnings in DSW 5.0
+    :width: 760
 
+    Knowledge Model warnings.
 
 Development with Document Template Editor
 =========================================
-
 It is possible to develop the knowledge model together with the document template. Any changes to the knowledge model are immediately reflected in the document template editor. In the Preview tab we can also save the current preview answer values to the knowledge model and make them visible in the document template editor.

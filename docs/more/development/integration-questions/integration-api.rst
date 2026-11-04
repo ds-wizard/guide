@@ -1,13 +1,9 @@
 Integration Question - API
 **************************
 
-:ref:`Integration question<integration-question>` can be connected to an external resource using its API. We can then search for the results from the external service using the DSW questionnaire interface. When we select an answer it is not only the text (such as a name of the database), but also a link to the external service to the selected item. The whole flow is denoted in the following diagram.
+:ref:`Integration questions <integration-question>` can search an external service through its API. The request configuration defines the search; the response and answer templates define which result is saved and how it is displayed. Include a link or persistent identifier in the answer template when the service provides one.
 
 We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/stable/>`_ to construct everything in integrations. We also have this :ref:`cheatsheet<jinja-cheatsheet>` available.
-
-.. figure:: integration-api/api-integration.png
-    
-    How integration question connected to, for example, FAIRsharing API works.
 
 
 External Service Requirements
@@ -16,7 +12,7 @@ External Service Requirements
 If we want to connect an external service using the API there are certain requirements for it to make the connection to DSW possible.
 
 - **Allows search using free text**
-  
+
   - There must be a way to send a search phrase to the API so that it can filter the results based on it
 
 - **Returns a JSON response with a list of results**
@@ -29,26 +25,22 @@ If we want to connect an external service using the API there are certain requir
 Configuration
 =============
 
-.. NOTE::
-
-    If we create a knowledge model editor from the ``Common DSW Knowledge Model``, we can see examples of integrations using various APIs.
-    
 
 The configuration is done in the :ref:`knowledge model editor<knowledge-model-editor>`. First of all, we need to create a new integration and choose its **Type** to be **API**. Then we need to fill the integration **Name**.
-  
+
 Advanced Integration Configuration
 ----------------------------------
 
 Additional integration configuration can be used when we want to force the integration reply, or when adding and editing **Variables** and **Secrets**.
 
 - **Allow Custom Reply** - The custom reply is turned on by default. We can turn it off if we want to force the integration reply. In that case, users will have to select one of the results from the external service, otherwise their reply will not be saved. This can be mentioned in the question description for the researchers.
-- **Variables** - We can use variables to parametrize the integration for each question. To define the variables, whose value can be filled on the questions using this integration. The variables can then be used in the request configuration. For example, if you define a variable named type, you can use it as ``{{ variables.type }}``, such as ``ht​tps://example.com/{{ type }}``.
+- **Variables** - We can use variables to parametrize the integration for each question. Variables can be filled on questions that use this integration and then used in the request configuration. For example, if you define a variable named ``type``, you can use it as ``{{ variables.type }}``, such as ``https://example.com/{{ variables.type }}``.
 - **Secrets** - Secrets can be used to store sensitive information, such as API keys or access tokens. We can reference these secrets as ``{{ secrets.secret_name }}`` anywhere in the request configuration, but their values will not be exposed in the question or answer templates. The additional knowledge model secrets documentation can be found :ref:`here<knowledge-model-secrets>`.
 
 Request Configuration
 ---------------------
 
-Clicking on field before the URL we can switch between ``GET`` and ``POST`` request methods.
+In the field before the URL, we can switch between ``GET`` and ``POST`` request methods.
 
 In the full API endpoint used for search we can use ``{{ q }}`` to insert the user's search term, and ``{{ variables.name }}`` for referencing variables and ``{{ secrets.name }}`` for secrets.
 
@@ -67,7 +59,7 @@ The advanced request configuration defines how the API request is constructed. T
 
 - **Request HTTP Headers** - some headers might be needed, such as ``Accept: application/json`` to have a correct response type
 - **Request HTTP Body** - if we need to send some HTTP body
-- **Allow Empty Search** - some APIs don't work if we try to search with an empty string, turn this of in such case
+- **Allow Empty Search** - some APIs don't work if we try to search with an empty string, turn this off in that case
 
 We can use ``{{ q }}`` for the search term, ``{{ variables.name }}`` for referencing variables and ``{{ secrets.name }}`` for secrets within those fields.
 
@@ -93,11 +85,11 @@ In the **Response** section, we configure how to process the JSON response from 
 
 .. NOTE::
 
-    We can also set the **Response Item Template** and/or **Response Item Template for Selection** to setup logo for the integration if we can access it.
+    We can also set the **Response Item Template** and/or **Response Item Template for Selection** to set up a logo for the integration if we can access it.
 
 The integration will show suggestions for **Response List Field** and **Response Item Template** based on the response structure. We can click the suggestions to insert them in the fields in the Jinja2 notation.
 
 Advanced Response Configuration
 -------------------------------
 
-The advanced response configuration allows setting **Response Item Template for Selection** which can be used to define how the selection of items from the integration will be presented before selection.
+In the advanced response configuration, we can set **Response Item Template for Selection** to define how results appear before the user selects one.

@@ -3,28 +3,28 @@
 Preview
 *******
 
-We can quickly see how the resulting document would look like in the :guilabel:`Preview` tab.
+We can see how the generated document looks in the :guilabel:`Preview` tab.
 
-.. figure:: preview/preview-html.png
-    
-    Document preview in the project detail.
+.. figure:: /_static/screenshots/5.0/project-preview.png
+    :figclass: guide-screenshot
+    :alt: Project preview in DSW 5.0
+    :width: 760
 
+    Project preview.
 
 Default Document Template Not Set
 =================================
 
 The preview uses the default document template. If there is no default document template set in the :ref:`project settings<default-document-template>`, we need to set it first.
 
-.. figure:: preview/document-template-not-set.png
-    
-    Preview only works when the default document template is set.
+.. figure:: /_static/screenshots/5.0/project-preview-empty.png
+    :figclass: guide-screenshot
+    :alt: Project preview empty in DSW 5.0
+    :width: 760
 
+    Project preview empty.
 
 Download Preview
 ================
 
-Not all formats can be displayed in the web browser, for example a MS Word document. In that case, we'll be able to download the document instead of previewing it.
-
-.. figure:: preview/download.png
-    
-    Some formats cannot be displayed in the web browser.
+If the selected format cannot be displayed in the browser, such as a Microsoft Word document, the Preview tab shows a :guilabel:`Download preview` message and a :guilabel:`Download` button.

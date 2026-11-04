@@ -1,26 +1,25 @@
-.. _users-list:
+.. _users:
 
 Users
 *****
 
-A users list allows users with permission to manage users to see and manage all users in a DSW instance. The list can be filtered using :ref:`roles<roles>`, searched by name or email fragment, and sorted via various user properties. The list shows the role of a user next to their name and also indicates when the user is inactive. Next to the email, we can quickly see what authentication services the user uses to log in.
+Open :guilabel:`Administration` → :guilabel:`Users` with :guilabel:`Manage Users`. Search the account list and open a user to change their profile, active status or role.
 
-A :ref:`user detail<user-detail>` can be opened by clicking the name of a user or by selecting :guilabel:`Edit` in the right dropdown menu for the desired row. There, a user can also be deleted via the :guilabel:`Delete` action. Finally, a new user can be :ref:`created<user-create>` by clicking :guilabel:`Create`.
-
-.. figure:: index/list.png
-    
-    List of users.
-
-----
+An inactive account cannot sign in. Before changing a role, review the permissions it grants in :doc:`/application/administration/settings/system/roles`.
 
 
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
+.. figure:: /_static/screenshots/5.0/users.png
+    :figclass: guide-screenshot
+    :alt: Users in DSW 5.0
+    :width: 760
+
+    Users.
 
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    Create<create>
-    Detail<detail>
+   Create <create>
+   Detail <detail>
+
+The list can be searched by name or email, filtered by role and sorted using the available columns. It shows the user's role and active status; authentication indicators identify internal sign-in or a connected external provider. Open a name or use the row's :guilabel:`Edit` action to manage the account.

@@ -9,23 +9,23 @@ Each document template in DSW has metadata stored. If developing locally with :d
 Specification Structure
 =======================
 
-* ``id`` = composed full ID of the template (``organizationId:templateId:version``)
-* ``organizationId`` = identifier of organization developing the template (lowercase, numerics, dot)
-* ``templateId`` = identifier of template (lowercase, numerics, dash)
+* ``id`` = identifier of the template without the version (letters, numbers, periods, dashes, and underscores)
 * ``version`` = version (semver) in X.Y.Z format where X, Y, and Z are non-negative numbers
 * ``name`` = name of the template
 * ``description`` = short description of the template
 * ``license`` = name of the used license
 * ``readme`` = longer description usually containing changelog
-* ``metamodelVersion`` = supported version of template metamodel, it affects with which DSW version is can be used
+* ``metamodelVersion`` = supported version of template metamodel in the ``MAJOR.MINOR`` format, it affects with which DSW version it can be used
+* ``language`` = language of the source strings of the template (defaults to ``en``)
 * ``allowedPackages`` = list of package filters (see :ref:`document-template-package-filter`) to specify supported packages
 * ``formats`` = list of available formats (see below :ref:`document-template-format`) with specified steps for generation
 * ``_tdk`` = TDK configuration for local development (not stored in DSW, see :ref:`tdk-config`)
 
+Tools use ``id:version`` where one reference is required, for example ``dsw.questionnaire-report:2.17.0``.
 
 .. NOTE::
 
-    TDK handles ``id`` and ``readme`` for you, so you can skip them and naturally use ``README.md`` file separately.
+    TDK handles ``readme`` for you, so you can skip it and naturally use ``README.md`` file separately. A template package also contains ``files``, ``assets``, ``createdAt``, and optionally ``updatedAt``, and it does not contain ``_tdk``. The ``dsw-tdk package`` command creates it for you.
 
 
 .. _document-template-package-filter:
@@ -35,10 +35,10 @@ Package Filters
 
 For filtering, the ``null`` value serves as wildcard, i.e., filter with all ``null`` values means that all packages are allowed.
 
-* ``orgId``: identifier of organization (e.g. ``myorg``)
-* ``kmId``: identifier of knowledge model (e.g. ``root``)
+* ``id``: identifier of knowledge model (e.g. ``myorg.root``)
 * ``minVersion``: minimal package version (in format X.Y.Z, inclusive)
 * ``maxVersion``: maximal package version (in format X.Y.Z, inclusive)
+* ``options``: optional free string pairs, not validated
 
 
 .. _document-template-format:
@@ -48,7 +48,7 @@ Formats
 
 A template can describe how to produce several formats, each with these metadata:
 
-* ``uuid``: UUID of the format (within template)
+* ``uuid``: UUID of the format (unique within template)
 * ``name``: display name of the format
 * ``icon``: icon style (CSS classes), preferably `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`__, e.g. ``fas fa-file-word``
 * ``steps``: list of steps for document worker to produce the document with this format, each step has ``name`` and ``options`` (see :ref:`document-worker-steps`)
@@ -83,7 +83,7 @@ Those are local-only metadata used for development of the template. You can use 
 
 * ``version``: metadata version for needs of migrations
 * ``readmeFile``: files used to get content for ``readme`` of the template, usually ``README.md``
-* ``files``: list of patterns to specify files that are part of the document template (it uses Git wildcard-match patterns, so you can also exclude files or directories)
+* ``files``: list of patterns to specify files that are part of the document template (it uses Git wildcard-match patterns, so you can also exclude files or directories). Only those files are available when rendering locally, as on the server.
 
 
 .. _document-template-metamodel-versions:
@@ -91,7 +91,57 @@ Those are local-only metadata used for development of the template. You can use 
 Document Template Metamodel Versions
 ====================================
 
-Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version when needed. It is also possible to check JSON schemas in higher detail, see :doc:`../metamodel-schemas`.
+Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version. DSW accepts a template of the same major version and a lower or equal minor version. It does not migrate templates, so a template of an earlier major version has to be ported.
+
+Version 19.0 (since 5.0.0)
+--------------------------
+
+* Replaced ``organizationId`` and ``templateId`` of a template with a single ``id`` (``<organizationId>.<templateId>``) and a separate ``version``. In the same way, ``orgId`` and ``kmId`` in package filters are replaced with ``id``; a filter naming only an organization becomes a wildcard, so review it. TDK and import still read the older form and only upgrade the metadata. Jinja templates and step options have to be ported manually.
+* A document context now comes from a project or from a knowledge model editor, and contains new ``hash``, ``workspace``, ``knowledgeModelEditor``, and ``questionnaire``. The document worker accepts only major version 19, so documents queued before an upgrade have to be regenerated.
+* In the JSON-like document context:
+
+  * replies, labels, phase, versions, files, report, and language moved from ``project`` to ``questionnaire``;
+  * top-level ``users`` and ``groups`` moved to ``project``, and ``users`` of a group are renamed to ``members``;
+  * ``project``, ``knowledgeModelPackage``, and ``document`` may be ``null``;
+  * ``document`` has ``documentTemplate``, ``format``, ``preview``, and ``eventUuid``;
+  * removed ``organization``, the report's ``uuid`` and timestamps, the package's ``organizationId``, ``kmId``, ``versions``, ``remoteLatestVersion``, and ``organization``, and ``config.appTitleShort`` and ``config.illustrationsColor``;
+  * removed ``extras.questionnaire``, use ``extras.project`` (``null`` with empty ``extras.submissions`` for a KM editor).
+
+* In the :ref:`object-oriented document context <document-context-obj>`:
+
+.. list-table::
+   :header-rows: 1
+
+   * - 18.x
+     - 19.0
+   * - ``dc.e``
+     - ``dc.km.entities`` (``dc.km.e`` stays)
+   * - ``dc.cfg``, ``dc.pkg``, ``dc.doc``
+     - ``dc.config``, ``dc.km_package``, ``dc.document``
+   * - ``dc.org``, ``dc.organization``
+     - Removed, ``dc.config.app_title`` is the closest for a displayed name
+   * - ``dc.replies``, ``dc.current_phase``, ``dc.report``
+     - ``dc.questionnaire.replies``, ``dc.questionnaire.phase``, ``dc.questionnaire.report``
+   * - ``dc.users``, ``dc.groups``
+     - ``dc.project.users``, ``dc.project.groups``
+   * - ``dc.project.replies``, ``phase``, ``phase_uuid``, ``version``, ``versions``, ``files``, ``language``, ``todos``
+     - Same names in ``dc.questionnaire``
+   * - ``dc.pkg.id`` (``org:km:version``)
+     - ``dc.km_package.id``, the ID alone without the version
+   * - ``dc.pkg.org_id``, ``organization_id``, ``km_id``, ``versions``
+     - Removed
+   * - ``dc.doc.document_template_uuid``, ``format_uuid``
+     - ``dc.document.document_template.uuid``, ``dc.document.format.uuid``
+   * - ``dc.config.app_title_short``, ``illustrations_color``
+     - Removed
+
+Version 18.3 (since 4.35.0)
+---------------------------
+
+* Added:
+
+  * ``language`` = new field in template specification, language of the source strings of the template
+  * ``language`` and ``locale`` = new fields of ``document`` in document context, see :ref:`odc-document`
 
 Version 18.2 (since 4.33.0)
 ---------------------------

@@ -3,41 +3,26 @@
 Overview
 ********
 
-Different components in the Data Stewardship Wizard are connected to create a data management plan and help with data management in general. Different components are typically made and used by different user roles. Data stewards work on preparing content (such as **knowledge models** or **document templates**) for researchers that they can use to work on their data management plans while filling in the **questionnaires** and exporting **documents**.
+A **knowledge model** defines the questions, guidance and possible answers used in a questionnaire. It can include follow-up questions, integrations, validation rules and project phases.
 
-.. figure:: overview/overview.png
-   :align: center
+A **project** uses a published knowledge model version. We fill in its questionnaire and can share the project with collaborators. Project settings select the knowledge model, questionnaire language and default document template.
 
-   Different components of the Data Stewardship Wizard and roles interacting with them.
+A **document template** defines how project answers become an output, such as an HTML or PDF document. We can preview an output while answering questions and generate documents to keep or submit to another service.
 
+Administrators manage accounts and settings. Data stewards can prepare content in the knowledge model and document template editors when their roles permit it.
 
-Knowledge Model
-===============
+See :doc:`/application/projects/list/create`, :doc:`/application/projects/list/detail/sharing` and :doc:`/application/projects/list/detail/documents` for these workflows.
 
-The knowledge model refers to something like a template for the questionnaire. However, it is not linear but has a tree-like structure with different branches based on the previous answer. Therefore, even if it can be complex overall, only the specific questions are used in the questionnaire.
+Dashboard
+=========
 
-:ref:`Learn more about knowledge models →<knowledge-model>`
+The dashboard brings together the actions available to our account:
 
+* Recent projects provide quick access to work we have opened recently.
+* Create-project actions start a new project when the account and project settings permit it.
+* Content actions provide shortcuts to create or import knowledge models and document templates.
+* Update widgets show newer knowledge models or document templates from the connected Registry.
+* The usage widget summarizes instance usage for accounts allowed to view it.
+* Setup shortcuts can lead to appearance, Registry connection and OpenID configuration when further setup is needed.
 
-Document Template
-=================
-
-While the knowledge model defines the structure of the questionnaire, it does not specify how the resulting document (such as the DMP) will look. We use document templates for that. They transform the answers into documents such as PDF, MS Word, or machine-actionable RDF. This way, we can only answer once and produce different documents.
-
-:ref:`Learn more about document templates →<document-template>`
-
-
-Questionnaire
-=============
-
-A questionnaire is part of a :ref:`project<project>` where researchers fill in their answers regarding their particular research. It uses a specific knowledge model that defines its structure.
-
-
-:ref:`Learn more about questionnaires →<questionnaire>`
-
-Document
-========
-
-Documents are produced from the questionnaire answers and a document template. The document template understands the knowledge model structure and knows how to transform the questionnaire answers into a specific document in the selected format. The documents are saved within a project where they were created from the questionnaire.
-
-:ref:`Learn more about documents →<documents>`
+The visible widgets depend on permissions, enabled features and the current setup. Dashboard announcements appear above them.

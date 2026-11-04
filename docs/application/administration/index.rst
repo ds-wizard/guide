@@ -3,18 +3,13 @@
 Administration
 **************
 
-Administration section serves as the name suggests to users with permission to manage the DSW instance. By navigating via :guilabel:`Administration` item from the main menu, we can manage the things listed below.
+The Administration menu contains application settings and user management. Available options depend on our role permissions.
 
-----
-
-.. raw:: html
-    
-    <h2>Table of Contents</h2>
+Use :doc:`settings/index` to configure DSW, including roles, sign-in methods and translations. Use :doc:`users/index` to manage accounts. :doc:`User groups </application/user-groups/index>` are available separately in the main menu.
 
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 1
 
-    settings/index
-    users/index
-    locales/index
+   settings/index
+   users/index

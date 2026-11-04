@@ -1,0 +1,638 @@
+{
+  "date": "2026-11-03",
+  "original_baseline": "5d045d4f0e8955dc4936fec218697a81415e0697",
+  "original_pages_reviewed": 126,
+  "pages_restored_or_corrected": 39,
+  "pages": [
+    {
+      "original_page": "about/introduction/document-template.rst",
+      "current_page": "about/introduction/document-template.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "about/introduction/index.rst",
+      "current_page": "about/introduction/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "about/introduction/knowledge-model.rst",
+      "current_page": "about/introduction/knowledge-model.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "about/introduction/overview.rst",
+      "current_page": "about/introduction/overview.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "about/introduction/project.rst",
+      "current_page": "about/introduction/project.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/index.rst",
+      "current_page": "application/administration/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/locales/create.rst",
+      "current_page": "application/administration/settings/translations/upload.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/locales/detail.rst",
+      "current_page": "application/administration/settings/translations/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/locales/import.rst",
+      "current_page": "application/administration/settings/translations/registry.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/locales/index.rst",
+      "current_page": "application/administration/settings/translations/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/content/document-submission.rst",
+      "current_page": "application/administration/settings/content/document-submission.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/content/dsw-registry.rst",
+      "current_page": "application/administration/settings/content/dsw-registry.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/content/index.rst",
+      "current_page": "application/administration/settings/index.rst",
+      "decision": "Old grouping page replaced by current Settings groups; child settings remain linked. Old category names are not application features."
+    },
+    {
+      "original_page": "application/administration/settings/content/projects.rst",
+      "current_page": "application/administration/settings/content/projects.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/administration/settings/index.rst",
+      "current_page": "application/administration/settings/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/info/index.rst",
+      "current_page": "application/administration/settings/index.rst",
+      "decision": "Old grouping page replaced by current Settings groups; child settings remain linked. Old category names are not application features."
+    },
+    {
+      "original_page": "application/administration/settings/info/usage.rst",
+      "current_page": "application/administration/settings/info/usage.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/system/authentication.rst",
+      "current_page": "application/administration/settings/system/authentication.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/administration/settings/system/features.rst",
+      "current_page": "application/administration/settings/system/features.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/system/index.rst",
+      "current_page": "application/administration/settings/index.rst",
+      "decision": "Old grouping page replaced by current Settings groups; child settings remain linked. Old category names are not application features."
+    },
+    {
+      "original_page": "application/administration/settings/system/openid.rst",
+      "current_page": "application/administration/settings/system/openid.rst",
+      "decision": "Exact original provider setup steps preserved from the preceding correction; not rewritten by this audit."
+    },
+    {
+      "original_page": "application/administration/settings/system/organization.rst",
+      "current_page": "application/administration/settings/user-interface/look-and-feel.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/system/plugins.rst",
+      "current_page": "application/administration/settings/system/plugins.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/system/privacy-and-support.rst",
+      "current_page": "application/administration/settings/system/privacy-and-support.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/settings/system/roles.rst",
+      "current_page": "application/administration/settings/system/roles.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/administration/settings/user-interface/dashboard-and-login-screen.rst",
+      "current_page": "application/administration/settings/user-interface/dashboard-and-login-screen.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/administration/settings/user-interface/index.rst",
+      "current_page": "application/administration/settings/index.rst",
+      "decision": "Old grouping page replaced by current Settings groups; child settings remain linked. Old category names are not application features."
+    },
+    {
+      "original_page": "application/administration/settings/user-interface/look-and-feel.rst",
+      "current_page": "application/administration/settings/user-interface/look-and-feel.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/users/create.rst",
+      "current_page": "application/administration/users/create.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/administration/users/detail.rst",
+      "current_page": "application/administration/users/detail.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/administration/users/index.rst",
+      "current_page": "application/administration/users/index.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/document-templates/editors/create.rst",
+      "current_page": "application/document-templates/editors/create.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/document-templates/editors/detail/files.rst",
+      "current_page": "application/document-templates/editors/detail/files.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/editors/detail/index.rst",
+      "current_page": "application/document-templates/editors/detail/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/editors/detail/preview.rst",
+      "current_page": "application/document-templates/editors/detail/preview.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/editors/detail/publish.rst",
+      "current_page": "application/document-templates/editors/detail/publish.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/editors/detail/settings.rst",
+      "current_page": "application/document-templates/editors/detail/settings.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/document-templates/editors/index.rst",
+      "current_page": "application/document-templates/editors/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/index.rst",
+      "current_page": "application/document-templates/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/list/detail.rst",
+      "current_page": "application/document-templates/list/detail.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/document-templates/list/import.rst",
+      "current_page": "application/document-templates/list/import.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/document-templates/list/index.rst",
+      "current_page": "application/document-templates/list/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/create.rst",
+      "current_page": "application/knowledge-models/editors/create.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/index.rst",
+      "current_page": "application/knowledge-models/editors/detail/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/knowledge-model.rst",
+      "current_page": "application/knowledge-models/editors/detail/knowledge-model.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/phases.rst",
+      "current_page": "application/knowledge-models/editors/detail/phases.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/preview.rst",
+      "current_page": "application/knowledge-models/editors/detail/preview.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/publish.rst",
+      "current_page": "application/knowledge-models/editors/detail/publish.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/question-tags.rst",
+      "current_page": "application/knowledge-models/editors/detail/question-tags.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/detail/settings.rst",
+      "current_page": "application/knowledge-models/editors/detail/settings.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/index.rst",
+      "current_page": "application/knowledge-models/editors/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/editors/migration.rst",
+      "current_page": "application/knowledge-models/editors/migration.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/knowledge-models/index.rst",
+      "current_page": "application/knowledge-models/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/list/compare.rst",
+      "current_page": "application/knowledge-models/list/compare.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/list/detail.rst",
+      "current_page": "application/knowledge-models/list/detail.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/list/import.rst",
+      "current_page": "application/knowledge-models/list/import.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/list/index.rst",
+      "current_page": "application/knowledge-models/list/index.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/knowledge-models/list/preview.rst",
+      "current_page": "application/knowledge-models/list/preview.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/knowledge-models/secrets.rst",
+      "current_page": "application/knowledge-models/secrets.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/profile/about.rst",
+      "current_page": "application/profile/about.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/profile/assigned-comments.rst",
+      "current_page": "application/profile/assigned-comments.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/index.rst",
+      "current_page": "application/profile/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/language.rst",
+      "current_page": "application/profile/settings/language.rst",
+      "decision": "Duplicate language page consolidated into profile settings; selection, default fallback and Save behavior retained."
+    },
+    {
+      "original_page": "application/profile/settings/active-sessions.rst",
+      "current_page": "application/profile/settings/active-sessions.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/settings/api-keys.rst",
+      "current_page": "application/profile/settings/api-keys.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/settings/connected-accounts.rst",
+      "current_page": "application/profile/settings/connected-accounts.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/settings/index.rst",
+      "current_page": "application/profile/settings/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/settings/language.rst",
+      "current_page": "application/profile/settings/language.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/profile/settings/password.rst",
+      "current_page": "application/profile/settings/password.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/profile/settings/submission-settings.rst",
+      "current_page": "application/profile/settings/submission-settings.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/profile/settings/tours.rst",
+      "current_page": "application/profile/settings/tours.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/documents.rst",
+      "current_page": "application/projects/documents.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/files.rst",
+      "current_page": "application/projects/files.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/index.rst",
+      "current_page": "application/projects/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/create.rst",
+      "current_page": "application/projects/list/create.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "application/projects/list/detail/documents.rst",
+      "current_page": "application/projects/list/detail/documents.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/files.rst",
+      "current_page": "application/projects/list/detail/files.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/index.rst",
+      "current_page": "application/projects/list/detail/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/metrics.rst",
+      "current_page": "application/projects/list/detail/metrics.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/preview.rst",
+      "current_page": "application/projects/list/detail/preview.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/questionnaire.rst",
+      "current_page": "application/projects/list/detail/questionnaire.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/settings.rst",
+      "current_page": "application/projects/list/detail/settings.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/detail/sharing.rst",
+      "current_page": "application/projects/list/detail/sharing.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/index.rst",
+      "current_page": "application/projects/list/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/migration.rst",
+      "current_page": "application/projects/list/migration.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "application/projects/list/templates.rst",
+      "current_page": "application/projects/list/templates.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "index.rst",
+      "current_page": "index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/api.rst",
+      "current_page": "more/development/api.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/contributing.rst",
+      "current_page": "more/development/contributing.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/document-templates/dev-notes.rst",
+      "current_page": "more/development/document-templates/dev-notes.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/document-context.rst",
+      "current_page": "more/development/document-templates/document-context.rst",
+      "decision": "Restored self-contained current 19.0 object/raw-field reference and examples. Old properties replaced by their current structure; source guards and migration mapping retained."
+    },
+    {
+      "original_page": "more/development/document-templates/document-worker-plugins.rst",
+      "current_page": "more/development/document-templates/document-worker-plugins.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/index.rst",
+      "current_page": "more/development/document-templates/index.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/specification.rst",
+      "current_page": "more/development/document-templates/specification.rst",
+      "decision": "Restored complete specification and historical versions 1\u201318.2; retained current 19.0 migration instructions, separate identity/version and compatibility cautions."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/archive.rst",
+      "current_page": "more/development/document-templates/steps/archive.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/enrich-docx.rst",
+      "current_page": "more/development/document-templates/steps/enrich-docx.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/excel.rst",
+      "current_page": "more/development/document-templates/steps/excel.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/jinja.rst",
+      "current_page": "more/development/document-templates/steps/jinja.rst",
+      "decision": "Restored detailed variables, functions, filters, tests, assets, extraction and examples. Corrected current extras, file-reply model and locale configuration; kept rendering-policy warnings."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/json.rst",
+      "current_page": "more/development/document-templates/steps/json.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/pandoc.rst",
+      "current_page": "more/development/document-templates/steps/pandoc.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/rdflib-convert.rst",
+      "current_page": "more/development/document-templates/steps/rdflib-convert.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/document-templates/steps/weasyprint.rst",
+      "current_page": "more/development/document-templates/steps/weasyprint.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/document-templates/tdk.rst",
+      "current_page": "more/development/document-templates/tdk.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/index.rst",
+      "current_page": "more/development/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/integration-questions/index.rst",
+      "current_page": "more/development/integration-questions/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/integration-questions/integration-api.rst",
+      "current_page": "more/development/integration-questions/integration-api.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/development/integration-questions/migration.rst",
+      "current_page": null,
+      "decision": "Removed by explicit user instruction: Migration from Legacy API Integration. Historical metamodel migration notes remain in the template specification."
+    },
+    {
+      "original_page": "more/development/metamodel-schemas.rst",
+      "current_page": "more/development/metamodel-schemas.rst",
+      "decision": "Restored all historical schema-version rows beside the current model reference. Missing published schema files are identified instead of linked to nonexistent files."
+    },
+    {
+      "original_page": "more/development/plugins.rst",
+      "current_page": "more/development/plugins.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/submission-service.rst",
+      "current_page": "more/development/submission-service.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/development/vulnerabilities.rst",
+      "current_page": "more/development/vulnerabilities.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/miscellaneous/dsw-registry.rst",
+      "current_page": "more/miscellaneous/dsw-registry.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/miscellaneous/help.rst",
+      "current_page": "more/miscellaneous/help.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/miscellaneous/index.rst",
+      "current_page": "more/miscellaneous/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/miscellaneous/jinja-cheatsheet.rst",
+      "current_page": "more/miscellaneous/jinja-cheatsheet.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/miscellaneous/keyboard-shortcuts.rst",
+      "current_page": "more/miscellaneous/keyboard-shortcuts.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/miscellaneous/markdown-cheatsheet.rst",
+      "current_page": "more/miscellaneous/markdown-cheatsheet.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/configuration/configuration.rst",
+      "current_page": "more/self-hosted-dsw/configuration/configuration.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/configuration/document-templates.rst",
+      "current_page": "more/self-hosted-dsw/configuration/document-templates.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/configuration/email-templates.rst",
+      "current_page": "more/self-hosted-dsw/configuration/email-templates.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/configuration/index.rst",
+      "current_page": "more/self-hosted-dsw/configuration/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/configuration/plugins.rst",
+      "current_page": "more/self-hosted-dsw/configuration/plugins.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/deployment.rst",
+      "current_page": "more/self-hosted-dsw/deployment.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/faq-notes.rst",
+      "current_page": "more/self-hosted-dsw/faq-notes.rst",
+      "decision": "Restored omitted detail or corrected wording/5.0 facts in this audit; original and pre-audit 5.0 text compared."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/index.rst",
+      "current_page": "more/self-hosted-dsw/index.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    },
+    {
+      "original_page": "more/self-hosted-dsw/upgrade-guidelines.rst",
+      "current_page": "more/self-hosted-dsw/upgrade-guidelines.rst",
+      "decision": "Content retained or updated in its mapped 5.0 page; wording, navigation and applicable behavior compared with the original."
+    }
+  ]
+}

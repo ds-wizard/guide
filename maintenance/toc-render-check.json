@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-03",
+  "pages_with_sidebars": 133,
+  "explicit_toc_aliases": 36,
+  "rendered_label_checks": 4788,
+  "errors": [],
+  "method": "Clean full HTML build; compare every rendered sidebar alias with its source toctree. Descriptive article titles remain unchanged.",
+  "settings_groups": [
+    "Users & Access",
+    "Projects",
+    "Appearance",
+    "Features & Integrations",
+    "Translations",
+    "Plan & Usage"
+  ],
+  "legacy_integration_migration": "Removed from source, navigation and generated preview output",
+  "graph": {
+    "source_pages": 130,
+    "reachable_pages": 130,
+    "orphan_pages": [],
+    "duplicate_parents": {},
+    "cycles": []
+  },
+  "local_references_checked": 27059
+}

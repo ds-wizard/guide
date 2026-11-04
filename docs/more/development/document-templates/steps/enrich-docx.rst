@@ -3,7 +3,7 @@
 Step: ``enrich-docx``
 *********************
 
-|badge-status| |badge-metamodel|
+
 
 Enrichment step for MS Word (``docx``) documents.
 
@@ -18,14 +18,14 @@ Output
 Results in a ``docx`` document as input.
 
 Options
-=======
+========
 
 Options are used as a dictionary for rewrites with the following syntax:
 
 -  Keys can be prefixed with:
 
    -  ``rewrite:`` and followed by path of file to be rewritten
-   -  *(currently there are no other prefixes then ``rewrite``)*
+   -  *(currently there are no other prefixes than ``rewrite``)*
 
 -  Values can be prefixed with:
 
@@ -43,7 +43,7 @@ Notes
 -  The document context is provided in ``ctx`` variable, other variables, filters, and tests are documented in other documents (same as for ``jinja`` step).
 
 Example
-=======
+========
 
 .. code:: json
 
@@ -54,7 +54,3 @@ Example
        "rewrite:word/header1.xml": "render:src/docx/header1.xml.j2"
      }
    }
-
-.. |badge-status| image:: https://img.shields.io/badge/status-stable-green
-.. |badge-metamodel| image:: https://img.shields.io/badge/metamodel%20version-%E2%89%A5%2011-blue
-

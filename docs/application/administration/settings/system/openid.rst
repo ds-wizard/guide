@@ -7,10 +7,19 @@ Using these settings, we can add `OpenID <https://openid.net/>`__ configuration 
 
 DSW supports Microsoft Azure, ORCID, and other OpenID providers. The following sections describe the setup for these options.
 
-.. figure:: openid/form.png
-	:width: 800
+.. figure:: /_static/screenshots/5.0/openid-example.png
+    :figclass: guide-screenshot
+    :alt: OpenID provider configuration for Example University, using a reserved example host and dummy credentials
+    :width: 760
 
-	Button for resetting tours.
+    Example OpenID configuration using dummy values.
+
+.. figure:: /_static/screenshots/5.0/settings-open-id.png
+    :figclass: guide-screenshot
+    :alt: OpenID providers in DSW 5.0
+    :width: 760
+
+    OpenID providers.
 
 
 .. NOTE::
@@ -41,11 +50,11 @@ Microsoft Azure Setup
 15. Open the ``Microsoft`` tab and fill in:
 	- ``Application (client) ID``
 	- ``Directory (tenant) ID``
-	- ``Client Secret`` → ``<stored secret value>``
+	- ``Client Secret Value`` → ``<stored secret value>``
 
 16. (optional) Fill in Icon (``fab fa-microsoft``, or another icon from `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), ``Background Color`` and ``Text Color``.
 
-17. Click on ``Save``.
+17. Click on ``Create``.
 
 18. Go back to Microsoft Azure.
 19. Click on ``Manage`` in the left menu → ``Authentication (Preview)``.
@@ -68,6 +77,14 @@ Microsoft Azure Setup
 34. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
 
 
+.. figure:: /_static/screenshots/5.0/create-open-id.png
+    :figclass: guide-screenshot
+    :alt: Create OpenID configuration in DSW 5.0
+    :width: 760
+
+    Create OpenID configuration.
+
+
 ORCID Setup
 ===========
 
@@ -82,8 +99,8 @@ ORCID requires a redirect URI before it allows us to save the application and ob
 	- ``URL`` → ``https://orcid.org``
 5. Leave ``Parameters`` empty.
 6. (optional) Fill in Icon (``fab fa-orcid``), ``Background Color`` (``#A6CE39``), and ``Text Color``.
-7. Click on ``Save``.
-8. Copy ``Callback URL`` from DSW. It will look similar to ``https://<your-domain>/wizard/open-id/<uuid>/callback``.
+7. Click on ``Create``.
+8. Copy ``Callback URL`` from DSW. It will look similar to ``https://<your-domain>/open-id/<uuid>/callback``.
 
 9. Go to https://orcid.org/signin and sign in to ORCID.
 10. Open ``Developer Tools`` from the account menu.
@@ -101,7 +118,7 @@ ORCID requires a redirect URI before it allows us to save the application and ob
 	- ``Client ID`` → ORCID ``Client ID``
 	- ``Client Secret`` → ORCID ``Client Secret``
 	- ``URL`` → keep ``https://orcid.org``
-17. Click on ``Save``.
+17. Click on ``Create``.
 18. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
 
 .. NOTE::
@@ -122,7 +139,7 @@ Custom Setup
 4. Prepare the OpenID endpoint ``URL``. This is usually the issuer URL of the provider. If the provider gives us a URL ending with ``/.well-known/openid-configuration``, use only the part before this suffix.
 5. Prepare the client application on the side of the OpenID provider:
 	- If the provider allows creating the client without redirect URLs, create it and obtain ``Client ID`` and ``Client Secret``.
-	- If the provider requires redirect URLs before it creates credentials, use temporary values in DSW first, for example ``placeholder`` for ``Client ID`` and ``Client Secret``. Fill in the real OpenID endpoint ``URL`` and click on ``Save``. Then copy the generated ``Callback URL`` from DSW and use it in the provider.
+	- If the provider requires redirect URLs before it creates credentials, use temporary values in DSW first, for example ``placeholder`` for ``Client ID`` and ``Client Secret``. Fill in the real OpenID endpoint ``URL`` and click on ``Create``. Then copy the generated ``Callback URL`` from DSW and use it in the provider.
 6. In the OpenID provider, configure redirect URLs:
 	- Use DSW ``Callback URL`` as the provider redirect URI, callback URL, reply URL, or sign-in redirect URI.
 	- If the provider supports logout URLs, use DSW ``Logout URL`` as the provider logout URL.
@@ -133,14 +150,14 @@ Custom Setup
 8. Go back to DSW and fill in the real ``Client ID``, ``Client Secret``, and ``URL`` from the OpenID provider.
 9. Leave ``Parameters`` empty unless the provider documentation requires an additional parameter.
 10. (optional) Fill in Icon (an icon from `Font Awesome <https://fontawesome.com/v6/search?o=r&m=free>`_), ``Background Color`` and ``Text Color``.
-11. Click on ``Save``.
+11. Click on ``Create`` for a new configuration, or ``Save`` when updating the temporary configuration.
 12. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
 
 
 Advanced Configuration
 ======================
 
-In the ``Advanced`` dropdown of the OpenID configuration, we can set up additional options.
+In the ``Advanced configuration`` section of the OpenID configuration, we can set up additional options.
 
 - **Registration enabled** - if enabled, users will be able to register a new DSW account using this OpenID service. If disabled, only existing DSW OpenID accounts can log in.
 - **Scopes** - scopes requested from the OpenID provider.

@@ -3,15 +3,10 @@
 DSW Registry
 ************
 
-`DSW Registry <https://registry.ds-wizard.org/>`_ is a place where we publish knowledge models, document templates and locales. It is very easy to get those into a DSW instance and use.
+The `DSW Registry <https://registry.ds-wizard.org/>`_ distributes knowledge models, document templates and translations.
 
-.. figure:: dsw-registry/dsw-registry.png
-    
-    DSW Registry with a list of knowledge models.
+Browse the available content and choose a released version. Use the import actions in DSW to install it. Content references use an identifier and version, for example ``example.research-model:1.0.0``; this is an illustrative identifier.
 
+The Registry uses individual accounts and API keys. Create a key in your Registry account to configure an instance connection. An instance API key does not authenticate to the Registry.
 
-We first need to connect our DSW instance to the DSW Registry in :ref:`DSW Registry Settings<dsw-registry-settings>`. Once we have that, we can:
-
-- :ref:`Import knowledge models from DSW Registry<km-import-from-registry>`
-- :ref:`Import document templates from DSW Registry<doc-template-import-from-registry>`
-- :ref:`Import locales from DSW Registry<locale-import-from-registry>`
+See :doc:`/application/administration/settings/content/dsw-registry` to configure the connection and :doc:`/application/knowledge-models/list/import` to import content.
