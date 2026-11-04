@@ -141,3 +141,11 @@ Final verification: strict HTML and LaTeX-source builds passed; 27415 local refe
 - Preserved screenshots, FAQ, original OpenID steps, sidebar behaviour and zero-placeholder inventory. The pending Document Context handover is now incorporated
 - Verification: clean strict HTML and LaTeX-source builds passed; 27,871 local references, all 38 application help targets and all rendered sidebar aliases pass. No orphan pages, duplicate parents, cycles or remaining screenshot TODOs. Full downloadable-PDF rendering remains separate
 - Added the combined result on top of the contributor branch while retaining its two commits, ready for a normal fast-forward push to the existing PR
+
+## 4 November 2026 — Screenshot hotfix
+
+- Refreshed Document Template Editor preview using the author's fixed Questionnaire Report files, removing the obsolete Workspace row and collapsing the global sidebar
+- Populated the API-key list with a temporary synthetic example for capture. The generated token was neither stored nor shown; the key was revoked after capture. Expired keys are hidden by the UI, so the initial expired-only example could not populate this view
+- Verified both captures with Cypress and inspected the report cover. Existing guide text and screenshot widths retained
+- Checked FW's old-UI/merger wording findings against DSW; no matching DSW wording or outdated UI screenshots were found. Its conceptual KM migration diagram remains valid
+- Hotfix branch starts from main and will target both main and develop. Further fixes will use the same branch/PRs; no merge authorized
