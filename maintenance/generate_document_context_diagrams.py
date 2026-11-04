@@ -19,7 +19,7 @@ OUTPUT_DIR = (pathlib.Path(__file__).parent.parent
 
 GROUPS = {
     'context': [
-        'DocumentContext', 'ContextConfig', 'Color', 'Workspace', 'Document',
+        'DocumentContext', 'ContextConfig', 'Color', 'Document',
         'DocumentDocumentTemplate', 'DocumentFormat', 'DocumentTemplateLocale',
         'KnowledgeModelPackage', 'Project', 'KnowledgeModelEditor', 'Questionnaire',
         'ProjectVersion', 'ProjectFile', 'User', 'UserGroup', 'UserGroupMember',
@@ -42,7 +42,7 @@ GROUPS = {
         'MultiChoiceReply', 'IntegrationReply', 'ItemSelectReply', 'FileReply',
     ],
 }
-EXCLUDED = {'ReplyVisitor'}
+EXCLUDED = {'ReplyVisitor', 'Workspace'}
 # Names used on the guide page where they differ from the classes
 DISPLAY_NAMES = {
     'DocumentContextUserPermission': 'UserPermission',
@@ -119,6 +119,9 @@ def visible_attrs(name, attrs):
     # Raw UUID links are hidden where the attribute with the resolved entity exists
     result = {}
     for attr, annotation in attrs.items():
+        # These internal fields do not describe a DSW feature.
+        if attr in {'workspace', 'workspace_uuid'}:
+            continue
         match = re.fullmatch(r'(.+)_uuids?', attr)
         if match and (match[1] in attrs or f'{match[1]}s' in attrs):
             continue

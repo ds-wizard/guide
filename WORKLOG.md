@@ -149,3 +149,9 @@ Final verification: strict HTML and LaTeX-source builds passed; 27415 local refe
 - Verified both captures with Cypress and inspected the report cover. Existing guide text and screenshot widths retained
 - Checked FW's old-UI/merger wording findings against DSW; no matching DSW wording or outdated UI screenshots were found. Its conceptual KM migration diagram remains valid
 - Hotfix branch starts from main and will target both main and develop. Further fixes will use the same branch/PRs; no merge authorized
+
+## 4 November 2026 — DSW workspace-reference audit
+
+Removed internal workspace metadata from the Document Context explanations, metamodel 19 change summary and context class diagrams at the user's request. The underlying shared API/model still contains these technical fields; no schema or application behaviour was changed. Updated the diagram generator so regeneration keeps the DSW documentation free of these fields. No workspace references were found in the application walkthrough pages.
+
+Verification: no workspace mentions remain in published-source text, Mermaid sources or rendered SVG diagrams. Strict HTML and LaTeX-source builds passed; generated search data has no pages linked to the removed terms.
