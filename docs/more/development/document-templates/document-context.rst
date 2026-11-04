@@ -17,7 +17,7 @@ Document context is an object that carries all information needed to produce a d
 * ``document`` = object with the details about the document, ``null`` in a context fetched using API
    * ``createdAt`` = when the document was created (initial creation, not final generation of the document)
    * ``createdBy`` = optional user that created the document
-   * ``documentTemplate`` = document template used for the document (``uuid``, ``id``, ``version``, and ``workspaceUuid``)
+   * ``documentTemplate`` = document template used for the document (``uuid``, ``id``, and ``version``)
    * ``eventUuid`` = optional UUID of the project event the document was generated at
    * ``format`` = format in the document template (``uuid`` and ``name``)
    * ``language`` = optional language requested for the document
@@ -74,7 +74,6 @@ Document context is an object that carries all information needed to produce a d
    * ``report`` = object that contains report with computed information about number of answered questions as well as metric values
    * ``versionUuid`` = optional UUID of the current version
    * ``versions`` = ordered list of versions (objects with details)
-* ``workspace`` = technical metadata about the workspace of the content (``uuid``, ``name``, and ``description``)
 
 This structure is provided to a Jinja template in :doc:`steps/jinja` and outputted from :doc:`steps/json`. We can use the JSON step to observe the actual content of the document context (structure as well as the values). We can also check :doc:`../metamodel-schemas`.
 
@@ -190,7 +189,6 @@ DocumentContext
 -  ``km_package`` (``Optional[``\ :ref:`odc-km-package`\ ``]``) - ``None`` for a KM editor without a previous package
 -  ``project`` (``Optional[``\ :ref:`odc-project`\ ``]``) - set for a project, ``None`` for a KM editor
 -  ``questionnaire`` (:ref:`odc-questionnaire`)
--  ``workspace`` (:ref:`odc-workspace`)
 
 
 .. _odc-context-config:
@@ -220,18 +218,6 @@ Color
 - ``contrast_color`` (:ref:`odc-color`) - white if its contrast ratio with this color is above 3, otherwise black
 
 
-.. _odc-workspace:
-
-Workspace
-~~~~~~~~~
-
-Technical metadata about the workspace of the content.
-
--  ``uuid`` (``str``)
--  ``name`` (``str``)
--  ``description`` (``Optional[str]``)
-
-
 .. _odc-document:
 
 Document
@@ -257,7 +243,6 @@ DocumentDocumentTemplate
 -  ``uuid`` (``str``)
 -  ``id`` (``str``)
 -  ``version`` (``str``)
--  ``workspace_uuid`` (``Optional[str]``)
 
 
 .. _odc-document-format:
@@ -293,7 +278,6 @@ KnowledgeModelPackage
 -  ``description`` (``str``)
 -  ``language`` (``str``)
 -  ``created_at`` (``datetime``)
--  ``workspace_uuid`` (``Optional[str]``)
 
 Notes:
 
@@ -358,7 +342,7 @@ Content of the project, or of the preview questionnaire of a KM editor.
 -  ``phase_uuid`` (``Optional[str]``)
 -  ``version`` (``Optional[``\ :ref:`odc-project-version`\ ``]``)
 -  ``versions`` (``list[``\ :ref:`odc-project-version`\ ``]``)
--  ``files`` (``dict[str, ``\ :ref:`odc-project-file`\ ``]``)
+-  ``files`` (``dict[str, ProjectFile]``) - see :ref:`odc-project-file`
 -  ``labels`` (``dict[str, list[str]]``) - label UUIDs by reply path
 -  ``todos`` (``list[str]``) - reply paths marked as TODO
 -  ``report`` (:ref:`odc-report`)

@@ -33,6 +33,14 @@ article .guide-home-website {font-size:.92rem;border-top:1px solid var(--color-b
 article .guide-home-website p {margin:.35rem 0;}
 @media(max-width:32rem) {article .guide-home-cards{grid-template-columns:1fr;}}
 
+/* Keep figures and callouts separate from the surrounding instructions. */
+article figure {margin:1.5rem 0 2rem;}
+article figure img {vertical-align:top;}
+article figure figcaption {margin-top:.75rem;line-height:1.5;}
+article figure figcaption p {margin:0;}
+article figure figcaption p + p {margin-top:.5rem;}
+article .admonition {margin:1.5rem 0;}
+
 /* Frame application captures without adding decoration to illustrations. */
 figure.guide-screenshot img {box-sizing:border-box;border:1px solid var(--color-background-border);border-radius:.35rem;box-shadow:0 3px 12px rgba(20,40,60,.13);}
 

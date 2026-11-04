@@ -329,7 +329,7 @@ All options above may specify ``format`` (refer to defined format via its ``name
 Inserting other elements
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Aside from data in cell, there is also possibility to insert other elements to the worksheet (``type`` vales):
+Aside from data in cell, there is also possibility to insert other elements to the worksheet (``type`` values):
 
 -  ``button`` with `options <https://xlsxwriter.readthedocs.io/worksheet.html#insert_button>`__ such as ``macro`` or ``caption``
 -  ``textbox`` with ``text`` and `options <https://xlsxwriter.readthedocs.io/worksheet.html#insert_textbox>`__ such as styling or offset in pixels
@@ -424,7 +424,7 @@ Options
 Notes
 =====
 
--  `XlxsWriter <https://xlsxwriter.readthedocs.io/>`__ library is used to construct Excel spreadsheet.
+-  `XlsxWriter <https://xlsxwriter.readthedocs.io/>`__ library is used to construct Excel spreadsheet.
 -  Most likely this step will follow ``jinja`` step that constructs the JSON file.
 
 Example

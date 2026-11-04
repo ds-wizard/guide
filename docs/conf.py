@@ -103,10 +103,5 @@ redirects = {
     'more/changelog': 'https://changelog.ds-wizard.org'
 }
 
-# Visible placeholders until the DSW screenshot environment is available.
-todo_include_todos = True
-
-notfound_context = {
-    'title': 'Page not found',
-    'body': '<h1>Page not found</h1><p>The page may have moved. Use the menu or search to find it, or return to the <a href="/en/develop/">DSW guide home</a>.</p>',
-}
+# Keep internal screenshot follow-ups out of published pages.
+todo_include_todos = False

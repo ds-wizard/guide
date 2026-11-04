@@ -21,11 +21,6 @@ classDiagram
         green
         blue
     }
-    class Workspace {
-        uuid: str
-        name: str
-        description: Optional[str]
-    }
     class Document {
         uuid: str
         name: str
@@ -38,7 +33,6 @@ classDiagram
         uuid: str
         id: str
         version: str
-        workspace_uuid: Optional[str]
     }
     class DocumentFormat {
         uuid: str
@@ -59,7 +53,6 @@ classDiagram
         description: str
         language: str
         created_at: datetime
-        workspace_uuid: Optional[str]
     }
     class Project {
         uuid: str
@@ -182,7 +175,6 @@ classDiagram
     class Chapter
     class Metric
     DocumentContext --> "1" ContextConfig : config
-    DocumentContext --> "1" Workspace : workspace
     DocumentContext --> "0..1" Project : project
     DocumentContext --> "0..1" KnowledgeModelEditor : km_editor
     DocumentContext --> "1" Questionnaire : questionnaire
