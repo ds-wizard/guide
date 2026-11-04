@@ -155,3 +155,9 @@ Final verification: strict HTML and LaTeX-source builds passed; 27415 local refe
 Removed internal workspace metadata from the Document Context explanations, metamodel 19 change summary and context class diagrams at the user's request. The underlying shared API/model still contains these technical fields; no schema or application behaviour was changed. Updated the diagram generator so regeneration keeps the DSW documentation free of these fields. No workspace references were found in the application walkthrough pages.
 
 Verification: no workspace mentions remain in published-source text, Mermaid sources or rendered SVG diagrams. Strict HTML and LaTeX-source builds passed; generated search data has no pages linked to the removed terms.
+
+## 4 November 2026 — Marek reference parity and schema links
+
+Compared Marek Suchánek's DSW Document Context 19.0 and TDK updates (1b2aa0c, 2c209b5) with the FW reference pages. The substantive context, Jinja, Excel/Pandoc, specification, worker plugin and TDK material was already present; retained FW workspace additions and adapted links. Applied the remaining editor-settings link correction in FW. Checked dsw-schemas master through GitHub: the newer context/template schema files remain absent. Restored JSON Schema links for versions 18.1, 18.2, 18.3 and 19.0 in both schema tables as explicitly requested, despite expected 404 responses.
+
+Verification: strict HTML and LaTeX-source builds passed for both guides. The schema 19.0 absence was confirmed by GitHub API HTTP 404; the repository tree lists no context/template schemas for 18.1–18.3 or 19.0. No full PDF render or external linkcheck was run; these missing links are intentional per request.
