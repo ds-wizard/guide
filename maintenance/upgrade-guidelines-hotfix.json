@@ -1,0 +1,17 @@
+{
+  "historicalSections": "4.34-to-4.35 and all older text unchanged",
+  "historySha256": "f3012c03d541237972a95c8dffc7e3933732c6073bca5f017299aaf21fbf0749",
+  "sourceRefs": {
+    "backend": "v5.0.0",
+    "tools": "v5.0.0"
+  },
+  "verifiedActions": [
+    "OpenID callback and logout URLs follow client address",
+    "locale migration deletes old translations",
+    "privacy/terms old settings table removed",
+    "worker maximum size and renamed env var",
+    "multiTenancy env variables and worker legacy fallback",
+    "client root, favicon and custom head mount changes"
+  ],
+  "scope": "DSW upgrade instructions only; no deployments or application changes"
+}

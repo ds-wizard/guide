@@ -173,3 +173,15 @@ Verification: strict HTML and LaTeX-source builds passed for both guides. The sc
 - Recreated the list-question screenshot including its items and Add control (targeted Cypress capture passes), aligned figure spacing and added a version-independent native 404 page
 - Corrected integration-secret configuration against backend source: file-level secrets, Jinja references and stored-secret precedence; aligned private security reporting with the dedicated security page
 - Reviewed on the existing hotfix branch so its earlier workspace-removal and screenshot fixes remain included. Continue the same PRs to main and develop; do not merge
+
+## Upgrade guidelines hotfix — 10 November 2026
+
+- Branch hotfix/5.0-upgrade-guidelines created from current main; prepare PRs to main and develop
+- Move 5.0 into the version-by-version upgrade list as 4.35.X to 5.0.X; retain the API subsection anchor and add the upgrade-5-0 reference
+- Add explicit OpenID callback/logout update for the move from /wizard to the root and private-window verification
+- Tighten common startup instructions and present 5.0 changes as administrator actions
+- Confirm additional required details against released server/tools source: old locale deletion, privacy/terms recovery, size-limit/env renames, multi-tenancy config, Registry account setup and custom client mounts
+- Preserve every historical instruction from 4.34-to-4.35 onward byte-for-byte; evidence in maintenance/upgrade-guidelines-hotfix.json
+- No FW-only features, deployment changes or application-code edits
+
+- Verification: strict HTML and LaTeX-source builds pass; rendered heading/anchor checks and byte-for-byte comparison of historical sections pass. No external linkcheck or PDF render performed
