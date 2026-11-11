@@ -3,7 +3,7 @@
 Document Template Specification
 *******************************
 
-Each document template in DSW has metadata stored. If developing locally with :doc:`./tdk`, you can find and manage them  in ``template.json`` file. In case of using :doc:`../../../application/document-templates/editors/index`, you can manage them on **Settings** tab.
+Each document template in DSW has metadata. If developing locally with :doc:`./tdk`, you can manage this metadata in ``template.json``. In case of using :doc:`../../../application/document-templates/editors/index`, you can manage it on the **Settings** tab.
 
 
 Specification Structure
@@ -15,7 +15,7 @@ Specification Structure
 * ``description`` = short description of the template
 * ``license`` = name of the used license
 * ``readme`` = longer description usually containing changelog
-* ``metamodelVersion`` = supported version of template metamodel in the ``MAJOR.MINOR`` format, it affects with which DSW version it can be used
+* ``metamodelVersion`` = supported version of template metamodel in the ``MAJOR.MINOR`` format, determines which DSW versions can use it
 * ``language`` = language of the source strings of the template (defaults to ``en``)
 * ``allowedPackages`` = list of package filters (see :ref:`document-template-package-filter`) to specify supported packages
 * ``formats`` = list of available formats (see below :ref:`document-template-format`) with specified steps for generation
@@ -33,7 +33,7 @@ Tools use ``id:version`` where one reference is required, for example ``dsw.ques
 Package Filters
 ---------------
 
-For filtering, the ``null`` value serves as wildcard, i.e., filter with all ``null`` values means that all packages are allowed.
+In a package filter, ``null`` is a wildcard. A filter whose fields are all ``null`` allows all packages.
 
 * ``id``: identifier of knowledge model (e.g. ``myorg.root``)
 * ``minVersion``: minimal package version (in format X.Y.Z, inclusive)
@@ -59,7 +59,7 @@ A template can describe how to produce several formats, each with these metadata
 Steps
 -----
 
-Each step of template produces output based on its (optional) input and options. Steps can be chained in order to generate the document and eventually transform it. All steps have always ``name`` and ``options`` based on one of the desired step. There are the details for steps supported by the *document worker* component:
+Each step produces output from its options and, where required, the previous step's output. Steps run in order to generate and convert a document. Each step has a ``name`` and ``options``. The document worker supports the following steps:
 
 .. toctree::
     :maxdepth: 1
@@ -79,7 +79,7 @@ Each step of template produces output based on its (optional) input and options.
 TDK Config
 ----------
 
-Those are local-only metadata used for development of the template. You can use them in versioned ``template.json`` but those are never stored directly in DSW.
+These local development settings can be kept in a version-controlled ``template.json``. They are not stored in DSW.
 
 * ``version``: metadata version for needs of migrations
 * ``readmeFile``: files used to get content for ``readme`` of the template, usually ``README.md``
@@ -91,7 +91,7 @@ Those are local-only metadata used for development of the template. You can use 
 Document Template Metamodel Versions
 ====================================
 
-Here are described the changes in metamodel for template specification as well as :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version. DSW accepts a template of the same major version and a lower or equal minor version. It does not migrate templates, so a template of an earlier major version has to be ported.
+The following sections describe metamodel changes to the template specification and :doc:`document context<document-context>` so developers can easily update their templates to a newer metamodel version. DSW accepts a template of the same major version and an equal or lower minor version. It does not migrate templates, so a template of an earlier major version has to be ported.
 
 Version 19.0 (since 5.0.0)
 --------------------------
@@ -156,7 +156,7 @@ Version 18.1 (since 4.31.0)
 * Added:
 
   * ``datetime`` = exposes datetime (https://docs.python.org/3/library/datetime.html) module from Python
-  * ``zoneinfo`` = exposes zoneinfo (zoneinfo — IANA time zone support — Python 3.14.5 documentation) module from Python
+  * ``zoneinfo`` = exposes Python's ``zoneinfo`` module
 
 Version 18.0 (since 4.29.0)
 ---------------------------
@@ -229,7 +229,7 @@ Version 9 (since 3.10.0)
 ------------------------
 
 * If you are using integration object, the ``requestItemUrl`` is changed to ``itemUrl``.
-* Integrations now have type, where the new Widget Integration has a different fields than API Integration (see schema).
+* Integrations now have type, where the new Widget Integration has different fields than API Integration (see schema).
 
 Version 8 (since 3.8.0)
 -----------------------
@@ -249,7 +249,7 @@ Version 6 (since 3.6.0)
 Version 5 (since 3.5.0)
 -----------------------
 
-* All KM entities has now annotations (key-value dictionary). If you do not want to use those in your template, no changes are required.
+* All KM entities now have annotations (key-value dictionary). If you do not want to use those in your template, no changes are required.
 
 Version 4 (since 3.2.0)
 -----------------------
@@ -260,7 +260,7 @@ Version 4 (since 3.2.0)
 Version 3 (since 2.12.0)
 ------------------------
 
-* Additional metadata about each replies has been added and structure of reply is changed (extra ``.value`` needed). In case you are using filters such as ``reply_str_value`` no changes are needed.
+* Additional metadata about each reply has been added and structure of reply is changed (extra ``.value`` needed). In case you are using filters such as ``reply_str_value`` no changes are needed.
 * For integration reply, the type values are renamed ``IntegrationValue`` -> ``IntegrationType`` and ``PlainValue`` -> ``PlainType`` for consistency.
 
 Version 2 (since 2.6.0)

@@ -19,7 +19,7 @@ If the submission service requires additional user properties, we can set those 
 
 .. NOTE::
 
-    In case we will update the document template used in **Supported Formats**, we should verify that it is still suitable for the submission service and if yes, then add it as a new entry under **Supported Formats**.
+    After updating a document template, check that the new version still meets the submission service's requirements. If it does, add its version and format under **Supported Formats**.
 
 
 .. figure:: /_static/screenshots/5.0/settings-submission.png

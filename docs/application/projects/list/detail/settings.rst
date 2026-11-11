@@ -5,7 +5,7 @@ Settings
 
 In the :guilabel:`Settings` tab, we can configure some details about the project. First we have a **name** and a **description** to identify the project.
 
-Next, we have **Project Tags**. These can be used for providing some metadata or categorization of the project. In the project list, we can filter the projects by these tags. We can write any text we want as a project tag and DSW will suggest us the tags that are there already in use so we can keep them consistent.
+Next, we have **Project Tags**. These can be used for providing some metadata or categorization of the project. In the project list, we can filter the projects by these tags. We can write any text we want as a project tag and DSW will suggest us the tags already in use so we can keep them consistent.
 
 .. NOTE::
 
@@ -65,4 +65,4 @@ We can see the :ref:`knowledge model<knowledge-model>` and its tags used for cre
 Danger Zone
 ===========
 
-In the danger zone, we can delete the project. Once the project is deleted it can **no longer be recovered**.
+In the danger zone, we can delete the project. Once the project is deleted, it can **no longer be recovered**.

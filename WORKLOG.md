@@ -185,3 +185,14 @@ Verification: strict HTML and LaTeX-source builds passed for both guides. The sc
 - No FW-only features, deployment changes or application-code edits
 
 - Verification: strict HTML and LaTeX-source builds pass; rendered heading/anchor checks and byte-for-byte comparison of historical sections pass. No external linkcheck or PDF render performed
+
+
+## 2026-11-11 — Guide proofreading
+
+- Base: `origin/hotfix/5.0-upgrade-guidelines-develop` at `8fc5d85850616aec5dd2c0055015f98dfe6ef367`; isolated branch `codex/guide-proofread`.
+- Reviewed guide prose for grammar, unclear instructions, internal contradictions and repetitive AI-style wording. Shared prose was checked across DSW and FAIR Wizard while retaining product-specific scope and features.
+- Edited 54 RST source files. Corrected import guidance, ORCID save instructions, rendering-reference wording, and language in knowledge-model and project workflows. Clarified worker multi-tenancy configuration against engine-tools source.
+- Checked OpenID editing and user-group save behavior against the local shared frontend source at `4a4c858c`; rendering options and worker configuration against engine-tools `origin/main` at `bea50b8`.
+- Verification: strict Sphinx HTML and LaTeX source builds passed with warnings treated as errors; `git diff --check` passed. All 49 code blocks in the edited RST files are unchanged.
+- Limits: no live application or third-party sign-in test, external link audit, full implementation audit, or rendered PDF check. The Word image-compression advice still needs a test of the Pandoc output; see the document-template development notes.
+- Original working copies and existing unfinished edits were left intact.

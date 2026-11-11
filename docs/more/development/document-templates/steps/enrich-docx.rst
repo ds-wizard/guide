@@ -39,8 +39,8 @@ Notes
 -  To figure out what to rewrite, you should first generate the ``docx`` later used as input, unzip it and go through the contents.
 -  A good way to adjust things is to put there some placeholder first (e.g. via ``reference.docx`` passed to ``pandoc``) and then just adjust the placeholder with other / dynamic content.
 -  Paths to files in a template are relative to template root, i.e. directory with ``template.json``.
--  It does not matter if the file to be rewritten is missing in the ``docx``, then the desired file is simply added.
--  The document context is provided in ``ctx`` variable, other variables, filters, and tests are documented in other documents (same as for ``jinja`` step).
+-  If the target file is missing from the ``docx`` archive, it is added.
+-  The document context is provided in the ``ctx`` variable, other variables, filters, and tests are documented in other documents (same as for ``jinja`` step).
 
 Example
 ========
