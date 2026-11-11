@@ -8,7 +8,7 @@ Here we collect general recommendations and best practices to develop document t
 Missing or Special Fonts
 ========================
 
-**Issue**: It may happen that certain fonts are not installed in the document worker (affecting PDF documents) or user's device (affecting client-rendered documents like HTML or SVG). This may result in weird/incorrect characters appearing incl. rectangular shapes.
+**Issue**: It may happen that certain fonts are not installed in the document worker (affecting PDF documents) or user's device (affecting client-rendered documents like HTML or SVG). Missing fonts can cause incorrect characters or empty boxes.
 
 **Recommendations**: Include fonts via CSS/HTML, e.g. using the `Google Fonts <https://fonts.google.com/>`_ or other similar:
 
@@ -36,15 +36,15 @@ Misplaced Content in PDF
 
 **Issue**: It may happen that content is placed over header/footer or incorrectly split between pages.
 
-**Recommendations**: First, avoid incorrect HTML structures such as empty list items, nested paragraphs, tables without ``tbody`` etc. Then also make sure that the page, footer and header sizes are correctly set via CSS. Similarly, you can prevent page break using CSS. In case of issues, also refer to the :ref:`WeasyPrint step <document-template-step-weasyprint>` or directly the `WeasyPrint documentation <https://doc.courtbouillon.org/weasyprint/stable/>`_.
+**Recommendations**: First, check the HTML structure, especially for invalid nesting such as paragraphs inside other paragraphs. Then also make sure that the page, footer and header sizes are correctly set via CSS. Similarly, you can prevent page break using CSS. In case of issues, also refer to the :ref:`WeasyPrint step <document-template-step-weasyprint>` or directly the `WeasyPrint documentation <https://doc.courtbouillon.org/weasyprint/stable/>`_.
 
 
 Issues with PDF Formatting
 ==========================
 
-**Issue**: PDF is rendered differently than if I check HTML in print view of browser.
+**Issue**: The PDF differs from the browser's print preview of the HTML.
 
-**Recommendations**: This is done via :ref:`document-template-step-weasyprint` thus the `WeasyPrint <https://weasyprint.org/>`_ library. Please check their documentation, recommendation and issues. It is also useful to search (e.g. via Google) specifically how to achieve certain styling/layouting in WeasyPrint.
+**Recommendations**: The :ref:`document-template-step-weasyprint` uses the `WeasyPrint <https://weasyprint.org/>`_ library, whose layout support differs from a web browser's. Check its documentation and issue tracker for the CSS features used by the template.
 
 
 Styling MS Word Documents

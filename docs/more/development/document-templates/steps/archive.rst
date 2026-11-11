@@ -5,7 +5,7 @@ Step: ``archive``
 
 
 
-Step that puts file from previous step to an archive file (ZIP or TAR).
+Puts the file from the previous step into a ZIP or TAR archive.
 
 Input
 =====

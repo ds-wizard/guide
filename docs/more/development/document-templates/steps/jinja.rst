@@ -51,12 +51,12 @@ The ``requests`` wrapper allows only ``http`` and ``https`` URLs. Hosts resolvin
 Functions
 ---------
 
-There are the following functions available on the global.
+The following functions are available as Jinja globals.
 
 ``assets``
 ~~~~~~~~~~
 
-The ``assets(file)`` function serves to retrieve Asset object from either a static file in a document template or a questionnaire file. Therefore, the `file` argument can be one the three following:
+The ``assets(file)`` function retrieves an ``Asset`` object from a template file or an uploaded questionnaire file. The ``file`` argument can be one of three types:
 
 - ``string`` value with path to asset file within the template (relative from its root), e.g. ``"assets/logo.png"``;
 - :ref:`odc-project-file` object from :ref:`document-context-obj`, e.g. from reply to a File Question passing file from it simply as ``reply.file``;
@@ -400,7 +400,7 @@ Mark strings using the `Jinja2 i18n extension <https://jinja.palletsprojects.com
 
 The document worker generates a POT file after a document template is released or imported. We can also create it locally using ``dsw-tdk pot``. Only files with the ``.j2``, ``.jinja``, ``.jinja2``, or ``.jnj`` extension are scanned. DSW reads the locale code from the ``Language`` header of the uploaded PO file, so that header must be filled in correctly. If a locale cannot be downloaded or is corrupt, document generation fails.
 
-To migrate a template that used the removed options, drop ``jinja-ext``, ``i18n-dir``, ``i18n-domain``, and ``i18n-lang``, merge the per-language formats into one format per output type, and set ``language`` of the template. Then release the template, download the POT file, and upload the existing catalogs as locales.
+To migrate a template, remove ``i18n`` from ``jinja-ext`` because it is always enabled, and drop the removed ``i18n-dir``, ``i18n-domain`` and ``i18n-lang`` options. Merge the per-language formats into one format per output type and set the template's ``language``. Release the template, download the POT file, and upload the existing catalogs as locales.
 
 
 Notes
@@ -408,7 +408,7 @@ Notes
 
 -  All paths (e.g. for ``import`` or ``extends`` in Jinja2 templates are relative from the template root, i.e. directory with ``template.json``).
 -  The ``do``, ``loopcontrols``, and ``i18n`` `Jinja2 extensions <https://jinja.palletsprojects.com/en/stable/extensions/>`__ are always enabled.
--  Using file extension ``.j2`` or ``.jinja2`` for templates is just a convention.
+-  Jinja can render templates with any extension. For translation extraction, use one of the extensions listed under :ref:`document-template-translations`.
 -  The :doc:`document context <../document-context>` is provided in ``ctx`` variable, other variables, filters, and tests are documented in other documents.
 
 Example

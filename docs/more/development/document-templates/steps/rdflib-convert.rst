@@ -15,7 +15,7 @@ Gets an RDF file from the previous step of one of the following formats: ``rdf``
 Output
 ======
 
-Results in an RDF document of one of the following formats: ``rdf`` (XML), ``nt``, ``n3``, ``ttl``, ``trig``, or ``json-ld`` (specified using ``from`` option).
+Results in an RDF document of one of the following formats: ``rdf`` (XML), ``nt``, ``n3``, ``ttl``, ``trig``, or ``json-ld`` (specified using the ``to`` option).
 
 Options
 ========

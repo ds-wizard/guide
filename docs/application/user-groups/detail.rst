@@ -3,7 +3,7 @@ Manage a User Group
 
 Open a group to review its details and members. Group owners can change its name, description and visibility, and add or remove members. Users with **Manage User Groups** can manage groups across the instance.
 
-Choose a member's group role to make them an owner or an ordinary member. Save your changes. Group ownership controls the group itself; access to a project depends on the role assigned when the group is added to :doc:`project sharing </application/projects/list/detail/sharing>`.
+Choose a member's group role to make them an owner or an ordinary member. Membership and member-role changes are saved immediately. Changes to the group's name, description or visibility require :guilabel:`Save`. Group ownership controls the group itself; access to a project depends on the role assigned when the group is added to :doc:`project sharing </application/projects/list/detail/sharing>`.
 
 .. figure:: /_static/screenshots/5.0/group-member-add.png
     :figclass: guide-screenshot
