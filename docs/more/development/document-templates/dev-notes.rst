@@ -62,6 +62,10 @@ Then, it can be added to the document template and used for the :ref:`Pandoc ste
 Compressing Images in MS Word Documents
 =======================================
 
-**Issue**: Uncompressed images in MS Word documents can significantly increase the file size, often making it much larger than the original HTML or PDF version.
+**Issue**: Large, high-resolution images can make generated Word documents much larger than expected, even when the images are displayed at a small size.
 
-**Recommendations**: In the ``reference.docx`` document, you can adjust the image compression level to reduce the file size. To do this, open the document ``reference.docx`` and click on an image. Then, navigate to ``Picture Format`` -> ``Compress Pictures`` in the ``Adjust`` group. In the dialog box, you can select the desired compression level. Alternatively, you can set the default compression level for all images in the document. This will ensure that images are compressed when the document is saved.
+**Recommendations**: Resize and compress source images before adding them to the template or uploading them as project files. Choose dimensions and quality suitable for their intended display or print size. Reducing an image's display width in HTML does not reduce the embedded image data.
+
+Do not rely on image-compression settings in ``reference.docx`` to reduce image data during Pandoc generation. A reference document can pass on some Word settings, but this does not make Pandoc resize or recompress the images.
+
+For a document that has already been generated, open it in Word, select a picture and choose ``Picture Format`` → ``Compress Pictures`` in the ``Adjust`` group. Choose the required resolution and whether to apply it to all pictures, then save the document. This is a separate operation on the generated file. See Microsoft's `picture-compression instructions <https://support.microsoft.com/en-us/office/graphics-visuals/reduce-the-file-size-of-a-picture-in-microsoft-office>`_ for the controls available on each platform.

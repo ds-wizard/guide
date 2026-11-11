@@ -205,3 +205,11 @@ Verification: strict HTML and LaTeX-source builds passed for both guides. The sc
 - Restored the Registry content examples and cron scheduling example in deployment guidance.
 - Retained explicit, documented factual corrections to contradictory instructions. Code examples and screenshots remain unchanged against the original base.
 - Recheck verification: strict HTML and LaTeX source builds and diff whitespace checks passed. 49 code blocks and 75 image references were compared with the original base and retained. This does not establish the truth of every factual statement in the guide.
+
+
+### Pandoc image-compression experiment
+
+- Tested locally with Pandoc 3.9.0.2 using 1800×1200 PNG and JPEG images displayed at three inches. Used a default reference plus references with 72-DPI, 150-DPI and disabled-compression settings. Repeated the low-DPI case with Markdown input. A font-size change confirmed each custom reference was used.
+- In all five original-image output cases, embedded PNG/JPEG bytes, SHA-256 hashes and dimensions matched the source files. The doNotAutoCompressPictures flag was copied; defaultImageDpi and discardImageEditingData were not. Independently resizing the two source images before generation reduced the embedded media and output size.
+- Checked the result against Pandoc's 3.9.0.2 DOCX writer and Microsoft's OOXML/image-compression documentation. The guide now recommends optimizing source images or using Word's compression on the generated document, instead of promising compression through reference.docx.
+- Scope: local Pandoc generation, not the deployed worker binary or a Microsoft Word open/save test. The shared worker source delegates conversion to Pandoc. The low-DPI output was rendered with bundled LibreOffice and its single page inspected.
