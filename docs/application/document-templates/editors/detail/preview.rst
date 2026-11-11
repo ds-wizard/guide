@@ -16,4 +16,4 @@ After saving changes to the template's configuration or files, open the :guilabe
 
 .. note::
 
-    Keep the preview open in a separate browser tab while editing files or settings. This makes it easier to compare changes with the generated output.
+    Keep the preview open in a separate browser tab while editing :doc:`files </application/document-templates/editors/detail/files>` or :doc:`settings </application/document-templates/editors/detail/settings>`. We can also keep the project used for the preview open in another tab. This makes it easier to compare changes with the generated output.

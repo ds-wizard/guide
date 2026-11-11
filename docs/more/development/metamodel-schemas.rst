@@ -58,7 +58,7 @@ File for import and export of knowledge models is a JSON file that contains all 
 Document Context
 ================
 
-The server supplies the document context, and the document worker passes it to the template. It contains all relevant data about project/questionnaire with replies, related knowledge model, author, and more. As KM evolves, the context may evolve as well. It is versioned using the Template metamodel version number. A document template must support the metamodel that is in the current DSW instance, see :ref:`document-template-metamodel-versions`. Understanding the context structure is especially useful when :doc:`./document-templates/index`.
+The server supplies the document context, and the document worker passes it to the template. It contains all relevant data about project/questionnaire with replies, related knowledge model, author, and more. As KM evolves, the context may evolve as well. It is versioned using the Template metamodel version number. A document template must support the metamodel that is in the current DSW instance, see :ref:`document-template-metamodel-versions`. Understanding the context structure is especially useful when developing :doc:`document templates <./document-templates/index>`.
 
 +-------------------+--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+--------+
 | Metamodel Version | Schema file                                                                                                              | Changes (brief)                                         | Since  |
