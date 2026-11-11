@@ -69,12 +69,12 @@ Initial Knowledge Model, Document Templates, and Locales
 
 A fresh installation needs knowledge models and document templates before users can create plans. Create them in the editors or import them from the `DSW Registry <https://registry.ds-wizard.org/>`__. Existing content can also be imported from files.
 
-Choose compatible knowledge model and template versions, then configure the required application, email and content translations.
+In the Registry, look for the core knowledge model for general data stewardship, document templates such as Horizon Europe, and translations. Choose compatible knowledge model and template versions, then configure the required application, email and content translations.
 
 Database Backups
 ----------------
 
-Schedule regular backups of PostgreSQL, S3 storage and configuration. PostgreSQL can be backed up using `pg_dump <https://www.postgresql.org/docs/current/app-pgdump.html>`__. Keep the encryption and signing keys with protected configuration backups, and test restoring the complete instance.
+Schedule regular backups of PostgreSQL, S3 storage and configuration, for example with a cron job. PostgreSQL can be backed up using `pg_dump <https://www.postgresql.org/docs/current/app-pgdump.html>`__. Keep the encryption and signing keys with protected configuration backups, and test restoring the complete instance.
 
 Deployment Requirements
 -----------------------

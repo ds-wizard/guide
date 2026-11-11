@@ -3,7 +3,7 @@
 Questionnaire
 *************
 
-The :guilabel:`Questionnaire` tab is where we answer questions about our project.
+The :guilabel:`Questionnaire` tab is the first tab in the project detail. This is where we answer questions about our project.
 
 
 Current Phase

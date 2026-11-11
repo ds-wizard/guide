@@ -196,3 +196,12 @@ Verification: strict HTML and LaTeX-source builds passed for both guides. The sc
 - Verification: strict Sphinx HTML and LaTeX source builds passed with warnings treated as errors; `git diff --check` passed. All 49 code blocks in the edited RST files are unchanged.
 - Limits: no live application or third-party sign-in test, external link audit, full implementation audit, or rendered PDF check. The Word image-compression advice still needs a test of the Pandoc output; see the document-template development notes.
 - Original working copies and existing unfinished edits were left intact.
+
+
+### Information-preservation recheck
+
+- Rechecked the proofreading diff against its original base after the user asked about factual changes and accidental loss.
+- The first pass did include intentional factual corrections and abridgement, rather than language-only edits. Restored the empty-secret distinction, preview/project workflow tip and first-tab detail. Corrected a sentence introduced in the metamodel overview.
+- Restored the Registry content examples and cron scheduling example in deployment guidance.
+- Retained explicit, documented factual corrections to contradictory instructions. Code examples and screenshots remain unchanged against the original base.
+- Recheck verification: strict HTML and LaTeX source builds and diff whitespace checks passed. 49 code blocks and 75 image references were compared with the original base and retained. This does not establish the truth of every factual statement in the guide.
