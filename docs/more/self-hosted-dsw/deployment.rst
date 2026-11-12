@@ -67,14 +67,14 @@ Configure a Registry connection using an API key from an individual `DSW Registr
 Initial Knowledge Model, Document Templates, and Locales
 --------------------------------------------------------
 
-When we have a fresh installation, there are just the default users and no knowledge models or document templates. We are free to create them from scratch if we want. Another option is to import existing KM and document templates from the `DSW Registry <https://registry.ds-wizard.org/>`__.
+A fresh installation needs knowledge models and document templates before users can create plans. Create them in the editors or import them from the `DSW Registry <https://registry.ds-wizard.org/>`__. Existing content can also be imported from files.
 
-In the `DSW Registry <https://registry.ds-wizard.org/>`__, we can find the core knowledge model for general data stewardship and a couple of document templates, such as Horizon Europe and locales! Another option is to import it from a file if we have any (according to usage).
+In the Registry, look for the core knowledge model for general data stewardship, document templates such as Horizon Europe, and translations. Choose compatible knowledge model and template versions, then configure the required application, email and content translations.
 
 Database Backups
 ----------------
 
-If we want to regularly backup our database (and we should!), all we need to do is to set up a cronjob that backups PostgreSQL database (e.g., using `pg_dump <https://www.postgresql.org/docs/current/app-pgdump.html>`__ utility) as well S3 storage.
+Schedule regular backups of PostgreSQL, S3 storage and configuration, for example with a cron job. PostgreSQL can be backed up using `pg_dump <https://www.postgresql.org/docs/current/app-pgdump.html>`__. Keep the encryption and signing keys with protected configuration backups, and test restoring the complete instance.
 
 Deployment Requirements
 -----------------------

@@ -5,19 +5,19 @@ Plugins
 
 .. WARNING::
 
-    The plugins functionality is considered experimental.
+    Plugin support is experimental.
 
 
 This page provides information on how to install plugins for DSW. Information on developing plugins can be found here: :ref:`plugins development<development-plugins>`.
 
-There are available plugins to extend the functionality of the base DSW.
+Plugins can extend DSW with additional features.
 
 How to Install Plugins
 ======================
 
-We can deploy plugins using the static file. The file is to be served via HTTP(S) so you can use public S3 bucket or HTTP(S) proxy to serve it. The file can be found in GitHub releases in a ZIP file in respective plugin repository.
+We can deploy plugins by serving their static files. Serve the files over HTTP(S), for example from a public S3 bucket or a web server. The file can be found in GitHub releases in a ZIP file in respective plugin repository.
 
-Once deployed, you need to add it to your DSW instance database (see the example sql where you need to adjust the ``https://example.com/6534f8f7-0d43-4c4d-9157-15af17f37649`` value).
+Once deployed, you need to add it to your DSW instance database (see the example SQL where you need to adjust the ``https://example.com/6534f8f7-0d43-4c4d-9157-15af17f37649`` value).
 
 .. CODE-BLOCK:: sql
 

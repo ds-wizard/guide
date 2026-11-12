@@ -9,7 +9,7 @@ We can use `Jinja2 templating language <https://jinja.palletsprojects.com/en/sta
 External Service Requirements
 =============================
 
-If we want to connect an external service using the API there are certain requirements for it to make the connection to DSW possible.
+An external service must meet the following requirements for an API integration with DSW.
 
 - **Allows search using free text**
 
@@ -33,7 +33,7 @@ Advanced Integration Configuration
 
 Additional integration configuration can be used when we want to force the integration reply, or when adding and editing **Variables** and **Secrets**.
 
-- **Allow Custom Reply** - The custom reply is turned on by default. We can turn it off if we want to force the integration reply. In that case, users will have to select one of the results from the external service, otherwise their reply will not be saved. This can be mentioned in the question description for the researchers.
+- **Allow Custom Reply** - The custom reply is turned on by default. We can turn it off if we want to force the integration reply. In that case, users will have to select one of the results from the external service, otherwise their reply will not be saved. Explain this requirement in the question description.
 - **Variables** - We can use variables to parametrize the integration for each question. Variables can be filled on questions that use this integration and then used in the request configuration. For example, if you define a variable named ``type``, you can use it as ``{{ variables.type }}``, such as ``https://example.com/{{ variables.type }}``.
 - **Secrets** - Secrets can be used to store sensitive information, such as API keys or access tokens. We can reference these secrets as ``{{ secrets.secret_name }}`` anywhere in the request configuration, but their values will not be exposed in the question or answer templates. The additional knowledge model secrets documentation can be found :ref:`here<knowledge-model-secrets>`.
 

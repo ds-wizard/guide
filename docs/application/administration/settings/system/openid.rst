@@ -24,7 +24,7 @@ DSW supports Microsoft Azure, ORCID, and other OpenID providers. The following s
 
 .. NOTE::
 
-    After setting a new OpenID service, we should directly test it and verify that the configuration works well. For that, we can simply open our DSW in a new anonymous window of the web browser.
+    After adding an OpenID provider, test sign-in to DSW in a private browser window.
 
 
 Microsoft Azure Setup
@@ -40,8 +40,8 @@ Microsoft Azure Setup
 8. Copy and store ``Directory (tenant) ID`` and ``Application (client) ID``.
 9. Click on ``Manage`` in the left menu → ``Certificates & Secrets``.
 10. Click on ``New client secret``.
-11. Fill description, set ``Expires`` and note it somewhere, then click on ``Add``.
-12. Copy ``Value`` and store it somewhere. You will not be able to view it again.
+11. Enter a description, set ``Expires`` and record the expiration date, then click on ``Add``.
+12. Copy ``Value`` and store it securely. You will not be able to view it again.
 
 13. Go to OpenID in DSW: ``Settings`` → ``OpenID`` → ``Create``.
 
@@ -118,7 +118,7 @@ ORCID requires a redirect URI before it allows us to save the application and ob
 	- ``Client ID`` → ORCID ``Client ID``
 	- ``Client Secret`` → ORCID ``Client Secret``
 	- ``URL`` → keep ``https://orcid.org``
-17. Click on ``Create``.
+17. Click on ``Save``.
 18. Test your OpenID configuration in DSW. You might need to refresh the login page for the login button to appear.
 
 .. NOTE::

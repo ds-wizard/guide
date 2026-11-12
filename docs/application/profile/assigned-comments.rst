@@ -1,7 +1,7 @@
 Assigned Comments
 *****************
 
-In the profile menu, we can view comments assigned to us. By clicking on the link, we can open the list of assigned comments. We can then filter assigned comments by resolved or unresolved. We can also order the assigned comments by project and last update.
+Choose :guilabel:`Assigned comments` from the profile menu to see comments assigned to us. We can filter the list by resolved or unresolved status and sort it by project or last update.
 
 .. figure:: /_static/screenshots/5.0/assigned-comments.png
     :figclass: guide-screenshot

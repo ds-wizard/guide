@@ -1,72 +1,17 @@
-..  _upgrade-guidelines:
+.. _upgrade-guidelines:
 
 Upgrade Guidelines
 ******************
 
-
-5.0
-===
-
-If the instance is older than 4.35, complete the :ref:`4.35 upgrade procedure <upgrade-4-35>` first, including its prerequisite version and database steps.
-
-Back up PostgreSQL, S3 storage and configuration before upgrading. Test the upgrade on a restored copy first. Use matching 5.0-compatible server, client, document worker, mailer and tools; do not combine an old client with the new API.
-
-API and client addresses
-------------------------
-
-The API uses ``/api``. Configure the frontend's ``API_URL`` and proxy that path to the server, including WebSocket upgrades. The current DSW client is served at the web root. Update ``general.clientUrl``, proxy rules and links to match the actual deployment address.
-
-Bootstrap is ``/api/bootstrap``; the old ``/configs/bootstrap`` endpoint is not available. Review API scripts against the new Swagger reference, including request fields and content identifiers.
-
-For OpenID, register the callback and logout URLs shown by the saved provider configuration. These depend on the deployed addresses; check both when an instance URL changes. Do not assume that an API base change alone updates the identity provider.
-
-Content and templates
----------------------
-
-Content identifiers combine the former organization and local ID using a dot. For example, ``example:research-model:1.0.0`` becomes identifier ``example.research-model`` and version ``1.0.0``. Imports and tools use identifier and version separately, or ``id:version`` where a reference is required.
-
-Resolve any duplicate knowledge model or document template IDs before upgrading. The migration checks the combined ID and version within each instance and stops if they are not unique.
-
-Review custom document templates for context 19.0 as described in :ref:`document-template-metamodel-versions` and use compatible worker and TDK versions. Changing only a metamodel number does not update template code. Check allowed-model patterns and document-submission formats after migration.
-
-Review the document worker configuration for these template-related changes:
-
-* ``templates[].ids`` prefixes match the ``<id>:<version>`` reference, so a prefix such as ``dsw:`` becomes ``dsw.``. Otherwise, a template loses its configured ``requests`` and ``secrets``.
-* ``documents.maxSize`` (``DOCUMENTS_MAX_SIZE``) replaces ``experimental.maxDocumentSize``. Generated documents are now limited to 5 MB by default; set the value to ``null`` for no limit.
-* ``documentContext.defaultAppTitleShort`` and ``documentContext.defaultIllustrationsColor`` are removed, including their ``DOCUMENT_CONTEXT_*`` variables.
-
-Documents queued before the upgrade fail with an unsupported-version message and have to be regenerated.
-
-Translations and configuration
-------------------------------
-
-The application and email translations use separate PO files. Export any custom wording before the upgrade, obtain the new POT files and prepare compatible translations. Review and enable the required languages in :doc:`/application/administration/settings/translations/index`.
-
-Registry connections use personal Registry API keys. Review the configured key and test content and translation imports. Configure custom privacy and terms links through ``general.privacyUrl`` and ``general.termsOfServiceUrl`` on the server.
-
-The server uses ``multiTenancy`` for multi-tenant hosting configuration. This is separate from the application's user-facing functionality. A normal single-instance deployment keeps ``multiTenancy.enabled: false``. Worker configuration still has its own ``cloud.enabled`` setting; use each component's matching configuration reference.
-
-Verification
-------------
-
-After the upgrade, check internal and OpenID sign-in, role permissions, project sharing and user groups, integrations, file downloads, document generation, translations, Registry imports and any configured submission service. Verify an existing project as well as a newly created one.
-
-Update local training materials containing screenshots or UI-specific instructions for the new interface.
-
 Upgrading DSW
 =============
 
-.. Warning::
-
-   Backup database and other important data (e.g., configuration) before upgrade!
-
+Back up PostgreSQL, S3 storage and configuration. Test the upgrade on a restored copy, and read the version-specific steps below before changing images. Keep ``general.secret`` and ``general.rsaPrivateKey`` from the existing configuration; see :ref:`config-server` before rotating either key.
 
 Using Docker
 ------------
 
-For an upgrade from 4.34 to 4.35, follow the :ref:`4.35 database upgrade steps <upgrade-4-35>` before starting the new server image.
-
-Set compatible target-version image tags for the server, client, document worker and mailer in the Compose file. Complete any version-specific steps below, then pull and apply that configuration:
+Set compatible target-version image tags for the server, client, document worker and mailer in the Compose file. Stop the server and workers, then start the server first:
 
 .. code-block:: shell
 
@@ -75,33 +20,69 @@ Set compatible target-version image tags for the server, client, document worker
    docker compose up -d server
    docker compose logs -f server
 
-Wait for the server migrations to complete successfully, then start the other services:
+Wait for the database migrations to finish successfully, then start the remaining services:
 
 .. code-block:: shell
 
    docker compose up -d
 
-The service names above follow the deployment example; use the names from your Compose file. Do not start workers against a database whose upgrade has failed.
-
+The service names follow the deployment example; use the names from your Compose file. Do not start workers after a failed migration. Upgrading from 4.34 to 4.35 requires the :ref:`database upgrade script <upgrade-4-35>` first.
 
 Other setup (using Git)
 -----------------------
 
-All we need to do is download or checkout the new version from GitHub repositories and rebuild the application (according to the guidelines above):
+Check out the target release in each component repository and rebuild it:
 
 .. code-block:: shell
 
-   $ git checkout vX.Y.Z
+   git checkout vX.Y.Z
+
+Use the same server-first startup order as above.
 
 Upgrade process
 ===============
 
-Usually, nothing special is required for the upgrade. Internal structure changes are migrated automatically using DB migrations and Metamodel migrations *(since 1.8.0)*. See below the changes that need to be done by us *(since 1.10.0)*:
+Apply the relevant version-specific steps in order. Stop the document worker and mailer before starting the upgraded server.
 
+.. _upgrade-5-0:
 
-.. Warning::
+4.35.X to 5.0.X
+----------------
 
-   Make sure to stop ``document-worker`` and ``mailer`` before upgrading to the next version. Run ``wizard-server`` first, then run the workers. Otherwise the database migrations might not work correctly.
+For an older instance, complete the :ref:`4.35 upgrade procedure <upgrade-4-35>` and its prerequisites first. Use matching 5.0-compatible components; the 4.x client cannot use the 5.0 API.
+
+API and client addresses
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Change the API base from ``/wizard-api`` to ``/api`` in the client's ``API_URL``, reverse proxy and API integrations. Preserve WebSocket upgrades on the API proxy. Bootstrap is now ``/api/bootstrap``, not ``/configs/bootstrap``.
+* Serve the 5.0 client at the web root. Update ``general.clientUrl`` and remove any old redirect from ``/`` to ``/wizard``. Serve client assets from the new root, and update bookmarks and shared links. See :ref:`client-configuration`.
+* **OpenID:** when moving from the standard ``/wizard`` deployment to the 5.0 web root, update the callback and logout URLs in the identity provider using the addresses displayed by DSW after upgrading. Keep an internal administrator login available while changing OpenID. Test sign-in and logout in a private browser window; see :ref:`openid-settings`.
+* Review API scripts against the 5.0 reference, including endpoints, request fields and content identifiers; see :doc:`/more/development/api`. Changing only the API base is not sufficient.
+
+Content and document templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Before upgrading, resolve duplicate content IDs.** The combined identifier and version must be unique within the instance; otherwise the migration stops. For example, ``example:research-model:1.0.0`` becomes identifier ``example.research-model`` and version ``1.0.0``. Update identifiers in scripts, imports and custom configuration to the new format; references use ``id:version``.
+* Upgrade installed document templates to versions compatible with context **19.0**. Update custom template code as described in :ref:`document-template-metamodel-versions`; changing only the declared version is not enough. Review allowed-model patterns and document-submission template/format settings.
+* In the document worker's ``templates[].ids``, replace old prefixes such as ``dsw:`` with ``dsw.``. These prefixes match ``<id>:<version>``; a mismatch stops the template receiving its configured ``requests`` and ``secrets``.
+* Replace ``experimental.maxDocumentSize`` / ``EXPERIMENTAL_MAX_DOCUMENT_SIZE`` with ``documents.maxSize`` / ``DOCUMENTS_MAX_SIZE``. The default is now **5 MB**; set the YAML value to ``null`` if no size limit is wanted.
+* Remove ``documentContext.defaultAppTitleShort`` and ``documentContext.defaultIllustrationsColor`` and their corresponding environment variables. Use the current document context for custom branding; see :ref:`configuration-files`.
+* Drain document-generation jobs before upgrading where possible. Jobs queued with the old context have to be regenerated after the upgrade.
+
+Translations and configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Export custom translations before upgrading.** The migration deletes the old interface translations. Prepare separate application and email PO files from the new POT files, import the required languages, enable them and set the defaults. Users may need to select their interface language again. Old ZIP locale bundles cannot be imported through the new PO workflow; see :doc:`/application/administration/settings/translations/index`.
+* Copy custom privacy and terms links into ``general.privacyUrl`` and ``general.termsOfServiceUrl`` **before upgrading**. Their old settings table is removed by the migration.
+* Replace the server's ``cloud`` section with ``multiTenancy``. Rename ``CLOUD_ENABLED``, ``CLOUD_DOMAIN`` and ``CLOUD_PUBLIC_REGISTRATION_ENABLED`` to ``MULTI_TENANCY_ENABLED``, ``MULTI_TENANCY_DOMAIN`` and ``MULTI_TENANCY_PUBLIC_REGISTRATION_ENABLED``. A normal single-instance deployment uses ``multiTenancy.enabled: false``. Match this setting in the workers; they also accept the legacy ``cloud.enabled`` fallback. Use the configuration for each matching component version.
+* Check the Registry connection under :doc:`DSW Registry settings </application/administration/settings/content/dsw-registry>` and test content and translation imports. The new Registry uses personal accounts and API keys. For an existing Registry account, use its password-reset flow to set a login password.
+* Review custom client mounts: favicon files now live under ``/usr/share/nginx/html/assets/favicon``, and custom head content is mounted at ``/src/head-extra.html``. Update custom CSS for the new design-system variables and check both light and dark appearance; see :ref:`client-configuration`.
+* Test installed plugins and custom mail layouts against the matching 5.0 versions. Update local training materials containing screenshots or UI-specific instructions.
+
+Verification
+~~~~~~~~~~~~
+
+After upgrading, test internal and OpenID sign-in/logout, role permissions, project sharing, user groups, integrations, file downloads, document generation, translations, Registry imports and any configured submission service. Check an existing project and create a new one. For configured email delivery, test password recovery and project invitations too.
 
 .. _upgrade-4-35:
 
@@ -248,7 +229,7 @@ Other changes:
 4.20.X to 4.21.X
 ----------------
 
-Before updating check following, otherwise the migration will fail:
+Before updating, check the following, otherwise the migration will fail:
 
 - All authentication services have unique IDs
 - All submission services have unique IDs
@@ -402,7 +383,7 @@ Before updating check following, otherwise the migration will fail:
 ----------------
 
 - **(breaking)** The JWT signing has been changed to RS256 and you need to add ``rsaPrivateKey`` in configuration file (see :ref:`config-server`).
-- **(breaking)** The location of configuration files has been changed and unified across components, check the deployment example for details. The main configuration file is located in ``/app/config/application.yml`` path which can be adjusted  ``APPLICATION_CONFIG_PATH``.
+- **(breaking)** The location of configuration files has been changed and unified across components, check the deployment example for details. The main configuration file is located in ``/app/config/application.yml`` path which can be changed using ``APPLICATION_CONFIG_PATH``.
 
 
 3.21.X to 3.22.X
@@ -413,7 +394,7 @@ Before updating check following, otherwise the migration will fail:
 3.20.X to 3.21.X
 ----------------
 
-- **(breaking)** The ``wizard-client`` container now exposes a different port (as all images are now root-less): 8080 instance of 80.
+- **(breaking)** The ``wizard-client`` container now exposes a different port (as all images are now root-less): 8080 instead of 80.
 - **(breaking)** The S3 service must be now publicly available, thus the S3 URL configured via :ref:`config-server` must be reachable by users to support download of documents or document preview.
 
 3.19.X to 3.20.X
@@ -434,7 +415,7 @@ Before updating check following, otherwise the migration will fail:
 3.16.X to 3.17.X
 ----------------
 
-- If we are upgrading from the older version than 3.16.X we need to first upgrade to version 3.16.X.
+- If we are upgrading from a version older than 3.16.X we need to first upgrade to version 3.16.X.
 
 3.15.X to 3.16.X
 ----------------
@@ -601,7 +582,7 @@ Before updating check following, otherwise the migration will fail:
 2.4.X to 2.5.X
 --------------
 
-- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD`` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
+- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new metadata fields that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD`` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
 - Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as DSW schedules synchronization internally.
 
 2.3.X to 2.4.X
@@ -619,7 +600,7 @@ Before updating check following, otherwise the migration will fail:
 --------------
 
 - Configuration of client and several features is now moved from ``application.yml`` file to in-app settings. therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start DSW, migrate options from ``application.yml`` in-app settings and then optionally clean up ``application.yml`` file.
-- User fields ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
+- User fields ``name`` and ``surname`` have been renamed to ``firstName`` and ``lastName`` - they need to be updated if used in **custom** mail or document templates.
 - Recommended version of MongoDB is updated to 4.2.3.
 
 2.0.X to 2.1.X
@@ -638,4 +619,4 @@ Before updating check following, otherwise the migration will fail:
 1.9.X to 1.10.X
 ---------------
 
-- Custom DMP templates needs to be upgraded to a new structure (see the default *root* template).
+- Custom DMP templates need to be upgraded to a new structure (see the default *root* template).

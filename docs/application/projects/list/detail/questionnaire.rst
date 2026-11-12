@@ -3,7 +3,7 @@
 Questionnaire
 *************
 
-Questionnaire is the first tab of the project detail. This is the most important part where we fill in all the details about our project.
+The :guilabel:`Questionnaire` tab is the first tab in the project detail. This is where we answer questions about our project.
 
 
 Current Phase
@@ -57,17 +57,17 @@ For the opened chapter, we can see a navigation tree for the chapter structure, 
 Questionnaire Area
 ==================
 
-The questionnaire area fills the most space in the questionnaire screen. It displays the questions and answers from the opened chapter.
+The questionnaire area occupies most of the screen. It displays the questions and answers from the opened chapter.
 
-Each question has an identifier which indicates the chapter it belongs to, as well as its order and nesting within the chapter. For example, **I.1.a.5**, where the Roman numeral represents the number of the chapter, and the remaining numbers indicate the order and nesting of the question. Then there is also the question name.
+Each question has an identifier which indicates the chapter it belongs to, as well as its order and nesting within the chapter. For example, **I.1.a.5**, where the Roman numeral represents the number of the chapter, and the remaining numbers indicate the order and nesting of the question. The question title appears beside this identifier.
 
-Some additional information can also be part of the question:
+A question can also display:
 
-- **Question tags** - can indicate some additional grouping of questions, for example what DMP templates is this question used for
+- **Question tags** - group questions, for example which DMP templates use the question
 - **Description** - additional information explaining the question
-- **Desirability** - what phase this question become desirable in
+- **Desirability** - the phase in which the question becomes desirable
 - **List of references** - links to additional external resources related to the question
-- **List of experts** - whom to contact when help is needed with answering the question
+- **List of experts** - whom to contact when we need help answering the question
 
 Based on our role in the project and specific settings, there are some additional actions besides answering the question:
 
@@ -76,13 +76,13 @@ Based on our role in the project and specific settings, there are some additiona
 
 We can get more information on how various collaboration tools work and can be used in :ref:`Sharing<sharing>`.
 
-The most important part is, however, answering the question. The way of how to answer the question differs based on the question type.
+The most important part is, however, answering the question. The way we answer depends on the question type.
 
 
 Options Question
 ----------------
 
-Options question has a list of pre-set answers and we can choose one from those. There can be some follow-up questions (indicated by the icon by the answer). These questions are displayed only if we select that answer.
+An options question has a list of pre-set answers and we can choose one from those. There can be some follow-up questions (indicated by the icon by the answer). These questions are displayed only if we select that answer.
 
 If there are some metrics set for the answers, we can see labels with the metrics by the answer as well. The color of the label indicates how good or bad the answer is (red means bad, green good, yellow something in between).
 
@@ -96,9 +96,9 @@ If there are some metrics set for the answers, we can see labels with the metric
 List of Items Question
 ----------------------
 
-List of items question doesn't have a simple answer but a list of items. Each of the items has the same set of subquestions. For example, a list of items question asking about the project contributors where each item represent one contributor with questions about their name, role, etc.
+A list of items question has a list of items instead of a single answer. Each of the items has the same set of subquestions. For example, a list of items question asking about the project contributors where each item represents one contributor with questions about their name, role, etc.
 
-We can simply click on :guilabel:`Add` button under the question to add a new item. Then, we can answer the questions for the item. If the item has a lot of questions, we can use the arrow icon in the item's top left corner to **fold/unfold** the item. We can also use :guilabel:`Expand all` and :guilabel:`Collapse all` buttons in the question menu to **fold/unfold** all items at once.
+We can click on the :guilabel:`Add` button under the question to add a new item. Then, we can answer the questions for the item. If the item has a lot of questions, we can use the arrow icon in the item's top left corner to **fold/unfold** the item. We can also use :guilabel:`Expand all` and :guilabel:`Collapse all` buttons in the question menu to **fold/unfold** all items at once.
 
 There is a trash bin icon in the item's top right corner that we can use to **delete** the item. If there is more than one item, there are also arrow icons that we can use to **change the order** of the items.
 
@@ -115,7 +115,7 @@ The first question in the list of items question is used as a label for the item
 Value Question
 --------------
 
-Value question contains an input field for our answer. This can be a simple text field (such as asking for a project contributor's name), or some additional widget, for example a date picker.
+A value question contains an input field for our answer. This can be a simple text field (such as asking for a project contributor's name), or some additional widget, for example a date picker.
 
 Value questions can have validation rules, such as a required text pattern or a permitted number range. If an answer does not meet a rule, the question shows a validation message. Review the message and correct the answer where appropriate.
 
@@ -129,7 +129,7 @@ Value questions can have validation rules, such as a required text pattern or a 
 Integration Question
 --------------------
 
-Integration question is connected to an external resource where it searches for the answers. The input field works as a search field, so when we start typing something, it searches the external resource and offers us a list of possible answers.
+An integration question searches an external resource for answers. The input field works as a search field, so when we start typing something, it searches the external resource and offers us a list of possible answers.
 
 Choose a result from the list to save the selected answer. Its displayed text and any link are defined by the knowledge model's integration configuration.
 
@@ -145,7 +145,7 @@ If the integration allows custom replies, we can also enter our own text when th
 Multi-Choice Question
 ---------------------
 
-Multi-choice question is similar to the options question, however we can choose more than one answer and there are no follow-up questions.
+A multi-choice question lets us select several answers. Unlike an options question, it has no follow-up questions.
 
 .. figure:: /_static/screenshots/5.0/question-multi-choice.png
     :figclass: guide-screenshot
@@ -168,7 +168,7 @@ The item selection question is used together with the list of items question. Wh
 
 File Question
 -------------
-File question is used when we need to upload a file as an answer. We can simply click on the :guilabel:`Upload File` button and select the file from our computer. We can also drag and drop the file into the input field.
+A file question lets us upload a file as an answer. We can click on the :guilabel:`Upload File` button and select the file from our computer. We can also drag and drop the file into the input field.
 
 .. figure:: /_static/screenshots/5.0/question-file.png
     :figclass: guide-screenshot
@@ -182,11 +182,11 @@ View settings
 
 In the questionnaire tab, there is a menu bar with various options. The first one is :guilabel:`View`, where we can show or hide some question details:
 
-- :guilabel:`Answered by` - show/hide who and when answered questions
+- :guilabel:`Answered by` - show/hide who answered each question and when
 - :guilabel:`Phases` - show/hide what phase the questions are desirable in
 - :guilabel:`Question tags` - show/hide the question tags
 - :guilabel:`Non-desirable questions` - show/hide questions that are not desirable in the current phase
-- :guilabel:`Metric values` - show/hide value of metrics for accessibility purpose
+- :guilabel:`Metric values` - show/hide metric values for accessibility
 
 .. figure:: /_static/screenshots/5.0/questionnaire-view.png
     :figclass: guide-screenshot
@@ -251,7 +251,7 @@ TODOs
 
 When we are filling in the questionnaire, we can stumble upon a question that we don't know how to answer yet, but we don't want to forget to come back to that question. We can click on :guilabel:`+ Add TODO` to add a TODO to the question.
 
-We can then open the :guilabel:`TODOs` tab from the questionnaire menu to see the list of all questions with assigned TODO in the questionnaire. By clicking on a question there, we can quickly jump back to that question and fill it.
+We can then open the :guilabel:`TODOs` tab from the questionnaire menu to see the list of all questions with assigned TODO in the questionnaire. By clicking on a question there, we can quickly jump back to that question and answer it.
 
 .. figure:: /_static/screenshots/5.0/questionnaire-todos.png
     :figclass: guide-screenshot
@@ -265,7 +265,7 @@ Comments
 
 We sometimes want to leave comments to discuss things with our team or just reminders for ourselves. We can write comments to each question in the questionnaire. The comments can be browsed using the navigation buttons.
 
-Total number of comments in the questionnaire is visible in the :guilabel:`Comments` tab in the questionnaire menu bar. If a comment detail is opened, the number `x/y` indicates the current comment's position within the total number of comments.
+The total number of comments in the questionnaire is visible in the :guilabel:`Comments` tab in the questionnaire menu bar. If a comment detail is opened, the number ``x/y`` indicates the current comment's position within the total number of comments.
 
 The number of comments per question is indicated by the comments icon next to the question.
 
@@ -305,7 +305,7 @@ Comment Threads
 
 Comments are organized into comment threads for better clarity. We can either start a new thread or reply in an existing thread if our comment is on the same topic.
 
-When the thread is resolved, we can click on the ✔ icon in order to resolve it. Resolved threads can be later viewed by selecting :guilabel:`View resolved comments`. They can also be reopened if needed.
+When a discussion is finished, click the ✔ icon to resolve its thread. Resolved threads can be later viewed by selecting :guilabel:`View resolved comments`. They can also be reopened if needed.
 
 
 Resolved Comments
@@ -327,7 +327,7 @@ Besides comments there are also editor notes which work the same way as comments
 Version History
 ===============
 
-When we open the :guilabel:`Version history` tab from the questionnaire menu bar we can see the list of all the changes that happened in that questionnaire. We can see who and when made what changes grouped by months and days.
+When we open the :guilabel:`Version history` tab from the questionnaire menu bar we can see the list of all the changes that happened in that questionnaire. Changes are grouped by month and day, showing who made each change and when.
 
 .. figure:: /_static/screenshots/5.0/project-history.png
     :figclass: guide-screenshot
@@ -339,7 +339,7 @@ When we open the :guilabel:`Version history` tab from the questionnaire menu bar
 Name a Version
 --------------
 
-Project owners can name a version, including an earlier event. Click on the triple dots on any event we want to name and choose :guilabel:`Name this version`. Then we just fill in name and description of that version. If the event already has a named version, we can choose :guilabel:`Rename this version` instead.
+Project owners can name a version, including an earlier event. Click on the triple dots on any event we want to name and choose :guilabel:`Name this version`. Then we fill in a name and description for that version. If the event already has a named version, we can choose :guilabel:`Rename this version` instead.
 
 When we have some named versions, we can choose :guilabel:`Named versions only`. Then, we don't see every single change but only the important versions we gave a name to.
 
@@ -351,13 +351,13 @@ When we have some named versions, we can choose :guilabel:`Named versions only`.
 View Questionnaire in a Version
 -------------------------------
 
-Thanks to the version history, we can see how the questionnaire was filled at any point in the past. We simply find the event in the version history and choose :guilabel:`View questionnaire` from the event menu.
+To see the questionnaire at an earlier point, find an event in the version history and choose :guilabel:`View questionnaire` from its menu.
 
 
 Create Document from an Older Version
 -------------------------------------
 
-Sometimes, we might want to create a document from an older version. For example, we created only a PDF document, but later we find out that we also needed a Word document. To do that, we simply find that version in the version history and select :guilabel:`Create document`. Then, we just fill in the details in the form and create the document.
+Sometimes, we might want to create a document from an older version. For example, we created only a PDF document, but later we find out that we also needed a Word document. To do that, we find that version in the version history and select :guilabel:`Create document`. Then, we fill in the details in the form and create the document.
 
 
 Revert to an Older Version
@@ -373,7 +373,7 @@ Project owners can revert the questionnaire to an earlier event. Find the event 
 Search
 ======
 
-Search is accessible from the questionnaire menu bar by clicking on the :guilabel:`Search` button. A search side panel opens where we can type in our search query. The search works in real-time, so while we are typing, the results are displayed below. We can fulltext search in questions and answers. In questions not only the question name but also description and references. The search is case insensitive.
+Search is accessible from the questionnaire menu bar by clicking on the :guilabel:`Search` button. A search side panel opens where we can type in our search query. The search works in real-time, so while we are typing, the results are displayed below. Search covers answers and question titles, descriptions and references. It is case-insensitive.
 
 We can click on any of the search results to quickly navigate to that question in the questionnaire.
 

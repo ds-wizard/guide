@@ -27,7 +27,7 @@ This configuration section is used only by **Server** and covers basic configura
    :type: Int
    :default: ``3000``
 
-    Port that will be the web server listening on.
+    Port on which the web server listens.
 
 .. confval:: general.clientUrl
 
@@ -86,12 +86,12 @@ Public links and hosting
    :type: Boolean
    :default: ``false``
 
-   Enables multi-tenant hosting in the server. Keep it disabled for a normal single-instance deployment. The document worker and mailer read their separate ``cloud.enabled`` option; keep that disabled for the same deployment.
+   Enables multi-tenant hosting in the server. Keep it disabled for a normal single-instance deployment. Set the same ``multiTenancy.enabled`` value in the document worker and mailer. These workers also accept ``cloud.enabled`` as a fallback when the new option is unset.
 
 Database
 --------
 
-Information for connection to PostgreSQL database.
+Connection settings for the PostgreSQL database.
 
 .. confval:: database.connectionString
 
@@ -102,7 +102,7 @@ Information for connection to PostgreSQL database.
 S3
 --
 
-Information for connection to S3-compatible object storage, such as `Garage <https://garagehq.deuxfleurs.fr/>`__ (used for documents, document template assets, files, and locales).
+Connection settings for S3-compatible object storage, such as `Garage <https://garagehq.deuxfleurs.fr/>`__ (used for documents, document template assets, files, and locales).
 
 .. confval:: s3.url
 
@@ -164,7 +164,7 @@ This configuration section is used only by **Mailer**. It must be filled with SM
 
    :type: String
 
-    Name of the DSW instance that will be used as “senders name” in email headers.
+    Name of the DSW instance that will be used as the sender's name in email headers.
 
 .. confval:: mail.email
 

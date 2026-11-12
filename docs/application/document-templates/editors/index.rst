@@ -9,9 +9,9 @@ We can use the search field to search for a specific document template editor. T
 
 We can :doc:`/application/document-templates/editors/create` by clicking the :guilabel:`Create` button.
 
-By clicking the triple dots on each item in the list we can access some actions:
+Open an item's three-dot menu to see the available actions:
 
-- **Open Editor** - simply open the :doc:`/application/document-templates/editors/detail/index` (we can also click the name of the editor)
+- **Open Editor** - open the :doc:`/application/document-templates/editors/detail/index` (we can also click the name of the editor)
 - **Delete** - to delete the document template editor (cannot be undone)
 
 

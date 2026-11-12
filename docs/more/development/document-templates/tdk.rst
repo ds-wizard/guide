@@ -91,7 +91,7 @@ Use exactly one input: ``--sample`` (the knowledge model shipped with the TDK), 
 
 With ``--from``, ``--mutate`` perturbs the context at the rate of each profile and ``--anonymize`` replaces personal data and free text with deterministic placeholders. Use ``--anonymize`` before sharing a test context taken from real data, and review the result.
 
-Generated data supplements real cases; it does not establish that all questionnaire behavior or template semantics are correct.
+Test with real project answers as well as generated contexts, and inspect the resulting documents.
 
 Render and compare
 ==================
@@ -103,7 +103,7 @@ Render and compare
 
 ``--format`` accepts a format's UUID or name and can be omitted if the template has only one. Both ``--context`` and ``--format`` can be repeated, and ``--context`` also accepts a directory of ``*.json`` files.
 
-A batch renders the context/format combinations and writes ``summary.json`` with the status, duration, output and error of each one. The exit code is 1 if any combination fails. Use the result to identify failures and inspect representative outputs for each customer format.
+A batch renders the context/format combinations and writes ``summary.json`` with the status, duration, output and error of each one. The exit code is 1 if any combination fails. Use the result to identify failures and inspect representative outputs for each output format.
 
 The context must be a complete 19.0 context; otherwise, ``render`` reports the file, JSON path and problem. A hash that does not match the content only produces a warning. ``render`` fills ``document`` as the worker does and always uses the template and format being rendered.
 
