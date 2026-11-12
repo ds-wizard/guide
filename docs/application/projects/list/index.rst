@@ -33,14 +33,14 @@ We can search for specific projects using the search field or filter them using 
 
 .. NOTE::
 
-    Note that some of the filters can be disabled based on the DSW settings or user role.
+    Some filters can be disabled based on the DSW settings or user role.
 
 
 We can :ref:`create a new project<create-project>` by clicking the :guilabel:`Create` button.
 
-By clicking the triple dots on each item in the list we can access some actions:
+Open an item's three-dot menu to see the available actions:
 
-- **Open project** - will simply open the project
+- **Open project** - opens the project
 - **Create project from this template** - will create a new project from the selected project template (this is only available if the project is also a project template)
 - **Clone** - creates a project with the source questionnaire, files, comments and named versions. Other explicit collaborators and the source sharing settings are retained. Generated documents are not copied
 - **Migrate** - will start a :ref:`project migration<project-migration>`

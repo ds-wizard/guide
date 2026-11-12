@@ -1,7 +1,7 @@
 Preview
 *******
 
-We can use :guilabel:`Preview` tab to quickly see how the resulting questionnaire would look like. If there are any :ref:`question tags<question-tag>` set up, we can also try different combinations of selected tags and observe the changes in the questionnaire.
+We can use the :guilabel:`Preview` tab to quickly see what the resulting questionnaire would look like. If there are any :ref:`question tags<question-tag>` set up, we can also try different combinations of selected tags and observe the changes in the questionnaire.
 
 .. figure:: /_static/screenshots/5.0/km-editor-preview.png
     :figclass: guide-screenshot
