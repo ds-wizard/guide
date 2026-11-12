@@ -10,7 +10,7 @@ Create or replace a secret
 ==========================
 
 Open :guilabel:`Knowledge Models` → :guilabel:`Secrets`, choose a name and enter the value needed by the integration.
-DSW does not return existing secret values to the browser. To change a value, supply a replacement; leaving a value unchanged is different from replacing it with an empty value.
+DSW does not return existing secret values to the browser. To change a secret, enter its replacement value and save. Leaving the value unchanged and replacing it with an empty value are different operations.
 
 Refer to :doc:`/more/development/integration-questions/integration-api` when configuring how an integration uses a secret.
 

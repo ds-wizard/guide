@@ -5,7 +5,7 @@ Plugins
 
 .. WARNING::
 
-    The plugins functionality is considered experimental.
+    Plugin support is experimental.
 
 
 This page provides information on how to develop plugins for DSW. Information on installing plugins can be found here: :ref:`plugins installation<configuration-plugins>`.

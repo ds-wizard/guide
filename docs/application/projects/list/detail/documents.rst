@@ -5,7 +5,7 @@ Documents
 
 In the :guilabel:`Documents` tab in the project detail we can manage the documents related to the project. We can see a list of all the documents with their **format**, **file size**, and **document template** used to create that document.
 
-While we can quickly see how the current state of the questionnaire looks like in the document in the :ref:`preview<preview>` tab, the documents created here are persistent. Once generated, a stored document does not change when we edit the questionnaire. We can download the same file later while it remains stored.
+While we can quickly see how the current questionnaire appears in a document in the :ref:`preview<preview>` tab, the documents created here are persistent. Once generated, a stored document does not change when we edit the questionnaire. We can download the same file later while it remains stored.
 
 
 .. figure:: /_static/screenshots/5.0/project-documents.png

@@ -5,7 +5,7 @@ Step: ``json``
 
 
 
-Trivial step that dumps document context to JSON file.
+Exports the document context to a JSON file.
 
 Input
 =====

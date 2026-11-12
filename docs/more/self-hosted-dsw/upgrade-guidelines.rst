@@ -229,7 +229,7 @@ Other changes:
 4.20.X to 4.21.X
 ----------------
 
-Before updating check following, otherwise the migration will fail:
+Before updating, check the following, otherwise the migration will fail:
 
 - All authentication services have unique IDs
 - All submission services have unique IDs
@@ -383,7 +383,7 @@ Before updating check following, otherwise the migration will fail:
 ----------------
 
 - **(breaking)** The JWT signing has been changed to RS256 and you need to add ``rsaPrivateKey`` in configuration file (see :ref:`config-server`).
-- **(breaking)** The location of configuration files has been changed and unified across components, check the deployment example for details. The main configuration file is located in ``/app/config/application.yml`` path which can be adjusted  ``APPLICATION_CONFIG_PATH``.
+- **(breaking)** The location of configuration files has been changed and unified across components, check the deployment example for details. The main configuration file is located in ``/app/config/application.yml`` path which can be changed using ``APPLICATION_CONFIG_PATH``.
 
 
 3.21.X to 3.22.X
@@ -394,7 +394,7 @@ Before updating check following, otherwise the migration will fail:
 3.20.X to 3.21.X
 ----------------
 
-- **(breaking)** The ``wizard-client`` container now exposes a different port (as all images are now root-less): 8080 instance of 80.
+- **(breaking)** The ``wizard-client`` container now exposes a different port (as all images are now root-less): 8080 instead of 80.
 - **(breaking)** The S3 service must be now publicly available, thus the S3 URL configured via :ref:`config-server` must be reachable by users to support download of documents or document preview.
 
 3.19.X to 3.20.X
@@ -415,7 +415,7 @@ Before updating check following, otherwise the migration will fail:
 3.16.X to 3.17.X
 ----------------
 
-- If we are upgrading from the older version than 3.16.X we need to first upgrade to version 3.16.X.
+- If we are upgrading from a version older than 3.16.X we need to first upgrade to version 3.16.X.
 
 3.15.X to 3.16.X
 ----------------
@@ -582,7 +582,7 @@ Before updating check following, otherwise the migration will fail:
 2.4.X to 2.5.X
 --------------
 
-- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new information that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD`` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
+- Document templates have been moved from FS to database. To simplify the transition for custom templates, we added to the Docker image a script that loads templates from FS to the database via DSW API. But there are several new metadata fields that we need to provide in ``template.json`` file: ``id`` (instead of ``uuid``), ``templateId``, ``organizationId``, ``version`` (semver), ``license``, ``readme`` (Markdown). The ``id`` should be in format ``organizationId:templateId:version``. Please note that this applies only for custom templates, default template can be removed from FS as it is added to the database automatically. The script must be enabled by setting envvar ``ENABLE_TEMPLATE_LOAD`` to ``1`` and ``SERVICE_TOKEN`` according to the configuration.
 - Cron is no longer needed for the feedback synchronization (environment variables in ``docker-compose.yml``) as DSW schedules synchronization internally.
 
 2.3.X to 2.4.X
@@ -600,7 +600,7 @@ Before updating check following, otherwise the migration will fail:
 --------------
 
 - Configuration of client and several features is now moved from ``application.yml`` file to in-app settings. therefore, it must be reconfigured during upgrade process. Additional ``secret`` must be configured in ``application.yml`` for encryption and JWT tokens (*JWT.secret* section has been removed), see :ref:`config-server` configuration. It is recommended to first add *general.secret* (32 chars secret), start DSW, migrate options from ``application.yml`` in-app settings and then optionally clean up ``application.yml`` file.
-- User fields ``name`` and ``surname`` has been renamed to ``firstName`` and ``lastName`` - it needs be updated if used in **custom** mail or document templates.
+- User fields ``name`` and ``surname`` have been renamed to ``firstName`` and ``lastName`` - they need to be updated if used in **custom** mail or document templates.
 - Recommended version of MongoDB is updated to 4.2.3.
 
 2.0.X to 2.1.X
@@ -619,4 +619,4 @@ Before updating check following, otherwise the migration will fail:
 1.9.X to 1.10.X
 ---------------
 
-- Custom DMP templates needs to be upgraded to a new structure (see the default *root* template).
+- Custom DMP templates need to be upgraded to a new structure (see the default *root* template).

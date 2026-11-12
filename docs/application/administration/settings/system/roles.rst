@@ -88,6 +88,6 @@ A project shared with a person or group can grant access even when their role do
 Examples of custom roles
 ========================
 
-A support role can receive view or comment access to projects, a content role can prepare knowledge models and document templates, and a user-management role can manage accounts. Choose the actual permissions and their prerequisites from the matrix above rather than relying on a role's name.
+A support role can receive view or comment access to projects, a content role can prepare knowledge models and document templates, and a user-management role can manage accounts. Select the permissions needed for each role from the table above, including their prerequisites.
 
 Before changing a role, review the people assigned to it. The changed permissions apply to those accounts. Use project sharing for access to a particular project, alongside the wider permissions granted by roles.

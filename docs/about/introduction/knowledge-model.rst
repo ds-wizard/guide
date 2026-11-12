@@ -5,7 +5,7 @@ Knowledge Model
 
 The knowledge model is a tree-like structure of chapters, questions, answers, and other entities that serves as a template for the questionnaire. All the different questions, their possible answers and follow-up questions, metrics and more are defined there.
 
-While all the possibilities are defined in the knowledge model, when researchers use it to create their project, they don't see everything, but only the top-level questions and more detailed questions are only asked if relevant to their use case.
+Researchers initially see the top-level questions. Their answers determine which follow-up questions appear, so they only see questions relevant to their project.
 
 Knowledge models are created by data stewards in the :ref:`knowledge model editor<knowledge-model-editor>`.
 
@@ -38,7 +38,7 @@ Question
 
 Questions are used to collect the answers from users. Each question has a **title** (the actual question), a **description**, a **phase** when it becomes desirable, a list of :ref:`resource pages<resource-page>` gathered in a :ref:`resource collection<resource-collection>` or :ref:`URL references<url-reference>` and :ref:`experts<expert>`, and a selection of :ref:`question tags<question-tag>`.
 
-Then there are some additional settings based on the **question type**.
+Then there are additional settings for each **question type**.
 
 
 .. _options-question:
@@ -54,7 +54,7 @@ The options question contains a closed list of :ref:`answers<answer>` where user
 List of Items Question
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The list of items question is used when there are multiple answers and we want to ask more details about those. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
+A list of items question collects the same details for several items. For example, we can ask about different datasets that will be produced -- users will have multiple datasets but we want to ask the same questions for each of those. For that, we configure the **item template**, which defines the questions for each item.
 
 For each item, the answer to the first question in the list of items question is used as a label for the item. It can be any type of question.
 
@@ -62,7 +62,7 @@ For each item, the answer to the first question in the list of items question is
 Value Question
 ^^^^^^^^^^^^^^
 
-The value question asks for a single value that users type in. There are many different types of the value question that can be used:
+The value question asks for a single value that users type in. The available value types are:
 
 - String
 - Number
@@ -74,16 +74,16 @@ The value question asks for a single value that users type in. There are many di
 - URL
 - Color
 
-The input field differs based on the value type (simple input for string, date picker for date, etc.). Some of these have a check whether the entered value is valid (such as valid email or URL) and displays a warning if not.
+The input field differs based on the value type (simple input for string, date picker for date, etc.). Some types check whether the entered value is valid, such as an email address or URL, and display a warning if it is not.
 
-Value Question also can have validations. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text based types (text, email, URL), we can also use a regular expression to create validations.
+Value questions can also have validation rules. Validations differ based on the value type. For example, we can set a minimum and maximum value for a number, or a minimum and maximum length for a string. For text-based types (text, email, URL), we can also use a regular expression to create validations.
 
 .. _integration-question:
 
 Integration Question
 ^^^^^^^^^^^^^^^^^^^^
 
-The integration question is connected to an external resource where the users can pick the answer from. We need to select an :ref:`integration<integration>` that the question uses and sometimes additional properties, based on the integration configuration.
+The integration question is connected to an external resource from which users can select an answer. We need to select an :ref:`integration<integration>` that the question uses and sometimes additional properties, based on the integration configuration.
 
 Users search the external resource through the questionnaire and choose a result. The integration defines how that result is displayed, including any link or persistent identifier.
 
@@ -114,7 +114,7 @@ The file question is used to upload files. We can configure the **file types** t
 Answer
 ------
 
-An answer is used with :ref:`options questions<options-question>`. It contains a **label** which is the answer itself. Then an **advice** which is visible only if the answer is selected. We can use this when users pick answer that is not great to provide them further guidance on how to improve.
+An answer is used with :ref:`options questions<options-question>`. It contains a **label** which is the answer itself. It can also contain **advice**, shown only when the answer is selected. We can use this when users select an answer that needs improvement and we want to provide further guidance.
 
 Answers can have **follow-up questions** that are only visible if the answer is selected. We can use this to ask only relevant questions based on the previous answers.
 
@@ -136,12 +136,12 @@ A choice is used with :ref:`multi-choice questions<multi-choice-question>`. It o
 Validation
 ----------
 
-Validation is used to define some rules for the answers in Value question type. It can be used to check if the answer is in the correct format, or if it is in the correct range. If the answer doesn't pass the validation, a warning is displayed to the user, however this does not prevent them from creating a document.
+Validation rules check the format or permitted range of answers to value questions. An answer that fails validation displays a warning, but does not prevent document creation.
 
 Reference
 ---------
 
-References are used to provide additional information for :ref:`questions<question>`. There are three types of references. :ref:`Resource page reference<resource-page>`, :ref:`URL reference<url-reference>`, and :ref:`Cross reference<cross-reference>`. resource page references are gathered in the resource collections.
+References are used to provide additional information for :ref:`questions<question>`. There are three types of references: :ref:`resource page references<resource-page>`, :ref:`URL references<url-reference>`, and :ref:`cross references<cross-reference>`. Resource page references are gathered in the resource collections.
 
 .. _resource-collection:
 
@@ -155,28 +155,28 @@ Resource collections are used to group together :ref:`resource pages<resource-pa
 Resource Page
 ^^^^^^^^^^^^^
 
-A resource page is a simple page that can be used to provide information for :ref:`questions<question>`. It has a **title** and a **content**. Resource pages are gathered in the :ref:`resource collections<resource-collection>`.
+A resource page is a simple page that can be used to provide information for :ref:`questions<question>`. It has a **title** and **content**. Resource pages are gathered in the :ref:`resource collections<resource-collection>`.
 
 .. _url-reference:
 
 URL Reference
 ^^^^^^^^^^^^^
 
-A URL reference is a simple link to any website. It has **URL** which is the actual link and a **label** that describes what the reference is about. URL reference is set up on a level of question, not on a level of knowledge model.
+A URL reference is a simple link to any website. It has a **URL** which is the actual link and a **label** that describes what the reference is about. URL reference is set up for an individual question.
 
 .. _cross-reference:
 
 Cross Reference
 ^^^^^^^^^^^^^^^
 
-A cross reference is a link to another question within the same knowledge model. It has **question** which is the referenced question selected from dropdown list and a **description** that describes what the reference is about.
+A cross reference is a link to another question within the same knowledge model. It has a **question** which is the referenced question selected from a dropdown list and a **description** that describes what the reference is about.
 
 .. _expert:
 
 Expert
 ------
 
-We can provide a contact information to an expert for some :ref:`questions<question>`. An expert has a **name** and an **email**. We can use this, for example, if there is an expert for a specific topics in our institution and we want to make it easy to find out in our customized knowledge model.
+We can link an expert's contact information to :ref:`questions<question>`. An expert has a **name** and an **email**. We can use this, for example, if there is an expert for a specific topic in our institution and we want to make their contact details available in our customized knowledge model.
 
 
 .. _metric:
@@ -201,9 +201,9 @@ And then define which answers affect which FAIR metrics to provide more feedback
 Phase
 -----
 
-We can create phases to reflect the workflow. Such as: *Before submitting the proposal*, *Before submitting the DMP*, etc. Each phase has a **title** and a **description**.
+We can create phases to reflect the workflow, such as *Before submitting the proposal* and *Before submitting the DMP*. Each phase has a **title** and a **description**.
 
-Once we have phases defined, we can assign them to :ref:`questions<question>` to indicate where each question becomes desirable. The phases implicitly follow the order in which they are in the knowledge model and the question is considered desirable from the defined phase and on. So for example, if a question is desirable in *Phase 2*, it is implicitly desirable in *Phase 3*, *Phase 4*, etc.
+Once we have phases defined, we can assign them to :ref:`questions<question>` to indicate when each question becomes desirable. The phases implicitly follow the order in which they are in the knowledge model and the question is considered desirable from the defined phase and on. So for example, if a question is desirable in *Phase 2*, it is implicitly desirable in *Phase 3*, *Phase 4*, etc.
 
 
 .. _question-tag:
@@ -236,7 +236,7 @@ An installed plugin can provide an integration with its own configuration and se
 Annotations
 -----------
 
-Annotations are arbitrary key value pairs that can be assigned to any entity in the knowledge model. These can provide some additional information for the document templates.
+Annotations are arbitrary key-value pairs that can be assigned to any entity in the knowledge model. These can provide some additional information for the document templates.
 
 
 Knowledge Model Customizations

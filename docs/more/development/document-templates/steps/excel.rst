@@ -5,7 +5,7 @@ Step: ``excel``
 
 
 
-Step producing Excel spreadsheets from JSON file with instructions.
+Produces an Excel spreadsheet from a JSON file containing generation instructions.
 
 Input
 =====
@@ -167,7 +167,7 @@ It is the main part specifying a list of sheets in the workbook, where each shee
 Chartsheet
 ^^^^^^^^^^
 
-A chartsheet simply refers to a ``chart`` (by its ``name``) that should be placed in this chartsheet.
+A chartsheet refers to the ``chart`` it displays by that chart's ``name``.
 
 The possible ``options`` are:
 
@@ -278,7 +278,7 @@ In JSON as part of worksheet's attribute ``data``, you can in the list specify d
 
 For data, there are the following subtypes possible (for ``type`` set to ``cell``):
 
--  (unspecified) tries to directly all `write <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-write>`__ with provided arguments, type should be then decided based on provided values and attributes
+-  (unspecified) calls `write <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-write>`__ with provided arguments, type should be then decided based on provided values and attributes
 -  ``string`` `writes string <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-write-string>`__ from ``value``
 -  ``number`` `writes number <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-write-number>`__ from numeric ``value``
 -  ``datetime`` `writes datetime <https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-write-datetime>`__; it tries to parse date/datetime ``value`` from string as JSON does not have a format for datetime, standard ISO formats are recommended (e.g. ``2022-12-24`` or ``2022-12-24T12:00:00Z``)
@@ -329,7 +329,7 @@ All options above may specify ``format`` (refer to defined format via its ``name
 Inserting other elements
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Aside from data in cell, there is also possibility to insert other elements to the worksheet (``type`` values):
+In addition to cell data, we can insert other elements into a worksheet (``type`` values):
 
 -  ``button`` with `options <https://xlsxwriter.readthedocs.io/worksheet.html#insert_button>`__ such as ``macro`` or ``caption``
 -  ``textbox`` with ``text`` and `options <https://xlsxwriter.readthedocs.io/worksheet.html#insert_textbox>`__ such as styling or offset in pixels
@@ -352,7 +352,7 @@ All of these are used with corresponding ``type`` and are placed to desired ``ce
 Header, Footer, Images
 ^^^^^^^^^^^^^^^^^^^^^^
 
-To allow easily add figures, those can be supplied as BASE64 encoded data directly via JSON as shown in the examples below.
+Images can be supplied as Base64-encoded data in the JSON, as shown below.
 
 For header and footer, the syntax of ``content`` is according to the
 `documentation <https://xlsxwriter.readthedocs.io/page_setup.html#set_header>`__.
@@ -411,7 +411,7 @@ List of VBA projects (with macros) to be embedded in the spreadsheet.
 Output
 ======
 
-Desired Excel spreadsheet based on instructions from input JSON, it can be one the following formats (whether it uses macros or not):
+Desired Excel spreadsheet based on instructions from input JSON, it can be one of the following formats (whether it uses macros or not):
 
 -  ``application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`` (extension ``.xlsx``)
 -  ``application/vnd.ms-excel.sheet.macroEnabled.12`` (extension ``.xlsm``)

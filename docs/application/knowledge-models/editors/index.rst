@@ -12,14 +12,14 @@ Users with the :ref:`Use Knowledge Model Editor<roles>` role permission can see 
 
     Knowledge Model Editors.
 
-We can use the search field to search for a specific KM editor. The editors are sorted by when they were last updated but we can change that. We can order the list by name, creation date, or last update date. The list shows the name, version, id, if editor contains unpublished changes, if it is a fork of different KM and last update.
+We can use the search field to search for a specific KM editor. The editors are sorted by when they were last updated but we can change that. We can order the list by name, creation date, or last update date. The list shows each editor's name, version, ID and last update, and indicates unpublished changes and forks of other knowledge models.
 
 We can :ref:`create a new knowledge model editor<create-knowledge-model-editor>` by clicking the :guilabel:`Create` button.
 
-By clicking the triple dots on each item in the list we can access some actions:
+Open an item's three-dot menu to see the available actions:
 
-- **Open Editor** - simply open the :ref:`editor detail<knowledge-model-editor>`
-- **Update** - if there is a newer version of parent knowledge model, we can use update action to start a :ref:`knowledge model migration<knowledge-model-migration>`, otherwise the action is not visible
+- **Open Editor** - open the :ref:`editor detail<knowledge-model-editor>`
+- **Update** - if there is a newer version of the parent knowledge model, we can use this action to start a :ref:`knowledge model migration<knowledge-model-migration>`, otherwise the action is not visible
 - **Delete** - to delete the knowledge model editor (cannot be undone)
 
 If there is an ongoing :ref:`knowledge model migration<knowledge-model-migration>`, there are different actions:
